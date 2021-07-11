@@ -12,32 +12,40 @@ struct SearchBar: View {
     @Binding var isEditing: Bool
     
     var body: some View {
-        ZStack(alignment: .leading) {
-            TextField("Search", text: $text)
-                .padding(.leading, 50)
-            
-            Image(systemName: "magnifyingglass.circle")
-                .padding(.leading)
-                .imageScale(.large)
-                .opacity(0.3)
-            
+        VStack {
+            Capsule()
+                .capsuleModifier(Color("Bone"))
+                
+            Capsule()
+                .capsuleModifier(Color(.systemBackground))
+                .overlay(
+                    ZStack(alignment: .leading) {
+                        TextField("Search", text: $text)
+                            .padding(.leading, 55)
+                            .padding(.trailing)
+                            .padding(.vertical, 25)  /// Expand tapable area
+                            .contentShape(Capsule())
+                        
+                        Image(systemName: "magnifyingglass.circle")
+                            .imageScale(.large)
+                            .opacity(0.3)
+                            .padding(.leading)
+                    }
+                )
+                .offset(x: -7, y: -90)
+                .padding(.bottom, -90)
         }
-        .padding()
-        .background(
-            ZStack {
-                Capsule()
-                    .strokeBorder(Color("Border"), lineWidth: 2)
-                    .background(Capsule().foregroundColor(Color("Bone")))
-                    .offset(x: 7.0, y: 10.0)
-                
-                Capsule()
-                    .strokeBorder(Color("Border"), lineWidth: 2)
-                    .background(Capsule().foregroundColor(Color(.systemBackground)))
-                
-                
-            }
-        )
-        .padding()
+        .padding(.leading, 7)
+        .padding(.horizontal)
+        
+    }
+}
+extension Capsule {
+    func capsuleModifier(_ colour: Color) -> some View {
+        self
+            .strokeBorder(Color("Border"), lineWidth: 2)
+            .background(Capsule().foregroundColor(colour))
+            .frame(height: 70)
     }
 }
 
