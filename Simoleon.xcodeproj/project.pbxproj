@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		9555933F269B0E47000FD726 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9555933E269B0E47000FD726 /* CurrencyModel.swift */; };
 		956C28CA269B5893005A4595 /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C28C9269B5893005A4595 /* CurrencyRow.swift */; };
 		956C28CC269B58A0005A4595 /* SmallFlagsPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C28CB269B58A0005A4595 /* SmallFlagsPair.swift */; };
+		95C02C8B269B61680061DD6D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 95C02C8A269B61680061DD6D /* Alamofire */; };
 		95C5B2282697752600941585 /* SimoleonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2272697752600941585 /* SimoleonApp.swift */; };
 		95C5B22A2697752600941585 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2292697752600941585 /* ContentView.swift */; };
 		95C5B22C2697752700941585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C5B22B2697752700941585 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C02C8B269B61680061DD6D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +227,9 @@
 			dependencies = (
 			);
 			name = Simoleon;
+			packageProductDependencies = (
+				95C02C8A269B61680061DD6D /* Alamofire */,
+			);
 			productName = Simoleon;
 			productReference = 95C5B2242697752600941585 /* Simoleon.app */;
 			productType = "com.apple.product-type.application";
@@ -296,6 +301,9 @@
 				Base,
 			);
 			mainGroup = 95C5B21B2697752600941585;
+			packageReferences = (
+				95C02C89269B61680061DD6D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 95C5B2252697752600941585 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -672,6 +680,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95C02C89269B61680061DD6D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95C02C8A269B61680061DD6D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95C02C89269B61680061DD6D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		95C5B2322697752700941585 /* Simoleon.xcdatamodeld */ = {
