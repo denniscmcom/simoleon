@@ -12,45 +12,61 @@ struct MainCurrencyRow: View {
     let currencies: [String: CurrencyModel] = parseJson("Currencies.json")
     
     var body: some View {
-        ZStack {
+        VStack {
             RoundedRectangle(cornerRadius: 10)
-                .strokeBorder(Color("Border"), lineWidth: 2)
-                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color("Bone")))
-                .offset(x: 10, y: 10.0)
+                .rectangleModifier(Color("Bone"), 250)
             
             RoundedRectangle(cornerRadius: 10)
-                .strokeBorder(Color("Border"), lineWidth: 2)
-                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color(.systemBackground)))
+                .rectangleModifier(Color(.systemBackground), 250)
                 .overlay(
                     VStack {
+                        let symbols = currencyQuote.symbol.split(separator: "/")
+                        let mainCurrencyFlag = currencies[String(symbols[0])]!.flag
+                        let SecondaryCurrencyFlag = currencies[String(symbols[1])]!.flag
                         HStack {
-                            let currencySymbols = currencyQuote.symbol.components(separatedBy: "/")
-                            let mainSymbol = currencySymbols[0]
-                            let secondarySymbol = currencySymbols[1]
-                            let mainCurrencyFlag = currencies[mainSymbol]!.flag
-                            let secondaryCurrencyFlag = currencies[secondarySymbol]!.flag
-                            FlagsPair(mainCurrencyFlag: mainCurrencyFlag, secondaryCurrencyFlag: secondaryCurrencyFlag)
-                                .frame(width: 80, height: 80)
+                        BigFlagsPair(mainCurrencyFlag: mainCurrencyFlag, secondaryCurrencyFlag: SecondaryCurrencyFlag)
                             
                             VStack(alignment: .leading) {
                                 Text("Bid")
+                                    .font(.title3)
+                                
                                 Text("\(currencyQuote.bid, specifier: "%.4f")")
-                                    .fontWeight(.semibold)
-                            }
-                            .padding(.leading, 55)
-                            
-                            VStack(alignment: .leading) {
-                                Text("Ask")
-                                Text("\(currencyQuote.ask, specifier: "%.4f")")
+                                    .font(.title3)
                                     .fontWeight(.semibold)
                             }
                             .padding(.horizontal)
+                            
+                            VStack(alignment: .leading) {
+                                Text("Ask")
+                                    .font(.title3)
+                                
+                                Text("\(currencyQuote.ask, specifier: "%.4f")")
+                                    .font(.title3)
+                                    .fontWeight(.semibold)
+                            }
+                            .padding(.trailing)
                         }
+                        
+                        Text("100 \(String(symbols[0])) is worth \(currencyQuote.ask*100, specifier: "%.2f") \(String(symbols[1]))")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .padding()
                     }
                 )
+                .offset(x: -10, y: -270)
+                .padding(.bottom, -270)
         }
-        .frame(height: 250)
+        .padding(.leading, 10)
         .padding(.horizontal)
+    }
+}
+extension RoundedRectangle {
+    func rectangleModifier(_ colour: Color, _ height: CGFloat) -> some View {
+        self
+            .strokeBorder(Color("Border"), lineWidth: 2)
+            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(colour))
+            .frame(height: height)
+            
     }
 }
 
