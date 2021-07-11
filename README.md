@@ -1,2 +1,2 @@
-# Simoleon
+# Simoleon 💷
 Simoleon iOS App
