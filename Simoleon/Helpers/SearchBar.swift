@@ -14,7 +14,7 @@ struct SearchBar: View {
     var body: some View {
         VStack {
             Capsule()
-                .capsuleModifier(Color("Bone"))
+                .capsuleModifier(Color("Shadow"))
                 
             Capsule()
                 .capsuleModifier(Color(.systemBackground))
@@ -24,6 +24,7 @@ struct SearchBar: View {
                             .padding(.leading, 55)
                             .padding(.trailing)
                             .padding(.vertical, 25)  /// Expand tapable area
+                            .onTapGesture { isEditing = true }
                             .contentShape(Capsule())
                         
                         Image(systemName: "magnifyingglass.circle")
@@ -32,10 +33,10 @@ struct SearchBar: View {
                             .padding(.leading)
                     }
                 )
-                .offset(x: -7, y: -90)
-                .padding(.bottom, -90)
+                .offset(x: -5, y: -77)
+                .padding(.bottom, -78)
         }
-        .padding(.leading, 7)
+        .padding(.leading, 5)
         .padding(.horizontal)
         
     }
@@ -45,7 +46,7 @@ extension Capsule {
         self
             .strokeBorder(Color("Border"), lineWidth: 2)
             .background(Capsule().foregroundColor(colour))
-            .frame(height: 70)
+            .frame(height: 60)
     }
 }
 

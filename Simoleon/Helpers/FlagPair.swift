@@ -1,5 +1,5 @@
 //
-//  BigFlagsPair.swift
+//  FlagPair.swift
 //  Simoleon
 //
 //  Created by Dennis Concepción Martín on 11/07/2021.
@@ -7,23 +7,23 @@
 
 import SwiftUI
 
-struct BigFlagsPair: View {
+struct FlagPair: View {
     var mainCurrencyFlag: String
     var secondaryCurrencyFlag: String
     
     var body: some View {
         VStack {
             Image(secondaryCurrencyFlag)
-                .flagModifier(80)
+                .flagModifier(50)
             
             Image(mainCurrencyFlag)
-                .flagModifier(80)
-                .offset(x: 40, y: -60)
-                .padding(.bottom, -60)
+                .flagModifier(50)
+                .offset(x: 20, y: -40)
+                .padding(.bottom, -40)
                 
                 
         }
-        .padding(.trailing, 40)
+        .padding(.trailing, 20)
     }
 }
 extension Image {
@@ -37,8 +37,8 @@ extension Image {
     }
 }
 
-struct FlagsPair_Previews: PreviewProvider {
+struct SmallFlagsPair_Previews: PreviewProvider {
     static var previews: some View {
-        BigFlagsPair(mainCurrencyFlag: "GB", secondaryCurrencyFlag: "US")
+        FlagPair(mainCurrencyFlag: "GB", secondaryCurrencyFlag: "US")
     }
 }

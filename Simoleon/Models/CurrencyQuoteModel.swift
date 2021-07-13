@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct CurrencyQuoteModel: Codable {
-    var symbol: String
-    var price: Float
-    var bid: Float
-    var ask: Float
-    var timeStamp: Int
+struct CurrencyQuoteModel: Codable, Hashable {
+    var id: UUID?
+    var symbol: String?
+    var price: Float?
+    var bid: Float?
+    var ask: Float?
+    var timeStamp: Int?
     
     private enum CodingKeys: String, CodingKey {
         case symbol = "s"
@@ -22,3 +23,4 @@ struct CurrencyQuoteModel: Codable {
         case timeStamp = "t"
     }
 }
+extension CurrencyQuoteModel: Identifiable {}
