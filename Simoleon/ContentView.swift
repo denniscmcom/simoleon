@@ -10,10 +10,8 @@ import Alamofire
 
 struct ContentView: View {
     @State private var showingView = false
-    
     @State private var text = ""
     @State private var isEditing = false
-    
     @State private var popularCurrencyPairsQuote = [CurrencyQuoteModel()]
     @State private var popularSelectedCurrencyPairQuote: CurrencyQuoteModel? = nil
     
@@ -26,6 +24,7 @@ struct ContentView: View {
                     VStack(spacing: 20) {
                         SearchBar(text: $text, isEditing: $isEditing)
                             .padding(.vertical)
+                            .padding(.top)
                         
                         if text.isEmpty {
                             ForEach(popularCurrencyPairsQuote, id: \.self) { currencyQuote in

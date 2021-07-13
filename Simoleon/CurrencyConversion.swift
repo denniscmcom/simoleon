@@ -73,6 +73,7 @@ struct CurrencyConversion: View {
                 }
                 .padding(.vertical)
             }
+            .padding(.top)
             .navigationTitle("Conversion")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {

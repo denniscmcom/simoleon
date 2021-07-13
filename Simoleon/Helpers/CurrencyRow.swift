@@ -37,16 +37,20 @@ struct CurrencyRow: View {
                         
                         VStack(alignment: .leading) {
                             Text("Bid")
-                            Text("\(currencyQuote.bid!, specifier: "%.4f")")
+                            let bid = currencyQuote.bid!
+                            Text("\(bid, specifier: createSpecifier(bid))")
                                 .fontWeight(.semibold)
+                                .lineLimit(1)
                                 
                         }
                         .padding(.trailing)
                         
                         VStack(alignment: .leading) {
                             Text("Ask")
-                            Text("\(currencyQuote.ask!, specifier: "%.4f")")
+                            let ask = currencyQuote.ask!
+                            Text("\(ask, specifier: createSpecifier(ask))")
                                 .fontWeight(.semibold)
+                                .lineLimit(1)
                                 
                         }
                         
@@ -59,6 +63,18 @@ struct CurrencyRow: View {
         }
         .padding(.leading, 10)
         .padding(.horizontal)
+    }
+    
+    /*
+     Choose how many decimals depending on whether the price is hundreds, thousands, etc
+     */
+    
+    private func createSpecifier(_ amount: Float) -> String {
+        if amount >= 10 {
+            return "%.2f"
+        } else {
+            return "%.4f"
+        }
     }
 }
 extension RoundedRectangle {

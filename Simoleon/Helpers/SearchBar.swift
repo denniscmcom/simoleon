@@ -33,7 +33,7 @@ struct SearchBar: View {
                             .padding(.leading)
                     }
                 )
-                .offset(x: -5, y: -77)
+                .offset(x: -5, y: -78)
                 .padding(.bottom, -78)
         }
         .padding(.leading, 5)
