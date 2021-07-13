@@ -10,10 +10,13 @@ import Alamofire
 
 struct ContentView: View {
     @State private var showingView = false
+    
     @State private var text = ""
     @State private var isEditing = false
-    @State private var popularCurrencyPairs = [CurrencyQuoteModel()]
-    @State private var selectedCurrencyQuote: CurrencyQuoteModel? = nil
+    
+    @State private var popularCurrencyPairsQuote = [CurrencyQuoteModel()]
+    @State private var popularSelectedCurrencyPairQuote: CurrencyQuoteModel? = nil
+    
     let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
     var body: some View {
@@ -24,24 +27,22 @@ struct ContentView: View {
                         SearchBar(text: $text, isEditing: $isEditing)
                             .padding(.vertical)
                         
-                        ForEach(popularCurrencyPairs, id: \.self) { currencyQuote in
-                            CurrencyRow(currencyQuote: currencyQuote)
-                                .onTapGesture { self.selectedCurrencyQuote = currencyQuote }
-                                .padding(.bottom)
+                        if text.isEmpty {
+                            ForEach(popularCurrencyPairsQuote, id: \.self) { currencyQuote in
+                                CurrencyRow(currencyQuote: currencyQuote)
+                                    .onTapGesture { self.popularSelectedCurrencyPairQuote = currencyQuote }
+                                    .padding(.bottom)
+                            }
+                        } else {
+                            SearchedCurrencyList(text: $text)
                         }
                     }
-                    .sheet(item: self.$selectedCurrencyQuote) { currencyQuote in
+                    .sheet(item: self.$popularSelectedCurrencyPairQuote) { currencyQuote in
                         CurrencyConversion(currencyQuote: currencyQuote)
                     }
                 }
                 .navigationTitle("Simoleon")
                 .toolbar {
-                    ToolbarItem(placement: .primaryAction) {
-                        Button(action: {  }) {
-                            Image(systemName: "gearshape")
-                        }
-                    }
-                    
                     ToolbarItem(placement: .cancellationAction) {
                         if isEditing {
                             Button("Cancel", action: {
@@ -55,14 +56,14 @@ struct ContentView: View {
             }
         } else {
             ProgressView()
-                .onAppear(perform: requestPopularCurrencies)
+                .onAppear(perform: requestCurrencyPairsQuote)
         }
     }
     
     /*
-     Request API popular currency pairs
+     Request API
      */
-    private func requestPopularCurrencies() {
+    private func requestCurrencyPairsQuote() {
         let popularCurrencyPairsArray: [String] = parseJson("PopularCurrencyPairs.json")
         let popularCurrencyPairsString = popularCurrencyPairsArray.joined(separator: ",")
         let quotes = popularCurrencyPairsString.replacingOccurrences(of: "/", with: "-")
@@ -70,8 +71,8 @@ struct ContentView: View {
         
         // Request popular currencies
         AF.request(url).responseDecodable(of: [CurrencyQuoteModel].self) { response in
-            if let popularCurrencyPairs = response.value {
-                self.popularCurrencyPairs = popularCurrencyPairs
+            if let currencyPairsQuote = response.value {
+                self.popularCurrencyPairsQuote = currencyPairsQuote
                 self.showingView = true
             } else {
                 // Handle error
