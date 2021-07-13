@@ -39,21 +39,23 @@ struct SearchedCurrencyList: View {
      Request API
      */
     private func requestCurrencyPairsQuote() {
-        let searchedCurrencyPairsArray: [String] = parseJson("CurrencyPairs.json")
-        let filteredSearchedCurrencyPairsArray = searchedCurrencyPairsArray.filter { $0.contains(text.uppercased()) }
-        
-        if filteredSearchedCurrencyPairsArray.count <= 327 {
-            let searchedCurrencyPairsString = filteredSearchedCurrencyPairsArray.joined(separator: ",")
-            let quotes = searchedCurrencyPairsString.replacingOccurrences(of: "/", with: "-")
-            let url = "https://api.simoleon.app/quotes=\(quotes)"
-        
-            // Request popular currencies
-            AF.request(url).responseDecodable(of: [CurrencyQuoteModel].self) { response in
-                if let searchedCurrencyPairsQuote = response.value {
-                    self.searchedCurrencyPairsQuote = searchedCurrencyPairsQuote
-                    self.showingView = true
-                } else {
-                    // Handle error
+        if !text.isEmpty {
+            let searchedCurrencyPairsArray: [String] = parseJson("CurrencyPairs.json")
+            let filteredSearchedCurrencyPairsArray = searchedCurrencyPairsArray.filter { $0.contains(text.uppercased()) }
+            
+            if filteredSearchedCurrencyPairsArray.count <= 327 {
+                let searchedCurrencyPairsString = filteredSearchedCurrencyPairsArray.joined(separator: ",")
+                let quotes = searchedCurrencyPairsString.replacingOccurrences(of: "/", with: "-")
+                let url = "https://api.simoleon.app/quotes=\(quotes)"
+            
+                // Request popular currencies
+                AF.request(url).responseDecodable(of: [CurrencyQuoteModel].self) { response in
+                    if let searchedCurrencyPairsQuote = response.value {
+                        self.searchedCurrencyPairsQuote = searchedCurrencyPairsQuote
+                        self.showingView = true
+                    } else {
+                        // Handle error
+                    }
                 }
             }
         }
