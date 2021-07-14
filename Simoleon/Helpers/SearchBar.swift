@@ -33,10 +33,10 @@ struct SearchBar: View {
                             .padding(.leading)
                     }
                 )
-                .offset(x: -5, y: -78)
-                .padding(.bottom, -78)
+                .offset(x: -4, y: -65)
+                .padding(.bottom, -65)
         }
-        .padding(.leading, 5)
+        .padding(.leading, 4)
         .padding(.horizontal)
         
     }
@@ -46,7 +46,7 @@ extension Capsule {
         self
             .strokeBorder(Color("Border"), lineWidth: 2)
             .background(Capsule().foregroundColor(colour))
-            .frame(height: 60)
+            .frame(height: 50)
     }
 }
 

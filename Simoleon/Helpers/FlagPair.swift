@@ -14,10 +14,10 @@ struct FlagPair: View {
     var body: some View {
         VStack {
             Image(secondaryCurrencyFlag)
-                .flagModifier(50)
+                .flagModifier(40)
             
             Image(mainCurrencyFlag)
-                .flagModifier(50)
+                .flagModifier(40)
                 .offset(x: 20, y: -40)
                 .padding(.bottom, -40)
                 

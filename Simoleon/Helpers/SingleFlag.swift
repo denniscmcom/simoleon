@@ -12,7 +12,7 @@ struct SingleFlag: View {
     
     var body: some View {
         Image(flag)
-            .flagModifier(50)
+            .flagModifier(40)
     }
 }
 
