@@ -21,21 +21,20 @@ struct ContentView: View {
         if showingView {
             NavigationView {
                 ScrollView(showsIndicators: false) {
-                    VStack(spacing: 20) {
+                    VStack(spacing: 30) {
                         SearchBar(text: $text, isEditing: $isEditing)
-                            .padding(.vertical)
                             .padding(.top)
                         
                         if text.isEmpty {
                             ForEach(popularCurrencyPairsQuote, id: \.self) { currencyQuote in
                                 CurrencyRow(currencyQuote: currencyQuote)
                                     .onTapGesture { self.popularSelectedCurrencyPairQuote = currencyQuote }
-                                    .padding(.bottom)
                             }
                         } else {
                             SearchedCurrencyList(text: $text)
                         }
                     }
+                    .padding(.vertical)
                     .sheet(item: self.$popularSelectedCurrencyPairQuote) { currencyQuote in
                         CurrencyConversion(currencyQuote: currencyQuote)
                     }
@@ -91,6 +90,7 @@ extension UIApplication {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

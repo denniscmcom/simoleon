@@ -14,10 +14,10 @@ struct CurrencyRow: View {
     var body: some View {
         VStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 10)
-                .rectangleModifier(Color("Shadow"), 100)
+                .rectangleModifier(Color("Shadow"), 80)
             
             RoundedRectangle(cornerRadius: 10)
-                .rectangleModifier(Color(.systemBackground), 100)
+                .rectangleModifier(Color(.systemBackground), 80)
                 .overlay(
                     HStack {
                         let symbols = currencyQuote.symbol!.split(separator: "/")
@@ -55,13 +55,14 @@ struct CurrencyRow: View {
                         }
                         
                         Spacer()
+                        
                     }
                     .padding(.horizontal)
                 )
-                .offset(x: -10.0, y: -120.0)
-                .padding(.bottom, -120)
+                .offset(x: -6.0, y: -95.0)
+                .padding(.bottom, -95)
         }
-        .padding(.leading, 10)
+        .padding(.leading, 6)
         .padding(.horizontal)
     }
     
@@ -75,6 +76,18 @@ struct CurrencyRow: View {
         } else {
             return "%.4f"
         }
+    }
+    
+    /*
+     Convert unix time into human readable
+     */
+    private func convertUnixTime(_ timestamp: Int) -> String {
+        let now = Date()
+        let convertedDate = Date(timeIntervalSince1970: TimeInterval(timestamp))
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .abbreviated
+        
+        return formatter.string(from: convertedDate, to: now)!
     }
 }
 extension RoundedRectangle {

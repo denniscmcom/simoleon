@@ -21,10 +21,10 @@ struct CurrencyConversion: View {
                     // MARK: - First currency row
                     VStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .rectangleModifier(Color("Shadow"), 80)
+                            .rectangleModifier(Color("Shadow"), 65)
                         
                         RoundedRectangle(cornerRadius: 10)
-                            .rectangleModifier(Color(.systemBackground), 80)
+                            .rectangleModifier(Color(.systemBackground), 65)
                             .overlay(
                                 HStack {
                                     SingleFlag(flag: currenciesMetadata[String(symbols[0])]!.flag)
@@ -38,19 +38,19 @@ struct CurrencyConversion: View {
                                 }
                                 .padding(.horizontal)
                             )
-                            .offset(x: -10.0, y: -100.0)
-                            .padding(.bottom, -100)
+                            .offset(x: -6.0, y: -80.0)
+                            .padding(.bottom, -80)
                     }
-                    .padding(.leading, 10)
-                    .padding([.horizontal, .bottom])
+                    .padding(.leading, 6)
+                    .padding(.horizontal)
                     
                     // MARK: - Second currency row
                     VStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .rectangleModifier(Color("Shadow"), 80)
+                            .rectangleModifier(Color("Shadow"), 65)
 
                         RoundedRectangle(cornerRadius: 10)
-                            .rectangleModifier(Color(.systemBackground), 80)
+                            .rectangleModifier(Color(.systemBackground), 65)
                             .overlay(
                                 HStack {
                                     SingleFlag(flag: currenciesMetadata[String(symbols[1])]!.flag)
@@ -64,10 +64,10 @@ struct CurrencyConversion: View {
                                 }
                                 .padding(.horizontal)
                             )
-                            .offset(x: -10.0, y: -100.0)
-                            .padding(.bottom, -100)
+                            .offset(x: -6, y: -80)
+                            .padding(.bottom, -80)
                     }
-                    .padding(.leading, 10)
+                    .padding(.leading, 6)
                     .padding(.horizontal)
                     
                 }

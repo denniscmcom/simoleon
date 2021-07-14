@@ -164,7 +164,6 @@
 				95E76437269E0033008E9F31 /* Simoleon.entitlements */,
 				95C5B2272697752600941585 /* SimoleonApp.swift */,
 				95C5B2292697752600941585 /* ContentView.swift */,
-				95E137CE269C9D8B00D2C5DC /* CurrencyConversion.swift */,
 				95C5B22B2697752700941585 /* Assets.xcassets */,
 				95C5B2302697752700941585 /* Persistence.swift */,
 				95C5B2352697752700941585 /* Info.plist */,
@@ -217,11 +216,12 @@
 		95FE659A269AFB44008745DE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				95E137CE269C9D8B00D2C5DC /* CurrencyConversion.swift */,
+				95E76433269DF63D008E9F31 /* SearchedCurrencyList.swift */,
 				95FE659B269AFB54008745DE /* SearchBar.swift */,
 				956C28CB269B58A0005A4595 /* FlagPair.swift */,
 				95E137D0269C9F0D00D2C5DC /* SingleFlag.swift */,
 				956C28C9269B5893005A4595 /* CurrencyRow.swift */,
-				95E76433269DF63D008E9F31 /* SearchedCurrencyList.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -537,6 +537,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -560,6 +561,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
