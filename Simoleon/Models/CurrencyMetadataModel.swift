@@ -2,7 +2,7 @@
 //  CurrencyMetadataModel.swift
 //  Simoleon
 //
-//  Created by Dennis Concepción Martín on 11/07/2021.
+//  Created by Dennis Concepción Martín on 15/07/2021.
 //
 
 import SwiftUI

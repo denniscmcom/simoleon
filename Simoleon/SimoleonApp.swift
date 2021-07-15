@@ -14,10 +14,16 @@ struct SimoleonApp: App {
     var body: some Scene {
         WindowGroup {
             if UIDevice.current.userInterfaceIdiom == .pad {
-                SidebarNavigation()
+                NavigationView {
+                    Sidebar()
+                    ContentView()
+                    CurrencyConversion(currency: "EUR/USD")
+                }
             } else {
-                ContentView()
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                NavigationView {
+                    ContentView()
+                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                }
             }
         }
     }

@@ -2,13 +2,12 @@
 //  CurrencyQuoteModel.swift
 //  Simoleon
 //
-//  Created by Dennis Concepción Martín on 11/07/2021.
+//  Created by Dennis Concepción Martín on 15/07/2021.
 //
 
 import SwiftUI
 
 struct CurrencyQuoteModel: Codable, Hashable {
-    var id: UUID?
     var symbol: String?
     var price: Float?
     var bid: Float?
@@ -23,4 +22,3 @@ struct CurrencyQuoteModel: Codable, Hashable {
         case timeStamp = "t"
     }
 }
-extension CurrencyQuoteModel: Identifiable {}
