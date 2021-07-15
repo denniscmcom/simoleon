@@ -22,7 +22,6 @@ struct SearchedCurrencyList: View {
                 ForEach(searchedCurrencyPairsQuote, id: \.self) { currencyQuote in
                     CurrencyRow(currencyQuote: currencyQuote)
                         .onTapGesture { self.searchedSelectedCurrencyPairQuote = currencyQuote }
-                        .padding(.bottom)
                 }
             }
         }

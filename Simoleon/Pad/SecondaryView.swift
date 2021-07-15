@@ -1,23 +1,22 @@
 //
-//  CurrencyConversion.swift
+//  SecondaryView.swift
 //  Simoleon
 //
-//  Created by Dennis Concepción Martín on 12/07/2021.
+//  Created by Dennis Concepción Martín on 15/07/2021.
 //
 
 import SwiftUI
 
-struct CurrencyConversion: View {
+struct SecondaryView: View {
     var currencyQuote: CurrencyQuoteModel
     let currenciesMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     @State private var inputAmount: String = "100"
-    @Environment(\.presentationMode) private var currencyConversionPresentation
     
     var body: some View {
-        NavigationView {
+        if let symbol = currencyQuote.symbol {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 20) {
-                    let symbols = currencyQuote.symbol!.split(separator: "/")
+                    let symbols = symbol.split(separator: "/")
                     
                     // MARK: - First currency row
                     RoundedRectangle(cornerRadius: 10)
@@ -58,11 +57,6 @@ struct CurrencyConversion: View {
             }
             .padding(.top)
             .navigationTitle("Conversion")
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel", action: { currencyConversionPresentation.wrappedValue.dismiss() })
-                }
-            }
         }
     }
     
@@ -80,10 +74,8 @@ struct CurrencyConversion: View {
     }
 }
 
-struct CurrencyConversion_Previews: PreviewProvider {
+struct SecondaryView_Previews: PreviewProvider {
     static var previews: some View {
-        let currencyQuote: CurrencyQuoteModel = parseJson("CurrencyQuoteData.json")
-        
-        CurrencyConversion(currencyQuote: currencyQuote)
+        SecondaryView(currencyQuote: CurrencyQuoteModel())
     }
 }

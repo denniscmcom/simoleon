@@ -13,8 +13,12 @@ struct SimoleonApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                SidebarNavigation()
+            } else {
+                ContentView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
         }
     }
 }

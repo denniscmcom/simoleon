@@ -18,10 +18,10 @@ struct ContentView: View {
     let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
     var body: some View {
-        if showingView {
-            NavigationView {
+        NavigationView {
+            if showingView {
                 ScrollView(showsIndicators: false) {
-                    VStack(spacing: 30) {
+                    VStack(spacing: 20) {
                         SearchBar(text: $text, isEditing: $isEditing)
                             .padding(.top)
                         
@@ -39,7 +39,7 @@ struct ContentView: View {
                         CurrencyConversion(currencyQuote: currencyQuote)
                     }
                 }
-                .navigationTitle("Simoleon")
+                .navigationTitle("Currencies")
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         if isEditing {
@@ -51,10 +51,10 @@ struct ContentView: View {
                         }
                     }
                 }
+            } else {
+                ProgressView()
+                    .onAppear(perform: requestCurrencyPairsQuote)
             }
-        } else {
-            ProgressView()
-                .onAppear(perform: requestCurrencyPairsQuote)
         }
     }
     
@@ -82,10 +82,10 @@ struct ContentView: View {
  Dismiss keyboard on cancel textfield
  */
 extension UIApplication {
-      func dismissKeyboard() {
-          sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-      }
+  func dismissKeyboard() {
+      sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
   }
+}
 
 
 struct ContentView_Previews: PreviewProvider {

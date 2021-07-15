@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		954DB2EB269F43C80069F317 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954DB2EA269F43C80069F317 /* Sidebar.swift */; };
 		95559333269B0965000FD726 /* CurrencyQuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95559332269B0965000FD726 /* CurrencyQuoteModel.swift */; };
 		95559337269B0A7B000FD726 /* CurrencyQuoteData.json in Resources */ = {isa = PBXBuildFile; fileRef = 95559336269B0A7B000FD726 /* CurrencyQuoteData.json */; };
 		9555933A269B0AB8000FD726 /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95559339269B0AB8000FD726 /* ParseJson.swift */; };
@@ -30,6 +31,10 @@
 		95E76434269DF63D008E9F31 /* SearchedCurrencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E76433269DF63D008E9F31 /* SearchedCurrencyList.swift */; };
 		95E76436269DFC1A008E9F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E76435269DFC1A008E9F31 /* LaunchScreen.storyboard */; };
 		95E7643A269E0037008E9F31 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E76439269E0037008E9F31 /* CloudKit.framework */; };
+		95EA4F4226A0346800AF89F6 /* SidebarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA4F4126A0346800AF89F6 /* SidebarNavigation.swift */; };
+		95EA4F4426A034CC00AF89F6 /* PrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA4F4326A034CC00AF89F6 /* PrimaryView.swift */; };
+		95EA4F4626A034D800AF89F6 /* SupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA4F4526A034D800AF89F6 /* SupplementaryView.swift */; };
+		95EA4F4826A034E000AF89F6 /* SecondaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA4F4726A034E000AF89F6 /* SecondaryView.swift */; };
 		95FE659C269AFB54008745DE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FE659B269AFB54008745DE /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		954DB2EA269F43C80069F317 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		95559332269B0965000FD726 /* CurrencyQuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyQuoteModel.swift; sourceTree = "<group>"; };
 		95559336269B0A7B000FD726 /* CurrencyQuoteData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrencyQuoteData.json; sourceTree = "<group>"; };
 		95559339269B0AB8000FD726 /* ParseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
@@ -80,6 +86,10 @@
 		95E76435269DFC1A008E9F31 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E76437269E0033008E9F31 /* Simoleon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simoleon.entitlements; sourceTree = "<group>"; };
 		95E76439269E0037008E9F31 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		95EA4F4126A0346800AF89F6 /* SidebarNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarNavigation.swift; sourceTree = "<group>"; };
+		95EA4F4326A034CC00AF89F6 /* PrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryView.swift; sourceTree = "<group>"; };
+		95EA4F4526A034D800AF89F6 /* SupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryView.swift; sourceTree = "<group>"; };
+		95EA4F4726A034E000AF89F6 /* SecondaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryView.swift; sourceTree = "<group>"; };
 		95FE659B269AFB54008745DE /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +183,7 @@
 				95559331269B094A000FD726 /* Models */,
 				95559338269B0AAA000FD726 /* Functions */,
 				9555933B269B0DF9000FD726 /* Resources */,
+				95EA4F4026A0343B00AF89F6 /* Pad */,
 				95C5B22D2697752700941585 /* Preview Content */,
 			);
 			path = Simoleon;
@@ -213,6 +224,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		95EA4F4026A0343B00AF89F6 /* Pad */ = {
+			isa = PBXGroup;
+			children = (
+				95EA4F4126A0346800AF89F6 /* SidebarNavigation.swift */,
+				95EA4F4326A034CC00AF89F6 /* PrimaryView.swift */,
+				95EA4F4526A034D800AF89F6 /* SupplementaryView.swift */,
+				95EA4F4726A034E000AF89F6 /* SecondaryView.swift */,
+			);
+			path = Pad;
+			sourceTree = "<group>";
+		};
 		95FE659A269AFB44008745DE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +244,7 @@
 				956C28CB269B58A0005A4595 /* FlagPair.swift */,
 				95E137D0269C9F0D00D2C5DC /* SingleFlag.swift */,
 				956C28C9269B5893005A4595 /* CurrencyRow.swift */,
+				954DB2EA269F43C80069F317 /* Sidebar.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -366,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95EA4F4626A034D800AF89F6 /* SupplementaryView.swift in Sources */,
 				956C28CA269B5893005A4595 /* CurrencyRow.swift in Sources */,
 				956C28CC269B58A0005A4595 /* FlagPair.swift in Sources */,
 				9555933F269B0E47000FD726 /* CurrencyMetadataModel.swift in Sources */,
@@ -376,8 +400,12 @@
 				95FE659C269AFB54008745DE /* SearchBar.swift in Sources */,
 				95E137D1269C9F0D00D2C5DC /* SingleFlag.swift in Sources */,
 				95559333269B0965000FD726 /* CurrencyQuoteModel.swift in Sources */,
+				95EA4F4826A034E000AF89F6 /* SecondaryView.swift in Sources */,
 				95C5B2282697752600941585 /* SimoleonApp.swift in Sources */,
+				95EA4F4426A034CC00AF89F6 /* PrimaryView.swift in Sources */,
+				95EA4F4226A0346800AF89F6 /* SidebarNavigation.swift in Sources */,
 				95C5B2342697752700941585 /* Simoleon.xcdatamodeld in Sources */,
+				954DB2EB269F43C80069F317 /* Sidebar.swift in Sources */,
 				95E76434269DF63D008E9F31 /* SearchedCurrencyList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,7 +565,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -550,7 +578,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -561,7 +589,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -574,7 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
