@@ -44,6 +44,7 @@ struct CurrencyRow: View {
             }
             .padding(.horizontal)
         }
+        .padding(.vertical, 7)
     }
 }
 

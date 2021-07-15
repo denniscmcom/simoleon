@@ -19,7 +19,6 @@ struct ContentView: View {
             List(filterCurrencies(), id: \.self) { currency in
                 NavigationLink(destination: CurrencyConversion(currency: currency)) {
                     CurrencyRow(currency: currency)
-                        .padding(.vertical, 7)
                 }
             }
             .id(UUID())

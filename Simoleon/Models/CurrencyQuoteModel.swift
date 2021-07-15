@@ -9,9 +9,9 @@ import SwiftUI
 
 struct CurrencyQuoteModel: Codable, Hashable {
     var symbol: String?
-    var price: Float?
-    var bid: Float?
-    var ask: Float?
+    var price: Double?
+    var bid: Double?
+    var ask: Double?
     var timeStamp: Int?
     
     private enum CodingKeys: String, CodingKey {
