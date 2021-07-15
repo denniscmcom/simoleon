@@ -12,58 +12,50 @@ struct CurrencyRow: View {
     let currenciesMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
     var body: some View {
-        VStack(alignment: .leading) {
-            RoundedRectangle(cornerRadius: 10)
-                .rectangleModifier(Color("Shadow"), 80)
-            
-            RoundedRectangle(cornerRadius: 10)
-                .rectangleModifier(Color(.systemBackground), 80)
-                .overlay(
-                    HStack {
-                        let symbols = currencyQuote.symbol!.split(separator: "/")
-                        let mainCurrencyFlag = currenciesMetadata[String(symbols[0])]!.flag
-                        let secondaryCurrencyFlag = currenciesMetadata[String(symbols[1])]!.flag
+        RoundedRectangle(cornerRadius: 10)
+            .rectangleModifier(Color(.systemBackground), 80)
+            .overlay(
+                HStack {
+                    let symbols = currencyQuote.symbol!.split(separator: "/")
+                    let mainCurrencyFlag = currenciesMetadata[String(symbols[0])]!.flag
+                    let secondaryCurrencyFlag = currenciesMetadata[String(symbols[1])]!.flag
+                    
+                    FlagPair(mainCurrencyFlag: mainCurrencyFlag, secondaryCurrencyFlag: secondaryCurrencyFlag)
+                    
+                    VStack(alignment: .leading) {
+                        Text("\(String(symbols[0]))")
+                            .fontWeight(.semibold)
                         
-                        FlagPair(mainCurrencyFlag: mainCurrencyFlag, secondaryCurrencyFlag: secondaryCurrencyFlag)
-                        
-                        VStack(alignment: .leading) {
-                            Text("\(String(symbols[0]))")
-                                .fontWeight(.semibold)
-                            
-                            Text("\(String(symbols[1]))")
-                                .fontWeight(.semibold)
-                        }
-                        .padding(.horizontal)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Bid")
-                            let bid = currencyQuote.bid!
-                            Text("\(bid, specifier: createSpecifier(bid))")
-                                .fontWeight(.semibold)
-                                .lineLimit(1)
-                                
-                        }
-                        .padding(.trailing)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Ask")
-                            let ask = currencyQuote.ask!
-                            Text("\(ask, specifier: createSpecifier(ask))")
-                                .fontWeight(.semibold)
-                                .lineLimit(1)
-                                
-                        }
-                        
-                        Spacer()
-                        
+                        Text("\(String(symbols[1]))")
+                            .fontWeight(.semibold)
                     }
                     .padding(.horizontal)
-                )
-                .offset(x: -6.0, y: -95.0)
-                .padding(.bottom, -95)
-        }
-        .padding(.leading, 6)
-        .padding(.horizontal)
+                    
+                    VStack(alignment: .leading) {
+                        Text("Bid")
+                        let bid = currencyQuote.bid!
+                        Text("\(bid, specifier: createSpecifier(bid))")
+                            .fontWeight(.semibold)
+                            .lineLimit(1)
+                            
+                    }
+                    .padding(.trailing)
+                    
+                    VStack(alignment: .leading) {
+                        Text("Ask")
+                        let ask = currencyQuote.ask!
+                        Text("\(ask, specifier: createSpecifier(ask))")
+                            .fontWeight(.semibold)
+                            .lineLimit(1)
+                            
+                    }
+                    
+                    Spacer()
+                    
+                }
+                .padding(.horizontal)
+            )
+            .padding(.horizontal)
     }
     
     /*
