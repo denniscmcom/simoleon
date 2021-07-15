@@ -2,95 +2,63 @@
 //  ContentView.swift
 //  Simoleon
 //
-//  Created by Dennis Concepción Martín on 08/07/2021.
+//  Created by Dennis Concepción Martín on 15/07/2021.
 //
 
 import SwiftUI
-import Alamofire
 
 struct ContentView: View {
-    @State private var showingView = false
-    @State private var text = ""
-    @State private var isEditing = false
-    @State private var popularCurrencyPairsQuote = [CurrencyQuoteModel()]
-    @State private var popularSelectedCurrencyPairQuote: CurrencyQuoteModel? = nil
-    
-    let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
+    @State var searchText = ""
+    @State var searching = false
+    @State private var refreshView = 0
+    let currencyPairs: [String] = parseJson("CurrencyPairs.json")
     
     var body: some View {
-        NavigationView {
-            if showingView {
-                ScrollView(showsIndicators: false) {
-                    VStack(spacing: 20) {
-                        SearchBar(text: $text, isEditing: $isEditing)
-                            .padding(.top)
-                        
-                        if text.isEmpty {
-                            ForEach(popularCurrencyPairsQuote, id: \.self) { currencyQuote in
-                                CurrencyRow(currencyQuote: currencyQuote)
-                                    .onTapGesture { self.popularSelectedCurrencyPairQuote = currencyQuote }
-                            }
-                        } else {
-                            SearchedCurrencyList(text: $text)
-                        }
-                    }
-                    .padding(.vertical)
-                    .sheet(item: self.$popularSelectedCurrencyPairQuote) { currencyQuote in
-                        CurrencyConversion(currencyQuote: currencyQuote)
-                    }
+        VStack {
+            SearchBar(searchText: $searchText, searching: $searching)
+            List(filterCurrencies(), id: \.self) { currency in
+                NavigationLink(destination: CurrencyConversion(currency: currency)) {
+                    CurrencyRow(currency: currency)
+                        .padding(.vertical, 7)
                 }
-                .navigationTitle("Currencies")
-                .toolbar {
-                    ToolbarItem(placement: .cancellationAction) {
-                        if isEditing {
-                            Button("Cancel", action: {
-                                text = ""
-                                isEditing = false
-                                UIApplication.shared.dismissKeyboard()
-                            })
-                        }
-                    }
-                }
-            } else {
-                ProgressView()
-                    .onAppear(perform: requestCurrencyPairsQuote)
             }
+            .id(UUID())
+            .listStyle(InsetListStyle())
+            .gesture(DragGesture()
+                .onChanged({ _ in
+                     UIApplication.shared.dismissKeyboard()
+                 })
+            )
+        }
+        .navigationTitle(searching ? "Search" : "Popular currencies")
+        .toolbar {
+             if searching {
+                 Button("Cancel") { searchText = ""
+                     withAnimation {
+                        searching = false
+                        UIApplication.shared.dismissKeyboard()
+                     }
+                 }
+             }
         }
     }
     
-    /*
-     Request API
-     */
-    private func requestCurrencyPairsQuote() {
-        let popularCurrencyPairsArray: [String] = parseJson("PopularCurrencyPairs.json")
-        let popularCurrencyPairsString = popularCurrencyPairsArray.joined(separator: ",")
-        let quotes = popularCurrencyPairsString.replacingOccurrences(of: "/", with: "-")
-        let url = "https://api.simoleon.app/quotes=\(quotes)"
-        
-        // Request popular currencies
-        AF.request(url).responseDecodable(of: [CurrencyQuoteModel].self) { response in
-            if let currencyPairsQuote = response.value {
-                self.popularCurrencyPairsQuote = currencyPairsQuote
-                self.showingView = true
-            } else {
-                // Handle error
-            }
+    private func filterCurrencies() -> [String] {
+        if searchText.isEmpty {
+            return currencyPairs
+        } else {
+            return currencyPairs.filter { $0.contains(searchText.uppercased()) }
         }
     }
 }
-/*
- Dismiss keyboard on cancel textfield
- */
 extension UIApplication {
-  func dismissKeyboard() {
-      sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+      func dismissKeyboard() {
+          sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+      }
   }
-}
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
