@@ -10,9 +10,10 @@ import Alamofire
 
 struct CurrencyConversion: View {
     var currency: String
-    @State private var price: Float = 1
+    @State private var price: Double = 1.00
     @State private var amountToConvert = "100"
     @State private var isEditing = false
+    @State private var showConversion = false
     let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
     var body: some View {
@@ -46,6 +47,8 @@ struct CurrencyConversion: View {
                                 isEditing = false
                              }
                          }
+                        .keyboardType(.decimalPad)
+                        .lineLimit(1)
                         .padding(.horizontal)
                         
                         Text("\(mainCurrency)")
@@ -68,8 +71,14 @@ struct CurrencyConversion: View {
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color(.systemGray), lineWidth: 1))
                         
-                        Text("\(makeConversion(), specifier: "%.2f")")
-                            .padding(.horizontal)
+                        if showConversion {
+                            Text("\(makeConversion(), specifier: "%.4f")")
+                                .lineLimit(1)
+                                .padding(.horizontal)
+                        } else {
+                            ProgressView()
+                                .padding(.horizontal)
+                        }
                         
                         Spacer()
                         Text("\(secondaryCurrency)")
@@ -80,8 +89,10 @@ struct CurrencyConversion: View {
                 .frame(height: 50)
                 .cornerRadius(13)
                 
-                Text("From \(currencyMetadata[secondaryCurrency]!.name) to \(currencyMetadata[mainCurrency]!.name) at \(price, specifier: "%.2f") exchange rate.")
-                    .multilineTextAlignment(.center)
+                if showConversion {
+                    Text("From \(currencyMetadata[mainCurrency]!.name) to \(currencyMetadata[secondaryCurrency]!.name) at \(price, specifier: "%.4f") exchange rate.")
+                        .multilineTextAlignment(.center)
+                }
                 
             }
             .padding()
@@ -90,11 +101,11 @@ struct CurrencyConversion: View {
         .navigationTitle("Conversion")
     }
     
-    private func makeConversion() -> Float {
+    private func makeConversion() -> Double {
         if amountToConvert.isEmpty {  /// Avoid nil error when string is empty
             return 0
         } else {
-            let conversion = Float(amountToConvert)!  * price
+            let conversion = Double(amountToConvert)!  * price
 
             return conversion
         }
@@ -103,8 +114,11 @@ struct CurrencyConversion: View {
     private func requestApi(_ mainCurrency: String, _ secondaryCurrency: String) {
         let url = "https://api.simoleon.app/quotes=\(mainCurrency)-\(secondaryCurrency)"
         AF.request(url).responseDecodable(of: [CurrencyQuoteModel].self) { response in
-            if let price = response.value![0].price {
-                self.price = price
+            if let currencyQuotes = response.value {
+                if let price = currencyQuotes[0].price {
+                    self.price = price
+                }
+                self.showConversion = true
             } else {
 //               Handle error
             }
