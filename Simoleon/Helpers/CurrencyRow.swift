@@ -8,48 +8,37 @@
 import SwiftUI
 
 struct CurrencyRow: View {
-    let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     var currency: String
+    let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
     var body: some View {
-        let currencies = currency.components(separatedBy: "/")
-        let mainCurrency = String(currencies[0])
-        let secondaryCurrency = String(currencies[1])
         HStack {
-            Image(currencyMetadata[mainCurrency]!.flag)
+            Image(currencyMetadata[currency]!.flag)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 30, height: 30)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color(.systemGray), lineWidth: 1))
-            
-            Image(currencyMetadata[secondaryCurrency]!.flag)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 30, height: 30)
-                .clipShape(Circle())
-                .overlay(Circle().stroke(Color(.systemGray), lineWidth: 1))
-                .offset(x: -20)
-                .padding(.trailing, -20)
             
             VStack(alignment: .leading) {
                 Text("\(currency)")
                     .fontWeight(.semibold)
+                    .foregroundColor(Color("PlainButton"))
                 
-                Text("\(currencyMetadata[mainCurrency]!.name)/\(currencyMetadata[secondaryCurrency]!.name)")
+                Text("\(currencyMetadata[currency]!.name)")
                     .font(.footnote)
                     .fontWeight(.semibold)
+                    .foregroundColor(Color("PlainButton"))
                     .opacity(0.5)
                     .lineLimit(1)
             }
             .padding(.horizontal)
         }
-        .padding(.vertical, 7)
     }
 }
 
 struct CurrencyRow_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyRow(currency: "USD/GBP")
+        CurrencyRow(currency: "USD")
     }
 }
