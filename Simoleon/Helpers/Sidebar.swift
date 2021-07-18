@@ -2,7 +2,7 @@
 //  Sidebar.swift
 //  Simoleon
 //
-//  Created by Dennis Concepción Martín on 15/07/2021.
+//  Created by Dennis Concepción Martín on 18/07/2021.
 //
 
 import SwiftUI
@@ -10,12 +10,11 @@ import SwiftUI
 struct Sidebar: View {
     var body: some View {
         List {
-            NavigationLink(destination: ContentView()) {
-                Text("Popular currencies")
+            NavigationLink(destination: Conversion()) {
+                Label("Convert", systemImage: "glass")
             }
         }
         .listStyle(SidebarListStyle())
-        .navigationBarTitle("Categories")
     }
 }
 
