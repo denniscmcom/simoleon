@@ -11,7 +11,15 @@ struct Sidebar: View {
     var body: some View {
         List {
             NavigationLink(destination: Conversion()) {
-                Label("Convert", systemImage: "glass")
+                Label("Convert", systemImage: "arrow.counterclockwise.circle")
+            }
+            
+            NavigationLink(destination: Text("Favourites")) {
+                Label("Favourites", systemImage: "star")
+            }
+            
+            NavigationLink(destination: Text("Settings")) {
+                Label("Settings", systemImage: "gear")
             }
         }
         .listStyle(SidebarListStyle())

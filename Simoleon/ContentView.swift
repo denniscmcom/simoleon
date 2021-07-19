@@ -8,10 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var tab: Tab = .convert
     var body: some View {
-        NavigationView {
+        TabView(selection: $tab) {
             Conversion()
+                .tabItem {
+                    Label("Convert", systemImage: "arrow.counterclockwise.circle")
+                }
+                .tag(Tab.convert)
+            
+            Favourites()
+                .tabItem {
+                    Label("Favourites", systemImage: "star")
+                }
+                .tag(Tab.favourites)
+            
+            Text("Settings")
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
+                .tag(Tab.settings)
         }
+    }
+    
+    private enum Tab {
+        case convert, favourites, settings
     }
 }
 
