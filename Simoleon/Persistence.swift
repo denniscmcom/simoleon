@@ -17,6 +17,11 @@ struct PersistenceController {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
         }
+        
+        for _ in 0..<10 {
+            let favourite = Favourite(context: viewContext)
+            favourite.currencyPair = "USD/GBP"
+        }
         do {
             try viewContext.save()
         } catch {

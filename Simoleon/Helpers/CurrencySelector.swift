@@ -8,58 +8,78 @@
 import SwiftUI
 
 struct CurrencySelector: View {
-    @Binding var mainCurrencySelected: String
-    @Binding var secondaryCurrencySelected: String
+    @Binding var currencyPair: String
     @Binding var showingCurrencySelector: Bool
-    @Binding var selectingMainCurrency: Bool
+    @State private var searchCurrency = ""
+    @State private var searching = false
     
     var body: some View {
         NavigationView {
             Form {
-                ForEach(generateCurrencyList(), id: \.self) { currency in
-                    Button(action: { select(currency) }) {
-                        CurrencyRow(currency: currency)
+                TextField("Search ...", text: $searchCurrency) { startedEditing in
+                if startedEditing {
+                         withAnimation {
+                             searching = true
+                         }
+                     }
+                } onCommit: {
+                    withAnimation {
+                        searching = false
+                    }
+                }
+                
+                Section(header: Text("All currencies")) {
+                    ForEach(currencyPairs(), id: \.self) { currencyPair in
+                        Button(action: {
+                            self.currencyPair = currencyPair
+                            showingCurrencySelector = false
+                        }) {
+                            CurrencyRow(currencyPair: currencyPair)
+                        }
                     }
                 }
             }
+            .gesture(DragGesture()
+                 .onChanged({ _ in
+                     UIApplication.shared.dismissKeyboard()
+                 })
+             )
             .navigationTitle("Currencies")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("OK", action: { showingCurrencySelector = false })
                 }
+                
+                ToolbarItem(placement: .cancellationAction) {
+                    if searching {
+                         Button("Cancel") {
+                            searchCurrency = ""
+                             withAnimation {
+                                searching = false
+                                UIApplication.shared.dismissKeyboard()
+                             }
+                         }
+                     }
+                }
             }
         }
     }
     
-    private func generateCurrencyList() -> [String] {
+    private func currencyPairs() -> [String] {
         let currencyPairs: [String] = parseJson("CurrencyPairs.json")
-        var currencies: [String] = []
         
-        for currencyPair in currencyPairs {
-            let splittedCurrencies = currencyPair.split(separator: "/")
-            let mainCurrency = String(splittedCurrencies[0])
-            if !currencies.contains(mainCurrency) {
-                currencies.append(mainCurrency)
-            }
-        }
-        
-        return currencies
-    }
-    
-    private func select(_ currency: String) {
-        if selectingMainCurrency {
-            self.mainCurrencySelected = currency
+        if searchCurrency.isEmpty {
+            return currencyPairs
         } else {
-            self.secondaryCurrencySelected = currency
+            return currencyPairs.filter { $0.contains(searchCurrency.uppercased()) }
         }
-        
-        showingCurrencySelector = false
     }
 }
 
+
 struct CurrencySelector_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencySelector(mainCurrencySelected: .constant(""), secondaryCurrencySelected: .constant(""), showingCurrencySelector: .constant(false), selectingMainCurrency: .constant(true))
+        CurrencySelector(currencyPair: .constant("USD/GBP"), showingCurrencySelector: .constant(false))
     }
 }
