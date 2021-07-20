@@ -34,13 +34,13 @@ struct Settings: View {
                     }
                 }
                 
-                Link(destination: URL(string: "https://dennistech.io")!) {
+                Link(destination: URL(string: "https://twitter.com/dennisconcep")!) {
                     HStack {
                         Image("TwitterLogo")
                             .resizable()
                             .frame(width: 30, height: 30)
                         
-                        Text("Follow on Twitter")
+                        Text("Developer's Twitter")
                     }
                 }
                 
@@ -58,7 +58,6 @@ struct Settings: View {
             Section(header: Text("About")) {
                 Link("Website", destination: URL(string: "https://dennistech.io")!)
                 Link("Privacy Policy", destination: URL(string: "https://dennistech.io")!)
-                Link("Developer's Twitter", destination: URL(string: "https://twitter.com/dennisconcep")!)
             }
         }
         .onChange(of: selectedCurrencyPair, perform: { selectedCurrencyPair in
