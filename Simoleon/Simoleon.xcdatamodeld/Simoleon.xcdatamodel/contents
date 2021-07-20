@@ -6,8 +6,12 @@
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="UserSettings" representedClassName="UserSettings" syncable="YES">
+        <attribute name="defaultCurrency" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
         <element name="Favourite" positionX="-63" positionY="-9" width="128" height="44"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="UserSettings" positionX="-63" positionY="-9" width="128" height="44"/>
     </elements>
 </model>
