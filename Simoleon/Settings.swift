@@ -21,9 +21,6 @@ struct Settings: View {
                         Text(currencyPair)
                     }
                 }
-                .onChange(of: selectedCurrencyPair, perform: { selectedCurrencyPair in
-                    setDefaultCurrency()
-                })
             }
             
             Section(header: Text("Stay in touch")) {
@@ -64,6 +61,9 @@ struct Settings: View {
                 Link("Developer's Twitter", destination: URL(string: "https://twitter.com/dennisconcep")!)
             }
         }
+        .onChange(of: selectedCurrencyPair, perform: { selectedCurrencyPair in
+            setDefaultCurrency()
+        })
         .onAppear(perform: fetchUserSettings)
         .listStyle(InsetGroupedListStyle())
         .navigationTitle("Settings")

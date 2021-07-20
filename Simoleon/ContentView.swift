@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var tab: Tab = .convert
     var body: some View {
         TabView(selection: $tab) {
-            Conversion()
+            Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")
                 .tabItem {
                     Label("Convert", systemImage: "arrow.counterclockwise.circle")
                 }
