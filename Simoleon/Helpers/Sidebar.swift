@@ -14,11 +14,11 @@ struct Sidebar: View {
                 Label("Convert", systemImage: "arrow.counterclockwise.circle")
             }
             
-            NavigationLink(destination: Text("Favourites")) {
+            NavigationLink(destination: Favourites()) {
                 Label("Favourites", systemImage: "star")
             }
             
-            NavigationLink(destination: Text("Settings")) {
+            NavigationLink(destination: Settings()) {
                 Label("Settings", systemImage: "gear")
             }
         }

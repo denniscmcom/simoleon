@@ -25,7 +25,7 @@ struct Conversion: View {
                     Button(action: { showingCurrencySelector = true }) {
                         RoundedRectangle(cornerRadius: 25)
                             .foregroundColor(Color(.secondarySystemBackground))
-                            .frame(height: 75)
+                            .frame(height: 65)
                             .overlay(CurrencyRow(currencyPair: currencyPair).padding(.horizontal))
                     }
                     
@@ -52,39 +52,32 @@ struct Conversion: View {
                 CurrencySelector(currencyPair: $currencyPair, showingCurrencySelector: $showingCurrencySelector)
             }
         }
-        .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
-            NavigationView {
-                content
-                    .navigationTitle("Conversion")
-                    .toolbar {
-                        ToolbarItem(placement: .cancellationAction) {
-                            if isEditing {
-                                Button("Cancel", action: {
-                                    UIApplication.shared.dismissKeyboard()
-                                    isEditing = false
-                                })
-                            }
-                        }
-                    }
+        .navigationTitle("Conversion")
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+                if isEditing {
+                    Button("Cancel", action: {
+                        UIApplication.shared.dismissKeyboard()
+                        isEditing = false
+                    })
+                }
             }
+        }
+        .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
+            NavigationView { content }
         }
     }
     
     private func request(_ currencyPair: String) {
-        let url = "https://api.1forge.com/quotes?pairs=\(currencyPair)&api_key=BFWeJQ3jJtqqpDv5ArNis59pAlFcQ4KF"
+        let url = "\(readConfig("API_URL")!)quotes?pairs=\(currencyPair)&api_key=\(readConfig("API_KEY")!)"
         
-        AF.request(url).responseDecodable(of: [CurrencyQuoteModel].self) { response in
+        Simoleon.request(url: url, model: [CurrencyQuoteModel].self) { response in
             self.showingConversion = false
-            
-            if let currencyQuotes = response.value {
-                if let price = currencyQuotes.first?.price {
-                    self.price = price
-                    self.showingConversion =  true
-                } else {
-//                    Handle error
-                }
+            if let price = response.first?.price {
+                self.price = price
+                self.showingConversion =  true
             } else {
-//               Handle error
+                // Handle error
             }
         }
     }

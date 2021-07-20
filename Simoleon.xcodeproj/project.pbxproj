@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9555933A269B0AB8000FD726 /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95559339269B0AB8000FD726 /* ParseJson.swift */; };
 		9555933D269B0E0A000FD726 /* CurrencyMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 9555933C269B0E0A000FD726 /* CurrencyMetadata.json */; };
+		957065E226A5FE0400523E68 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957065E126A5FE0400523E68 /* Settings.swift */; };
+		9585BB1226A6B71B00E3193E /* ReadConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1126A6B71B00E3193E /* ReadConfig.swift */; };
+		9585BB1426A6B7F400E3193E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1326A6B7F400E3193E /* Request.swift */; };
 		95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9426A03ECB00613729 /* ContentView.swift */; };
 		95AEBC9B26A04A4200613729 /* CurrencyMetadataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9A26A04A4200613729 /* CurrencyMetadataModel.swift */; };
 		95AEBC9D26A04D4600613729 /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9C26A04D4600613729 /* CurrencyRow.swift */; };
@@ -18,7 +21,6 @@
 		95B54F4A26A4A450001DC0D8 /* ConversionBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B54F4926A4A450001DC0D8 /* ConversionBox.swift */; };
 		95B54F4F26A4AC52001DC0D8 /* ContentViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B54F4E26A4AC52001DC0D8 /* ContentViewPad.swift */; };
 		95B54F5126A4ACAC001DC0D8 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B54F5026A4ACAC001DC0D8 /* Sidebar.swift */; };
-		95C02C8B269B61680061DD6D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 95C02C8A269B61680061DD6D /* Alamofire */; };
 		95C5179126A5DC8E00BC2B24 /* ConditionalWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179026A5DC8E00BC2B24 /* ConditionalWrapper.swift */; };
 		95C5179926A5EC9F00BC2B24 /* FavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179826A5EC9F00BC2B24 /* FavouriteButton.swift */; };
 		95C5179C26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179A26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift */; };
@@ -57,6 +59,11 @@
 /* Begin PBXFileReference section */
 		95559339269B0AB8000FD726 /* ParseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
 		9555933C269B0E0A000FD726 /* CurrencyMetadata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrencyMetadata.json; sourceTree = "<group>"; };
+		957065E126A5FE0400523E68 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		9585BB0F26A6B58500E3193E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		9585BB1026A6B5ED00E3193E /* ConfigTemplate.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigTemplate.xcconfig; sourceTree = "<group>"; };
+		9585BB1126A6B71B00E3193E /* ReadConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadConfig.swift; sourceTree = "<group>"; };
+		9585BB1326A6B7F400E3193E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		95AEBC9426A03ECB00613729 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95AEBC9A26A04A4200613729 /* CurrencyMetadataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyMetadataModel.swift; sourceTree = "<group>"; };
 		95AEBC9C26A04D4600613729 /* CurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRow.swift; sourceTree = "<group>"; };
@@ -96,7 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95C02C8B269B61680061DD6D /* Alamofire in Frameworks */,
 				95E7643A269E0037008E9F31 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				95559339269B0AB8000FD726 /* ParseJson.swift */,
+				9585BB1126A6B71B00E3193E /* ReadConfig.swift */,
+				9585BB1326A6B7F400E3193E /* Request.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -149,6 +157,8 @@
 		95C5B21B2697752600941585 = {
 			isa = PBXGroup;
 			children = (
+				9585BB1026A6B5ED00E3193E /* ConfigTemplate.xcconfig */,
+				9585BB0F26A6B58500E3193E /* Config.xcconfig */,
 				95C5B2262697752600941585 /* Simoleon */,
 				95C5B23D2697752700941585 /* SimoleonTests */,
 				95C5B2482697752700941585 /* SimoleonUITests */,
@@ -176,6 +186,7 @@
 				95B54F4E26A4AC52001DC0D8 /* ContentViewPad.swift */,
 				95B54F4326A4842C001DC0D8 /* Conversion.swift */,
 				95C5179E26A5F34200BC2B24 /* Favourites.swift */,
+				957065E126A5FE0400523E68 /* Settings.swift */,
 				95C5B22B2697752700941585 /* Assets.xcassets */,
 				95C5B2302697752700941585 /* Persistence.swift */,
 				95C5B2352697752700941585 /* Info.plist */,
@@ -255,7 +266,6 @@
 			);
 			name = Simoleon;
 			packageProductDependencies = (
-				95C02C8A269B61680061DD6D /* Alamofire */,
 			);
 			productName = Simoleon;
 			productReference = 95C5B2242697752600941585 /* Simoleon.app */;
@@ -329,7 +339,6 @@
 			);
 			mainGroup = 95C5B21B2697752600941585;
 			packageReferences = (
-				95C02C89269B61680061DD6D /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 95C5B2252697752600941585 /* Products */;
 			projectDirPath = "";
@@ -379,6 +388,7 @@
 				95C5179926A5EC9F00BC2B24 /* FavouriteButton.swift in Sources */,
 				95C5179C26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift in Sources */,
 				95C5B2312697752700941585 /* Persistence.swift in Sources */,
+				9585BB1226A6B71B00E3193E /* ReadConfig.swift in Sources */,
 				95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */,
 				95AEBC9B26A04A4200613729 /* CurrencyMetadataModel.swift in Sources */,
 				9555933A269B0AB8000FD726 /* ParseJson.swift in Sources */,
@@ -390,6 +400,8 @@
 				95AEBC9D26A04D4600613729 /* CurrencyRow.swift in Sources */,
 				95AEBCA326A0900E00613729 /* CurrencyQuoteModel.swift in Sources */,
 				95B54F4F26A4AC52001DC0D8 /* ContentViewPad.swift in Sources */,
+				9585BB1426A6B7F400E3193E /* Request.swift in Sources */,
+				957065E226A5FE0400523E68 /* Settings.swift in Sources */,
 				95B54F4426A4842C001DC0D8 /* Conversion.swift in Sources */,
 				95C5B2342697752700941585 /* Simoleon.xcdatamodeld in Sources */,
 				95C5179126A5DC8E00BC2B24 /* ConditionalWrapper.swift in Sources */,
@@ -493,6 +505,7 @@
 		};
 		95C5B24D2697752700941585 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9585BB0F26A6B58500E3193E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -548,6 +561,7 @@
 		};
 		95C5B24F2697752700941585 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9585BB0F26A6B58500E3193E /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -720,25 +734,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		95C02C89269B61680061DD6D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		95C02C8A269B61680061DD6D /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95C02C89269B61680061DD6D /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		95C5B2322697752700941585 /* Simoleon.xcdatamodeld */ = {

@@ -22,7 +22,7 @@ struct FavouriteButton: View {
         }) {
             RoundedRectangle(cornerRadius: 25)
                 .foregroundColor(Color(.secondarySystemBackground))
-                .frame(width: 75, height: 75)
+                .frame(width: 65, height: 65)
                 .overlay(
                     Image(systemName: generateStar())
                         .font(.system(size: 28))
