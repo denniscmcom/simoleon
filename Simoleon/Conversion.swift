@@ -9,16 +9,17 @@ import SwiftUI
 import Alamofire
 
 struct Conversion: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) private var userSettings: FetchedResults<UserSettings>
+    var fetchUserSettings: Bool
+    @State var currencyPair: String
     
-    @State private var currencyPair = "USD/GBP"
     @State private var amountToConvert = "1000"
     @State private var price: Double = 1.00
     @State private var showingConversion = false
     @State private var showingCurrencySelector = false
     @State private var isEditing = false
     
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) private var userSettings: FetchedResults<UserSettings>
     let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
     var body: some View {
@@ -46,7 +47,10 @@ struct Conversion: View {
             }
             .padding()
             .onAppear {
-                fetchUserSettings()
+                if fetchUserSettings {
+                    fetchingUserSettings()
+                }
+                
                 request(currencyPair)
             }
             .onChange(of: showingCurrencySelector, perform: { showingCurrencySelector in
@@ -69,7 +73,7 @@ struct Conversion: View {
                 }
             }
         }
-        .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
+        .if(UIDevice.current.userInterfaceIdiom == .phone && fetchUserSettings) { content in
             NavigationView { content }
         }
     }
@@ -92,7 +96,7 @@ struct Conversion: View {
      1) Fetch default currency from User Settings
      2) Change State var currencyPair
      */
-    private func fetchUserSettings() {
+    private func fetchingUserSettings() {
         if let userSettings = userSettings.first {
             self.currencyPair = userSettings.defaultCurrency ?? "USD/GBP"
         }
@@ -102,6 +106,6 @@ struct Conversion: View {
 
 struct Conversion_Previews: PreviewProvider {
     static var previews: some View {
-        Conversion()
+        Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")
     }
 }

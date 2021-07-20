@@ -11,7 +11,7 @@ struct ContentViewPad: View {
     var body: some View {
         NavigationView {
             Sidebar()
-            Conversion()
+            Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")
         }
     }
 }

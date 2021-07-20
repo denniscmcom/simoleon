@@ -10,7 +10,7 @@ import SwiftUI
 struct Sidebar: View {
     var body: some View {
         List {
-            NavigationLink(destination: Conversion()) {
+            NavigationLink(destination: Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")) {
                 Label("Convert", systemImage: "arrow.counterclockwise.circle")
             }
             
