@@ -23,6 +23,7 @@ struct Sidebar: View {
             }
         }
         .listStyle(SidebarListStyle())
+        .navigationTitle("Categories")
     }
 }
 
