@@ -21,16 +21,14 @@ struct Favourites: View {
             }
             .onDelete(perform: removeFromFavourites)
         }
+        .navigationTitle("Favourites")
+        .toolbar {
+            #if os(iOS)
+            EditButton()
+            #endif
+        }
         .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
-            NavigationView {
-                content
-                    .navigationTitle("Favourites")
-                    .toolbar {
-                        #if os(iOS)
-                        EditButton()
-                        #endif
-                    }
-            }
+            NavigationView { content }
         }
     }
     

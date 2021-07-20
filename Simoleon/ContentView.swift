@@ -23,7 +23,7 @@ struct ContentView: View {
                 }
                 .tag(Tab.favourites)
             
-            Text("Settings")
+            Settings()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
