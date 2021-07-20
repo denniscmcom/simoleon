@@ -9,6 +9,9 @@ import SwiftUI
 import Alamofire
 
 struct Conversion: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) private var userSettings: FetchedResults<UserSettings>
+    
     @State private var currencyPair = "USD/GBP"
     @State private var amountToConvert = "1000"
     @State private var price: Double = 1.00
@@ -42,7 +45,10 @@ struct Conversion: View {
                 )
             }
             .padding()
-            .onAppear { request(currencyPair) }
+            .onAppear {
+                fetchUserSettings()
+                request(currencyPair)
+            }
             .onChange(of: showingCurrencySelector, perform: { showingCurrencySelector in
                 if !showingCurrencySelector {
                     request(currencyPair)
@@ -79,6 +85,16 @@ struct Conversion: View {
             } else {
                 // Handle error
             }
+        }
+    }
+    
+    /*
+     1) Fetch default currency from User Settings
+     2) Change State var currencyPair
+     */
+    private func fetchUserSettings() {
+        if let userSettings = userSettings.first {
+            self.currencyPair = userSettings.defaultCurrency ?? "USD/GBP"
         }
     }
 }
