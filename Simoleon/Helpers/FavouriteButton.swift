@@ -16,8 +16,10 @@ struct FavouriteButton: View {
         Button(action: {
             if isFavourite() {
                 removeFromFavourites()
+                simpleSuccess()
             } else {
                 addToFavourites()
+                simpleSuccess()
             }
         }) {
             RoundedRectangle(cornerRadius: 25)
