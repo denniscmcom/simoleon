@@ -22,9 +22,9 @@ struct FavouriteButton: View {
                 simpleSuccess()
             }
         }) {
-            RoundedRectangle(cornerRadius: 25)
+            RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(Color(.secondarySystemBackground))
-                .frame(width: 65, height: 65)
+                .frame(width: 60, height: 60)
                 .overlay(
                     Image(systemName: generateStar())
                         .font(.system(size: 28))
