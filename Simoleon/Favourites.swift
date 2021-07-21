@@ -15,13 +15,24 @@ struct Favourites: View {
     private var favourite: FetchedResults<Favourite>
     
     var body: some View {
-        List {
-            ForEach(favourite) { favourite in
-                NavigationLink(destination: Conversion(fetchUserSettings: false, currencyPair: favourite.currencyPair)) {
-                    CurrencyRow(currencyPair: favourite.currencyPair)
+        VStack {
+            if favourite.isEmpty {
+                Group {
+                    Text("Tap ") + Text(Image(systemName: "star"))
+                    Text("to add a currency pair to favourites")
+                        .padding(.top, 5)
+                }
+                .foregroundColor(Color(.systemGray))
+            } else {
+                List {
+                    ForEach(favourite) { favourite in
+                        NavigationLink(destination: Conversion(fetchUserSettings: false, currencyPair: favourite.currencyPair)) {
+                            CurrencyRow(currencyPair: favourite.currencyPair)
+                        }
+                    }
+                    .onDelete(perform: removeFromFavourites)
                 }
             }
-            .onDelete(perform: removeFromFavourites)
         }
         .navigationTitle("Favourites")
         .toolbar {

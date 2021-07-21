@@ -9,14 +9,14 @@ import SwiftUI
 
 struct Settings: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) private var userSettings: FetchedResults<UserSettings>
-    @State private var selectedCurrencyPair = "USD/GBP"
+    @FetchRequest(sortDescriptors: []) private var defaultCurrency: FetchedResults<DefaultCurrency>
+    @State private var selectedDefaultCurrency = ""
     let currencyPairs: [String] = parseJson("CurrencyPairs.json")
     
     var body: some View {
         List {
             Section(header: Text("Preferences")) {
-                Picker("Default currency", selection: $selectedCurrencyPair) {
+                Picker("Default currency", selection: $selectedDefaultCurrency) {
                     ForEach(currencyPairs.sorted(), id: \.self) { currencyPair in
                         Text(currencyPair)
                     }
@@ -60,10 +60,7 @@ struct Settings: View {
                 Link("Privacy Policy", destination: URL(string: "https://dennistech.io")!)
             }
         }
-        .onChange(of: selectedCurrencyPair, perform: { selectedCurrencyPair in
-            setDefaultCurrency()
-        })
-        .onAppear(perform: fetchUserSettings)
+        .onAppear(perform: setCurrency)
         .listStyle(InsetGroupedListStyle())
         .navigationTitle("Settings")
         .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
@@ -71,28 +68,26 @@ struct Settings: View {
         }
     }
     
-    /*
-     1) Fetch default currency from User Settings
-     2) Change State var currencyPair
-     */
-    private func fetchUserSettings() {
-        if let userSettings = userSettings.first {
-            self.selectedCurrencyPair = userSettings.defaultCurrency ?? "USD/GBP"
+    private func setCurrency() {
+        if selectedDefaultCurrency == "" {
+            self.selectedDefaultCurrency = defaultCurrency.first?.pair ?? "USD/GBP"
+        } else {
+            setCoreData()
         }
     }
     
-    private func setDefaultCurrency() {
-        if self.userSettings.isEmpty {  /// If it's empty -> add record
-            let userSettings = UserSettings(context: viewContext)
-            userSettings.defaultCurrency = selectedCurrencyPair
+    private func setCoreData() {
+        if self.defaultCurrency.isEmpty {  // If it's empty -> add record
+            let defaultCurrency = DefaultCurrency(context: viewContext)
+            defaultCurrency.pair = selectedDefaultCurrency
             
             do {
                 try viewContext.save()
             } catch {
                 print(error.localizedDescription)
             }
-        } else {  /// If not, update record
-            self.userSettings.first?.defaultCurrency = selectedCurrencyPair
+        } else {  // If not, update record
+            self.defaultCurrency.first?.pair = selectedDefaultCurrency
             try? viewContext.save()
         }
     }

@@ -18,7 +18,7 @@ struct Conversion: View {
     @State private var isEditing = false
     
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) private var userSettings: FetchedResults<UserSettings>
+    @FetchRequest(sortDescriptors: []) private var defaultCurrency: FetchedResults<DefaultCurrency>
     let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
     var body: some View {
@@ -26,9 +26,9 @@ struct Conversion: View {
             VStack(alignment: .leading) {
                 HStack {
                     Button(action: { showingCurrencySelector = true }) {
-                        RoundedRectangle(cornerRadius: 25)
+                        RoundedRectangle(cornerRadius: 15)
                             .foregroundColor(Color(.secondarySystemBackground))
-                            .frame(height: 65)
+                            .frame(height: 60)
                             .overlay(CurrencyRow(currencyPair: currencyPair).padding(.horizontal))
                     }
                     
@@ -96,8 +96,8 @@ struct Conversion: View {
      2) Change State var currencyPair
      */
     private func fetchingUserSettings() {
-        if let userSettings = userSettings.first {
-            self.currencyPair = userSettings.defaultCurrency ?? "USD/GBP"
+        if let defaultCurrency = defaultCurrency.first {
+            self.currencyPair = defaultCurrency.pair ?? "USD/GBP"
         }
     }
 }
