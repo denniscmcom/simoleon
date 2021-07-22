@@ -6,20 +6,39 @@
 //
 
 import SwiftUI
+import Purchases
 
 struct Settings: View {
+    @EnvironmentObject var subscriptionController: SubscriptionController
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var defaultCurrency: FetchedResults<DefaultCurrency>
+    
     @State private var selectedDefaultCurrency = ""
+    @State private var showingSubscriptionPaywall = false
+    
     let currencyPairs: [String] = parseJson("CurrencyPairs.json")
     
     var body: some View {
         List {
+            Section(header: Text("Subscription")) {
+                NavigationLink("Information", destination: SubscriberInfo())
+                if !subscriptionController.isActive {
+                    Text("Subscribe")
+                        .onTapGesture { showingSubscriptionPaywall = true }
+                }
+            }
+            
             Section(header: Text("Preferences")) {
-                Picker("Default currency", selection: $selectedDefaultCurrency) {
-                    ForEach(currencyPairs.sorted(), id: \.self) { currencyPair in
-                        Text(currencyPair)
+                if subscriptionController.isActive {
+                    Picker("Default currency", selection: $selectedDefaultCurrency) {
+                        ForEach(currencyPairs.sorted(), id: \.self) { currencyPair in
+                            Text(currencyPair)
+                        }
                     }
+                } else {
+                    LockedCurrencyPicker()
+                        .contentShape(Rectangle())
+                        .onTapGesture { showingSubscriptionPaywall = true }
                 }
             }
             
@@ -60,15 +79,20 @@ struct Settings: View {
                 Link("Privacy Policy", destination: URL(string: "https://dennistech.io")!)
             }
         }
-        .onAppear(perform: setCurrency)
+        .onAppear(perform: onAppear)
         .listStyle(InsetGroupedListStyle())
         .navigationTitle("Settings")
+        .sheet(isPresented: $showingSubscriptionPaywall) {
+            Subscription(showingSubscriptionPaywall: $showingSubscriptionPaywall)
+                .environmentObject(subscriptionController)
+        }
         .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
             NavigationView { content }
         }
     }
     
-    private func setCurrency() {
+    private func onAppear() {
+        // Set initial value of the picker
         if selectedDefaultCurrency == "" {
             self.selectedDefaultCurrency = defaultCurrency.first?.pair ?? "USD/GBP"
         } else {
@@ -96,5 +120,6 @@ struct Settings: View {
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         Settings()
+            .environmentObject(SubscriptionController())
     }
 }
