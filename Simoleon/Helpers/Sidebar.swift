@@ -11,19 +11,28 @@ struct Sidebar: View {
     var body: some View {
         List {
             NavigationLink(destination: Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")) {
-                Label("Convert", systemImage: "arrow.counterclockwise.circle")
+                HStack {
+                    Text("Convert", comment: "Tab bar button to show conversion")
+                    Image(systemName: "arrow.counterclockwise.circle")
+                }
             }
             
             NavigationLink(destination: Favourites()) {
-                Label("Favourites", systemImage: "star")
+                HStack {
+                    Text("Favourites", comment: "Tab bar button to show favourites")
+                    Image(systemName: "star")
+                }
             }
             
             NavigationLink(destination: Settings()) {
-                Label("Settings", systemImage: "gear")
+                HStack {
+                    Text("Settings", comment: "Tab bar button to show settings")
+                    Image(systemName: "gear")
+                }
             }
         }
         .listStyle(SidebarListStyle())
-        .navigationTitle("Categories")
+        .navigationTitle(Text("Categories", comment: "Side bar navigation title"))
     }
 }
 

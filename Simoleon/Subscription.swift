@@ -23,7 +23,7 @@ struct Subscription: View {
                                 .frame(width: 100, height: 100)
                                 .cornerRadius(25)
                             
-                            Text("Unlock all access")
+                            Text("Unlock all access", comment: "Headline in Subscription paywall")
                                 .font(.title)
                                 .fontWeight(.semibold)
                                 .padding(.top)
@@ -75,7 +75,9 @@ struct Subscription: View {
             }
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel", action: { showingSubscriptionPaywall = false })
+                    Button(action: { showingSubscriptionPaywall = false }) {
+                        Text("Cancel", comment: "Button to dismiss paywall modal sheet")
+                    }
                 }
             }
         }

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SubscriptionFeature: View {
     var symbol: String
-    var title: String
-    var text: String
+    var title: LocalizedStringKey
+    var text: LocalizedStringKey
     var colour: Color
     
     var body: some View {
@@ -20,10 +20,10 @@ struct SubscriptionFeature: View {
                 .font(.title)
             
             VStack(alignment: .leading) {
-                Text(title)
+                Text(title, comment: "Title of subscription feature")
                     .font(.headline)
                 
-                Text(text)
+                Text(text, comment: "Description of subscription feature")
             }
         }
     }
