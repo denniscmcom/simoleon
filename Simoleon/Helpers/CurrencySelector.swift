@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import Purchases
 
 struct CurrencySelector: View {
     @Binding var currencyPair: String
     @Binding var showingCurrencySelector: Bool
+    @EnvironmentObject var subscriptionController: SubscriptionController
+    
     @State private var searchCurrency = ""
     @State private var searching = false
+    @State private var showingSubscriptionPaywall = false
     
     var body: some View {
         NavigationView {
@@ -30,10 +34,7 @@ struct CurrencySelector: View {
                 
                 Section(header: Text("All currencies")) {
                     ForEach(currencyPairs(), id: \.self) { currencyPair in
-                        Button(action: {
-                            self.currencyPair = currencyPair
-                            showingCurrencySelector = false
-                        }) {
+                        Button(action: { select(currencyPair) }) {
                             CurrencyRow(currencyPair: currencyPair)
                         }
                     }
@@ -41,19 +42,20 @@ struct CurrencySelector: View {
             }
             .gesture(DragGesture()
                  .onChanged({ _ in
-                     UIApplication.shared.dismissKeyboard()
+                    UIApplication.shared.dismissKeyboard()
+                    searching = false
                  })
              )
             .navigationTitle("Currencies")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("OK", action: { showingCurrencySelector = false })
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel", action: { showingCurrencySelector = false })
                 }
                 
-                ToolbarItem(placement: .cancellationAction) {
+                ToolbarItem(placement: .confirmationAction) {
                     if searching {
-                         Button("Cancel") {
+                         Button("OK") {
                             searchCurrency = ""
                              withAnimation {
                                 searching = false
@@ -63,6 +65,9 @@ struct CurrencySelector: View {
                      }
                 }
             }
+        }
+        .sheet(isPresented: $showingSubscriptionPaywall) {
+            Subscription(showingSubscriptionPaywall: $showingSubscriptionPaywall)
         }
     }
     
@@ -75,11 +80,22 @@ struct CurrencySelector: View {
             return currencyPairs.filter { $0.contains(searchCurrency.uppercased()) }
         }
     }
+    
+    
+    private func select(_ currencyPair: String) {
+        if subscriptionController.isActive {
+            self.currencyPair = currencyPair
+            showingCurrencySelector = false
+        } else {
+            showingSubscriptionPaywall = true
+        }
+    }
 }
 
 
 struct CurrencySelector_Previews: PreviewProvider {
     static var previews: some View {
         CurrencySelector(currencyPair: .constant("USD/GBP"), showingCurrencySelector: .constant(false))
+            .environmentObject(SubscriptionController())
     }
 }
