@@ -13,8 +13,8 @@ struct RestoreButton: View {
     @EnvironmentObject var subscriptionController: SubscriptionController
     
     @State private var restoringPurchases = false
-    @State private var alertTitle = ""
-    @State private var alertMessage = ""
+    @State private var alertTitle = Text("")
+    @State private var alertMessage = Text("")
     @State private var showingAlert = false
     
     var body: some View {
@@ -22,11 +22,11 @@ struct RestoreButton: View {
             if restoringPurchases {
                 ProgressView()
             } else {
-                Text("Restore purchases")
+                Text("Restore purchases", comment: "Button to restore in-App purchases")
             }
         }
         .alert(isPresented: $showingAlert) {
-            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
+            Alert(title: alertTitle, message: alertMessage, dismissButton: .default(Text("Ok", comment: "Button to dismiss alert")))
         }
     }
     
@@ -38,15 +38,15 @@ struct RestoreButton: View {
                 subscriptionController.isActive = true
                 showingSubscriptionPaywall = false
             } else {
-                alertTitle = "No subscriptions found"
-                alertMessage = "You are not subscripted to Simoleon yet."
+                alertTitle = Text("No subscriptions found", comment: "Alert title")
+                alertMessage = Text("You are not subscripted to Simoleon yet.", comment: "Alert message")
                 restoringPurchases = false
                 showingAlert = true
             }
             
             if let error = error as NSError? {
-                alertTitle = error.localizedDescription
-                alertMessage = error.localizedFailureReason ?? "If the problem persists send an email to dmartin@dennistech.io"
+                alertTitle = Text(error.localizedDescription)
+                alertMessage = Text(error.localizedFailureReason ?? "If the problem persists send an email to dmartin@dennistech.io")
                 showingAlert = true
             }
         }

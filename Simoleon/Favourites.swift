@@ -18,8 +18,8 @@ struct Favourites: View {
         VStack {
             if favourite.isEmpty {
                 Group {
-                    Text("Tap ") + Text(Image(systemName: "star"))
-                    Text("to add a currency pair to favourites")
+                    Text("Tap ", comment: "First line when favourites are empty") + Text(Image(systemName: "star"))
+                    Text("to add a currency pair to favourites", comment: "Finish line when favourites are empty")
                         .padding(.top, 5)
                 }
                 .foregroundColor(Color(.systemGray))
@@ -34,7 +34,7 @@ struct Favourites: View {
                 }
             }
         }
-        .navigationTitle("Favourites")
+        .navigationTitle(Text("Favourites", comment: "Navigation title"))
         .toolbar {
             #if os(iOS)
             EditButton()

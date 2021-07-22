@@ -62,14 +62,16 @@ struct Conversion: View {
                 CurrencySelector(currencyPair: $currencyPair, showingCurrencySelector: $showingCurrencySelector)
             }
         }
-        .navigationTitle("Conversion")
+        .navigationTitle(Text("Conversion", comment: "Navigation title"))
         .toolbar {
             ToolbarItem(placement: .cancellationAction) {
                 if isEditing {
-                    Button("Cancel", action: {
+                    Button(action: {
                         UIApplication.shared.dismissKeyboard()
                         isEditing = false
-                    })
+                    }) {
+                        Text("Cancel", comment: "Button to stop editing textfield")
+                    }
                 }
             }
         }

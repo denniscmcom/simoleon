@@ -32,7 +32,7 @@ struct CurrencySelector: View {
                     }
                 }
                 
-                Section(header: Text("All currencies")) {
+                Section(header: Text("All currencies", comment: "Section header in currency selector")) {
                     ForEach(currencyPairs(), id: \.self) { currencyPair in
                         Button(action: { select(currencyPair) }) {
                             CurrencyRow(currencyPair: currencyPair)
@@ -46,22 +46,25 @@ struct CurrencySelector: View {
                     searching = false
                  })
              )
-            .navigationTitle("Currencies")
+            .navigationTitle(Text("Currencies", comment: "Navigation title"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel", action: { showingCurrencySelector = false })
+                    Button(action: { showingCurrencySelector = false }) {
+                        Text("Cancel", comment: "Button to dismiss currency selector")
+                    }
                 }
                 
                 ToolbarItem(placement: .confirmationAction) {
-                    if searching {
-                         Button("OK") {
+                    if searching {                        
+                        Button(action: { withAnimation {
                             searchCurrency = ""
-                             withAnimation {
-                                searching = false
-                                UIApplication.shared.dismissKeyboard()
-                             }
-                         }
+                            searching = false
+                            UIApplication.shared.dismissKeyboard()
+                        }}
+                        ) {
+                            Text("Ok", comment: "Button to stop searching in currency selector")
+                        }
                      }
                 }
             }

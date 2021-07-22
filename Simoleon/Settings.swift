@@ -20,21 +20,24 @@ struct Settings: View {
     
     var body: some View {
         List {
-            Section(header: Text("Subscription")) {
-                NavigationLink("Information", destination: SubscriberInfo())
-                if !subscriptionController.isActive {
-                    Text("Subscribe")
+            Section(header: Text("Subscription", comment: "Section header in settings")) {
+                if subscriptionController.isActive {
+                    NavigationLink(destination: SubscriberInfo()) {
+                        Text("Information", comment: "Button to show subscription information in settings")
+                    }
+                } else {
+                    Text("Subscribe", comment: "Button to suscribe in settings")
                         .onTapGesture { showingSubscriptionPaywall = true }
                 }
             }
             
-            Section(header: Text("Preferences")) {
+            Section(header: Text("Preferences", comment: "Section header in settings")) {
                 if subscriptionController.isActive {
-                    Picker("Default currency", selection: $selectedDefaultCurrency) {
+                    Picker(selection: $selectedDefaultCurrency, label: Text("Default currency", comment: "Picker to select default currency"), content: {
                         ForEach(currencyPairs.sorted(), id: \.self) { currencyPair in
                             Text(currencyPair)
                         }
-                    }
+                    })
                 } else {
                     LockedCurrencyPicker()
                         .contentShape(Rectangle())
@@ -42,14 +45,14 @@ struct Settings: View {
                 }
             }
             
-            Section(header: Text("Stay in touch")) {
+            Section(header: Text("Stay in touch", comment: "Section header in settings")) {
                 Link(destination: URL(string: "https://itunes.apple.com/app/id1576390953?action=write-review")!) {
                     HStack {
                         Image(systemName: "heart.fill")
                             .foregroundColor(Color(.systemRed))
                             .imageScale(.large)
                         
-                        Text("Rate Simoleon")
+                        Text("Rate Simoleon", comment: "Button to rate app in Settings")
                     }
                 }
                 
@@ -59,7 +62,7 @@ struct Settings: View {
                             .resizable()
                             .frame(width: 30, height: 30)
                         
-                        Text("Developer's Twitter")
+                        Text("Developer's Twitter", comment: "Button to go to Twitter in Settings")
                     }
                 }
                 
@@ -69,19 +72,24 @@ struct Settings: View {
                             .renderingMode(.original)
                             .imageScale(.large)
                         
-                        Text("Contact")
+                        Text("Contact", comment: "Button to contact in Settings")
                     }
                 }
             }
             
             Section(header: Text("About")) {
-                Link("Website", destination: URL(string: "https://dennistech.io")!)
-                Link("Privacy Policy", destination: URL(string: "https://dennistech.io")!)
+                Link(destination: URL(string: "https://dennistech.io")!) {
+                    Text("Website", comment: "Button to go to Dennis Tech website")
+                }
+                
+                Link(destination: URL(string: "https://dennistech.io")!) {
+                    Text("Privacy Policy", comment: "Button to go to app privacy policy")
+                }
             }
         }
         .onAppear(perform: onAppear)
         .listStyle(InsetGroupedListStyle())
-        .navigationTitle("Settings")
+        .navigationTitle(Text("Settings", comment: "Navigation title"))
         .sheet(isPresented: $showingSubscriptionPaywall) {
             Subscription(showingSubscriptionPaywall: $showingSubscriptionPaywall)
                 .environmentObject(subscriptionController)

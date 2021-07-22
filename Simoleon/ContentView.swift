@@ -17,20 +17,24 @@ struct ContentView: View {
             Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")
                 .environmentObject(subscriptionController)
                 .tabItem {
-                    Label("Convert", systemImage: "arrow.counterclockwise.circle")
+                    Text("Convert", comment: "Tab bar button to show conversion")
+                    Image(systemName: "arrow.counterclockwise.circle")
                 }
                 .tag(Tab.convert)
             
             Favourites()
+                .environmentObject(subscriptionController)
                 .tabItem {
-                    Label("Favourites", systemImage: "star")
+                    Text("Favourites", comment: "Tab bar button to show favourites")
+                    Image(systemName: "star")
                 }
                 .tag(Tab.favourites)
             
             Settings()
                 .environmentObject(subscriptionController)
                 .tabItem {
-                    Label("Settings", systemImage: "gear")
+                    Text("Settings", comment: "Tab bar button to show settings")
+                    Image(systemName: "gear")
                 }
                 .tag(Tab.settings)
         }
@@ -40,10 +44,9 @@ struct ContentView: View {
     private func checkEntitlements() {
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
             if purchaserInfo?.entitlements["all"]?.isActive == true {
-                print("User's subscription is active")
                 self.subscriptionController.isActive = true
             } else {
-                print("User's subscription expired or doesn't exist")
+                // User subscription is not active
             }
         }
     }
