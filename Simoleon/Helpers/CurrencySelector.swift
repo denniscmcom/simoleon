@@ -14,23 +14,12 @@ struct CurrencySelector: View {
     @EnvironmentObject var subscriptionController: SubscriptionController
     
     @State private var searchCurrency = ""
-    @State private var searching = false
     @State private var showingSubscriptionPaywall = false
     
     var body: some View {
         NavigationView {
             Form {
-                TextField("Search ...", text: $searchCurrency) { startedEditing in
-                if startedEditing {
-                         withAnimation {
-                             searching = true
-                         }
-                     }
-                } onCommit: {
-                    withAnimation {
-                        searching = false
-                    }
-                }
+                TextField("Search ...", text: $searchCurrency)
                 
                 Section(header: Text("All currencies", comment: "Section header in currency selector")) {
                     ForEach(currencyPairs(), id: \.self) { currencyPair in
@@ -43,7 +32,6 @@ struct CurrencySelector: View {
             .gesture(DragGesture()
                  .onChanged({ _ in
                     UIApplication.shared.dismissKeyboard()
-                    searching = false
                  })
              )
             .navigationTitle(Text("Currencies", comment: "Navigation title"))
@@ -53,19 +41,6 @@ struct CurrencySelector: View {
                     Button(action: { showingCurrencySelector = false }) {
                         Text("Cancel", comment: "Button to dismiss currency selector")
                     }
-                }
-                
-                ToolbarItem(placement: .confirmationAction) {
-                    if searching {                        
-                        Button(action: { withAnimation {
-                            searchCurrency = ""
-                            searching = false
-                            UIApplication.shared.dismissKeyboard()
-                        }}
-                        ) {
-                            Text("Ok", comment: "Button to stop searching in currency selector")
-                        }
-                     }
                 }
             }
         }
