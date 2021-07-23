@@ -12,11 +12,11 @@ struct SubscribeButton: View {
     @Binding var showingSubscriptionPaywall: Bool
     @EnvironmentObject var subscriptionController: SubscriptionController
     
-    @State private var subscribeButtonText = ""
-    @State private var showingPrice = false
+    @State private var price = ""
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     @State private var showingAlert = false
+    @State private var showingPrice = false
     
     var body: some View {
         Button(action: purchaseMonthlySubscription) {
@@ -25,7 +25,7 @@ struct SubscribeButton: View {
                 .overlay(
                     VStack {
                         if showingPrice {
-                            Text(subscribeButtonText)
+                            Text("Subscribe for \(price) / month", comment: "Subscribe button")
                                 .foregroundColor(.white)
                                 .fontWeight(.semibold)
                         } else {
@@ -43,15 +43,14 @@ struct SubscribeButton: View {
     private func fetchMonthlySubscription() {
         Purchases.shared.offerings { (offerings, error) in
             if let product = offerings?.current?.monthly?.product {
-                let price = formatCurrency(product.priceLocale, product.price)
-                subscribeButtonText = "Subscribe for \(price) / month"
+                self.price = formatCurrency(product.priceLocale, product.price)
                 showingPrice = true
             }
             
             if let error = error as NSError? {
                 alertTitle = error.localizedDescription
-                alertMessage = error.localizedFailureReason ?? "If the problem persists send an email to dmartin@dennistech.io"
-                subscribeButtonText = "-"
+                alertMessage = error.localizedFailureReason ?? ""
+                price = "-"
                 showingPrice = true
                 showingAlert = true
             }
@@ -73,7 +72,7 @@ struct SubscribeButton: View {
                     
                     if let error = error as NSError? {
                         alertTitle = error.localizedDescription
-                        alertMessage = error.localizedFailureReason ?? "If the problem persists send an email to dmartin@dennistech.io"
+                        alertMessage = error.localizedFailureReason ?? ""
                         showingPrice = true
                         showingAlert = true
                     }
@@ -81,7 +80,7 @@ struct SubscribeButton: View {
                 
                 if let error = error as NSError? {
                     alertTitle = error.localizedDescription
-                    alertMessage = error.localizedFailureReason ?? "If the problem persists send an email to dmartin@dennistech.io"
+                    alertMessage = error.localizedFailureReason ?? ""
                     showingPrice = true
                     showingAlert = true
                 }
