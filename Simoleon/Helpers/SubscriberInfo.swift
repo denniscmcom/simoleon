@@ -13,8 +13,8 @@ struct SubscriberInfo: View {
     @State private var expiration: Date? = nil
     @State private var latestPurchase: Date? = nil
     @State private var showingAlert = false
-    @State private var alertTitle = Text("")
-    @State private var alertMessage = Text("")
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
     
     var body: some View {
         VStack {
@@ -42,7 +42,7 @@ struct SubscriberInfo: View {
         .navigationTitle(Text("Information", comment: "Navigation title"))
         .onAppear(perform: getInfo)
         .alert(isPresented: $showingAlert) {
-            Alert(title: alertTitle, message: alertMessage, dismissButton: .default(Text("Ok", comment: "Dismiss alert")))
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok", comment: "Dismiss alert")))
         }
     }
     
@@ -53,8 +53,8 @@ struct SubscriberInfo: View {
             self.latestPurchase = purchaserInfo?.entitlements["all"]?.latestPurchaseDate
 
             if let error = error as NSError? {
-                alertTitle = Text(error.localizedDescription)
-                alertMessage = Text(error.localizedFailureReason ?? "If the problem persists send an email to dmartin@dennistech.io")
+                alertTitle = error.localizedDescription
+                alertMessage = error.localizedFailureReason ?? ""
                 showingAlert = true
             }
         }

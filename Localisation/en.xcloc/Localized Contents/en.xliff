@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Simoleon/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.5.1" build-num="12E507"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>Simoleon</source>
+        <target>Simoleon</target>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Simoleon</source>
+        <target>Simoleon</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Simoleon/en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.5.1" build-num="12E507"/>
+    </header>
+    <body>
+      <trans-unit id="%.2f" xml:space="preserve">
+        <source>%.2f</source>
+        <target>%.2f</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@ (%@)" xml:space="preserve">
+        <source>%1$@ (%2$@)</source>
+        <target>%1$@ (%2$@)</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="-" xml:space="preserve">
+        <source>-</source>
+        <target>-</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="About" xml:space="preserve">
+        <source>About</source>
+        <target>About</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="All currencies" xml:space="preserve">
+        <source>All currencies</source>
+        <target>All currencies</target>
+        <note>Section header in currency selector</note>
+      </trans-unit>
+      <trans-unit id="Cancel" xml:space="preserve">
+        <source>Cancel</source>
+        <target>Cancel</target>
+        <note>Button to dismiss currency selector
+   Button to dismiss paywall modal sheet
+   Button to stop editing textfield</note>
+      </trans-unit>
+      <trans-unit id="Categories" xml:space="preserve">
+        <source>Categories</source>
+        <target>Categories</target>
+        <note>Side bar navigation title</note>
+      </trans-unit>
+      <trans-unit id="Contact" xml:space="preserve">
+        <source>Contact</source>
+        <target>Contact</target>
+        <note>Button to contact in Settings</note>
+      </trans-unit>
+      <trans-unit id="Convert" xml:space="preserve">
+        <source>Convert</source>
+        <target>Convert</target>
+        <note>Navigation title
+   Tab bar button to show conversion</note>
+      </trans-unit>
+      <trans-unit id="Convert your currency between cryptos, gold, and silver." xml:space="preserve">
+        <source>Convert your currency between cryptos, gold, and silver.</source>
+        <target>Convert your currency between cryptos, gold, and silver.</target>
+        <note>Subscription feature description</note>
+      </trans-unit>
+      <trans-unit id="Cryptos and commodities" xml:space="preserve">
+        <source>Cryptos and commodities</source>
+        <target>Cryptos and commodities</target>
+        <note>Subscription feature title</note>
+      </trans-unit>
+      <trans-unit id="Currencies" xml:space="preserve">
+        <source>Currencies</source>
+        <target>Currencies</target>
+        <note>Navigation title</note>
+      </trans-unit>
+      <trans-unit id="Default currency" xml:space="preserve">
+        <source>Default currency</source>
+        <target>Default currency</target>
+        <note>Label in locked picker
+   Picker to select default currency</note>
+      </trans-unit>
+      <trans-unit id="Developer's Twitter" xml:space="preserve">
+        <source>Developer's Twitter</source>
+        <target>Developer's Twitter</target>
+        <note>Button to go to Twitter in Settings</note>
+      </trans-unit>
+      <trans-unit id="Enter amount" xml:space="preserve">
+        <source>Enter amount</source>
+        <target>Enter amount</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Expires at %@" xml:space="preserve">
+        <source>Expires at %@</source>
+        <target>Expires at %@</target>
+        <note>Subscriber information</note>
+      </trans-unit>
+      <trans-unit id="Favourite currencies" xml:space="preserve">
+        <source>Favourite currencies</source>
+        <target>Favourite currencies</target>
+        <note>Subscription feature title</note>
+      </trans-unit>
+      <trans-unit id="Favourites" xml:space="preserve">
+        <source>Favourites</source>
+        <target>Favourites</target>
+        <note>Navigation title
+   Tab bar button to show favourites</note>
+      </trans-unit>
+      <trans-unit id="From %@ to %@" xml:space="preserve">
+        <source>From %1$@ to %2$@</source>
+        <target>From %1$@ to %2$@</target>
+        <note>Conversion from one currency to another</note>
+      </trans-unit>
+      <trans-unit id="Have access to almost every currency of the world." xml:space="preserve">
+        <source>Have access to almost every currency of the world.</source>
+        <target>Have access to almost every currency of the world.</target>
+        <note>Subscription feature description</note>
+      </trans-unit>
+      <trans-unit id="Information" xml:space="preserve">
+        <source>Information</source>
+        <target>Information</target>
+        <note>Button to show subscription information in settings
+   Navigation title</note>
+      </trans-unit>
+      <trans-unit id="Latest purchase %@" xml:space="preserve">
+        <source>Latest purchase %@</source>
+        <target>Latest purchase %@</target>
+        <note>Subscriber information</note>
+      </trans-unit>
+      <trans-unit id="Member since %@" xml:space="preserve">
+        <source>Member since %@</source>
+        <target>Member since %@</target>
+        <note>Subscriber information</note>
+      </trans-unit>
+      <trans-unit id="Ok" xml:space="preserve">
+        <source>Ok</source>
+        <target>Ok</target>
+        <note>Button to dismiss alert
+   Button to stop searching in currency selector
+   Dismiss alert</note>
+      </trans-unit>
+      <trans-unit id="Over 170 currencies" xml:space="preserve">
+        <source>Over 170 currencies</source>
+        <target>Over 170 currencies</target>
+        <note>Subscription feature title</note>
+      </trans-unit>
+      <trans-unit id="Preferences" xml:space="preserve">
+        <source>Preferences</source>
+        <target>Preferences</target>
+        <note>Section header in settings</note>
+      </trans-unit>
+      <trans-unit id="Privacy Policy" xml:space="preserve">
+        <source>Privacy Policy</source>
+        <target>Privacy Policy</target>
+        <note>Button to go to app privacy policy</note>
+      </trans-unit>
+      <trans-unit id="Rate Simoleon" xml:space="preserve">
+        <source>Rate Simoleon</source>
+        <target>Rate Simoleon</target>
+        <note>Button to rate app in Settings</note>
+      </trans-unit>
+      <trans-unit id="Restore purchases" xml:space="preserve">
+        <source>Restore purchases</source>
+        <target>Restore purchases</target>
+        <note>Button to restore in-App purchases</note>
+      </trans-unit>
+      <trans-unit id="Save your favourite currencies to access them quickly." xml:space="preserve">
+        <source>Save your favourite currencies to access them quickly.</source>
+        <target>Save your favourite currencies to access them quickly.</target>
+        <note>Subscription feature description</note>
+      </trans-unit>
+      <trans-unit id="Search ..." xml:space="preserve">
+        <source>Search ...</source>
+        <target>Search ...</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Settings" xml:space="preserve">
+        <source>Settings</source>
+        <target>Settings</target>
+        <note>Navigation title
+   Tab bar button to show settings</note>
+      </trans-unit>
+      <trans-unit id="Simoleon on all your devices" xml:space="preserve">
+        <source>Simoleon on all your devices</source>
+        <target>Simoleon on all your devices</target>
+        <note>Subscription feature title</note>
+      </trans-unit>
+      <trans-unit id="Stay in touch" xml:space="preserve">
+        <source>Stay in touch</source>
+        <target>Stay in touch</target>
+        <note>Section header in settings</note>
+      </trans-unit>
+      <trans-unit id="Subscribe" xml:space="preserve">
+        <source>Subscribe</source>
+        <target>Subscribe</target>
+        <note>Button to suscribe in settings</note>
+      </trans-unit>
+      <trans-unit id="Subscribe for %@ / month" xml:space="preserve">
+        <source>Subscribe for %@ / month</source>
+        <target>Subscribe for %@ / month</target>
+        <note>Subscribe button</note>
+      </trans-unit>
+      <trans-unit id="Subscription" xml:space="preserve">
+        <source>Subscription</source>
+        <target>Subscription</target>
+        <note>Section header in settings</note>
+      </trans-unit>
+      <trans-unit id="Tap " xml:space="preserve">
+        <source>Tap </source>
+        <target>Tap </target>
+        <note>First line when favourites are empty</note>
+      </trans-unit>
+      <trans-unit id="USD/GBP" xml:space="preserve">
+        <source>USD/GBP</source>
+        <target>USD/GBP</target>
+        <note>Default currency in locked picker</note>
+      </trans-unit>
+      <trans-unit id="Unlock all access" xml:space="preserve">
+        <source>Unlock all access</source>
+        <target>Unlock all access</target>
+        <note>Headline in Subscription paywall</note>
+      </trans-unit>
+      <trans-unit id="Website" xml:space="preserve">
+        <source>Website</source>
+        <target>Website</target>
+        <note>Button to go to Dennis Tech website</note>
+      </trans-unit>
+      <trans-unit id="Your settings and favourite currencies in all your devices." xml:space="preserve">
+        <source>Your settings and favourite currencies in all your devices.</source>
+        <target>Your settings and favourite currencies in all your devices.</target>
+        <note>Subscription feature description</note>
+      </trans-unit>
+      <trans-unit id="to add a currency pair to favourites" xml:space="preserve">
+        <source>to add a currency pair to favourites</source>
+        <target>to add a currency pair to favourites</target>
+        <note>Finish line when favourites are empty</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -32,6 +32,7 @@ struct Favourites: View {
                     }
                     .onDelete(perform: removeFromFavourites)
                 }
+                .listStyle(PlainListStyle())
             }
         }
         .navigationTitle(Text("Favourites", comment: "Navigation title"))

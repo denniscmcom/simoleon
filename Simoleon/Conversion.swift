@@ -62,7 +62,7 @@ struct Conversion: View {
                 CurrencySelector(currencyPair: $currencyPair, showingCurrencySelector: $showingCurrencySelector)
             }
         }
-        .navigationTitle(Text("Conversion", comment: "Navigation title"))
+        .navigationTitle(Text("Convert", comment: "Navigation title"))
         .toolbar {
             ToolbarItem(placement: .cancellationAction) {
                 if isEditing {

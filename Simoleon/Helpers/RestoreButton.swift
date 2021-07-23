@@ -12,9 +12,9 @@ struct RestoreButton: View {
     @Binding var showingSubscriptionPaywall: Bool
     @EnvironmentObject var subscriptionController: SubscriptionController
     
+    @State private var alertTitle: LocalizedStringKey = ""
+    @State private var alertMessage: LocalizedStringKey = ""
     @State private var restoringPurchases = false
-    @State private var alertTitle = Text("")
-    @State private var alertMessage = Text("")
     @State private var showingAlert = false
     
     var body: some View {
@@ -26,7 +26,7 @@ struct RestoreButton: View {
             }
         }
         .alert(isPresented: $showingAlert) {
-            Alert(title: alertTitle, message: alertMessage, dismissButton: .default(Text("Ok", comment: "Button to dismiss alert")))
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok", comment: "Button to dismiss alert")))
         }
     }
     
@@ -38,15 +38,15 @@ struct RestoreButton: View {
                 subscriptionController.isActive = true
                 showingSubscriptionPaywall = false
             } else {
-                alertTitle = Text("No subscriptions found", comment: "Alert title")
-                alertMessage = Text("You are not subscripted to Simoleon yet.", comment: "Alert message")
+                alertTitle = LocalizedStringKey("No subscriptions found")
+                alertMessage = LocalizedStringKey("You are not subscripted to Simoleon yet.")
                 restoringPurchases = false
                 showingAlert = true
             }
             
             if let error = error as NSError? {
-                alertTitle = Text(error.localizedDescription)
-                alertMessage = Text(error.localizedFailureReason ?? "If the problem persists send an email to dmartin@dennistech.io")
+                alertTitle = LocalizedStringKey(error.localizedDescription)
+                alertMessage = LocalizedStringKey(error.localizedFailureReason ?? "")
                 showingAlert = true
             }
         }

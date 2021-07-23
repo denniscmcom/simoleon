@@ -27,6 +27,10 @@
 		95B54F4A26A4A450001DC0D8 /* ConversionBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B54F4926A4A450001DC0D8 /* ConversionBox.swift */; };
 		95B54F4F26A4AC52001DC0D8 /* ContentViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B54F4E26A4AC52001DC0D8 /* ContentViewPad.swift */; };
 		95B54F5126A4ACAC001DC0D8 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B54F5026A4ACAC001DC0D8 /* Sidebar.swift */; };
+		95B5F53126AADE4B00BDCE89 /* en.xliff in Resources */ = {isa = PBXBuildFile; fileRef = 95B5F52826AADE4B00BDCE89 /* en.xliff */; };
+		95B5F53226AADE4B00BDCE89 /* contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 95B5F52A26AADE4B00BDCE89 /* contents.json */; };
+		95B5F53326AADE4B00BDCE89 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95B5F52D26AADE4B00BDCE89 /* Localizable.strings */; };
+		95B5F53426AADE4B00BDCE89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95B5F52F26AADE4B00BDCE89 /* InfoPlist.strings */; };
 		95C5179126A5DC8E00BC2B24 /* ConditionalWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179026A5DC8E00BC2B24 /* ConditionalWrapper.swift */; };
 		95C5179926A5EC9F00BC2B24 /* FavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179826A5EC9F00BC2B24 /* FavouriteButton.swift */; };
 		95C5179C26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179A26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift */; };
@@ -41,7 +45,6 @@
 		95C5B23F2697752700941585 /* SimoleonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B23E2697752700941585 /* SimoleonTests.swift */; };
 		95C5B24A2697752700941585 /* SimoleonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2492697752700941585 /* SimoleonUITests.swift */; };
 		95D8C8C726A95D2900BCC188 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8C626A95D2900BCC188 /* Subscription.swift */; };
-		95D8C8CB26A970F400BCC188 /* SubscriptionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8CA26A970F400BCC188 /* SubscriptionFeature.swift */; };
 		95D8C8CD26A9784500BCC188 /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */; };
 		95D8C8CF26A98A7900BCC188 /* RestoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */; };
 		95D8C8D126A9BC6200BCC188 /* LockedCurrencyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */; };
@@ -91,6 +94,12 @@
 		95B54F4926A4A450001DC0D8 /* ConversionBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionBox.swift; sourceTree = "<group>"; };
 		95B54F4E26A4AC52001DC0D8 /* ContentViewPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewPad.swift; sourceTree = "<group>"; };
 		95B54F5026A4ACAC001DC0D8 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		95B5F52826AADE4B00BDCE89 /* en.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = en.xliff; sourceTree = "<group>"; };
+		95B5F52A26AADE4B00BDCE89 /* contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contents.json; sourceTree = "<group>"; };
+		95B5F52E26AADE4B00BDCE89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		95B5F53026AADE4B00BDCE89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		95B5F53526AADE5200BDCE89 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		95B5F53626AADE5500BDCE89 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95C5179026A5DC8E00BC2B24 /* ConditionalWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalWrapper.swift; sourceTree = "<group>"; };
 		95C5179826A5EC9F00BC2B24 /* FavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
 		95C5179A26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -111,7 +120,6 @@
 		95C5B2492697752700941585 /* SimoleonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonUITests.swift; sourceTree = "<group>"; };
 		95C5B24B2697752700941585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95D8C8C626A95D2900BCC188 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
-		95D8C8CA26A970F400BCC188 /* SubscriptionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFeature.swift; sourceTree = "<group>"; };
 		95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
 		95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreButton.swift; sourceTree = "<group>"; };
 		95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedCurrencyPicker.swift; sourceTree = "<group>"; };
@@ -192,11 +200,63 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		95B5F52526AADE4B00BDCE89 /* Localisation */ = {
+			isa = PBXGroup;
+			children = (
+				95B5F52626AADE4B00BDCE89 /* en.xcloc */,
+			);
+			path = Localisation;
+			sourceTree = "<group>";
+		};
+		95B5F52626AADE4B00BDCE89 /* en.xcloc */ = {
+			isa = PBXGroup;
+			children = (
+				95B5F52726AADE4B00BDCE89 /* Localized Contents */,
+				95B5F52926AADE4B00BDCE89 /* Notes */,
+				95B5F52A26AADE4B00BDCE89 /* contents.json */,
+				95B5F52B26AADE4B00BDCE89 /* Source Contents */,
+			);
+			path = en.xcloc;
+			sourceTree = "<group>";
+		};
+		95B5F52726AADE4B00BDCE89 /* Localized Contents */ = {
+			isa = PBXGroup;
+			children = (
+				95B5F52826AADE4B00BDCE89 /* en.xliff */,
+			);
+			path = "Localized Contents";
+			sourceTree = "<group>";
+		};
+		95B5F52926AADE4B00BDCE89 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		95B5F52B26AADE4B00BDCE89 /* Source Contents */ = {
+			isa = PBXGroup;
+			children = (
+				95B5F52C26AADE4B00BDCE89 /* Simoleon */,
+			);
+			path = "Source Contents";
+			sourceTree = "<group>";
+		};
+		95B5F52C26AADE4B00BDCE89 /* Simoleon */ = {
+			isa = PBXGroup;
+			children = (
+				95B5F52D26AADE4B00BDCE89 /* Localizable.strings */,
+				95B5F52F26AADE4B00BDCE89 /* InfoPlist.strings */,
+			);
+			path = Simoleon;
+			sourceTree = "<group>";
+		};
 		95C5B21B2697752600941585 = {
 			isa = PBXGroup;
 			children = (
 				9585BB1026A6B5ED00E3193E /* ConfigTemplate.xcconfig */,
 				9585BB0F26A6B58500E3193E /* Config.xcconfig */,
+				95B5F52526AADE4B00BDCE89 /* Localisation */,
 				95C5B2262697752600941585 /* Simoleon */,
 				95C5B23D2697752700941585 /* SimoleonTests */,
 				95C5B2482697752700941585 /* SimoleonUITests */,
@@ -286,7 +346,6 @@
 				95C5179026A5DC8E00BC2B24 /* ConditionalWrapper.swift */,
 				95C5179826A5EC9F00BC2B24 /* FavouriteButton.swift */,
 				95C517A026A5F6C000BC2B24 /* ResignKeyboard.swift */,
-				95D8C8CA26A970F400BCC188 /* SubscriptionFeature.swift */,
 				95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */,
 				95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */,
 				95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */,
@@ -383,6 +442,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 				Base,
 			);
 			mainGroup = 95C5B21B2697752600941585;
@@ -409,6 +469,10 @@
 				95C5B22F2697752700941585 /* Preview Assets.xcassets in Resources */,
 				95E76436269DFC1A008E9F31 /* LaunchScreen.storyboard in Resources */,
 				9555933D269B0E0A000FD726 /* CurrencyMetadata.json in Resources */,
+				95B5F53126AADE4B00BDCE89 /* en.xliff in Resources */,
+				95B5F53326AADE4B00BDCE89 /* Localizable.strings in Resources */,
+				95B5F53226AADE4B00BDCE89 /* contents.json in Resources */,
+				95B5F53426AADE4B00BDCE89 /* InfoPlist.strings in Resources */,
 				95C5B22C2697752700941585 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,7 +504,6 @@
 				950A377826A820F800CAB175 /* DefaultCurrency+CoreDataClass.swift in Sources */,
 				95C5B2312697752700941585 /* Persistence.swift in Sources */,
 				9585BB1226A6B71B00E3193E /* ReadConfig.swift in Sources */,
-				95D8C8CB26A970F400BCC188 /* SubscriptionFeature.swift in Sources */,
 				95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */,
 				95AEBC9B26A04A4200613729 /* CurrencyMetadataModel.swift in Sources */,
 				95D8C8D526A9E20F00BCC188 /* SubscriberInfo.swift in Sources */,
@@ -500,6 +563,27 @@
 			targetProxy = 95C5B2462697752700941585 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		95B5F52D26AADE4B00BDCE89 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95B5F52E26AADE4B00BDCE89 /* en */,
+				95B5F53526AADE5200BDCE89 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		95B5F52F26AADE4B00BDCE89 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95B5F53026AADE4B00BDCE89 /* en */,
+				95B5F53626AADE5500BDCE89 /* es */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		95C5B24C2697752700941585 /* Debug */ = {
@@ -629,7 +713,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -654,7 +738,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
