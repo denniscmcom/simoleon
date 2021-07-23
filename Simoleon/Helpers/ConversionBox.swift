@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ConversionBox: View {
     @Binding var currencyPair: String
-    @Binding var amountToConvert: String
+    @Binding var amountToConvert: String { willSet { print(newValue) }}
     @Binding var price: Double
     @Binding var showingConversion: Bool
     @Binding var showingCurrencySelector: Bool
@@ -68,7 +68,7 @@ struct ConversionBox: View {
         if amountToConvert.isEmpty {  /// Avoid nil error when string is empty
             return 0
         } else {
-            let conversion = Double(amountToConvert)!  * price
+            let conversion = Double(amountToConvert) ?? 0  * price
 
             return conversion
         }
