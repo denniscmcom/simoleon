@@ -79,7 +79,6 @@
 		95562D4C26A8962A0047E778 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		957065E126A5FE0400523E68 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		9585BB0F26A6B58500E3193E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		9585BB1026A6B5ED00E3193E /* ConfigTemplate.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigTemplate.xcconfig; sourceTree = "<group>"; };
 		9585BB1126A6B71B00E3193E /* ReadConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadConfig.swift; sourceTree = "<group>"; };
 		9585BB1326A6B7F400E3193E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		9585BB1926A6E8FD00E3193E /* SimpleSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSuccess.swift; sourceTree = "<group>"; };
@@ -251,7 +250,6 @@
 		95C5B21B2697752600941585 = {
 			isa = PBXGroup;
 			children = (
-				9585BB1026A6B5ED00E3193E /* ConfigTemplate.xcconfig */,
 				9585BB0F26A6B58500E3193E /* Config.xcconfig */,
 				95B5F52526AADE4B00BDCE89 /* Localisation */,
 				95C5B2262697752600941585 /* Simoleon */,
