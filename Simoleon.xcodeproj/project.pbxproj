@@ -250,8 +250,6 @@
 		95C5B21B2697752600941585 = {
 			isa = PBXGroup;
 			children = (
-				9585BB0F26A6B58500E3193E /* Config.xcconfig */,
-				95B5F52526AADE4B00BDCE89 /* Localisation */,
 				95C5B2262697752600941585 /* Simoleon */,
 				95C5B23D2697752700941585 /* SimoleonTests */,
 				95C5B2482697752700941585 /* SimoleonUITests */,
@@ -274,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				95E76437269E0033008E9F31 /* Simoleon.entitlements */,
+				9585BB0F26A6B58500E3193E /* Config.xcconfig */,
 				95C5B2272697752600941585 /* SimoleonApp.swift */,
 				95AEBC9426A03ECB00613729 /* ContentView.swift */,
 				95B54F4E26A4AC52001DC0D8 /* ContentViewPad.swift */,
@@ -290,6 +289,7 @@
 				95559331269B094A000FD726 /* Models */,
 				95559338269B0AAA000FD726 /* Functions */,
 				9555933B269B0DF9000FD726 /* Resources */,
+				95B5F52526AADE4B00BDCE89 /* Localisation */,
 				95C5B22D2697752700941585 /* Preview Content */,
 				95562D5326A8B0A70047E778 /* Tests */,
 			);
