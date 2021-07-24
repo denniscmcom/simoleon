@@ -26,8 +26,9 @@ struct Settings: View {
                         Text("Information", comment: "Button to show subscription information in settings")
                     }
                 } else {
-                    Text("Subscribe", comment: "Button to suscribe in settings")
-                        .onTapGesture { showingSubscriptionPaywall = true }
+                    Button(action: { showingSubscriptionPaywall = true }) {
+                        Text("Subscribe", comment: "Button to suscribe in settings")
+                    }
                 }
             }
             
