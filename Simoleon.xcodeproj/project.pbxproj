@@ -13,7 +13,6 @@
 		9555933D269B0E0A000FD726 /* CurrencyMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 9555933C269B0E0A000FD726 /* CurrencyMetadata.json */; };
 		95562D4D26A8962A0047E778 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95562D4C26A8962A0047E778 /* StoreKit.framework */; };
 		95562D5226A8AEF60047E778 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 95562D5126A8AEF60047E778 /* Purchases */; };
-		95562D5526A8B0B70047E778 /* RevenueCatTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95562D5426A8B0B70047E778 /* RevenueCatTest.swift */; };
 		957065E226A5FE0400523E68 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957065E126A5FE0400523E68 /* Settings.swift */; };
 		9585BB1226A6B71B00E3193E /* ReadConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1126A6B71B00E3193E /* ReadConfig.swift */; };
 		9585BB1426A6B7F400E3193E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1326A6B7F400E3193E /* Request.swift */; };
@@ -78,7 +77,6 @@
 		95559339269B0AB8000FD726 /* ParseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
 		9555933C269B0E0A000FD726 /* CurrencyMetadata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrencyMetadata.json; sourceTree = "<group>"; };
 		95562D4C26A8962A0047E778 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		95562D5426A8B0B70047E778 /* RevenueCatTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatTest.swift; sourceTree = "<group>"; };
 		957065E126A5FE0400523E68 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		9585BB0F26A6B58500E3193E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		9585BB1026A6B5ED00E3193E /* ConfigTemplate.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigTemplate.xcconfig; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 		95562D5326A8B0A70047E778 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				95562D5426A8B0B70047E778 /* RevenueCatTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -515,7 +512,6 @@
 				95C5179D26A5EFBE00BC2B24 /* Favourite+CoreDataProperties.swift in Sources */,
 				95C5179F26A5F34200BC2B24 /* Favourites.swift in Sources */,
 				95C5B2282697752600941585 /* SimoleonApp.swift in Sources */,
-				95562D5526A8B0B70047E778 /* RevenueCatTest.swift in Sources */,
 				95B54F4A26A4A450001DC0D8 /* ConversionBox.swift in Sources */,
 				95D8C8C726A95D2900BCC188 /* Subscription.swift in Sources */,
 				95D8C8D126A9BC6200BCC188 /* LockedCurrencyPicker.swift in Sources */,
@@ -713,7 +709,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -738,7 +734,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;

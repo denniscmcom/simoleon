@@ -8,27 +8,26 @@
 import SwiftUI
 
 struct Sidebar: View {
+    @EnvironmentObject var subscriptionController: SubscriptionController
+    
     var body: some View {
         List {
-            NavigationLink(destination: Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")) {
-                HStack {
-                    Text("Convert", comment: "Tab bar button to show conversion")
-                    Image(systemName: "arrow.counterclockwise.circle")
-                }
+            NavigationLink(destination: Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")
+                            .environmentObject(subscriptionController)
+            ) {
+                Label("Convert", systemImage: "arrow.counterclockwise.circle")
             }
             
-            NavigationLink(destination: Favourites()) {
-                HStack {
-                    Text("Favourites", comment: "Tab bar button to show favourites")
-                    Image(systemName: "star")
-                }
+            NavigationLink(destination: Favourites()
+                            .environmentObject(subscriptionController)
+            ) {
+                Label("Favourites", systemImage: "star")
             }
             
-            NavigationLink(destination: Settings()) {
-                HStack {
-                    Text("Settings", comment: "Tab bar button to show settings")
-                    Image(systemName: "gear")
-                }
+            NavigationLink(destination: Settings()
+                            .environmentObject(subscriptionController)
+            ) {
+                Label("Settings", systemImage: "gear")
             }
         }
         .listStyle(SidebarListStyle())

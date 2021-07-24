@@ -10,6 +10,7 @@ import SwiftUI
 struct Conversion: View {
     var fetchUserSettings: Bool
     @State var currencyPair: String
+    @EnvironmentObject var subscriptionController: SubscriptionController
     
     @State private var amountToConvert = "1000"
     @State private var price: Double = 1.00
@@ -60,6 +61,7 @@ struct Conversion: View {
             })
             .sheet(isPresented: $showingCurrencySelector) {
                 CurrencySelector(currencyPair: $currencyPair, showingCurrencySelector: $showingCurrencySelector)
+                    .environmentObject(subscriptionController)
             }
         }
         .navigationTitle(Text("Convert", comment: "Navigation title"))
