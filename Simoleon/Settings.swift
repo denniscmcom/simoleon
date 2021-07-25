@@ -86,6 +86,10 @@ struct Settings: View {
                 Link(destination: URL(string: "https://dennistech.io")!) {
                     Text("Privacy Policy", comment: "Button to go to app privacy policy")
                 }
+                
+                Link(destination: URL(string: "https://dennistech.io/terms-of-use")!) {
+                    Text("Terms of Use", comment: "Button to go to app terms of use")
+                }
             }
         }
         .onAppear(perform: onAppear)
@@ -130,5 +134,6 @@ struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         Settings()
             .environmentObject(SubscriptionController())
+            .environment(\.locale, .init(identifier: "es"))
     }
 }
