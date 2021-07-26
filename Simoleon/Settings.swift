@@ -9,31 +9,19 @@ import SwiftUI
 import Purchases
 
 struct Settings: View {
-    @EnvironmentObject var subscriptionController: SubscriptionController
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var defaultCurrency: FetchedResults<DefaultCurrency>
     
     @State private var selectedDefaultCurrency = ""
     @State private var showingSubscriptionPaywall = false
+    @State private var entitlementIsActive = false
     
     let currencyPairs: [String] = parseJson("CurrencyPairs.json")
     
     var body: some View {
         List {
-            Section(header: Text("Subscription", comment: "Section header in settings")) {
-                if subscriptionController.isActive {
-                    NavigationLink(destination: SubscriberInfo()) {
-                        Text("Information", comment: "Button to show subscription information in settings")
-                    }
-                } else {
-                    Button(action: { showingSubscriptionPaywall = true }) {
-                        Text("Subscribe", comment: "Button to suscribe in settings")
-                    }
-                }
-            }
-            
             Section(header: Text("Preferences", comment: "Section header in settings")) {
-                if subscriptionController.isActive {
+                if entitlementIsActive {
                     Picker(selection: $selectedDefaultCurrency, label: Text("Default currency", comment: "Picker to select default currency"), content: {
                         ForEach(currencyPairs.sorted(), id: \.self) { currencyPair in
                             Text(currencyPair)
@@ -83,7 +71,7 @@ struct Settings: View {
                     Text("Website", comment: "Button to go to Dennis Tech website")
                 }
                 
-                Link(destination: URL(string: "https://dennistech.io")!) {
+                Link(destination: URL(string: "https://dennistech.io/privacy-policy")!) {
                     Text("Privacy Policy", comment: "Button to go to app privacy policy")
                 }
                 
@@ -92,27 +80,30 @@ struct Settings: View {
                 }
             }
         }
-        .onAppear(perform: onAppear)
+        .onAppear {
+            /*
+             if selectedDefaultCurrency is empty -> view is appearing for the first time -> set initial default curency for picker
+             else -> view is appearing after user selected another default currency -> save it to core data
+             */
+            if selectedDefaultCurrency == "" {
+                self.selectedDefaultCurrency = defaultCurrency.first?.pair ?? "USD/GBP"
+            } else {
+                setCoreData()
+            }
+        }
         .listStyle(InsetGroupedListStyle())
         .navigationTitle(Text("Settings", comment: "Navigation title"))
-        .sheet(isPresented: $showingSubscriptionPaywall) {
-            Subscription(showingSubscriptionPaywall: $showingSubscriptionPaywall)
-                .environmentObject(subscriptionController)
+        .sheet(isPresented: $showingSubscriptionPaywall, onDismiss: checkEntitlement) {
+            SubscriptionPaywall(showingSubscriptionPaywall: $showingSubscriptionPaywall)
         }
         .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
             NavigationView { content }
         }
     }
     
-    private func onAppear() {
-        // Set initial value of the picker
-        if selectedDefaultCurrency == "" {
-            self.selectedDefaultCurrency = defaultCurrency.first?.pair ?? "USD/GBP"
-        } else {
-            setCoreData()
-        }
-    }
-    
+    /*
+     Save default currency to core data
+     */
     private func setCoreData() {
         if self.defaultCurrency.isEmpty {  // If it's empty -> add record
             let defaultCurrency = DefaultCurrency(context: viewContext)
@@ -128,12 +119,26 @@ struct Settings: View {
             try? viewContext.save()
         }
     }
+    
+    /*
+     Check if user subscription is active
+     */
+    private func checkEntitlement() {
+        Purchases.shared.purchaserInfo { (purchaserInfo, error) in
+            if purchaserInfo?.entitlements["all"]?.isActive == true {
+                entitlementIsActive = true
+                print("Entitlement is active")
+            } else {
+                entitlementIsActive = false
+                print("Entitlement is NOT active")
+            }
+        }
+    }
 }
 
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         Settings()
-            .environmentObject(SubscriptionController())
             .environment(\.locale, .init(identifier: "es"))
     }
 }

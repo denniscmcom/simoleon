@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
-import Purchases
 
 struct ContentView: View {
     @State private var tab: Tab = .convert
-    @StateObject var subscriptionController = SubscriptionController()
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) private var defaultCurrency: FetchedResults<DefaultCurrency>
     
     var body: some View {
         TabView(selection: $tab) {
-            Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")
-                .environmentObject(subscriptionController)
+            Conversion(currencyPair: defaultCurrency.first?.pair ?? "USD/GBP")
                 .tabItem {
                     Text("Convert", comment: "Tab bar button to show conversion")
                     Image(systemName: "arrow.counterclockwise.circle")
@@ -23,7 +22,6 @@ struct ContentView: View {
                 .tag(Tab.convert)
             
             Favourites()
-                .environmentObject(subscriptionController)
                 .tabItem {
                     Text("Favourites", comment: "Tab bar button to show favourites")
                     Image(systemName: "star")
@@ -31,23 +29,11 @@ struct ContentView: View {
                 .tag(Tab.favourites)
             
             Settings()
-                .environmentObject(subscriptionController)
                 .tabItem {
                     Text("Settings", comment: "Tab bar button to show settings")
                     Image(systemName: "gear")
                 }
                 .tag(Tab.settings)
-        }
-        .onAppear(perform: checkEntitlements)
-    }
-    
-    private func checkEntitlements() {
-        Purchases.shared.purchaserInfo { (purchaserInfo, error) in
-            if purchaserInfo?.entitlements["all"]?.isActive == true {
-                self.subscriptionController.isActive = true
-            } else {
-                // User subscription is not active
-            }
         }
     }
     
@@ -59,6 +45,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-//            .environment(\.locale, .init(identifier: "es"))
     }
 }

@@ -11,9 +11,7 @@ struct Favourites: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Favourite.currencyPair, ascending: true)],
-        animation: .default)
-    private var favourite: FetchedResults<Favourite>
-    @EnvironmentObject var subscriptionController: SubscriptionController
+        animation: .default) private var favourite: FetchedResults<Favourite>
     
     var body: some View {
         VStack {
@@ -27,9 +25,7 @@ struct Favourites: View {
             } else {
                 List {
                     ForEach(favourite) { favourite in
-                        NavigationLink(destination: Conversion(fetchUserSettings: false, currencyPair: favourite.currencyPair)
-                                        .environmentObject(subscriptionController)
-                        ) {
+                        NavigationLink(destination: Conversion(currencyPair: favourite.currencyPair)) {
                             CurrencyRow(currencyPair: favourite.currencyPair)
                         }
                     }

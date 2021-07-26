@@ -10,7 +10,6 @@ import Purchases
 
 struct RestoreButton: View {
     @Binding var showingSubscriptionPaywall: Bool
-    @EnvironmentObject var subscriptionController: SubscriptionController
     
     @State private var alertTitle: LocalizedStringKey = ""
     @State private var alertMessage: LocalizedStringKey = ""
@@ -35,7 +34,6 @@ struct RestoreButton: View {
         
         Purchases.shared.restoreTransactions { purchaserInfo, error in
             if purchaserInfo?.entitlements["all"]?.isActive == true {
-                subscriptionController.isActive = true
                 showingSubscriptionPaywall = false
             } else {
                 alertTitle = LocalizedStringKey("No subscriptions found")

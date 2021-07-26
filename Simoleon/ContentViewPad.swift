@@ -6,29 +6,15 @@
 //
 
 import SwiftUI
-import Purchases
 
 struct ContentViewPad: View {
-    @StateObject var subscriptionController = SubscriptionController()
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) private var defaultCurrency: FetchedResults<DefaultCurrency>
     
     var body: some View {
         NavigationView {
             Sidebar()
-                .environmentObject(subscriptionController)
-            
-            Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")
-                .environmentObject(subscriptionController)
-        }
-        .onAppear(perform: checkEntitlements)
-    }
-    
-    private func checkEntitlements() {
-        Purchases.shared.purchaserInfo { (purchaserInfo, error) in
-            if purchaserInfo?.entitlements["all"]?.isActive == true {
-                self.subscriptionController.isActive = true
-            } else {
-                // User subscription is not active
-            }
+            Conversion(currencyPair: defaultCurrency.first?.pair ?? "USD/GBP")
         }
     }
 }

@@ -43,12 +43,10 @@
 		95C5B2342697752700941585 /* Simoleon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2322697752700941585 /* Simoleon.xcdatamodeld */; };
 		95C5B23F2697752700941585 /* SimoleonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B23E2697752700941585 /* SimoleonTests.swift */; };
 		95C5B24A2697752700941585 /* SimoleonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2492697752700941585 /* SimoleonUITests.swift */; };
-		95D8C8C726A95D2900BCC188 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8C626A95D2900BCC188 /* Subscription.swift */; };
+		95D8C8C726A95D2900BCC188 /* SubscriptionPaywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8C626A95D2900BCC188 /* SubscriptionPaywall.swift */; };
 		95D8C8CD26A9784500BCC188 /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */; };
 		95D8C8CF26A98A7900BCC188 /* RestoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */; };
 		95D8C8D126A9BC6200BCC188 /* LockedCurrencyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */; };
-		95D8C8D326A9C17300BCC188 /* SubscriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8D226A9C17300BCC188 /* SubscriptionController.swift */; };
-		95D8C8D526A9E20F00BCC188 /* SubscriberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8D426A9E20F00BCC188 /* SubscriberInfo.swift */; };
 		95DD4ABB269B33810027CA1F /* CurrencyPairs.json in Resources */ = {isa = PBXBuildFile; fileRef = 95DD4ABA269B33810027CA1F /* CurrencyPairs.json */; };
 		95E76436269DFC1A008E9F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E76435269DFC1A008E9F31 /* LaunchScreen.storyboard */; };
 		95E7643A269E0037008E9F31 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E76439269E0037008E9F31 /* CloudKit.framework */; };
@@ -116,12 +114,10 @@
 		95C5B2452697752700941585 /* SimoleonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoleonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C5B2492697752700941585 /* SimoleonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonUITests.swift; sourceTree = "<group>"; };
 		95C5B24B2697752700941585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95D8C8C626A95D2900BCC188 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		95D8C8C626A95D2900BCC188 /* SubscriptionPaywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPaywall.swift; sourceTree = "<group>"; };
 		95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
 		95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreButton.swift; sourceTree = "<group>"; };
 		95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedCurrencyPicker.swift; sourceTree = "<group>"; };
-		95D8C8D226A9C17300BCC188 /* SubscriptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionController.swift; sourceTree = "<group>"; };
-		95D8C8D426A9E20F00BCC188 /* SubscriberInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberInfo.swift; sourceTree = "<group>"; };
 		95DD4ABA269B33810027CA1F /* CurrencyPairs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrencyPairs.json; sourceTree = "<group>"; };
 		95E76435269DFC1A008E9F31 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E76437269E0033008E9F31 /* Simoleon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simoleon.entitlements; sourceTree = "<group>"; };
@@ -279,7 +275,7 @@
 				95B54F4326A4842C001DC0D8 /* Conversion.swift */,
 				95C5179E26A5F34200BC2B24 /* Favourites.swift */,
 				957065E126A5FE0400523E68 /* Settings.swift */,
-				95D8C8C626A95D2900BCC188 /* Subscription.swift */,
+				95D8C8C626A95D2900BCC188 /* SubscriptionPaywall.swift */,
 				95C5B22B2697752700941585 /* Assets.xcassets */,
 				95C5B2302697752700941585 /* Persistence.swift */,
 				95C5B2352697752700941585 /* Info.plist */,
@@ -344,8 +340,6 @@
 				95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */,
 				95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */,
 				95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */,
-				95D8C8D226A9C17300BCC188 /* SubscriptionController.swift */,
-				95D8C8D426A9E20F00BCC188 /* SubscriberInfo.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -493,7 +487,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D8C8D326A9C17300BCC188 /* SubscriptionController.swift in Sources */,
 				95C5179926A5EC9F00BC2B24 /* FavouriteButton.swift in Sources */,
 				95C5179C26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift in Sources */,
 				950A377826A820F800CAB175 /* DefaultCurrency+CoreDataClass.swift in Sources */,
@@ -501,7 +494,6 @@
 				9585BB1226A6B71B00E3193E /* ReadConfig.swift in Sources */,
 				95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */,
 				95AEBC9B26A04A4200613729 /* CurrencyMetadataModel.swift in Sources */,
-				95D8C8D526A9E20F00BCC188 /* SubscriberInfo.swift in Sources */,
 				95D8C8CD26A9784500BCC188 /* SubscribeButton.swift in Sources */,
 				950A377726A820F800CAB175 /* DefaultCurrency+CoreDataProperties.swift in Sources */,
 				9585BB1A26A6E8FD00E3193E /* SimpleSuccess.swift in Sources */,
@@ -511,7 +503,7 @@
 				95C5179F26A5F34200BC2B24 /* Favourites.swift in Sources */,
 				95C5B2282697752600941585 /* SimoleonApp.swift in Sources */,
 				95B54F4A26A4A450001DC0D8 /* ConversionBox.swift in Sources */,
-				95D8C8C726A95D2900BCC188 /* Subscription.swift in Sources */,
+				95D8C8C726A95D2900BCC188 /* SubscriptionPaywall.swift in Sources */,
 				95D8C8D126A9BC6200BCC188 /* LockedCurrencyPicker.swift in Sources */,
 				95C517A126A5F6C000BC2B24 /* ResignKeyboard.swift in Sources */,
 				95AEBC9D26A04D4600613729 /* CurrencyRow.swift in Sources */,
@@ -707,7 +699,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -732,7 +724,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
