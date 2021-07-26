@@ -42,7 +42,7 @@ struct SubscribeButton: View {
     private func fetchMonthlySubscription() {
         Purchases.shared.offerings { (offerings, error) in
             if let product = offerings?.current?.monthly?.product {
-                self.price = formatCurrency(product.priceLocale, product.price)
+                price = formatCurrency(product.priceLocale, product.price)
                 showingPrice = true
             }
             

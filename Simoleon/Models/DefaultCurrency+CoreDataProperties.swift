@@ -11,11 +11,11 @@ import CoreData
 
 
 extension DefaultCurrency {
-
+    
     @nonobjc public class func fetchRequest() -> NSFetchRequest<DefaultCurrency> {
         return NSFetchRequest<DefaultCurrency>(entityName: "DefaultCurrency")
     }
-
+    
     @NSManaged public var pair: String?
-
+    
 }

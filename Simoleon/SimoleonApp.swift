@@ -12,9 +12,9 @@ import Purchases
 struct SimoleonApp: App {
     let persistenceController = PersistenceController.shared
     init() {
-            Purchases.configure(withAPIKey: "\(readConfig("PURCHASES_KEY")!)")
-        }
-
+        Purchases.configure(withAPIKey: "\(readConfig("PURCHASES_KEY")!)")
+    }
+    
     var body: some Scene {
         WindowGroup {
             if UIDevice.current.userInterfaceIdiom == .pad {

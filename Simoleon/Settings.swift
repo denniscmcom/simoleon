@@ -83,11 +83,15 @@ struct Settings: View {
         .onAppear {
             checkEntitlement()
             /*
-             if selectedDefaultCurrency is empty -> view is appearing for the first time -> set initial default curency for picker
-             else -> view is appearing after user selected another default currency -> save it to core data
+             if selectedDefaultCurrency is empty:
+             * View is appearing for the first time
+             * Set initial default curency for picker
+             else:
+             * View is appearing after user selected another default currency
+             * Save it to core data
              */
             if selectedDefaultCurrency == "" {
-                self.selectedDefaultCurrency = defaultCurrency.first?.pair ?? "USD/GBP"
+                selectedDefaultCurrency = defaultCurrency.first?.pair ?? "USD/GBP"
             } else {
                 setCoreData()
             }
@@ -102,11 +106,10 @@ struct Settings: View {
         }
     }
     
-    /*
-     Save default currency to core data
-     */
+     
+    // Save default currency to core data
     private func setCoreData() {
-        if self.defaultCurrency.isEmpty {  // If it's empty -> add record
+        if defaultCurrency.isEmpty {  // If it's empty -> add record
             let defaultCurrency = DefaultCurrency(context: viewContext)
             defaultCurrency.pair = selectedDefaultCurrency
             
@@ -116,28 +119,26 @@ struct Settings: View {
                 print(error.localizedDescription)
             }
         } else {  // If not, update record
-            self.defaultCurrency.first?.pair = selectedDefaultCurrency
+            defaultCurrency.first?.pair = selectedDefaultCurrency
             try? viewContext.save()
         }
     }
     
-    /*
-     Check if user subscription is active
-     */
+    // Check if user subscription is active
     private func checkEntitlement() {
         #if targetEnvironment(simulator)
-            // We're in simulator
-            entitlementIsActive = true
+        // We're in simulator
+        entitlementIsActive = true
         #else
-            Purchases.shared.purchaserInfo { (purchaserInfo, error) in
-                if purchaserInfo?.entitlements["all"]?.isActive == true {
-                    entitlementIsActive = true
-                    print("Entitlement is active")
-                } else {
-                    entitlementIsActive = false
-                    print("Entitlement is NOT active")
-                }
+        Purchases.shared.purchaserInfo { (purchaserInfo, error) in
+            if purchaserInfo?.entitlements["all"]?.isActive == true {
+                entitlementIsActive = true
+                print("Entitlement is active")
+            } else {
+                entitlementIsActive = false
+                print("Entitlement is NOT active")
             }
+        }
         #endif
     }
 }
