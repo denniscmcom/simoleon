@@ -11,7 +11,6 @@ import Purchases
 struct CurrencySelector: View {
     @Binding var currencyPair: String
     @Binding var showingCurrencySelector: Bool
-    @EnvironmentObject var subscriptionController: SubscriptionController
     
     @State private var searchCurrency = ""
     @State private var showingSubscriptionPaywall = false
@@ -34,6 +33,9 @@ struct CurrencySelector: View {
                     UIApplication.shared.dismissKeyboard()
                  })
              )
+            .sheet(isPresented: $showingSubscriptionPaywall) {
+                SubscriptionPaywall(showingSubscriptionPaywall: $showingSubscriptionPaywall)
+            }
             .navigationTitle(Text("Currencies", comment: "Navigation title"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -44,11 +46,12 @@ struct CurrencySelector: View {
                 }
             }
         }
-        .sheet(isPresented: $showingSubscriptionPaywall) {
-            Subscription(showingSubscriptionPaywall: $showingSubscriptionPaywall)
-        }
     }
     
+    /*
+     If searched currency string is empty -> show all currencies
+     else -> show filtered list of currencies containing searched currency string
+     */
     private func currencyPairs() -> [String] {
         let currencyPairs: [String] = parseJson("CurrencyPairs.json")
         
@@ -60,12 +63,18 @@ struct CurrencySelector: View {
     }
     
     
+    /*
+     If user is subscribed -> select currency and dismiss currency selector
+     else -> show subscription paywall
+     */
     private func select(_ currencyPair: String) {
-        if subscriptionController.isActive {
-            self.currencyPair = currencyPair
-            showingCurrencySelector = false
-        } else {
-            showingSubscriptionPaywall = true
+        Purchases.shared.purchaserInfo { (purchaserInfo, error) in
+            if purchaserInfo?.entitlements["all"]?.isActive == true {
+                self.currencyPair = currencyPair
+                showingCurrencySelector = false
+            } else {
+                showingSubscriptionPaywall = true
+            }
         }
     }
 }
@@ -74,6 +83,5 @@ struct CurrencySelector: View {
 struct CurrencySelector_Previews: PreviewProvider {
     static var previews: some View {
         CurrencySelector(currencyPair: .constant("USD/GBP"), showingCurrencySelector: .constant(false))
-            .environmentObject(SubscriptionController())
     }
 }

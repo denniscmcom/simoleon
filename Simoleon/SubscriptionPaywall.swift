@@ -1,5 +1,5 @@
 //
-//  Subscription.swift
+//  SubscriptionPaywall.swift
 //  Simoleon
 //
 //  Created by Dennis Concepción Martín on 22/07/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Subscription: View {
+struct SubscriptionPaywall: View {
     @Binding var showingSubscriptionPaywall: Bool
     
     var body: some View {
@@ -90,10 +90,22 @@ struct Subscription: View {
                     SubscribeButton(showingSubscriptionPaywall: $showingSubscriptionPaywall)
                     HStack {
                         Spacer()
-                        RestoreButton(showingSubscriptionPaywall: $showingSubscriptionPaywall)
+                        VStack {
+                            RestoreButton(showingSubscriptionPaywall: $showingSubscriptionPaywall)
+                                .padding(.bottom)
+                            HStack {
+                                Link(destination: URL(string: "https://dennistech.io/privacy-policy")!) {
+                                    Text("Privacy Policy", comment: "Button to go to app privacy policy")
+                                }
+
+                                Link(destination: URL(string: "https://dennistech.io/terms-of-use")!) {
+                                    Text("Terms of Use", comment: "Button to go to app terms of use")
+                                }
+                            }
+                        }
+                        
                         Spacer()
                     }
-                    
                 }
                 .padding(.bottom)
                 .padding(.horizontal, 40)
@@ -109,8 +121,8 @@ struct Subscription: View {
     }
 }
 
-struct Subscription_Previews: PreviewProvider {
+struct SubscriptionPaywall_Previews: PreviewProvider {
     static var previews: some View {
-        Subscription(showingSubscriptionPaywall: .constant(false))
+        SubscriptionPaywall(showingSubscriptionPaywall: .constant(false))
     }
 }

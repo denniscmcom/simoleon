@@ -10,7 +10,6 @@ import Purchases
 
 struct SubscribeButton: View {
     @Binding var showingSubscriptionPaywall: Bool
-    @EnvironmentObject var subscriptionController: SubscriptionController
     
     @State private var price = ""
     @State private var alertTitle = ""
@@ -66,7 +65,6 @@ struct SubscribeButton: View {
                 Purchases.shared.purchasePackage(package) { (transaction, purchaserInfo, error, userCancelled) in
                     if purchaserInfo?.entitlements["all"]?.isActive == true {
                         showingPrice = true
-                        subscriptionController.isActive = true
                         showingSubscriptionPaywall = false
                     }
                     

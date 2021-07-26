@@ -6,20 +6,15 @@
 //
 
 import SwiftUI
+import Purchases
 
 struct Conversion: View {
-    var fetchUserSettings: Bool
     @State var currencyPair: String
-    @EnvironmentObject var subscriptionController: SubscriptionController
-    
     @State private var amountToConvert = "1000"
     @State private var price: Double = 1.00
     @State private var showingConversion = false
     @State private var showingCurrencySelector = false
-    @State private var isEditing = false
-    
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) private var defaultCurrency: FetchedResults<DefaultCurrency>
+    @State private var amountIsEditing = false
     
     let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
@@ -31,7 +26,10 @@ struct Conversion: View {
                         RoundedRectangle(cornerRadius: 15)
                             .foregroundColor(Color(.secondarySystemBackground))
                             .frame(height: 60)
-                            .overlay(CurrencyRow(currencyPair: currencyPair).padding(.horizontal))
+                            .overlay(
+                                CurrencyRow(currencyPair: currencyPair)
+                                    .padding(.horizontal)
+                            )
                     }
                     
                     FavouriteButton(currencyPair: currencyPair)
@@ -42,47 +40,34 @@ struct Conversion: View {
                     amountToConvert: $amountToConvert,
                     price: $price,
                     showingConversion: $showingConversion,
-                    showingCurrencySelector: $showingCurrencySelector,
-                    isEditing: $isEditing
+                    amountIsEditing: $amountIsEditing
                 )
             }
             .padding()
-            .onAppear {
-                if fetchUserSettings {
-                    fetchingUserSettings()
-                }
-                
-                request(currencyPair)
-            }
-            .onChange(of: showingCurrencySelector, perform: { showingCurrencySelector in
-                if !showingCurrencySelector {
-                    request(currencyPair)
-                }
-            })
             .sheet(isPresented: $showingCurrencySelector) {
                 CurrencySelector(currencyPair: $currencyPair, showingCurrencySelector: $showingCurrencySelector)
-                    .environmentObject(subscriptionController)
             }
         }
+        .onAppear(perform: request)
         .navigationTitle(Text("Convert", comment: "Navigation title"))
         .toolbar {
             ToolbarItem(placement: .cancellationAction) {
-                if isEditing {
+                if amountIsEditing {
                     Button(action: {
                         UIApplication.shared.dismissKeyboard()
-                        isEditing = false
+                        amountIsEditing = false
                     }) {
                         Text("Cancel", comment: "Button to stop editing textfield")
                     }
                 }
             }
         }
-        .if(UIDevice.current.userInterfaceIdiom == .phone && fetchUserSettings) { content in
+        .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
             NavigationView { content }
         }
     }
     
-    private func request(_ currencyPair: String) {
+    private func request() {
         let url = "\(readConfig("API_URL")!)quotes?pairs=\(currencyPair)&api_key=\(readConfig("API_KEY")!)"
         
         Simoleon.request(url: url, model: [CurrencyQuoteModel].self) { response in
@@ -95,21 +80,11 @@ struct Conversion: View {
             }
         }
     }
-    
-    /*
-     1) Fetch default currency from User Settings
-     2) Change State var currencyPair
-     */
-    private func fetchingUserSettings() {
-        if let defaultCurrency = defaultCurrency.first {
-            self.currencyPair = defaultCurrency.pair ?? "USD/GBP"
-        }
-    }
 }
 
 
 struct Conversion_Previews: PreviewProvider {
     static var previews: some View {
-        Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")
+        Conversion(currencyPair: "USD/GBP")
     }
 }

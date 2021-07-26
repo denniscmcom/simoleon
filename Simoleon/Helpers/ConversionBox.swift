@@ -12,8 +12,7 @@ struct ConversionBox: View {
     @Binding var amountToConvert: String
     @Binding var price: Double
     @Binding var showingConversion: Bool
-    @Binding var showingCurrencySelector: Bool
-    @Binding var isEditing: Bool
+    @Binding var amountIsEditing: Bool
     
     let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
@@ -29,13 +28,13 @@ struct ConversionBox: View {
                 TextField("Enter amount", text: $amountToConvert) { startedEditing in
                 if startedEditing {
                          withAnimation {
-                            isEditing = true
+                            amountIsEditing = true
                          }
                      }
                 }
                 onCommit: {
                      withAnimation {
-                        isEditing = false
+                        amountIsEditing = false
                      }
                  }
                 .keyboardType(.decimalPad)
@@ -63,7 +62,10 @@ struct ConversionBox: View {
         }
     }
     
-    
+    /*
+     if the amount can be converted to Double -> return amount
+     else -> return zero
+     */
     private func makeConversion() -> Double {
         if let amountToConvert = Double(amountToConvert) {
             return amountToConvert * price  /// Conversion
@@ -76,6 +78,12 @@ struct ConversionBox: View {
 
 struct ConversionBox_Previews: PreviewProvider {
     static var previews: some View {
-        ConversionBox(currencyPair: .constant("USD/GBP"), amountToConvert: .constant("1000"), price: .constant(1), showingConversion: .constant(false), showingCurrencySelector: .constant(false), isEditing: .constant(false))
+        ConversionBox(
+            currencyPair: .constant("USD/GBP"),
+            amountToConvert: .constant("1000"),
+            price: .constant(1),
+            showingConversion: .constant(false),
+            amountIsEditing: .constant(false)
+        )
     }
 }

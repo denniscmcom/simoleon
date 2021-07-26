@@ -8,25 +8,17 @@
 import SwiftUI
 
 struct Sidebar: View {
-    @EnvironmentObject var subscriptionController: SubscriptionController
-    
     var body: some View {
         List {
-            NavigationLink(destination: Conversion(fetchUserSettings: true, currencyPair: "USD/GBP")
-                            .environmentObject(subscriptionController)
-            ) {
+            NavigationLink(destination: Conversion(currencyPair: "USD/GBP")) {
                 Label("Convert", systemImage: "arrow.counterclockwise.circle")
             }
             
-            NavigationLink(destination: Favourites()
-                            .environmentObject(subscriptionController)
-            ) {
+            NavigationLink(destination: Favourites()) {
                 Label("Favourites", systemImage: "star")
             }
             
-            NavigationLink(destination: Settings()
-                            .environmentObject(subscriptionController)
-            ) {
+            NavigationLink(destination: Settings()) {
                 Label("Settings", systemImage: "gear")
             }
         }
