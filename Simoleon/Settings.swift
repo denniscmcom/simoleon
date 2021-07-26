@@ -145,6 +145,5 @@ struct Settings: View {
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         Settings()
-            .environment(\.locale, .init(identifier: "es"))
     }
 }

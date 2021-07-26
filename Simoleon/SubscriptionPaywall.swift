@@ -34,57 +34,33 @@ struct SubscriptionPaywall: View {
                     
                     Divider()
                     
-                    HStack(alignment:.top) {
-                        Image(systemName: "star.circle.fill")
-                            .foregroundColor(Color(.systemYellow))
-                            .font(.title)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Favourite currencies", comment: "Subscription feature title")
-                                .font(.headline)
-                            
-                            Text("Save your favourite currencies to access them quickly.", comment: "Subscription feature description")
-                        }
-                    }
+                    SubscriptionFeature(
+                        symbol: "star.circle.fill",
+                        colour: Color(.systemYellow),
+                        title: "Favourite currencies",
+                        description: "Save your favourite currencies to access them quickly."
+                    )
                     
-                    HStack(alignment:.top) {
-                        Image(systemName: "flag.circle.fill")
-                            .foregroundColor(Color(.systemRed))
-                            .font(.title)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Over 170 currencies", comment: "Subscription feature title")
-                                .font(.headline)
-                            
-                            Text("Have access to almost every currency of the world.", comment: "Subscription feature description")
-                        }
-                    }
+                    SubscriptionFeature(
+                        symbol: "flag.circle.fill",
+                        colour: Color(.systemRed),
+                        title: "Over 170 currencies",
+                        description: "Have access to almost every currency of the world."
+                    )
                     
-                    HStack(alignment:.top) {
-                        Image(systemName: "icloud.circle.fill")
-                            .foregroundColor(Color(.systemBlue))
-                            .font(.title)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Simoleon on all your devices", comment: "Subscription feature title")
-                                .font(.headline)
-                            
-                            Text("Your settings and favourite currencies in all your devices.", comment: "Subscription feature description")
-                        }
-                    }
+                    SubscriptionFeature(
+                        symbol: "icloud.circle.fill",
+                        colour: Color(.systemBlue),
+                        title: "Simoleon on all your devices",
+                        description: "Your settings and favourite currencies in all your devices."
+                    )
                     
-                    HStack(alignment:.top) {
-                        Image(systemName: "bitcoinsign.circle.fill")
-                            .foregroundColor(Color(.systemOrange))
-                            .font(.title)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Cryptos and commodities", comment: "Subscription feature title")
-                                .font(.headline)
-                            
-                            Text("Convert your currency between cryptos, gold, and silver.", comment: "Subscription feature description")
-                        }
-                    }
+                    SubscriptionFeature(
+                        symbol: "bitcoinsign.circle.fill",
+                        colour: Color(.systemOrange),
+                        title: "Cryptos and commodities",
+                        description: "Convert your currency between cryptos, gold, and silver."
+                    )
                     
                     Spacer()
                     SubscribeButton(showingSubscriptionPaywall: $showingSubscriptionPaywall)
