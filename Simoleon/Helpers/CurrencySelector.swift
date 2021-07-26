@@ -14,6 +14,9 @@ struct CurrencySelector: View {
     
     @State private var searchCurrency = ""
     @State private var showingSubscriptionPaywall = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    @State private var showingAlert = false
     
     var body: some View {
         NavigationView {
@@ -46,6 +49,9 @@ struct CurrencySelector: View {
                     }
                 }
             }
+        }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
         }
     }
     
@@ -85,6 +91,12 @@ struct CurrencySelector: View {
                 showingCurrencySelector = false
             } else {
                 showingSubscriptionPaywall = true
+            }
+            
+            if let error = error as NSError? {
+                alertTitle = error.localizedDescription
+                alertMessage = error.localizedFailureReason ?? ""
+                showingAlert = true
             }
         }
         #endif

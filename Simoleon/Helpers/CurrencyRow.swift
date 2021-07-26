@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CurrencyRow: View {
     var currencyPair: String
+    
     let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
     var body: some View {

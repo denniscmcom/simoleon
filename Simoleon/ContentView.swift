@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var tab: Tab = .convert
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var defaultCurrency: FetchedResults<DefaultCurrency>
+    
+    @State private var tab: Tab = .convert
     
     var body: some View {
         TabView(selection: $tab) {

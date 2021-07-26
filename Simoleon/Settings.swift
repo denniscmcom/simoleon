@@ -15,6 +15,9 @@ struct Settings: View {
     @State private var selectedDefaultCurrency = ""
     @State private var showingSubscriptionPaywall = false
     @State private var entitlementIsActive = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    @State private var showingAlert = false
     
     let currencyPairs: [String] = parseJson("CurrencyPairs.json")
     
@@ -80,6 +83,9 @@ struct Settings: View {
                 }
             }
         }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
+        }
         .onAppear {
             checkEntitlement()
             /*
@@ -130,6 +136,7 @@ struct Settings: View {
         // We're in simulator
         entitlementIsActive = true
         #else
+        // We're in physical device
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
             if purchaserInfo?.entitlements["all"]?.isActive == true {
                 entitlementIsActive = true
@@ -137,6 +144,12 @@ struct Settings: View {
             } else {
                 entitlementIsActive = false
                 print("Entitlement is NOT active")
+            }
+            
+            if let error = error as NSError? {
+                alertTitle = error.localizedDescription
+                alertMessage = error.localizedFailureReason ?? ""
+                showingAlert = true
             }
         }
         #endif
