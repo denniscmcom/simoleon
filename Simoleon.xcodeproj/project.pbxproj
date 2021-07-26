@@ -11,6 +11,7 @@
 		950A377826A820F800CAB175 /* DefaultCurrency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A377526A820F400CAB175 /* DefaultCurrency+CoreDataClass.swift */; };
 		9555933A269B0AB8000FD726 /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95559339269B0AB8000FD726 /* ParseJson.swift */; };
 		9555933D269B0E0A000FD726 /* CurrencyMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 9555933C269B0E0A000FD726 /* CurrencyMetadata.json */; };
+		95561E3F26AF25EF00CCB543 /* SubscriptionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */; };
 		95562D4D26A8962A0047E778 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95562D4C26A8962A0047E778 /* StoreKit.framework */; };
 		95562D5226A8AEF60047E778 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 95562D5126A8AEF60047E778 /* Purchases */; };
 		957065E226A5FE0400523E68 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957065E126A5FE0400523E68 /* Settings.swift */; };
@@ -74,6 +75,7 @@
 		950A377626A820F400CAB175 /* DefaultCurrency+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCurrency+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		95559339269B0AB8000FD726 /* ParseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
 		9555933C269B0E0A000FD726 /* CurrencyMetadata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrencyMetadata.json; sourceTree = "<group>"; };
+		95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFeature.swift; sourceTree = "<group>"; };
 		95562D4C26A8962A0047E778 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		957065E126A5FE0400523E68 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		9585BB0F26A6B58500E3193E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */,
 				95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */,
 				95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */,
+				95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				95C5179126A5DC8E00BC2B24 /* ConditionalWrapper.swift in Sources */,
 				95B54F5126A4ACAC001DC0D8 /* Sidebar.swift in Sources */,
 				95B54F4626A48852001DC0D8 /* CurrencySelector.swift in Sources */,
+				95561E3F26AF25EF00CCB543 /* SubscriptionFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

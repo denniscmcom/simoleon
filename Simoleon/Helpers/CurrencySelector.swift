@@ -26,11 +26,9 @@ struct CurrencySelector: View {
                         Button(action: { select(currencyPair) }) {
                             CurrencyRow(currencyPair: currencyPair)
                         }
-                        .accessibilityIdentifier("CurrencyRowButton")
                     }
                 }
             }
-            .accessibilityIdentifier("AllCurrencies")
             .gesture(DragGesture()
                  .onChanged({ _ in
                     UIApplication.shared.dismissKeyboard()
