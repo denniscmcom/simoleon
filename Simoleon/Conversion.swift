@@ -9,6 +9,7 @@ import SwiftUI
 import Purchases
 
 struct Conversion: View {
+    var showNavigationView: Bool?
     @State var currencyPair: String
     @State private var amountToConvert = "1000"
     @State private var price: Double = 1.00
@@ -31,6 +32,7 @@ struct Conversion: View {
                                     .padding(.horizontal)
                             )
                     }
+                    .accessibilityIdentifier("CurrencySelector")
                     
                     FavouriteButton(currencyPair: currencyPair)
                 }
@@ -51,7 +53,7 @@ struct Conversion: View {
         .onAppear(perform: request)
         .navigationTitle(Text("Convert", comment: "Navigation title"))
         .toolbar {
-            ToolbarItem(placement: .cancellationAction) {
+            ToolbarItem(placement: .navigationBarTrailing) {
                 if amountIsEditing {
                     Button(action: {
                         UIApplication.shared.dismissKeyboard()
@@ -62,7 +64,7 @@ struct Conversion: View {
                 }
             }
         }
-        .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
+        .if(UIDevice.current.userInterfaceIdiom == .phone && showNavigationView ?? true) { content in
             NavigationView { content }
         }
     }

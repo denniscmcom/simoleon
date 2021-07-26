@@ -20,6 +20,7 @@ struct ContentView: View {
                     Image(systemName: "arrow.counterclockwise.circle")
                 }
                 .tag(Tab.convert)
+                .accessibilityIdentifier("Convert")
             
             Favourites()
                 .tabItem {
@@ -27,6 +28,7 @@ struct ContentView: View {
                     Image(systemName: "star")
                 }
                 .tag(Tab.favourites)
+                .accessibilityIdentifier("Favourites")
             
             Settings()
                 .tabItem {
@@ -34,6 +36,7 @@ struct ContentView: View {
                     Image(systemName: "gear")
                 }
                 .tag(Tab.settings)
+                .accessibilityIdentifier("Settings")
         }
     }
     
