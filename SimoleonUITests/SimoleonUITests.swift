@@ -21,14 +21,38 @@ class SimoleonUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    
+    // MARK: - Tab View
+    func testTabBarButtons() {
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        app.tabBars.buttons["Favourites"].tap()
+        XCTAssertTrue(app.navigationBars["Favourites"].exists)
+        
+        app.tabBars.buttons["Settings"].tap()
+        XCTAssertTrue(app.navigationBars["Settings"].exists)
+        
+        app.tabBars.buttons["Convert"].tap()
+        XCTAssertTrue(app.navigationBars["Convert"].exists)
+    }
+    
+    // MARK: - Conversion View
+    func testCurrencySelector() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let currencySelectorButton = app.buttons["CurrencySelector"]
+        currencySelectorButton.tap()
+        
+        let searchBar = app.textFields["SearchBar"]
+        searchBar.typeText("BTC/USD")
+        
+        let currencyRowButton = app.buttons["CurrencyRowButton"].firstMatch
+        let currencyRowButtonLabel = currencyRowButton.label
+        currencyRowButton.tap()
+        
+        XCTAssertTrue(currencyRowButtonLabel == currencySelectorButton.label)
     }
 
     func testLaunchPerformance() throws {
