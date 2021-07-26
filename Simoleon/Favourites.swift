@@ -25,7 +25,7 @@ struct Favourites: View {
             } else {
                 List {
                     ForEach(favourite) { favourite in
-                        NavigationLink(destination: Conversion(currencyPair: favourite.currencyPair)) {
+                        NavigationLink(destination: Conversion(showNavigationView: false, currencyPair: favourite.currencyPair)) {
                             CurrencyRow(currencyPair: favourite.currencyPair)
                         }
                     }

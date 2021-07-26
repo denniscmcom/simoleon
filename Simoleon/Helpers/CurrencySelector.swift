@@ -19,15 +19,18 @@ struct CurrencySelector: View {
         NavigationView {
             Form {
                 TextField("Search ...", text: $searchCurrency)
+                    .accessibilityIdentifier("SearchBar")
                 
                 Section(header: Text("All currencies", comment: "Section header in currency selector")) {
                     ForEach(currencyPairs(), id: \.self) { currencyPair in
                         Button(action: { select(currencyPair) }) {
                             CurrencyRow(currencyPair: currencyPair)
                         }
+                        .accessibilityIdentifier("CurrencyRowButton")
                     }
                 }
             }
+            .accessibilityIdentifier("AllCurrencies")
             .gesture(DragGesture()
                  .onChanged({ _ in
                     UIApplication.shared.dismissKeyboard()
@@ -68,14 +71,21 @@ struct CurrencySelector: View {
      else -> show subscription paywall
      */
     private func select(_ currencyPair: String) {
-        Purchases.shared.purchaserInfo { (purchaserInfo, error) in
-            if purchaserInfo?.entitlements["all"]?.isActive == true {
-                self.currencyPair = currencyPair
-                showingCurrencySelector = false
-            } else {
-                showingSubscriptionPaywall = true
+        #if targetEnvironment(simulator)
+            // We're in simulator
+            self.currencyPair = currencyPair
+            showingCurrencySelector = false
+        #else
+            // We're in physical device
+            Purchases.shared.purchaserInfo { (purchaserInfo, error) in
+                if purchaserInfo?.entitlements["all"]?.isActive == true {
+                    self.currencyPair = currencyPair
+                    showingCurrencySelector = false
+                } else {
+                    showingSubscriptionPaywall = true
+                }
             }
-        }
+        #endif
     }
 }
 

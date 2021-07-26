@@ -81,6 +81,7 @@ struct Settings: View {
             }
         }
         .onAppear {
+            checkEntitlement()
             /*
              if selectedDefaultCurrency is empty -> view is appearing for the first time -> set initial default curency for picker
              else -> view is appearing after user selected another default currency -> save it to core data
@@ -124,15 +125,20 @@ struct Settings: View {
      Check if user subscription is active
      */
     private func checkEntitlement() {
-        Purchases.shared.purchaserInfo { (purchaserInfo, error) in
-            if purchaserInfo?.entitlements["all"]?.isActive == true {
-                entitlementIsActive = true
-                print("Entitlement is active")
-            } else {
-                entitlementIsActive = false
-                print("Entitlement is NOT active")
+        #if targetEnvironment(simulator)
+            // We're in simulator
+            entitlementIsActive = true
+        #else
+            Purchases.shared.purchaserInfo { (purchaserInfo, error) in
+                if purchaserInfo?.entitlements["all"]?.isActive == true {
+                    entitlementIsActive = true
+                    print("Entitlement is active")
+                } else {
+                    entitlementIsActive = false
+                    print("Entitlement is NOT active")
+                }
             }
-        }
+        #endif
     }
 }
 
