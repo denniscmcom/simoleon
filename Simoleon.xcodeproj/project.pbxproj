@@ -187,13 +187,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		95562D5326A8B0A70047E778 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		95B5F52526AADE4B00BDCE89 /* Localisation */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,7 +282,6 @@
 				9555933B269B0DF9000FD726 /* Resources */,
 				95B5F52526AADE4B00BDCE89 /* Localisation */,
 				95C5B22D2697752700941585 /* Preview Content */,
-				95562D5326A8B0A70047E778 /* Tests */,
 			);
 			path = Simoleon;
 			sourceTree = "<group>";
