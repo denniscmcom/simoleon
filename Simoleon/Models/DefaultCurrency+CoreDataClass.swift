@@ -11,5 +11,5 @@ import CoreData
 
 @objc(DefaultCurrency)
 public class DefaultCurrency: NSManagedObject {
-
+    
 }

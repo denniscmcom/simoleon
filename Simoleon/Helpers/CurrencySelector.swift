@@ -30,10 +30,10 @@ struct CurrencySelector: View {
                 }
             }
             .gesture(DragGesture()
-                 .onChanged({ _ in
-                    UIApplication.shared.dismissKeyboard()
-                 })
-             )
+                        .onChanged({ _ in
+                            UIApplication.shared.dismissKeyboard()
+                        })
+            )
             .sheet(isPresented: $showingSubscriptionPaywall) {
                 SubscriptionPaywall(showingSubscriptionPaywall: $showingSubscriptionPaywall)
             }
@@ -50,8 +50,10 @@ struct CurrencySelector: View {
     }
     
     /*
-     If searched currency string is empty -> show all currencies
-     else -> show filtered list of currencies containing searched currency string
+     If searched currency string is empty:
+     * Show all currencies
+     else:
+     * Show filtered list of currencies containing searched currency string
      */
     private func currencyPairs() -> [String] {
         let currencyPairs: [String] = parseJson("CurrencyPairs.json")
@@ -65,24 +67,26 @@ struct CurrencySelector: View {
     
     
     /*
-     If user is subscribed -> select currency and dismiss currency selector
-     else -> show subscription paywall
+     If user is subscribed:
+     * Select currency and dismiss currency selector
+     else:
+     * Show subscription paywall
      */
     private func select(_ currencyPair: String) {
         #if targetEnvironment(simulator)
-            // We're in simulator
-            self.currencyPair = currencyPair
-            showingCurrencySelector = false
+        // We're in simulator
+        self.currencyPair = currencyPair
+        showingCurrencySelector = false
         #else
-            // We're in physical device
-            Purchases.shared.purchaserInfo { (purchaserInfo, error) in
-                if purchaserInfo?.entitlements["all"]?.isActive == true {
-                    self.currencyPair = currencyPair
-                    showingCurrencySelector = false
-                } else {
-                    showingSubscriptionPaywall = true
-                }
+        // We're in physical device
+        Purchases.shared.purchaserInfo { (purchaserInfo, error) in
+            if purchaserInfo?.entitlements["all"]?.isActive == true {
+                self.currencyPair = currencyPair
+                showingCurrencySelector = false
+            } else {
+                showingSubscriptionPaywall = true
             }
+        }
         #endif
     }
 }

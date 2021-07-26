@@ -26,17 +26,17 @@ struct ConversionBox: View {
             
             ZStack(alignment: .trailing) {
                 TextField("Enter amount", text: $amountToConvert) { startedEditing in
-                if startedEditing {
-                         withAnimation {
+                    if startedEditing {
+                        withAnimation {
                             amountIsEditing = true
-                         }
-                     }
+                        }
+                    }
                 }
                 onCommit: {
-                     withAnimation {
+                    withAnimation {
                         amountIsEditing = false
-                     }
-                 }
+                    }
+                }
                 .keyboardType(.decimalPad)
                 .font(Font.title.weight(.semibold))
                 .lineLimit(1)
@@ -63,12 +63,14 @@ struct ConversionBox: View {
     }
     
     /*
-     if the amount can be converted to Double -> return amount
-     else -> return zero
+     if the amount can be converted to Double:
+     * Return amount
+     else:
+     * Return zero
      */
     private func makeConversion() -> Double {
         if let amountToConvert = Double(amountToConvert) {
-            return amountToConvert * price  /// Conversion
+            return amountToConvert * price  // Conversion
         } else {
             return 0
         }

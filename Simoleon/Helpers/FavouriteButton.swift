@@ -29,8 +29,10 @@ struct FavouriteButton: View {
     }
     
     /*
-     If currency pair is favourite -> button action is to remove from favourites
-     else -> button action is to add to favourites
+     If currency pair is favourite:
+     * Button action is to remove from favourites
+     else:
+     * Button action is to add to favourites
      */
     private func favouriteAction(_ favouriteCurrencyPairs: [String]) {
         if favouriteCurrencyPairs.contains(currencyPair) {
@@ -43,8 +45,10 @@ struct FavouriteButton: View {
     }
     
     /*
-     if currency pair is favourite -> return "star.fill" symbol
-     else -> return "star"
+     if currency pair is favourite:
+     * Return "star.fill" symbol
+     else:
+     * Return "star"
      */
     private func generateStar(_ favouriteCurrencyPairs: [String]) -> String {
         if favouriteCurrencyPairs.contains(currencyPair) {
@@ -55,8 +59,8 @@ struct FavouriteButton: View {
     }
     
     /*
-     1) Get first favourite core data object that matches the specified currency pair
-     2) Delete it
+     * Get first favourite core data object that matches the specified currency pair
+     * Delete it
      */
     private func removeFromFavourites() {
         withAnimation {
@@ -73,8 +77,8 @@ struct FavouriteButton: View {
     }
     
     /*
-     1) Create a favourite core data object
-     2) Save it
+     * Create a favourite core data object
+     * Save it
      */
     private func addToFavourites() {
         withAnimation {

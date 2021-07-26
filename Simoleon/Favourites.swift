@@ -48,7 +48,7 @@ struct Favourites: View {
     private func removeFromFavourites(offsets: IndexSet) {
         withAnimation {
             offsets.map { favourite[$0] }.forEach(viewContext.delete)
-
+            
             do {
                 try viewContext.save()
             } catch {

@@ -73,10 +73,10 @@ struct Conversion: View {
         let url = "\(readConfig("API_URL")!)quotes?pairs=\(currencyPair)&api_key=\(readConfig("API_KEY")!)"
         
         Simoleon.request(url: url, model: [CurrencyQuoteModel].self) { response in
-            self.showingConversion = false
+            showingConversion = false
             if let price = response.first?.price {
                 self.price = price
-                self.showingConversion =  true
+                showingConversion =  true
             } else {
                 // Handle error
             }
