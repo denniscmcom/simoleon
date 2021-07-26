@@ -36,24 +36,6 @@ class SimoleonUITests: XCTestCase {
         app.tabBars.buttons["Convert"].tap()
         XCTAssertTrue(app.navigationBars["Convert"].exists)
     }
-    
-    // MARK: - Conversion View
-    func testCurrencySelector() {
-        let app = XCUIApplication()
-        app.launch()
-        
-        let currencySelectorButton = app.buttons["CurrencySelector"]
-        currencySelectorButton.tap()
-        
-        let searchBar = app.textFields["SearchBar"]
-        searchBar.typeText("BTC/USD")
-        
-        let currencyRowButton = app.buttons["CurrencyRowButton"].firstMatch
-        let currencyRowButtonLabel = currencyRowButton.label
-        currencyRowButton.tap()
-        
-        XCTAssertTrue(currencyRowButtonLabel == currencySelectorButton.label)
-    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
