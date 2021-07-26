@@ -10,9 +10,10 @@ import SwiftUI
 struct FavouriteButton: View {
     var currencyPair: String
     
-    @State private var starSymbol = "star"
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var favourite: FetchedResults<Favourite>
+    
+    @State private var starSymbol = "star"
     
     var body: some View {
         let favouriteCurrencyPairs = favourite.map { $0.currencyPair }

@@ -10,6 +10,7 @@ import Purchases
 
 struct Conversion: View {
     var showNavigationView: Bool?
+    
     @State var currencyPair: String
     @State private var amountToConvert = "1000"
     @State private var price: Double = 1.00
