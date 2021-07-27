@@ -21,11 +21,11 @@ struct RestoreButton: View {
             if restoringPurchases {
                 ProgressView()
             } else {
-                Text("Restore purchases", comment: "Button to restore in-App purchases")
+                Text("Restore purchases")
             }
         }
         .alert(isPresented: $showingAlert) {
-            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok", comment: "Button to dismiss alert")))
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
         }
     }
     

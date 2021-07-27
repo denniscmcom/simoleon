@@ -10,9 +10,9 @@ import SwiftUI
 struct LockedCurrencyPicker: View {
     var body: some View {
         HStack {
-            Text("Default currency", comment: "Label in locked picker")
+            Text("Default currency")
             Spacer()
-            Text("USD/GBP", comment: "Default currency in locked picker")
+            Text("USD/GBP")
                 .foregroundColor(Color(.systemGray))
             
             Image(systemName: "lock")

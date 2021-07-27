@@ -31,7 +31,7 @@ struct CurrencyRow: View {
                 .offset(x: -20)
                 .padding(.trailing, -20)
             
-            Text("From \(String(currencies[0])) to \(String(currencies[1]))", comment: "Conversion from one currency to another")
+            Text("From \(String(currencies[0])) to \(String(currencies[1]))")
                 .fontWeight(.semibold)
                 .foregroundColor(Color("PlainButton"))
                 .padding(.leading)
