@@ -23,14 +23,9 @@ struct CurrencySelector: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextField("Search ...", text: $searchCurrency)
-                    .padding(10)
-                    .background(
-                        RoundedRectangle(cornerRadius: 15)
-                            .foregroundColor(Color(.systemGray6))
-                    )
+                SearchBar(placeholder: "Search...", text: $searchCurrency)
                     .padding()
-
+                
                 List(searchResults, id: \.self) { currencyPair in
                     Button(action: { select(currencyPair) }) {
                         CurrencyRow(currencyPair: currencyPair)
