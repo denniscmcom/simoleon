@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct Sidebar: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) private var defaultCurrency: FetchedResults<DefaultCurrency>
+    
     var body: some View {
         List {
-            NavigationLink(destination: Conversion(currencyPair: "USD/GBP")) {
+            NavigationLink(destination: Conversion(currencyPair: defaultCurrency.first?.pair ?? "USD/GBP")) {
                 Label("Convert", systemImage: "arrow.counterclockwise.circle")
             }
             
@@ -29,6 +32,8 @@ struct Sidebar: View {
 
 struct Sidebar_Previews: PreviewProvider {
     static var previews: some View {
-        Sidebar()
+        NavigationView {
+            Sidebar()
+        }
     }
 }
