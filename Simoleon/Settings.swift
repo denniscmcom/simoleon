@@ -47,7 +47,7 @@ struct Settings: View {
                         Image(systemName: "heart.fill")
                             .foregroundColor(Color(.systemRed))
                             .imageScale(.large)
-                        
+
                         Text("Rate Simoleon")
                     }
                 }
@@ -64,8 +64,8 @@ struct Settings: View {
                 
                 Link(destination: URL(string: "https://dennistech.io/contact")!) {
                     HStack {
-                        Image(systemName: "envelope.circle.fill")
-                            .renderingMode(.original)
+                        Image(systemName: "envelope.fill")
+                            .foregroundColor(Color(.systemIndigo))
                             .imageScale(.large)
                         
                         Text("Contact")
