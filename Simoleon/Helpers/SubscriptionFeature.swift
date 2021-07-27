@@ -34,8 +34,8 @@ struct SubscriptionFeature_Previews: PreviewProvider {
         SubscriptionFeature(
             symbol: "star.circle.fill",
             colour: Color(.systemYellow),
-            title: "Favourite currencies",
-            description: "Save your favourite currencies to access them quickly."
+            title: "Favorite currencies",
+            description: "Save your favorite currencies to access them quickly."
         )
     }
 }

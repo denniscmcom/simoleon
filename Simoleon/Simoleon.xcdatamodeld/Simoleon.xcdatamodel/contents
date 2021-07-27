@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G71" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="DefaultCurrency" representedClassName="DefaultCurrency" syncable="YES">
         <attribute name="pair" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Favourite" representedClassName="Favourite" syncable="YES">
+    <entity name="Favorite" representedClassName="Favorite" syncable="YES">
         <attribute name="currencyPair" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="Favourite" positionX="-63" positionY="-9" width="128" height="44"/>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-        <element name="DefaultCurrency" positionX="-54" positionY="0" width="128" height="44"/>
+        <element name="DefaultCurrency" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Favorite" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Item" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

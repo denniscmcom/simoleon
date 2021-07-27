@@ -106,16 +106,16 @@
         <target>Expires at %@</target>
         <note>Subscriber information</note>
       </trans-unit>
-      <trans-unit id="Favourite currencies" xml:space="preserve">
-        <source>Favourite currencies</source>
-        <target>Favourite currencies</target>
+      <trans-unit id="Favorite currencies" xml:space="preserve">
+        <source>Favorite currencies</source>
+        <target>Favorite currencies</target>
         <note>Subscription feature title</note>
       </trans-unit>
-      <trans-unit id="Favourites" xml:space="preserve">
-        <source>Favourites</source>
-        <target>Favourites</target>
+      <trans-unit id="Favorites" xml:space="preserve">
+        <source>Favorite</source>
+        <target>Favorite</target>
         <note>Navigation title
-   Tab bar button to show favourites</note>
+   Tab bar button to show favorites</note>
       </trans-unit>
       <trans-unit id="From %@ to %@" xml:space="preserve">
         <source>From %1$@ to %2$@</source>
@@ -175,9 +175,9 @@
         <target>Restore purchases</target>
         <note>Button to restore in-App purchases</note>
       </trans-unit>
-      <trans-unit id="Save your favourite currencies to access them quickly." xml:space="preserve">
-        <source>Save your favourite currencies to access them quickly.</source>
-        <target>Save your favourite currencies to access them quickly.</target>
+      <trans-unit id="Save your favorite currencies to access them quickly." xml:space="preserve">
+        <source>Save your favorite currencies to access them quickly.</source>
+        <target>Save your favorite currencies to access them quickly.</target>
         <note>Subscription feature description</note>
       </trans-unit>
       <trans-unit id="Search ..." xml:space="preserve">
@@ -219,7 +219,7 @@
       <trans-unit id="Tap " xml:space="preserve">
         <source>Tap </source>
         <target>Tap </target>
-        <note>First line when favourites are empty</note>
+        <note>First line when favorites are empty</note>
       </trans-unit>
       <trans-unit id="USD/GBP" xml:space="preserve">
         <source>USD/GBP</source>
@@ -236,15 +236,15 @@
         <target>Website</target>
         <note>Button to go to Dennis Tech website</note>
       </trans-unit>
-      <trans-unit id="Your settings and favourite currencies in all your devices." xml:space="preserve">
-        <source>Your settings and favourite currencies in all your devices.</source>
-        <target>Your settings and favourite currencies in all your devices.</target>
+      <trans-unit id="Your settings and favorite currencies in all your devices." xml:space="preserve">
+        <source>Your settings and favorite currencies in all your devices.</source>
+        <target>Your settings and favorite currencies in all your devices.</target>
         <note>Subscription feature description</note>
       </trans-unit>
-      <trans-unit id="to add a currency pair to favourites" xml:space="preserve">
-        <source>to add a currency pair to favourites</source>
-        <target>to add a currency pair to favourites</target>
-        <note>Finish line when favourites are empty</note>
+      <trans-unit id="to add a currency pair to favorites" xml:space="preserve">
+        <source>to add a currency pair to favorites</source>
+        <target>to add a currency pair to favorites</target>
+        <note>Finish line when favorites are empty</note>
       </trans-unit>
     </body>
   </file>
