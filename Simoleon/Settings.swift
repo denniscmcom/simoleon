@@ -18,18 +18,22 @@ struct Settings: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     @State private var showingAlert = false
+    @State private var searchCurrency = ""
     
     let currencyPairs: [String] = parseJson("CurrencyPairs.json")
     
     var body: some View {
         List {
-            Section(header: Text("Preferences", comment: "Section header in settings")) {
+            Section(header: Text("Preferences")) {
                 if entitlementIsActive {
-                    Picker(selection: $selectedDefaultCurrency, label: Text("Default currency", comment: "Picker to select default currency"), content: {
-                        ForEach(currencyPairs.sorted(), id: \.self) { currencyPair in
+                    Picker("Default currency", selection: $selectedDefaultCurrency) {
+                        SearchBar(placeholder: "Search...", text: $searchCurrency)
+                            .padding(5)
+                        
+                        ForEach(searchResults, id: \.self) { currencyPair in
                             Text(currencyPair)
                         }
-                    })
+                    }
                 } else {
                     LockedCurrencyPicker()
                         .contentShape(Rectangle())
@@ -37,14 +41,14 @@ struct Settings: View {
                 }
             }
             
-            Section(header: Text("Stay in touch", comment: "Section header in settings")) {
+            Section(header: Text("Stay in touch")) {
                 Link(destination: URL(string: "https://itunes.apple.com/app/id1576390953?action=write-review")!) {
                     HStack {
                         Image(systemName: "heart.fill")
                             .foregroundColor(Color(.systemRed))
                             .imageScale(.large)
                         
-                        Text("Rate Simoleon", comment: "Button to rate app in Settings")
+                        Text("Rate Simoleon")
                     }
                 }
                 
@@ -54,7 +58,7 @@ struct Settings: View {
                             .resizable()
                             .frame(width: 30, height: 30)
                         
-                        Text("Developer's Twitter", comment: "Button to go to Twitter in Settings")
+                        Text("Developer's Twitter")
                     }
                 }
                 
@@ -64,22 +68,22 @@ struct Settings: View {
                             .renderingMode(.original)
                             .imageScale(.large)
                         
-                        Text("Contact", comment: "Button to contact in Settings")
+                        Text("Contact")
                     }
                 }
             }
             
             Section(header: Text("About")) {
                 Link(destination: URL(string: "https://dennistech.io")!) {
-                    Text("Website", comment: "Button to go to Dennis Tech website")
+                    Text("Website")
                 }
                 
                 Link(destination: URL(string: "https://dennistech.io/privacy-policy")!) {
-                    Text("Privacy Policy", comment: "Button to go to app privacy policy")
+                    Text("Privacy Policy")
                 }
                 
                 Link(destination: URL(string: "https://dennistech.io/terms-of-use")!) {
-                    Text("Terms of Use", comment: "Button to go to app terms of use")
+                    Text("Terms of Use")
                 }
             }
         }
@@ -103,12 +107,26 @@ struct Settings: View {
             }
         }
         .listStyle(InsetGroupedListStyle())
-        .navigationTitle(Text("Settings", comment: "Navigation title"))
+        .navigationTitle("Settings")
         .sheet(isPresented: $showingSubscriptionPaywall, onDismiss: checkEntitlement) {
             SubscriptionPaywall(showingSubscriptionPaywall: $showingSubscriptionPaywall)
         }
         .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
             NavigationView { content }
+        }
+    }
+    
+    /*
+     If searched currency string is empty:
+     * Show all currencies
+     else:
+     * Show filtered list of currencies containing searched currency string
+     */
+    var searchResults: [String] {
+        if searchCurrency.isEmpty {
+            return currencyPairs.sorted()
+        } else {
+            return currencyPairs.filter { $0.contains(searchCurrency.uppercased()) }
         }
     }
     
@@ -140,10 +158,8 @@ struct Settings: View {
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
             if purchaserInfo?.entitlements["all"]?.isActive == true {
                 entitlementIsActive = true
-                print("Entitlement is active")
             } else {
                 entitlementIsActive = false
-                print("Entitlement is NOT active")
             }
             
             if let error = error as NSError? {
