@@ -18,6 +18,9 @@
 		9585BB1226A6B71B00E3193E /* ReadConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1126A6B71B00E3193E /* ReadConfig.swift */; };
 		9585BB1426A6B7F400E3193E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1326A6B7F400E3193E /* Request.swift */; };
 		9585BB1A26A6E8FD00E3193E /* SimpleSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1926A6E8FD00E3193E /* SimpleSuccess.swift */; };
+		95909CAF26B06A2000D051AB /* Simoleon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2322697752700941585 /* Simoleon.xcdatamodeld */; };
+		95A70BEA26B0550000CC0273 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A70BE926B0550000CC0273 /* CloudKit.framework */; };
+		95A70BEB26B0553C00CC0273 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2302697752700941585 /* Persistence.swift */; };
 		95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9426A03ECB00613729 /* ContentView.swift */; };
 		95AEBC9B26A04A4200613729 /* CurrencyMetadataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9A26A04A4200613729 /* CurrencyMetadataModel.swift */; };
 		95AEBC9D26A04D4600613729 /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9C26A04D4600613729 /* CurrencyRow.swift */; };
@@ -37,6 +40,18 @@
 		95C5179D26A5EFBE00BC2B24 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179B26A5EFBE00BC2B24 /* Favorite+CoreDataProperties.swift */; };
 		95C5179F26A5F34200BC2B24 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179E26A5F34200BC2B24 /* Favorites.swift */; };
 		95C517A126A5F6C000BC2B24 /* ResignKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C517A026A5F6C000BC2B24 /* ResignKeyboard.swift */; };
+		95C57A1626B00B59009716F1 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179A26A5EFBE00BC2B24 /* Favorite+CoreDataClass.swift */; };
+		95C57A1726B00B5D009716F1 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179B26A5EFBE00BC2B24 /* Favorite+CoreDataProperties.swift */; };
+		95C57A1B26B00D8F009716F1 /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C57A1A26B00D8F009716F1 /* CurrencyRow.swift */; };
+		95C57A1E26B01CA3009716F1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95B5F52D26AADE4B00BDCE89 /* Localizable.strings */; };
+		95C57A2126B01CAF009716F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95B5F52F26AADE4B00BDCE89 /* InfoPlist.strings */; };
+		95C57A2326B01CEF009716F1 /* ConversionBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C57A2226B01CEF009716F1 /* ConversionBox.swift */; };
+		95C57A2426B01DA8009716F1 /* CurrencyMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 9555933C269B0E0A000FD726 /* CurrencyMetadata.json */; };
+		95C57A2526B01DC9009716F1 /* CurrencyMetadataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9A26A04A4200613729 /* CurrencyMetadataModel.swift */; };
+		95C57A2626B01DD9009716F1 /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95559339269B0AB8000FD726 /* ParseJson.swift */; };
+		95C57A2726B01F7A009716F1 /* ReadConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1126A6B71B00E3193E /* ReadConfig.swift */; };
+		95C57A2826B01F84009716F1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1326A6B7F400E3193E /* Request.swift */; };
+		95C57A2926B01F8C009716F1 /* CurrencyQuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBCA226A0900E00613729 /* CurrencyQuoteModel.swift */; };
 		95C5B2282697752600941585 /* SimoleonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2272697752600941585 /* SimoleonApp.swift */; };
 		95C5B22C2697752700941585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C5B22B2697752700941585 /* Assets.xcassets */; };
 		95C5B22F2697752700941585 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C5B22E2697752700941585 /* Preview Assets.xcassets */; };
@@ -44,6 +59,18 @@
 		95C5B2342697752700941585 /* Simoleon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2322697752700941585 /* Simoleon.xcdatamodeld */; };
 		95C5B23F2697752700941585 /* SimoleonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B23E2697752700941585 /* SimoleonTests.swift */; };
 		95C5B24A2697752700941585 /* SimoleonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2492697752700941585 /* SimoleonUITests.swift */; };
+		95CEFB4C26B0034B003CD2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CEFB4B26B0034B003CD2AE /* Assets.xcassets */; };
+		95CEFB5326B0034B003CD2AE /* SimoleonWatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 95CEFB5226B0034B003CD2AE /* SimoleonWatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		95CEFB5826B0034B003CD2AE /* SimoleonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CEFB5726B0034B003CD2AE /* SimoleonApp.swift */; };
+		95CEFB5A26B0034B003CD2AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CEFB5926B0034B003CD2AE /* ContentView.swift */; };
+		95CEFB5C26B0034B003CD2AE /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CEFB5B26B0034B003CD2AE /* NotificationController.swift */; };
+		95CEFB5E26B0034B003CD2AE /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CEFB5D26B0034B003CD2AE /* NotificationView.swift */; };
+		95CEFB6026B0034B003CD2AE /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CEFB5F26B0034B003CD2AE /* ComplicationController.swift */; };
+		95CEFB6226B0034B003CD2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CEFB6126B0034B003CD2AE /* Assets.xcassets */; };
+		95CEFB6526B0034B003CD2AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CEFB6426B0034B003CD2AE /* Preview Assets.xcassets */; };
+		95CEFB7126B0034B003CD2AE /* SimoleonWatchOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CEFB7026B0034B003CD2AE /* SimoleonWatchOSTests.swift */; };
+		95CEFB7C26B0034C003CD2AE /* SimoleonWatchOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CEFB7B26B0034C003CD2AE /* SimoleonWatchOSUITests.swift */; };
+		95CEFB8026B0034C003CD2AE /* SimoleonWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 95CEFB4926B0034A003CD2AE /* SimoleonWatchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		95D8C8C726A95D2900BCC188 /* SubscriptionPaywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8C626A95D2900BCC188 /* SubscriptionPaywall.swift */; };
 		95D8C8CD26A9784500BCC188 /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */; };
 		95D8C8CF26A98A7900BCC188 /* RestoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */; };
@@ -68,7 +95,60 @@
 			remoteGlobalIDString = 95C5B2232697752600941585;
 			remoteInfo = Simoleon;
 		};
+		95CEFB5426B0034B003CD2AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C5B21C2697752600941585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95CEFB5126B0034B003CD2AE;
+			remoteInfo = "SimoleonWatchOS Extension";
+		};
+		95CEFB6D26B0034B003CD2AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C5B21C2697752600941585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95CEFB5126B0034B003CD2AE;
+			remoteInfo = "SimoleonWatchOS Extension";
+		};
+		95CEFB7826B0034C003CD2AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C5B21C2697752600941585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95CEFB4826B00349003CD2AE;
+			remoteInfo = SimoleonWatchOS;
+		};
+		95CEFB7E26B0034C003CD2AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C5B21C2697752600941585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95CEFB4826B00349003CD2AE;
+			remoteInfo = SimoleonWatchOS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		95CEFB8426B0034C003CD2AE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				95CEFB5326B0034B003CD2AE /* SimoleonWatchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95CEFB8826B0034C003CD2AE /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				95CEFB8026B0034C003CD2AE /* SimoleonWatchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		950A377526A820F400CAB175 /* DefaultCurrency+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCurrency+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -82,6 +162,8 @@
 		9585BB1126A6B71B00E3193E /* ReadConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadConfig.swift; sourceTree = "<group>"; };
 		9585BB1326A6B7F400E3193E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		9585BB1926A6E8FD00E3193E /* SimpleSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSuccess.swift; sourceTree = "<group>"; };
+		95A70BE826B054F400CC0273 /* SimoleonWatchOS Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SimoleonWatchOS Extension.entitlements"; sourceTree = "<group>"; };
+		95A70BE926B0550000CC0273 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		95AEBC9426A03ECB00613729 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95AEBC9A26A04A4200613729 /* CurrencyMetadataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyMetadataModel.swift; sourceTree = "<group>"; };
 		95AEBC9C26A04D4600613729 /* CurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRow.swift; sourceTree = "<group>"; };
@@ -103,6 +185,8 @@
 		95C5179B26A5EFBE00BC2B24 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		95C5179E26A5F34200BC2B24 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		95C517A026A5F6C000BC2B24 /* ResignKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResignKeyboard.swift; sourceTree = "<group>"; };
+		95C57A1A26B00D8F009716F1 /* CurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRow.swift; sourceTree = "<group>"; };
+		95C57A2226B01CEF009716F1 /* ConversionBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionBox.swift; sourceTree = "<group>"; };
 		95C5B2242697752600941585 /* Simoleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simoleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C5B2272697752600941585 /* SimoleonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonApp.swift; sourceTree = "<group>"; };
 		95C5B22B2697752700941585 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +200,25 @@
 		95C5B2452697752700941585 /* SimoleonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoleonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C5B2492697752700941585 /* SimoleonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonUITests.swift; sourceTree = "<group>"; };
 		95C5B24B2697752700941585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95CEFB4926B0034A003CD2AE /* SimoleonWatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimoleonWatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95CEFB4B26B0034B003CD2AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95CEFB4D26B0034B003CD2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95CEFB5226B0034B003CD2AE /* SimoleonWatchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SimoleonWatchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95CEFB5726B0034B003CD2AE /* SimoleonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonApp.swift; sourceTree = "<group>"; };
+		95CEFB5926B0034B003CD2AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95CEFB5B26B0034B003CD2AE /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		95CEFB5D26B0034B003CD2AE /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		95CEFB5F26B0034B003CD2AE /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		95CEFB6126B0034B003CD2AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95CEFB6426B0034B003CD2AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95CEFB6626B0034B003CD2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95CEFB6726B0034B003CD2AE /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		95CEFB6C26B0034B003CD2AE /* SimoleonWatchOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoleonWatchOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95CEFB7026B0034B003CD2AE /* SimoleonWatchOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonWatchOSTests.swift; sourceTree = "<group>"; };
+		95CEFB7226B0034C003CD2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95CEFB7726B0034C003CD2AE /* SimoleonWatchOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoleonWatchOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95CEFB7B26B0034C003CD2AE /* SimoleonWatchOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonWatchOSUITests.swift; sourceTree = "<group>"; };
+		95CEFB7D26B0034C003CD2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95D8C8C626A95D2900BCC188 /* SubscriptionPaywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPaywall.swift; sourceTree = "<group>"; };
 		95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
 		95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreButton.swift; sourceTree = "<group>"; };
@@ -145,6 +248,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		95C5B2422697752700941585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95CEFB4F26B0034B003CD2AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A70BEA26B0550000CC0273 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95CEFB6926B0034B003CD2AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95CEFB7426B0034C003CD2AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,12 +363,25 @@
 			path = Simoleon;
 			sourceTree = "<group>";
 		};
+		95C57A1926B00D7F009716F1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				95C57A1A26B00D8F009716F1 /* CurrencyRow.swift */,
+				95C57A2226B01CEF009716F1 /* ConversionBox.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		95C5B21B2697752600941585 = {
 			isa = PBXGroup;
 			children = (
 				95C5B2262697752600941585 /* Simoleon */,
 				95C5B23D2697752700941585 /* SimoleonTests */,
 				95C5B2482697752700941585 /* SimoleonUITests */,
+				95CEFB4A26B0034A003CD2AE /* SimoleonWatchOS */,
+				95CEFB5626B0034B003CD2AE /* SimoleonWatchOS Extension */,
+				95CEFB6F26B0034B003CD2AE /* SimoleonWatchOSTests */,
+				95CEFB7A26B0034C003CD2AE /* SimoleonWatchOSUITests */,
 				95C5B2252697752600941585 /* Products */,
 				95E76438269E0037008E9F31 /* Frameworks */,
 			);
@@ -255,6 +393,10 @@
 				95C5B2242697752600941585 /* Simoleon.app */,
 				95C5B23A2697752700941585 /* SimoleonTests.xctest */,
 				95C5B2452697752700941585 /* SimoleonUITests.xctest */,
+				95CEFB4926B0034A003CD2AE /* SimoleonWatchOS.app */,
+				95CEFB5226B0034B003CD2AE /* SimoleonWatchOS Extension.appex */,
+				95CEFB6C26B0034B003CD2AE /* SimoleonWatchOSTests.xctest */,
+				95CEFB7726B0034C003CD2AE /* SimoleonWatchOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,9 +454,63 @@
 			path = SimoleonUITests;
 			sourceTree = "<group>";
 		};
+		95CEFB4A26B0034A003CD2AE /* SimoleonWatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				95CEFB4B26B0034B003CD2AE /* Assets.xcassets */,
+				95CEFB4D26B0034B003CD2AE /* Info.plist */,
+			);
+			path = SimoleonWatchOS;
+			sourceTree = "<group>";
+		};
+		95CEFB5626B0034B003CD2AE /* SimoleonWatchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				95A70BE826B054F400CC0273 /* SimoleonWatchOS Extension.entitlements */,
+				95CEFB5726B0034B003CD2AE /* SimoleonApp.swift */,
+				95CEFB5926B0034B003CD2AE /* ContentView.swift */,
+				95CEFB5B26B0034B003CD2AE /* NotificationController.swift */,
+				95CEFB5D26B0034B003CD2AE /* NotificationView.swift */,
+				95CEFB5F26B0034B003CD2AE /* ComplicationController.swift */,
+				95CEFB6126B0034B003CD2AE /* Assets.xcassets */,
+				95CEFB6626B0034B003CD2AE /* Info.plist */,
+				95CEFB6726B0034B003CD2AE /* PushNotificationPayload.apns */,
+				95C57A1926B00D7F009716F1 /* Helpers */,
+				95CEFB6326B0034B003CD2AE /* Preview Content */,
+			);
+			path = "SimoleonWatchOS Extension";
+			sourceTree = "<group>";
+		};
+		95CEFB6326B0034B003CD2AE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				95CEFB6426B0034B003CD2AE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		95CEFB6F26B0034B003CD2AE /* SimoleonWatchOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				95CEFB7026B0034B003CD2AE /* SimoleonWatchOSTests.swift */,
+				95CEFB7226B0034C003CD2AE /* Info.plist */,
+			);
+			path = SimoleonWatchOSTests;
+			sourceTree = "<group>";
+		};
+		95CEFB7A26B0034C003CD2AE /* SimoleonWatchOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95CEFB7B26B0034C003CD2AE /* SimoleonWatchOSUITests.swift */,
+				95CEFB7D26B0034C003CD2AE /* Info.plist */,
+			);
+			path = SimoleonWatchOSUITests;
+			sourceTree = "<group>";
+		};
 		95E76438269E0037008E9F31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95A70BE926B0550000CC0273 /* CloudKit.framework */,
 				95562D4C26A8962A0047E778 /* StoreKit.framework */,
 				95E76439269E0037008E9F31 /* CloudKit.framework */,
 			);
@@ -349,10 +545,12 @@
 				95C5B2202697752600941585 /* Sources */,
 				95C5B2212697752600941585 /* Frameworks */,
 				95C5B2222697752600941585 /* Resources */,
+				95CEFB8826B0034C003CD2AE /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				95CEFB7F26B0034C003CD2AE /* PBXTargetDependency */,
 			);
 			name = Simoleon;
 			packageProductDependencies = (
@@ -398,6 +596,76 @@
 			productReference = 95C5B2452697752700941585 /* SimoleonUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		95CEFB4826B00349003CD2AE /* SimoleonWatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95CEFB8526B0034C003CD2AE /* Build configuration list for PBXNativeTarget "SimoleonWatchOS" */;
+			buildPhases = (
+				95CEFB4726B00349003CD2AE /* Resources */,
+				95CEFB8426B0034C003CD2AE /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95CEFB5526B0034B003CD2AE /* PBXTargetDependency */,
+			);
+			name = SimoleonWatchOS;
+			productName = SimoleonWatchOS;
+			productReference = 95CEFB4926B0034A003CD2AE /* SimoleonWatchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		95CEFB5126B0034B003CD2AE /* SimoleonWatchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95CEFB8126B0034C003CD2AE /* Build configuration list for PBXNativeTarget "SimoleonWatchOS Extension" */;
+			buildPhases = (
+				95CEFB4E26B0034B003CD2AE /* Sources */,
+				95CEFB4F26B0034B003CD2AE /* Frameworks */,
+				95CEFB5026B0034B003CD2AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SimoleonWatchOS Extension";
+			productName = "SimoleonWatchOS Extension";
+			productReference = 95CEFB5226B0034B003CD2AE /* SimoleonWatchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		95CEFB6B26B0034B003CD2AE /* SimoleonWatchOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95CEFB8926B0034C003CD2AE /* Build configuration list for PBXNativeTarget "SimoleonWatchOSTests" */;
+			buildPhases = (
+				95CEFB6826B0034B003CD2AE /* Sources */,
+				95CEFB6926B0034B003CD2AE /* Frameworks */,
+				95CEFB6A26B0034B003CD2AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95CEFB6E26B0034B003CD2AE /* PBXTargetDependency */,
+			);
+			name = SimoleonWatchOSTests;
+			productName = SimoleonWatchOSTests;
+			productReference = 95CEFB6C26B0034B003CD2AE /* SimoleonWatchOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95CEFB7626B0034C003CD2AE /* SimoleonWatchOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95CEFB8C26B0034C003CD2AE /* Build configuration list for PBXNativeTarget "SimoleonWatchOSUITests" */;
+			buildPhases = (
+				95CEFB7326B0034C003CD2AE /* Sources */,
+				95CEFB7426B0034C003CD2AE /* Frameworks */,
+				95CEFB7526B0034C003CD2AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95CEFB7926B0034C003CD2AE /* PBXTargetDependency */,
+			);
+			name = SimoleonWatchOSUITests;
+			productName = SimoleonWatchOSUITests;
+			productReference = 95CEFB7726B0034C003CD2AE /* SimoleonWatchOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -417,6 +685,20 @@
 					95C5B2442697752700941585 = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 95C5B2232697752600941585;
+					};
+					95CEFB4826B00349003CD2AE = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					95CEFB5126B0034B003CD2AE = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					95CEFB6B26B0034B003CD2AE = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 95CEFB5126B0034B003CD2AE;
+					};
+					95CEFB7626B0034C003CD2AE = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 95CEFB4826B00349003CD2AE;
 					};
 				};
 			};
@@ -440,6 +722,10 @@
 				95C5B2232697752600941585 /* Simoleon */,
 				95C5B2392697752700941585 /* SimoleonTests */,
 				95C5B2442697752700941585 /* SimoleonUITests */,
+				95CEFB4826B00349003CD2AE /* SimoleonWatchOS */,
+				95CEFB5126B0034B003CD2AE /* SimoleonWatchOS Extension */,
+				95CEFB6B26B0034B003CD2AE /* SimoleonWatchOSTests */,
+				95CEFB7626B0034C003CD2AE /* SimoleonWatchOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -469,6 +755,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		95C5B2432697752700941585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95CEFB4726B00349003CD2AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95CEFB4C26B0034B003CD2AE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95CEFB5026B0034B003CD2AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95CEFB6526B0034B003CD2AE /* Preview Assets.xcassets in Resources */,
+				95C57A2426B01DA8009716F1 /* CurrencyMetadata.json in Resources */,
+				95C57A2126B01CAF009716F1 /* InfoPlist.strings in Resources */,
+				95C57A1E26B01CA3009716F1 /* Localizable.strings in Resources */,
+				95CEFB6226B0034B003CD2AE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95CEFB6A26B0034B003CD2AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95CEFB7526B0034C003CD2AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -531,6 +851,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		95CEFB4E26B0034B003CD2AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C57A2326B01CEF009716F1 /* ConversionBox.swift in Sources */,
+				95CEFB5C26B0034B003CD2AE /* NotificationController.swift in Sources */,
+				95C57A1726B00B5D009716F1 /* Favorite+CoreDataProperties.swift in Sources */,
+				95909CAF26B06A2000D051AB /* Simoleon.xcdatamodeld in Sources */,
+				95C57A1626B00B59009716F1 /* Favorite+CoreDataClass.swift in Sources */,
+				95CEFB5A26B0034B003CD2AE /* ContentView.swift in Sources */,
+				95CEFB6026B0034B003CD2AE /* ComplicationController.swift in Sources */,
+				95C57A2926B01F8C009716F1 /* CurrencyQuoteModel.swift in Sources */,
+				95CEFB5826B0034B003CD2AE /* SimoleonApp.swift in Sources */,
+				95C57A2526B01DC9009716F1 /* CurrencyMetadataModel.swift in Sources */,
+				95A70BEB26B0553C00CC0273 /* Persistence.swift in Sources */,
+				95CEFB5E26B0034B003CD2AE /* NotificationView.swift in Sources */,
+				95C57A1B26B00D8F009716F1 /* CurrencyRow.swift in Sources */,
+				95C57A2826B01F84009716F1 /* Request.swift in Sources */,
+				95C57A2726B01F7A009716F1 /* ReadConfig.swift in Sources */,
+				95C57A2626B01DD9009716F1 /* ParseJson.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95CEFB6826B0034B003CD2AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95CEFB7126B0034B003CD2AE /* SimoleonWatchOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95CEFB7326B0034C003CD2AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95CEFB7C26B0034C003CD2AE /* SimoleonWatchOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -543,6 +902,26 @@
 			isa = PBXTargetDependency;
 			target = 95C5B2232697752600941585 /* Simoleon */;
 			targetProxy = 95C5B2462697752700941585 /* PBXContainerItemProxy */;
+		};
+		95CEFB5526B0034B003CD2AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95CEFB5126B0034B003CD2AE /* SimoleonWatchOS Extension */;
+			targetProxy = 95CEFB5426B0034B003CD2AE /* PBXContainerItemProxy */;
+		};
+		95CEFB6E26B0034B003CD2AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95CEFB5126B0034B003CD2AE /* SimoleonWatchOS Extension */;
+			targetProxy = 95CEFB6D26B0034B003CD2AE /* PBXContainerItemProxy */;
+		};
+		95CEFB7926B0034C003CD2AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95CEFB4826B00349003CD2AE /* SimoleonWatchOS */;
+			targetProxy = 95CEFB7826B0034C003CD2AE /* PBXContainerItemProxy */;
+		};
+		95CEFB7F26B0034C003CD2AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95CEFB4826B00349003CD2AE /* SimoleonWatchOS */;
+			targetProxy = 95CEFB7E26B0034C003CD2AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -822,6 +1201,186 @@
 			};
 			name = Release;
 		};
+		95CEFB8226B0034C003CD2AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9585BB0F26A6B58500E3193E /* Config.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "SimoleonWatchOS Extension/SimoleonWatchOS Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SimoleonWatchOS Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SimoleonWatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		95CEFB8326B0034C003CD2AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9585BB0F26A6B58500E3193E /* Config.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "SimoleonWatchOS Extension/SimoleonWatchOS Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SimoleonWatchOS Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SimoleonWatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		95CEFB8626B0034C003CD2AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				IBSC_MODULE = SimoleonWatchOS_Extension;
+				INFOPLIST_FILE = SimoleonWatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		95CEFB8726B0034C003CD2AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				IBSC_MODULE = SimoleonWatchOS_Extension;
+				INFOPLIST_FILE = SimoleonWatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		95CEFB8A26B0034C003CD2AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = SimoleonWatchOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon.SimoleonWatchOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimoleonWatchOS Extension.appex/SimoleonWatchOS Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		95CEFB8B26B0034C003CD2AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = SimoleonWatchOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon.SimoleonWatchOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimoleonWatchOS Extension.appex/SimoleonWatchOS Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		95CEFB8D26B0034C003CD2AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = SimoleonWatchOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon.SimoleonWatchOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = SimoleonWatchOS;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		95CEFB8E26B0034C003CD2AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = SimoleonWatchOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon.SimoleonWatchOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = SimoleonWatchOS;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -857,6 +1416,42 @@
 			buildConfigurations = (
 				95C5B2552697752700941585 /* Debug */,
 				95C5B2562697752700941585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95CEFB8126B0034C003CD2AE /* Build configuration list for PBXNativeTarget "SimoleonWatchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95CEFB8226B0034C003CD2AE /* Debug */,
+				95CEFB8326B0034C003CD2AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95CEFB8526B0034C003CD2AE /* Build configuration list for PBXNativeTarget "SimoleonWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95CEFB8626B0034C003CD2AE /* Debug */,
+				95CEFB8726B0034C003CD2AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95CEFB8926B0034C003CD2AE /* Build configuration list for PBXNativeTarget "SimoleonWatchOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95CEFB8A26B0034C003CD2AE /* Debug */,
+				95CEFB8B26B0034C003CD2AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95CEFB8C26B0034C003CD2AE /* Build configuration list for PBXNativeTarget "SimoleonWatchOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95CEFB8D26B0034C003CD2AE /* Debug */,
+				95CEFB8E26B0034C003CD2AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
