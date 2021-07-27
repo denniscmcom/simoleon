@@ -66,20 +66,7 @@ struct SubscriptionPaywall: View {
                     SubscribeButton(showingSubscriptionPaywall: $showingSubscriptionPaywall)
                     HStack {
                         Spacer()
-                        VStack {
-                            RestoreButton(showingSubscriptionPaywall: $showingSubscriptionPaywall)
-                                .padding(.bottom)
-                            HStack {
-                                Link(destination: URL(string: "https://dennistech.io/privacy-policy")!) {
-                                    Text("Privacy Policy", comment: "Button to go to app privacy policy")
-                                }
-                                
-                                Link(destination: URL(string: "https://dennistech.io/terms-of-use")!) {
-                                    Text("Terms of Use", comment: "Button to go to app terms of use")
-                                }
-                            }
-                        }
-                        
+                        RestoreButton(showingSubscriptionPaywall: $showingSubscriptionPaywall)
                         Spacer()
                     }
                 }
