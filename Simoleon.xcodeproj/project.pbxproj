@@ -19,6 +19,7 @@
 		9585BB1426A6B7F400E3193E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1326A6B7F400E3193E /* Request.swift */; };
 		9585BB1A26A6E8FD00E3193E /* SimpleSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1926A6E8FD00E3193E /* SimpleSuccess.swift */; };
 		95909CAF26B06A2000D051AB /* Simoleon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2322697752700941585 /* Simoleon.xcdatamodeld */; };
+		95909CB326B07BFC00D051AB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95909CB226B07BFC00D051AB /* SearchBar.swift */; };
 		95A70BEA26B0550000CC0273 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A70BE926B0550000CC0273 /* CloudKit.framework */; };
 		95A70BEB26B0553C00CC0273 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2302697752700941585 /* Persistence.swift */; };
 		95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9426A03ECB00613729 /* ContentView.swift */; };
@@ -162,6 +163,7 @@
 		9585BB1126A6B71B00E3193E /* ReadConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadConfig.swift; sourceTree = "<group>"; };
 		9585BB1326A6B7F400E3193E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		9585BB1926A6E8FD00E3193E /* SimpleSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSuccess.swift; sourceTree = "<group>"; };
+		95909CB226B07BFC00D051AB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		95A70BE826B054F400CC0273 /* SimoleonWatchOS Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SimoleonWatchOS Extension.entitlements"; sourceTree = "<group>"; };
 		95A70BE926B0550000CC0273 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		95AEBC9426A03ECB00613729 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -531,6 +533,7 @@
 				95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */,
 				95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */,
 				95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */,
+				95909CB226B07BFC00D051AB /* SearchBar.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -808,6 +811,7 @@
 				95C5B2312697752700941585 /* Persistence.swift in Sources */,
 				9585BB1226A6B71B00E3193E /* ReadConfig.swift in Sources */,
 				95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */,
+				95909CB326B07BFC00D051AB /* SearchBar.swift in Sources */,
 				95AEBC9B26A04A4200613729 /* CurrencyMetadataModel.swift in Sources */,
 				95D8C8CD26A9784500BCC188 /* SubscribeButton.swift in Sources */,
 				950A377726A820F800CAB175 /* DefaultCurrency+CoreDataProperties.swift in Sources */,

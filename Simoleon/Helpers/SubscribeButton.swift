@@ -24,7 +24,7 @@ struct SubscribeButton: View {
                 .overlay(
                     VStack {
                         if showingPrice {
-                            Text("Subscribe for \(price) / month", comment: "Subscribe button")
+                            Text("Subscribe for \(price) / month")
                                 .foregroundColor(.white)
                                 .fontWeight(.semibold)
                         } else {
