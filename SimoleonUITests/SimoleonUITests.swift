@@ -23,18 +23,10 @@ class SimoleonUITests: XCTestCase {
     }
     
     // MARK: - Tab View
-    func testTabBarButtons() {
+    func testExample() throws {
         let app = XCUIApplication()
         app.launch()
-        
-        app.tabBars.buttons["Favorites"].tap()
-        XCTAssertTrue(app.navigationBars["Favorites"].exists)
-        
-        app.tabBars.buttons["Settings"].tap()
-        XCTAssertTrue(app.navigationBars["Settings"].exists)
-        
-        app.tabBars.buttons["Convert"].tap()
-        XCTAssertTrue(app.navigationBars["Convert"].exists)
+        // Put code here
     }
 
     func testLaunchPerformance() throws {
