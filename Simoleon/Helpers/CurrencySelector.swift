@@ -18,34 +18,41 @@ struct CurrencySelector: View {
     @State private var alertMessage = ""
     @State private var showingAlert = false
     
+    let currencyPairs: [String] = parseJson("CurrencyPairs.json")
+    
     var body: some View {
         NavigationView {
-            Form {
+            VStack {
                 TextField("Search ...", text: $searchCurrency)
-                    .accessibilityIdentifier("SearchBar")
-                
-                Section(header: Text("All currencies", comment: "Section header in currency selector")) {
-                    ForEach(currencyPairs(), id: \.self) { currencyPair in
-                        Button(action: { select(currencyPair) }) {
-                            CurrencyRow(currencyPair: currencyPair)
-                        }
+                    .padding(10)
+                    .background(
+                        RoundedRectangle(cornerRadius: 15)
+                            .foregroundColor(Color(.systemGray6))
+                    )
+                    .padding()
+
+                List(searchResults, id: \.self) { currencyPair in
+                    Button(action: { select(currencyPair) }) {
+                        CurrencyRow(currencyPair: currencyPair)
                     }
                 }
+                .id(UUID())
+                .listStyle(PlainListStyle())
+                .gesture(DragGesture()
+                            .onChanged({ _ in
+                                UIApplication.shared.dismissKeyboard()
+                            })
+                )
             }
-            .gesture(DragGesture()
-                        .onChanged({ _ in
-                            UIApplication.shared.dismissKeyboard()
-                        })
-            )
             .sheet(isPresented: $showingSubscriptionPaywall) {
                 SubscriptionPaywall(showingSubscriptionPaywall: $showingSubscriptionPaywall)
             }
-            .navigationTitle(Text("Currencies", comment: "Navigation title"))
+            .navigationTitle("Currencies")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button(action: { showingCurrencySelector = false }) {
-                        Text("Cancel", comment: "Button to dismiss currency selector")
+                        Text("Cancel")
                     }
                 }
             }
@@ -61,16 +68,13 @@ struct CurrencySelector: View {
      else:
      * Show filtered list of currencies containing searched currency string
      */
-    private func currencyPairs() -> [String] {
-        let currencyPairs: [String] = parseJson("CurrencyPairs.json")
-        
+    var searchResults: [String] {
         if searchCurrency.isEmpty {
             return currencyPairs
         } else {
             return currencyPairs.filter { $0.contains(searchCurrency.uppercased()) }
         }
     }
-    
     
     /*
      If user is subscribed:
@@ -106,6 +110,9 @@ struct CurrencySelector: View {
 
 struct CurrencySelector_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencySelector(currencyPair: .constant("USD/GBP"), showingCurrencySelector: .constant(false))
+        CurrencySelector(
+            currencyPair: .constant("USD/GBP"),
+            showingCurrencySelector: .constant(false)
+        )
     }
 }
