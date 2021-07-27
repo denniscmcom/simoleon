@@ -1,5 +1,5 @@
 //
-//  Favourites.swift
+//  Favorites.swift
 //  Simoleon
 //
 //  Created by Dennis Concepción Martín on 19/07/2021.
@@ -7,34 +7,34 @@
 
 import SwiftUI
 
-struct Favourites: View {
+struct Favorites: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Favourite.currencyPair, ascending: true)],
-        animation: .default) private var favourite: FetchedResults<Favourite>
+        sortDescriptors: [NSSortDescriptor(keyPath: \Favorite.currencyPair, ascending: true)],
+        animation: .default) private var favorite: FetchedResults<Favorite>
     
     var body: some View {
         VStack {
-            if favourite.isEmpty {
+            if favorite.isEmpty {
                 Group {
-                    Text("Tap ", comment: "First line when favourites are empty") + Text(Image(systemName: "star"))
-                    Text("to add a currency pair to favourites", comment: "Finish line when favourites are empty")
+                    Text("Tap ") + Text(Image(systemName: "star"))
+                    Text("to add a currency pair to favorites")
                         .padding(.top, 5)
                 }
                 .foregroundColor(Color(.systemGray))
             } else {
                 List {
-                    ForEach(favourite) { favourite in
-                        NavigationLink(destination: Conversion(showNavigationView: false, currencyPair: favourite.currencyPair)) {
-                            CurrencyRow(currencyPair: favourite.currencyPair)
+                    ForEach(favorite) { favorite in
+                        NavigationLink(destination: Conversion(showNavigationView: false, currencyPair: favorite.currencyPair)) {
+                            CurrencyRow(currencyPair: favorite.currencyPair)
                         }
                     }
-                    .onDelete(perform: removeFromFavourites)
+                    .onDelete(perform: removeFromFavorites)
                 }
                 .listStyle(PlainListStyle())
             }
         }
-        .navigationTitle(Text("Favourites", comment: "Navigation title"))
+        .navigationTitle("Favorites")
         .toolbar {
             #if os(iOS)
             EditButton()
@@ -45,9 +45,9 @@ struct Favourites: View {
         }
     }
     
-    private func removeFromFavourites(offsets: IndexSet) {
+    private func removeFromFavorites(offsets: IndexSet) {
         withAnimation {
-            offsets.map { favourite[$0] }.forEach(viewContext.delete)
+            offsets.map { favorite[$0] }.forEach(viewContext.delete)
             
             do {
                 try viewContext.save()
@@ -59,9 +59,9 @@ struct Favourites: View {
     }
 }
 
-struct Favourites_Previews: PreviewProvider {
+struct Favorites_Previews: PreviewProvider {
     static var previews: some View {
-        Favourites()
+        Favorites()
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

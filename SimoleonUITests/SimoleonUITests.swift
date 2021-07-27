@@ -27,8 +27,8 @@ class SimoleonUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         
-        app.tabBars.buttons["Favourites"].tap()
-        XCTAssertTrue(app.navigationBars["Favourites"].exists)
+        app.tabBars.buttons["Favorites"].tap()
+        XCTAssertTrue(app.navigationBars["Favorites"].exists)
         
         app.tabBars.buttons["Settings"].tap()
         XCTAssertTrue(app.navigationBars["Settings"].exists)

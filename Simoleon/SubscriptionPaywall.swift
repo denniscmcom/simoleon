@@ -37,8 +37,8 @@ struct SubscriptionPaywall: View {
                     SubscriptionFeature(
                         symbol: "star.circle.fill",
                         colour: Color(.systemYellow),
-                        title: "Favourite currencies",
-                        description: "Save your favourite currencies to access them quickly."
+                        title: "Favorite currencies",
+                        description: "Save your favorite currencies to access them quickly."
                     )
                     
                     SubscriptionFeature(
@@ -52,7 +52,7 @@ struct SubscriptionPaywall: View {
                         symbol: "icloud.circle.fill",
                         colour: Color(.systemBlue),
                         title: "Simoleon on all your devices",
-                        description: "Your settings and favourite currencies in all your devices."
+                        description: "Your settings and favorite currencies in all your devices."
                     )
                     
                     SubscriptionFeature(

@@ -14,8 +14,8 @@ struct Sidebar: View {
                 Label("Convert", systemImage: "arrow.counterclockwise.circle")
             }
             
-            NavigationLink(destination: Favourites()) {
-                Label("Favourites", systemImage: "star")
+            NavigationLink(destination: Favorites()) {
+                Label("Favorites", systemImage: "star")
             }
             
             NavigationLink(destination: Settings()) {
@@ -23,7 +23,7 @@ struct Sidebar: View {
             }
         }
         .listStyle(SidebarListStyle())
-        .navigationTitle(Text("Categories", comment: "Side bar navigation title"))
+        .navigationTitle("Categories")
     }
 }
 

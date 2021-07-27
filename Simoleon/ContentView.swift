@@ -13,41 +13,39 @@ struct ContentView: View {
     
     @State private var tab: Tab = .convert
     
+    private enum Tab {
+        case convert, favorites, settings
+    }
+    
     var body: some View {
         TabView(selection: $tab) {
             Conversion(currencyPair: defaultCurrency.first?.pair ?? "USD/GBP")
                 .tabItem {
-                    Text("Convert", comment: "Tab bar button to show conversion")
-                    Image(systemName: "arrow.counterclockwise.circle")
+                    Label("Convert", systemImage: "arrow.counterclockwise.circle")
                 }
                 .tag(Tab.convert)
                 .accessibilityIdentifier("Convert")
             
-            Favourites()
+            Favorites()
                 .tabItem {
-                    Text("Favourites", comment: "Tab bar button to show favourites")
-                    Image(systemName: "star")
+                    Label("Favorites", systemImage: "star")
                 }
-                .tag(Tab.favourites)
-                .accessibilityIdentifier("Favourites")
+                .tag(Tab.favorites)
+                .accessibilityIdentifier("Favorites")
             
             Settings()
                 .tabItem {
-                    Text("Settings", comment: "Tab bar button to show settings")
-                    Image(systemName: "gear")
+                    Label("Settings", systemImage: "gear")
                 }
                 .tag(Tab.settings)
                 .accessibilityIdentifier("Settings")
         }
-    }
-    
-    private enum Tab {
-        case convert, favourites, settings
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environment(\.locale, Locale(identifier: "es"))
     }
 }

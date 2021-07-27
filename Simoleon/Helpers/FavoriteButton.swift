@@ -1,5 +1,5 @@
 //
-//  FavouriteButton.swift
+//  FavoriteButton.swift
 //  Simoleon
 //
 //  Created by Dennis Concepción Martín on 19/07/2021.
@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-struct FavouriteButton: View {
+struct FavoriteButton: View {
     var currencyPair: String
     
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) private var favourite: FetchedResults<Favourite>
+    @FetchRequest(sortDescriptors: []) private var favorite: FetchedResults<Favorite>
     
     @State private var starSymbol = "star"
     
     var body: some View {
-        let favouriteCurrencyPairs = favourite.map { $0.currencyPair }
-        Button(action: { favouriteAction(favouriteCurrencyPairs) }) {
+        let favoriteCurrencyPairs = favorite.map { $0.currencyPair }
+        Button(action: { favoriteAction(favoriteCurrencyPairs) }) {
             RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(Color(.secondarySystemBackground))
                 .frame(width: 60, height: 60)
                 .overlay(
-                    Image(systemName: generateStar(favouriteCurrencyPairs))
+                    Image(systemName: generateStar(favoriteCurrencyPairs))
                         .font(.system(size: 28))
                         .foregroundColor(Color(.systemYellow))
                 )
@@ -30,29 +30,29 @@ struct FavouriteButton: View {
     }
     
     /*
-     If currency pair is favourite:
-     * Button action is to remove from favourites
+     If currency pair is favorite:
+     * Button action is to remove from favorites
      else:
-     * Button action is to add to favourites
+     * Button action is to add to favorites
      */
-    private func favouriteAction(_ favouriteCurrencyPairs: [String]) {
-        if favouriteCurrencyPairs.contains(currencyPair) {
-            removeFromFavourites()
+    private func favoriteAction(_ favoriteCurrencyPairs: [String]) {
+        if favoriteCurrencyPairs.contains(currencyPair) {
+            removeFromFavorites()
         } else {
-            addToFavourites()
+            addToFavorites()
         }
         
         simpleSuccess()
     }
     
     /*
-     if currency pair is favourite:
+     if currency pair is favorite:
      * Return "star.fill" symbol
      else:
      * Return "star"
      */
-    private func generateStar(_ favouriteCurrencyPairs: [String]) -> String {
-        if favouriteCurrencyPairs.contains(currencyPair) {
+    private func generateStar(_ favoriteCurrencyPairs: [String]) -> String {
+        if favoriteCurrencyPairs.contains(currencyPair) {
             return "star.fill"
         } else {
             return "star"
@@ -60,13 +60,13 @@ struct FavouriteButton: View {
     }
     
     /*
-     * Get first favourite core data object that matches the specified currency pair
+     * Get first favorite core data object that matches the specified currency pair
      * Delete it
      */
-    private func removeFromFavourites() {
+    private func removeFromFavorites() {
         withAnimation {
-            let favouriteObject = favourite.first(where: { $0.currencyPair == currencyPair })
-            viewContext.delete(favouriteObject ?? Favourite())
+            let favoriteObject = favorite.first(where: { $0.currencyPair == currencyPair })
+            viewContext.delete(favoriteObject ?? Favorite())
             
             do {
                 try viewContext.save()
@@ -78,13 +78,13 @@ struct FavouriteButton: View {
     }
     
     /*
-     * Create a favourite core data object
+     * Create a favorite core data object
      * Save it
      */
-    private func addToFavourites() {
+    private func addToFavorites() {
         withAnimation {
-            let favourite = Favourite(context: viewContext)
-            favourite.currencyPair = currencyPair
+            let favorite = Favorite(context: viewContext)
+            favorite.currencyPair = currencyPair
             
             do {
                 try viewContext.save()
@@ -96,8 +96,8 @@ struct FavouriteButton: View {
     }
 }
 
-struct FavouriteButton_Previews: PreviewProvider {
+struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        FavouriteButton(currencyPair: "USD/GBP")
+        FavoriteButton(currencyPair: "USD/GBP")
     }
 }

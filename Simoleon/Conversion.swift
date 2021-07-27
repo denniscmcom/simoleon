@@ -33,9 +33,8 @@ struct Conversion: View {
                                     .padding(.horizontal)
                             )
                     }
-                    .accessibilityIdentifier("CurrencySelector")
                     
-                    FavouriteButton(currencyPair: currencyPair)
+                    FavoriteButton(currencyPair: currencyPair)
                 }
                 
                 ConversionBox(
@@ -52,7 +51,7 @@ struct Conversion: View {
             }
         }
         .onAppear(perform: request)
-        .navigationTitle(Text("Convert", comment: "Navigation title"))
+        .navigationTitle("Convert")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 if amountIsEditing {
@@ -60,7 +59,7 @@ struct Conversion: View {
                         UIApplication.shared.dismissKeyboard()
                         amountIsEditing = false
                     }) {
-                        Text("Cancel", comment: "Button to stop editing textfield")
+                        Text("Cancel")
                     }
                 }
             }

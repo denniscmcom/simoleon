@@ -32,10 +32,10 @@
 		95B5F53326AADE4B00BDCE89 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95B5F52D26AADE4B00BDCE89 /* Localizable.strings */; };
 		95B5F53426AADE4B00BDCE89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95B5F52F26AADE4B00BDCE89 /* InfoPlist.strings */; };
 		95C5179126A5DC8E00BC2B24 /* ConditionalWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179026A5DC8E00BC2B24 /* ConditionalWrapper.swift */; };
-		95C5179926A5EC9F00BC2B24 /* FavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179826A5EC9F00BC2B24 /* FavouriteButton.swift */; };
-		95C5179C26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179A26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift */; };
-		95C5179D26A5EFBE00BC2B24 /* Favourite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179B26A5EFBE00BC2B24 /* Favourite+CoreDataProperties.swift */; };
-		95C5179F26A5F34200BC2B24 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179E26A5F34200BC2B24 /* Favourites.swift */; };
+		95C5179926A5EC9F00BC2B24 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179826A5EC9F00BC2B24 /* FavoriteButton.swift */; };
+		95C5179C26A5EFBE00BC2B24 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179A26A5EFBE00BC2B24 /* Favorite+CoreDataClass.swift */; };
+		95C5179D26A5EFBE00BC2B24 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179B26A5EFBE00BC2B24 /* Favorite+CoreDataProperties.swift */; };
+		95C5179F26A5F34200BC2B24 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5179E26A5F34200BC2B24 /* Favorites.swift */; };
 		95C517A126A5F6C000BC2B24 /* ResignKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C517A026A5F6C000BC2B24 /* ResignKeyboard.swift */; };
 		95C5B2282697752600941585 /* SimoleonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2272697752600941585 /* SimoleonApp.swift */; };
 		95C5B22C2697752700941585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C5B22B2697752700941585 /* Assets.xcassets */; };
@@ -98,10 +98,10 @@
 		95B5F53526AADE5200BDCE89 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		95B5F53626AADE5500BDCE89 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95C5179026A5DC8E00BC2B24 /* ConditionalWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalWrapper.swift; sourceTree = "<group>"; };
-		95C5179826A5EC9F00BC2B24 /* FavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
-		95C5179A26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataClass.swift"; sourceTree = "<group>"; };
-		95C5179B26A5EFBE00BC2B24 /* Favourite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		95C5179E26A5F34200BC2B24 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
+		95C5179826A5EC9F00BC2B24 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		95C5179A26A5EFBE00BC2B24 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		95C5179B26A5EFBE00BC2B24 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		95C5179E26A5F34200BC2B24 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		95C517A026A5F6C000BC2B24 /* ResignKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResignKeyboard.swift; sourceTree = "<group>"; };
 		95C5B2242697752600941585 /* Simoleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simoleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C5B2272697752600941585 /* SimoleonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonApp.swift; sourceTree = "<group>"; };
@@ -159,8 +159,8 @@
 			children = (
 				950A377526A820F400CAB175 /* DefaultCurrency+CoreDataClass.swift */,
 				950A377626A820F400CAB175 /* DefaultCurrency+CoreDataProperties.swift */,
-				95C5179A26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift */,
-				95C5179B26A5EFBE00BC2B24 /* Favourite+CoreDataProperties.swift */,
+				95C5179A26A5EFBE00BC2B24 /* Favorite+CoreDataClass.swift */,
+				95C5179B26A5EFBE00BC2B24 /* Favorite+CoreDataProperties.swift */,
 				95AEBC9A26A04A4200613729 /* CurrencyMetadataModel.swift */,
 				95AEBCA226A0900E00613729 /* CurrencyQuoteModel.swift */,
 			);
@@ -187,12 +187,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		95B5F52526AADE4B00BDCE89 /* Localisation */ = {
+		95B5F52526AADE4B00BDCE89 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
 				95B5F52626AADE4B00BDCE89 /* en.xcloc */,
 			);
-			path = Localisation;
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		95B5F52626AADE4B00BDCE89 /* en.xcloc */ = {
@@ -268,7 +268,7 @@
 				95AEBC9426A03ECB00613729 /* ContentView.swift */,
 				95B54F4E26A4AC52001DC0D8 /* ContentViewPad.swift */,
 				95B54F4326A4842C001DC0D8 /* Conversion.swift */,
-				95C5179E26A5F34200BC2B24 /* Favourites.swift */,
+				95C5179E26A5F34200BC2B24 /* Favorites.swift */,
 				957065E126A5FE0400523E68 /* Settings.swift */,
 				95D8C8C626A95D2900BCC188 /* SubscriptionPaywall.swift */,
 				95C5B22B2697752700941585 /* Assets.xcassets */,
@@ -280,7 +280,7 @@
 				95559331269B094A000FD726 /* Models */,
 				95559338269B0AAA000FD726 /* Functions */,
 				9555933B269B0DF9000FD726 /* Resources */,
-				95B5F52526AADE4B00BDCE89 /* Localisation */,
+				95B5F52526AADE4B00BDCE89 /* Localization */,
 				95C5B22D2697752700941585 /* Preview Content */,
 			);
 			path = Simoleon;
@@ -329,7 +329,7 @@
 				95B54F4926A4A450001DC0D8 /* ConversionBox.swift */,
 				95B54F5026A4ACAC001DC0D8 /* Sidebar.swift */,
 				95C5179026A5DC8E00BC2B24 /* ConditionalWrapper.swift */,
-				95C5179826A5EC9F00BC2B24 /* FavouriteButton.swift */,
+				95C5179826A5EC9F00BC2B24 /* FavoriteButton.swift */,
 				95C517A026A5F6C000BC2B24 /* ResignKeyboard.swift */,
 				95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */,
 				95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */,
@@ -482,8 +482,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95C5179926A5EC9F00BC2B24 /* FavouriteButton.swift in Sources */,
-				95C5179C26A5EFBE00BC2B24 /* Favourite+CoreDataClass.swift in Sources */,
+				95C5179926A5EC9F00BC2B24 /* FavoriteButton.swift in Sources */,
+				95C5179C26A5EFBE00BC2B24 /* Favorite+CoreDataClass.swift in Sources */,
 				950A377826A820F800CAB175 /* DefaultCurrency+CoreDataClass.swift in Sources */,
 				95C5B2312697752700941585 /* Persistence.swift in Sources */,
 				9585BB1226A6B71B00E3193E /* ReadConfig.swift in Sources */,
@@ -494,8 +494,8 @@
 				9585BB1A26A6E8FD00E3193E /* SimpleSuccess.swift in Sources */,
 				9555933A269B0AB8000FD726 /* ParseJson.swift in Sources */,
 				95D8C8CF26A98A7900BCC188 /* RestoreButton.swift in Sources */,
-				95C5179D26A5EFBE00BC2B24 /* Favourite+CoreDataProperties.swift in Sources */,
-				95C5179F26A5F34200BC2B24 /* Favourites.swift in Sources */,
+				95C5179D26A5EFBE00BC2B24 /* Favorite+CoreDataProperties.swift in Sources */,
+				95C5179F26A5F34200BC2B24 /* Favorites.swift in Sources */,
 				95C5B2282697752600941585 /* SimoleonApp.swift in Sources */,
 				95B54F4A26A4A450001DC0D8 /* ConversionBox.swift in Sources */,
 				95D8C8C726A95D2900BCC188 /* SubscriptionPaywall.swift in Sources */,
@@ -695,7 +695,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -705,7 +705,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -720,7 +720,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -730,7 +730,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
