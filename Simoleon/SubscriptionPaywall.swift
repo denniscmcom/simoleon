@@ -23,7 +23,7 @@ struct SubscriptionPaywall: View {
                                 .frame(width: 100, height: 100)
                                 .cornerRadius(25)
                             
-                            Text("Unlock all access")
+                            Text("Unlock All Access")
                                 .font(.title)
                                 .fontWeight(.semibold)
                                 .padding(.top)
@@ -37,29 +37,29 @@ struct SubscriptionPaywall: View {
                     SubscriptionFeature(
                         symbol: "star.circle.fill",
                         colour: Color(.systemYellow),
-                        title: "Favorite currencies",
-                        description: "Save your favorite currencies to access them quickly."
+                        title: "Favorite Forex Pairs",
+                        description: "Save any currency pair for quick access."
                     )
                     
                     SubscriptionFeature(
                         symbol: "flag.circle.fill",
                         colour: Color(.systemRed),
-                        title: "Over 170 currencies",
-                        description: "Have access to almost every currency of the world."
+                        title: "Over 170 Currencies",
+                        description: "Access almost every currency of the world."
                     )
                     
                     SubscriptionFeature(
                         symbol: "icloud.circle.fill",
                         colour: Color(.systemBlue),
-                        title: "Simoleon on all your devices",
+                        title: "Everything is Up-to-date",
                         description: "Your settings and favorite currencies in all your devices."
                     )
                     
                     SubscriptionFeature(
                         symbol: "bitcoinsign.circle.fill",
                         colour: Color(.systemOrange),
-                        title: "Cryptos and commodities",
-                        description: "Convert your currency between cryptos, gold, and silver."
+                        title: "Cryptos and Commodities",
+                        description: "Convert currency between cryptos, gold, and silver."
                     )
                     
                     Spacer()

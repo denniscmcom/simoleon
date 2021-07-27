@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct SubscriptionFeature: View {
-    var symbol: LocalizedStringKey
+    var symbol: String
     var colour: Color
     var title: LocalizedStringKey
     var description: LocalizedStringKey
     
     var body: some View {
         HStack(alignment:.top) {
-            Image(systemName: "\(symbol)")
+            Image(systemName: symbol)
                 .foregroundColor(colour)
                 .font(.title)
             
@@ -34,7 +34,7 @@ struct SubscriptionFeature_Previews: PreviewProvider {
         SubscriptionFeature(
             symbol: "star.circle.fill",
             colour: Color(.systemYellow),
-            title: "Favorite currencies",
+            title: "Favorite Currencies",
             description: "Save your favorite currencies to access them quickly."
         )
     }
