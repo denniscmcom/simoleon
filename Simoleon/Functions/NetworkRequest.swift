@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-func request<T: Decodable>(url: String, model: T.Type, completion: @escaping (_ result: T) -> Void) {
+func networkRequest<T: Decodable>(url: String, model: T.Type, completion: @escaping (_ result: T) -> Void) {
     // We take some model data T.Type
     guard let url = URL(string: url) else {
         print("Invalid URL")

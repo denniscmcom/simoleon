@@ -46,7 +46,7 @@ struct Conversion: View {
                 )
             }
             .padding()
-            .sheet(isPresented: $showingCurrencySelector) {
+            .sheet(isPresented: $showingCurrencySelector, onDismiss: request) {
                 CurrencySelector(currencyPair: $currencyPair, showingCurrencySelector: $showingCurrencySelector)
             }
         }
@@ -70,10 +70,9 @@ struct Conversion: View {
     }
     
     private func request() {
+        showingConversion = false
         let url = "\(readConfig("API_URL")!)quotes?pairs=\(currencyPair)&api_key=\(readConfig("API_KEY")!)"
-        
-        Simoleon.request(url: url, model: [CurrencyQuoteModel].self) { response in
-            showingConversion = false
+        networkRequest(url: url, model: [CurrencyQuoteModel].self) { response in
             if let price = response.first?.price {
                 self.price = price
                 showingConversion =  true

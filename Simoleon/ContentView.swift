@@ -24,21 +24,18 @@ struct ContentView: View {
                     Label("Convert", systemImage: "arrow.counterclockwise.circle")
                 }
                 .tag(Tab.convert)
-                .accessibilityIdentifier("Convert")
             
             Favorites()
                 .tabItem {
                     Label("Favorites", systemImage: "star")
                 }
                 .tag(Tab.favorites)
-                .accessibilityIdentifier("Favorites")
             
             Settings()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
                 .tag(Tab.settings)
-                .accessibilityIdentifier("Settings")
         }
     }
 }
@@ -46,6 +43,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environment(\.locale, Locale(identifier: "es"))
     }
 }
