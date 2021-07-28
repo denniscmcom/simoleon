@@ -38,7 +38,7 @@ struct SubscriptionPaywall: View {
                         symbol: "star.circle.fill",
                         colour: Color(.systemYellow),
                         title: "Favorite Forex Pairs",
-                        description: "Save any currency pair for quick access."
+                        description: "Save any currency pair to access them quickly."
                     )
                     
                     SubscriptionFeature(
@@ -87,5 +87,6 @@ struct SubscriptionPaywall: View {
 struct SubscriptionPaywall_Previews: PreviewProvider {
     static var previews: some View {
         SubscriptionPaywall(showingSubscriptionPaywall: .constant(false))
+            .environment(\.locale, Locale(identifier: "es"))
     }
 }
