@@ -87,6 +87,5 @@ struct SubscriptionPaywall: View {
 struct SubscriptionPaywall_Previews: PreviewProvider {
     static var previews: some View {
         SubscriptionPaywall(showingSubscriptionPaywall: .constant(false))
-            .environment(\.locale, Locale(identifier: "es"))
     }
 }
