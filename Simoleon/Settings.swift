@@ -78,11 +78,11 @@ struct Settings: View {
                     Text("Website")
                 }
                 
-                Link(destination: URL(string: "https://dennistech.io/privacy-policy")!) {
+                Link(destination: URL(string: "https://dennistech.io/simoleon-privacy-policy")!) {
                     Text("Privacy Policy")
                 }
                 
-                Link(destination: URL(string: "https://dennistech.io/terms-of-use")!) {
+                Link(destination: URL(string: "https://dennistech.io/simoleon-terms-of-use")!) {
                     Text("Terms of Use")
                 }
             }
