@@ -1,0 +1,714 @@
+{
+    "AED": {
+        "name": "Dirham Der Vereinigten Arabischen Emirate",
+        "flag": "AE"
+    },
+    "AFN": {
+        "name": "Afghanisch Afghanisch",
+        "flag": "AF"
+    },
+    "ALL": {
+        "name": "Albanisches Lek",
+        "flag": "AL"
+    },
+    "AMD": {
+        "name": "Armenisches Dram",
+        "flag": "AM"
+    },
+    "ANG": {
+        "name": "Niederl\u00e4ndischer Antillen-Gulden",
+        "flag": "CW"
+    },
+    "AOA": {
+        "name": "Angolanisch Zuerst",
+        "flag": "AO"
+    },
+    "ARE": {
+        "name": "Areg",
+        "flag": "AR"
+    },
+    "ARS": {
+        "name": "Argentinien Peso",
+        "flag": "AR"
+    },
+    "AUD": {
+        "name": "Australischer Dollar",
+        "flag": "AU"
+    },
+    "AUN": {
+        "name": "Australisches Nugget",
+        "flag": "AU"
+    },
+    "AWG": {
+        "name": "Aruba-Florin",
+        "flag": "AW"
+    },
+    "BAM": {
+        "name": "Konvertible Mark F\u00fcr Bosnien Und Herzegowina",
+        "flag": "BA"
+    },
+    "BBD": {
+        "name": "Barbados-Dollar",
+        "flag": "BB"
+    },
+    "BDT": {
+        "name": "Bangladesch Taka",
+        "flag": "BD"
+    },
+    "BGN": {
+        "name": "Bulgarischer Lev",
+        "flag": "BG"
+    },
+    "BHD": {
+        "name": "Bahrain-Dinar",
+        "flag": "BH"
+    },
+    "BIF": {
+        "name": "Burundischer Franken",
+        "flag": "BI"
+    },
+    "BMD": {
+        "name": "Bermuda-Dollar",
+        "flag": "BM"
+    },
+    "BND": {
+        "name": "Brunei Dollar",
+        "flag": "BN"
+    },
+    "BOB": {
+        "name": "Bolivianisch",
+        "flag": "BO"
+    },
+    "BRI": {
+        "name": "Gro\u00dfbritannien",
+        "flag": "BR"
+    },
+    "BRL": {
+        "name": "Brasilianischer Real",
+        "flag": "BR"
+    },
+    "BSD": {
+        "name": "Bahama-Dollar",
+        "flag": "BS"
+    },
+    "BTN": {
+        "name": "Bhutanesischer Ngultrum",
+        "flag": "BT"
+    },
+    "BWP": {
+        "name": "Botswana Pula",
+        "flag": "BW"
+    },
+    "BYN": {
+        "name": "Wei\u00dfrussischer Rubel",
+        "flag": "BY"
+    },
+    "BZD": {
+        "name": "Belize-Dollar",
+        "flag": "BZ"
+    },
+    "CAD": {
+        "name": "Kanadischer Dollar",
+        "flag": "CA"
+    },
+    "CDF": {
+        "name": "Kongolesischer Franken",
+        "flag": "CD"
+    },
+    "CHF": {
+        "name": "Schweizerfranken",
+        "flag": "CH"
+    },
+    "CLF": {
+        "name": "Chilenische Rechnungseinheit",
+        "flag": "CL"
+    },
+    "CLP": {
+        "name": "Chilenischer Peso",
+        "flag": "CL"
+    },
+    "CNH": {
+        "name": "Chinesische Yuan",
+        "flag": "CN"
+    },
+    "CNY": {
+        "name": "Chinesische Yuan",
+        "flag": "CN"
+    },
+    "COP": {
+        "name": "Kolumbianischer Peso",
+        "flag": "CO"
+    },
+    "CRC": {
+        "name": "Costa-Rica-Colon",
+        "flag": "CR"
+    },
+    "CUP": {
+        "name": "Kubanischer Peso",
+        "flag": "CU"
+    },
+    "CVE": {
+        "name": "Kapverdischer Schild",
+        "flag": "CV"
+    },
+    "CYP": {
+        "name": "Zypriotisches Pfund",
+        "flag": "CY"
+    },
+    "CZK": {
+        "name": "Tschechische Krone",
+        "flag": "CZ"
+    },
+    "DJF": {
+        "name": "Dschibutisches Franken",
+        "flag": "DJ"
+    },
+    "DKK": {
+        "name": "D\u00e4nische Krone",
+        "flag": "DK"
+    },
+    "DOE": {
+        "name": "Doppeladler",
+        "flag": "DO"
+    },
+    "DOP": {
+        "name": "Dominikanische Peso",
+        "flag": "DO"
+    },
+    "DZD": {
+        "name": "Algerischer Dinar",
+        "flag": "DZ"
+    },
+    "EGP": {
+        "name": "\u00c4gyptisches Pfund",
+        "flag": "EG"
+    },
+    "ETB": {
+        "name": "\u00c4thiopischer Birr",
+        "flag": "ET"
+    },
+    "EUR": {
+        "name": "Euro",
+        "flag": "EU"
+    },
+    "FJD": {
+        "name": "Fidschi-Dollar",
+        "flag": "FJ"
+    },
+    "FRN": {
+        "name": "Franz\u00f6sischer Napoleon",
+        "flag": "FR"
+    },
+    "GBP": {
+        "name": "Pfund Sterling",
+        "flag": "GB"
+    },
+    "GEL": {
+        "name": "Georgischer Lauf",
+        "flag": "GE"
+    },
+    "GHS": {
+        "name": "Ghanaischer Cedi",
+        "flag": "GH"
+    },
+    "GMD": {
+        "name": "Gambischer Dalasi",
+        "flag": "GM"
+    },
+    "GNF": {
+        "name": "Guinea-Franc",
+        "flag": "GN"
+    },
+    "GTQ": {
+        "name": "Guatemaltekischer Quetzal",
+        "flag": "GT"
+    },
+    "GYD": {
+        "name": "Guyana-Dollar",
+        "flag": "GY"
+    },
+    "HKD": {
+        "name": "Hongkong Dollar",
+        "flag": "HK"
+    },
+    "HNL": {
+        "name": "Honduranisches Lempira",
+        "flag": "HN"
+    },
+    "HRK": {
+        "name": "Kroatische Kuna",
+        "flag": "HR"
+    },
+    "HTG": {
+        "name": "Haitianischer K\u00fcrbis",
+        "flag": "HT"
+    },
+    "HUF": {
+        "name": "Ungarischer Forint",
+        "flag": "HU"
+    },
+    "IDR": {
+        "name": "Indonesische Rupiah",
+        "flag": "ID"
+    },
+    "ILS": {
+        "name": "Israelischer Neuer Schekel",
+        "flag": "IL"
+    },
+    "INR": {
+        "name": "Indische Rupie",
+        "flag": "IN"
+    },
+    "IQD": {
+        "name": "Irakischer Dinar",
+        "flag": "IQ"
+    },
+    "IRR": {
+        "name": "Iranischer Rial",
+        "flag": "IR"
+    },
+    "ISK": {
+        "name": "Isl\u00e4ndische Krone",
+        "flag": "IS"
+    },
+    "JMD": {
+        "name": "Jamaika-Dollar",
+        "flag": "JM"
+    },
+    "JOD": {
+        "name": "Jordanischer Dinar",
+        "flag": "JO"
+    },
+    "JPY": {
+        "name": "Japanische Yen",
+        "flag": "JP"
+    },
+    "KES": {
+        "name": "Kenianischer Schilling",
+        "flag": "KE"
+    },
+    "KHR": {
+        "name": "Kambodschanische Riel",
+        "flag": "KH"
+    },
+    "KMF": {
+        "name": "Komoren Frankreich",
+        "flag": "KM"
+    },
+    "KRU": {
+        "name": "S\u00fcdafrikanischer Kr\u00fcgerrand",
+        "flag": "KR"
+    },
+    "KRW": {
+        "name": "S\u00fcdkoreanische Won",
+        "flag": "KR"
+    },
+    "KWD": {
+        "name": "Kuwait-Dinar",
+        "flag": "KW"
+    },
+    "KYD": {
+        "name": "Kaimaninseln-Dollar",
+        "flag": "KY"
+    },
+    "KZT": {
+        "name": "Kasachstan Tenge",
+        "flag": "KZ"
+    },
+    "LAK": {
+        "name": "Laotischer Kip",
+        "flag": "LA"
+    },
+    "LBP": {
+        "name": "Libanesisches Pfund",
+        "flag": "LB"
+    },
+    "LFX": {
+        "name": "Sukuk-Sch\u00e4tze",
+        "flag": "MY"
+    },
+    "LKR": {
+        "name": "Sri-Lanka-Rupie",
+        "flag": "LK"
+    },
+    "LRD": {
+        "name": "Liberianischer Dollar",
+        "flag": "LR"
+    },
+    "LSL": {
+        "name": "Lesotho Loti",
+        "flag": "LS"
+    },
+    "LTL": {
+        "name": "Litauische Litas",
+        "flag": "LT"
+    },
+    "LYD": {
+        "name": "Libyscher Dinar",
+        "flag": "LY"
+    },
+    "M5P": {
+        "name": "Mexikanische 50 Peso",
+        "flag": "MX"
+    },
+    "MAD": {
+        "name": "Marokkanischer Dirham",
+        "flag": "MA"
+    },
+    "MAL": {
+        "name": "Ahornblatt",
+        "flag": "MA"
+    },
+    "MDL": {
+        "name": "Moldauischer Leu",
+        "flag": "MD"
+    },
+    "MGA": {
+        "name": "Madagassischer Ariary",
+        "flag": "MG"
+    },
+    "MKD": {
+        "name": "Mazedonischer Denar",
+        "flag": "MK"
+    },
+    "MMK": {
+        "name": "Myanmar Kyat",
+        "flag": "MM"
+    },
+    "MOP": {
+        "name": "Macanesisches Pataca",
+        "flag": "MO"
+    },
+    "MRU": {
+        "name": "Mauretanischer Ouguiya",
+        "flag": "MR"
+    },
+    "MTL": {
+        "name": "Maltesische Lira",
+        "flag": "MT"
+    },
+    "MUR": {
+        "name": "Mauritius-Rupie",
+        "flag": "MU"
+    },
+    "MVR": {
+        "name": "Maledivische Rufiyaa",
+        "flag": "MV"
+    },
+    "MWK": {
+        "name": "Malawischer Kwacha",
+        "flag": "MW"
+    },
+    "MXN": {
+        "name": "Mexikanischer Peso",
+        "flag": "MX"
+    },
+    "MYR": {
+        "name": "Malaysische Ringgit",
+        "flag": "MY"
+    },
+    "MZN": {
+        "name": "Mosambikanische Metical",
+        "flag": "MZ"
+    },
+    "NAD": {
+        "name": "Namibischer Dollar",
+        "flag": "NA"
+    },
+    "NBL": {
+        "name": "Insel Man Noble",
+        "flag": "IM"
+    },
+    "NGN": {
+        "name": "Nigerianische Naira",
+        "flag": "NG"
+    },
+    "NIO": {
+        "name": "Nicaraguanisches Cordoba",
+        "flag": "NI"
+    },
+    "NOK": {
+        "name": "Norwegische Krone",
+        "flag": "NO"
+    },
+    "NPR": {
+        "name": "Nepalesische Rupie",
+        "flag": "NP"
+    },
+    "NSO": {
+        "name": "Neuer Souver\u00e4n",
+        "flag": "GB"
+    },
+    "NZD": {
+        "name": "Neuseeland Dollar",
+        "flag": "NZ"
+    },
+    "OMR": {
+        "name": "Omanische Rial",
+        "flag": "OM"
+    },
+    "OSO": {
+        "name": "Alter Souver\u00e4n",
+        "flag": "GB"
+    },
+    "PAB": {
+        "name": "Panamaischer Balboa",
+        "flag": "PA"
+    },
+    "PEN": {
+        "name": "Peruanisches Neues Sol",
+        "flag": "PE"
+    },
+    "PGK": {
+        "name": "Papua-Neuguinea China",
+        "flag": "PG"
+    },
+    "PHP": {
+        "name": "Philippinischer Peso",
+        "flag": "PH"
+    },
+    "PKR": {
+        "name": "Pakistanische Rupie",
+        "flag": "PK"
+    },
+    "PLN": {
+        "name": "Polnischer Zloty",
+        "flag": "PL"
+    },
+    "PYG": {
+        "name": "Paraguayischer Guaran\u00ed",
+        "flag": "PY"
+    },
+    "QAR": {
+        "name": "Katar-Riyal",
+        "flag": "QA"
+    },
+    "RON": {
+        "name": "Rum\u00e4nischer Neuer Leu",
+        "flag": "RO"
+    },
+    "RSD": {
+        "name": "Serbischer Dinar",
+        "flag": "RS"
+    },
+    "RUB": {
+        "name": "Russischer Rubel",
+        "flag": "RU"
+    },
+    "RWF": {
+        "name": "Ruanda-Franken",
+        "flag": "RW"
+    },
+    "SAR": {
+        "name": "Saudi-Riyal",
+        "flag": "SA"
+    },
+    "SBD": {
+        "name": "Salomonen-Dollar",
+        "flag": "SB"
+    },
+    "SCR": {
+        "name": "Seychellen-Rupie",
+        "flag": "SC"
+    },
+    "SDG": {
+        "name": "Sudanesisches Pfund",
+        "flag": "SD"
+    },
+    "SEK": {
+        "name": "Schwedische Krone",
+        "flag": "SE"
+    },
+    "SGD": {
+        "name": "Singapur-Dollar",
+        "flag": "SG"
+    },
+    "SHP": {
+        "name": "St. Helena Pfund",
+        "flag": "SH"
+    },
+    "SLL": {
+        "name": "Sierra Leone Leone",
+        "flag": "SL"
+    },
+    "SOS": {
+        "name": "Somalischer Schilling",
+        "flag": "SO"
+    },
+    "SRD": {
+        "name": "Surinamischer Dollar",
+        "flag": "SR"
+    },
+    "STN": {
+        "name": "Sao Tomean Dobra",
+        "flag": "ST"
+    },
+    "SVC": {
+        "name": "Salvadorianischer Kolumbus",
+        "flag": "SV"
+    },
+    "SZL": {
+        "name": "Swazi-Lilangeni",
+        "flag": "SZ"
+    },
+    "THB": {
+        "name": "Thail\u00e4ndischer Baht",
+        "flag": "TH"
+    },
+    "TJS": {
+        "name": "Tadschikischer Somoni",
+        "flag": "TJ"
+    },
+    "TMT": {
+        "name": "Turkmenistanischer Manat",
+        "flag": "TM"
+    },
+    "TND": {
+        "name": "Tunesischer Dinar",
+        "flag": "TN"
+    },
+    "TOP": {
+        "name": "Tongaische Pa\u02bbAnga",
+        "flag": "TO"
+    },
+    "TRY": {
+        "name": "T\u00fcrkische Lire",
+        "flag": "TR"
+    },
+    "TTD": {
+        "name": "Trinidad Und Tobago-Dollar",
+        "flag": "TT"
+    },
+    "TWD": {
+        "name": "Neuer Taiwan-Dollar",
+        "flag": "TW"
+    },
+    "TZS": {
+        "name": "Tansania-Schilling",
+        "flag": "TZ"
+    },
+    "UAH": {
+        "name": "Ukrainische Griwna",
+        "flag": "UA"
+    },
+    "UGX": {
+        "name": "Uganda-Schilling",
+        "flag": "UG"
+    },
+    "USD": {
+        "name": "Us-Dollar",
+        "flag": "US"
+    },
+    "UYU": {
+        "name": "Uruguayischer Peso",
+        "flag": "UY"
+    },
+    "UZS": {
+        "name": "Usbekistan Som",
+        "flag": "UZ"
+    },
+    "VES": {
+        "name": "Venezolanischer Bolivar Soberano",
+        "flag": "VE"
+    },
+    "VND": {
+        "name": "Vietnamesischer Dong",
+        "flag": "VN"
+    },
+    "VRL": {
+        "name": "Vreneli 10F.",
+        "flag": "CH"
+    },
+    "VRN": {
+        "name": "Vreneli 20F",
+        "flag": "CH"
+    },
+    "XAG": {
+        "name": "Silber (Eine Feinunze)",
+        "flag": "XAG"
+    },
+    "XAGK": {
+        "name": "Silber (Kg)",
+        "flag": "XAG"
+    },
+    "XAU": {
+        "name": "Gold (Eine Feinunze)",
+        "flag": "XAU"
+    },
+    "XAUK": {
+        "name": "Gold (Kg)",
+        "flag": "XAU"
+    },
+    "XCD": {
+        "name": "Ostkaribischer Dollar",
+        "flag": "AI"
+    },
+    "XOF": {
+        "name": "Cfa Franc Bceao",
+        "flag": "SN"
+    },
+    "XPD": {
+        "name": "Palladium (Eine Feinunze)",
+        "flag": "XPD"
+    },
+    "XPDK": {
+        "name": "Palladium (Kg)",
+        "flag": "XPD"
+    },
+    "XPF": {
+        "name": "Cfp-Franc",
+        "flag": "PF"
+    },
+    "XPT": {
+        "name": "Platin (Eine Feinunze)",
+        "flag": "XPT"
+    },
+    "XPTK": {
+        "name": "Platin (Kg)",
+        "flag": "XPT"
+    },
+    "YER": {
+        "name": "Jemenitischer Rial",
+        "flag": "YE"
+    },
+    "ZAR": {
+        "name": "S\u00fcdafrikanischer Rand",
+        "flag": "ZA"
+    },
+    "ZMW": {
+        "name": "Sambischer Kwacha",
+        "flag": "ZM"
+    },
+    "ZWD": {
+        "name": "Simbabwe-Dollar",
+        "flag": "ZW"
+    },
+    "DASH": {
+        "name": "Dash Kryptow\u00e4hrung",
+        "flag": "DASH"
+    },
+    "BTC": {
+        "name": "Bitcoin",
+        "flag": "BTC"
+    },
+    "DSH": {
+        "name": "Dash Kryptow\u00e4hrung",
+        "flag": "DASH"
+    },
+    "LTC": {
+        "name": "Litecoin",
+        "flag": "LTC"
+    },
+    "ETH": {
+        "name": "\u00c4ther",
+        "flag": "ETH"
+    },
+    "BCH": {
+        "name": "Bitcoin-Bargeld",
+        "flag": "BTC"
+    },
+    "XRP": {
+        "name": "Xrp Kryptow\u00e4hrung",
+        "flag": "XRP"
+    }
+}
