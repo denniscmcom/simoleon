@@ -78,12 +78,6 @@ struct CurrencySelector: View {
      * Show subscription paywall
      */
     private func select(_ currencyPair: String) {
-        #if targetEnvironment(simulator)
-        // We're in simulator
-        self.currencyPair = currencyPair
-        showingCurrencySelector = false
-        #else
-        // We're in physical device
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
             if purchaserInfo?.entitlements["all"]?.isActive == true {
                 self.currencyPair = currencyPair
@@ -98,7 +92,6 @@ struct CurrencySelector: View {
                 showingAlert = true
             }
         }
-        #endif
     }
 }
 

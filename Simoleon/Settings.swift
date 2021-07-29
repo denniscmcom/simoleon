@@ -150,11 +150,6 @@ struct Settings: View {
     
     // Check if user subscription is active
     private func checkEntitlement() {
-        #if targetEnvironment(simulator)
-        // We're in simulator
-        entitlementIsActive = true
-        #else
-        // We're in physical device
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
             if purchaserInfo?.entitlements["all"]?.isActive == true {
                 entitlementIsActive = true
@@ -168,7 +163,6 @@ struct Settings: View {
                 showingAlert = true
             }
         }
-        #endif
     }
 }
 
