@@ -18,6 +18,12 @@
 		9585BB1426A6B7F400E3193E /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1326A6B7F400E3193E /* NetworkRequest.swift */; };
 		9585BB1A26A6E8FD00E3193E /* SimpleSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1926A6E8FD00E3193E /* SimpleSuccess.swift */; };
 		9587598D26B2A68B004086F0 /* CurrencyMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 9587598F26B2A68B004086F0 /* CurrencyMetadata.json */; };
+		9587599E26B2ACA6004086F0 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 9587599D26B2ACA6004086F0 /* Configuration.storekit */; };
+		9587599F26B2ACA6004086F0 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 9587599D26B2ACA6004086F0 /* Configuration.storekit */; };
+		958759A026B2ACA6004086F0 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 9587599D26B2ACA6004086F0 /* Configuration.storekit */; };
+		958759A226B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 958759A126B2AE85004086F0 /* StoreKitTestCertificate.cer */; };
+		958759A326B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 958759A126B2AE85004086F0 /* StoreKitTestCertificate.cer */; };
+		958759A426B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 958759A126B2AE85004086F0 /* StoreKitTestCertificate.cer */; };
 		95909CB326B07BFC00D051AB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95909CB226B07BFC00D051AB /* SearchBar.swift */; };
 		95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9426A03ECB00613729 /* ContentView.swift */; };
 		95AEBC9B26A04A4200613729 /* CurrencyMetadataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9A26A04A4200613729 /* CurrencyMetadataModel.swift */; };
@@ -131,6 +137,8 @@
 		9587599A26B2A6A8004086F0 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-PT"; path = "pt-PT.lproj/CurrencyMetadata.json"; sourceTree = "<group>"; };
 		9587599B26B2A6A8004086F0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ru; path = ru.lproj/CurrencyMetadata.json; sourceTree = "<group>"; };
 		9587599C26B2A6AA004086F0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = es; path = es.lproj/CurrencyMetadata.json; sourceTree = "<group>"; };
+		9587599D26B2ACA6004086F0 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = file; path = Configuration.storekit; sourceTree = SOURCE_ROOT; };
+		958759A126B2AE85004086F0 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 		95909CB226B07BFC00D051AB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		95A70BE926B0550000CC0273 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		95AEBC9426A03ECB00613729 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -292,6 +300,8 @@
 		95C5B21B2697752600941585 = {
 			isa = PBXGroup;
 			children = (
+				9587599D26B2ACA6004086F0 /* Configuration.storekit */,
+				958759A126B2AE85004086F0 /* StoreKitTestCertificate.cer */,
 				95C5B2262697752600941585 /* Simoleon */,
 				95C5B23D2697752700941585 /* SimoleonTests */,
 				95C5B2482697752700941585 /* SimoleonUITests */,
@@ -515,6 +525,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				95DD4ABB269B33810027CA1F /* CurrencyPairs.json in Resources */,
+				9587599E26B2ACA6004086F0 /* Configuration.storekit in Resources */,
+				958759A226B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */,
 				95C5B22F2697752700941585 /* Preview Assets.xcassets in Resources */,
 				95E76436269DFC1A008E9F31 /* LaunchScreen.storyboard in Resources */,
 				9587598D26B2A68B004086F0 /* CurrencyMetadata.json in Resources */,
@@ -530,6 +542,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9587599F26B2ACA6004086F0 /* Configuration.storekit in Resources */,
+				958759A326B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +551,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				958759A026B2ACA6004086F0 /* Configuration.storekit in Resources */,
+				958759A426B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
