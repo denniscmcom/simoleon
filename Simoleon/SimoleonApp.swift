@@ -11,6 +11,7 @@ import Purchases
 @main
 struct SimoleonApp: App {
     let persistenceController = PersistenceController.shared
+    
     init() {
         Purchases.configure(withAPIKey: "\(readConfig("PURCHASES_KEY")!)")
     }
@@ -27,3 +28,4 @@ struct SimoleonApp: App {
         }
     }
 }
+
