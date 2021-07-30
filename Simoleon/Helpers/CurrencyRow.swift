@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct CurrencyRow: View {
-    var currencyPair: String
-    
+    var currencyPairName: String
     let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
     var body: some View {
         HStack {
-            let currencies = currencyPair.split(separator: "/")
+            let currencies = currencyPairName.split(separator: "/")
             Image(currencyMetadata[String(currencies[0])]!.flag)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -43,6 +42,6 @@ struct CurrencyRow: View {
 
 struct CurrencyRow_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyRow(currencyPair: "USD/GBP")
+        CurrencyRow(currencyPairName: "USD/GBP")
     }
 }

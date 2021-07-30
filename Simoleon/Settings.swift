@@ -20,7 +20,21 @@ struct Settings: View {
     @State private var showingAlert = false
     @State private var searchCurrency = ""
     
-    let currencyPairs: [String] = parseJson("CurrencyPairs.json")
+    let currencyPairs: [CurrencyPairModel] = parseJson("CurrencyPairs.json")
+    
+    /*
+     If searched currency string is empty:
+     * Show all currencies
+     else:
+     * Show filtered list of currencies containing searched currency string
+     */
+    var searchResults: [CurrencyPairModel] {
+        if searchCurrency.isEmpty {
+            return currencyPairs.sorted { $0.name < $1.name }
+        } else {
+            return currencyPairs.filter { $0.name.contains(searchCurrency.uppercased()) }
+        }
+    }
     
     var body: some View {
         List {
@@ -31,7 +45,7 @@ struct Settings: View {
                             .padding(5)
                         
                         ForEach(searchResults, id: \.self) { currencyPair in
-                            Text(currencyPair)
+                            Text(currencyPair.name)
                         }
                     }
                 } else {
@@ -115,21 +129,6 @@ struct Settings: View {
             NavigationView { content }
         }
     }
-    
-    /*
-     If searched currency string is empty:
-     * Show all currencies
-     else:
-     * Show filtered list of currencies containing searched currency string
-     */
-    var searchResults: [String] {
-        if searchCurrency.isEmpty {
-            return currencyPairs.sorted()
-        } else {
-            return currencyPairs.filter { $0.contains(searchCurrency.uppercased()) }
-        }
-    }
-    
      
     // Save default currency to core data
     private func setCoreData() {

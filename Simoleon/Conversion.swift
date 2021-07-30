@@ -29,7 +29,7 @@ struct Conversion: View {
                             .foregroundColor(Color(.secondarySystemBackground))
                             .frame(height: 60)
                             .overlay(
-                                CurrencyRow(currencyPair: currencyPair)
+                                CurrencyRow(currencyPairName: currencyPair)
                                     .padding(.horizontal)
                             )
                     }

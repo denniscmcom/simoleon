@@ -22,6 +22,7 @@ struct SubscriptionPaywall: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 100, height: 100)
                                 .cornerRadius(25)
+                                .padding(.top)
                             
                             Text("Unlock All Access")
                                 .font(.title)
@@ -73,6 +74,7 @@ struct SubscriptionPaywall: View {
                 .padding(.bottom)
                 .padding(.horizontal, 40)
             }
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button(action: { showingSubscriptionPaywall = false }) {
@@ -86,6 +88,6 @@ struct SubscriptionPaywall: View {
 
 struct SubscriptionPaywall_Previews: PreviewProvider {
     static var previews: some View {
-        SubscriptionPaywall(showingSubscriptionPaywall: .constant(false))
+        SubscriptionPaywall(showingSubscriptionPaywall: .constant(true))
     }
 }
