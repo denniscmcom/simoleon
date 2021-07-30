@@ -26,7 +26,7 @@ struct Favorites: View {
                 List {
                     ForEach(favorite) { favorite in
                         NavigationLink(destination: Conversion(showNavigationView: false, currencyPair: favorite.currencyPair)) {
-                            CurrencyRow(currencyPair: favorite.currencyPair)
+                            CurrencyRow(currencyPairName: favorite.currencyPair)
                         }
                     }
                     .onDelete(perform: removeFromFavorites)

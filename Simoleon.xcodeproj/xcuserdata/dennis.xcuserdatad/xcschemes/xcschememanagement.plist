@@ -30,7 +30,7 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Simoleon.xcscheme_^#shared#^_</key>
+		<key>Simoleon.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
@@ -49,6 +49,14 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>95C5B2232697752600941585</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

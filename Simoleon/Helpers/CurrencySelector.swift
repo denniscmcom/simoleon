@@ -18,7 +18,21 @@ struct CurrencySelector: View {
     @State private var alertMessage = ""
     @State private var showingAlert = false
     
-    let currencyPairs: [String] = parseJson("CurrencyPairs.json")
+    var currencyPairs: [CurrencyPairModel] = parseJson("CurrencyPairs.json")
+    
+    /*
+     If searched currency string is empty:
+     * Show all currencies
+     else:
+     * Show filtered list of currencies containing searched currency string
+     */
+    var searchResults: [CurrencyPairModel] {
+        if searchCurrency.isEmpty {
+            return currencyPairs.sorted { !$0.isLocked && $1.isLocked }
+        } else {
+            return currencyPairs.filter { $0.name.contains(searchCurrency.uppercased()) }
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -26,11 +40,11 @@ struct CurrencySelector: View {
                 SearchBar(placeholder: "Search...", text: $searchCurrency)
                     .padding()
                 
-                List(searchResults, id: \.self) { currencyPair in
-                    Button(action: { select(currencyPair) }) {
-                        CurrencyRow(currencyPair: currencyPair)
+                    List(searchResults, id: \.self) { currencyPair in
+                        Button(action: { select(currencyPair.name) }) {
+                            CurrencyRow(currencyPairName: currencyPair.name)
+                        }
                     }
-                }
                 .id(UUID())
                 .listStyle(PlainListStyle())
                 .gesture(DragGesture()
@@ -38,9 +52,6 @@ struct CurrencySelector: View {
                                 UIApplication.shared.dismissKeyboard()
                             })
                 )
-            }
-            .sheet(isPresented: $showingSubscriptionPaywall) {
-                SubscriptionPaywall(showingSubscriptionPaywall: $showingSubscriptionPaywall)
             }
             .navigationTitle("Currencies")
             .navigationBarTitleDisplayMode(.inline)
@@ -55,19 +66,8 @@ struct CurrencySelector: View {
         .alert(isPresented: $showingAlert) {
             Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
         }
-    }
-    
-    /*
-     If searched currency string is empty:
-     * Show all currencies
-     else:
-     * Show filtered list of currencies containing searched currency string
-     */
-    var searchResults: [String] {
-        if searchCurrency.isEmpty {
-            return currencyPairs
-        } else {
-            return currencyPairs.filter { $0.contains(searchCurrency.uppercased()) }
+        .sheet(isPresented: $showingSubscriptionPaywall) {
+            SubscriptionPaywall(showingSubscriptionPaywall: $showingSubscriptionPaywall)
         }
     }
     
