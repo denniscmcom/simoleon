@@ -46,6 +46,7 @@ struct Settings: View {
                         
                         ForEach(searchResults, id: \.self) { currencyPair in
                             Text(currencyPair.name)
+                                .tag(currencyPair.name)
                         }
                     }
                 } else {
@@ -152,8 +153,6 @@ struct Settings: View {
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
             if purchaserInfo?.entitlements["all"]?.isActive == true {
                 entitlementIsActive = true
-            } else {
-                entitlementIsActive = false
             }
             
             if let error = error as NSError? {
