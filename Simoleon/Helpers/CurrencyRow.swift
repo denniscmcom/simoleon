@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CurrencyRow: View {
     var currencyPairName: String
+    var isLocked: Bool?
     let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
     var body: some View {
@@ -36,6 +37,11 @@ struct CurrencyRow: View {
                 .padding(.leading)
             
             Spacer()
+            
+            if isLocked ?? false {
+                Image(systemName: "lock")
+                    .foregroundColor(Color(.systemGray))
+            }
         }
     }
 }
