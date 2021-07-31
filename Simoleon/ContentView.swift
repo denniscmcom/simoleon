@@ -17,26 +17,39 @@ struct ContentView: View {
         case convert, favorites, settings
     }
     
-    var body: some View {
-        TabView(selection: $tab) {
-            Conversion(currencyPair: defaultCurrency.first?.pair ?? "USD/GBP")
-                .tabItem {
-                    Label("Convert", systemImage: "arrow.counterclockwise.circle")
-                }
-                .tag(Tab.convert)
-            
-            Favorites()
-                .tabItem {
-                    Label("Favorites", systemImage: "star")
-                }
-                .tag(Tab.favorites)
-            
-            Settings()
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
-                .tag(Tab.settings)
+    @ViewBuilder var adjustedView: some View {
+        // MARK: - iPad
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            NavigationView {
+                Sidebar()
+                Conversion(currencyPair: defaultCurrency.first?.pair ?? "USD/GBP")
+            }
+        } else {
+            // MARK: - iPhone
+            TabView(selection: $tab) {
+                Conversion(currencyPair: defaultCurrency.first?.pair ?? "USD/GBP")
+                    .tabItem {
+                        Label("Convert", systemImage: "arrow.counterclockwise.circle")
+                    }
+                    .tag(Tab.convert)
+                
+                Favorites()
+                    .tabItem {
+                        Label("Favorites", systemImage: "star")
+                    }
+                    .tag(Tab.favorites)
+                
+                Settings()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+                    .tag(Tab.settings)
+            }
         }
+    }
+    
+    var body: some View {
+        adjustedView
     }
 }
 

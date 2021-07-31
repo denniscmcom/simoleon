@@ -10,6 +10,7 @@ import Purchases
 
 @main
 struct SimoleonApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     let persistenceController = PersistenceController.shared
     
     init() {
@@ -18,14 +19,8 @@ struct SimoleonApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                ContentViewPad()
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            } else {
-                ContentView()
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            }
+            ContentView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
-
