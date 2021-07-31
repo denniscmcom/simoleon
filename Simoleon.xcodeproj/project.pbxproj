@@ -10,6 +10,7 @@
 		950A377726A820F800CAB175 /* DefaultCurrency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A377626A820F400CAB175 /* DefaultCurrency+CoreDataProperties.swift */; };
 		950A377826A820F800CAB175 /* DefaultCurrency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A377526A820F400CAB175 /* DefaultCurrency+CoreDataClass.swift */; };
 		9522BEA926B5A4D20076B098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BEA826B5A4D20076B098 /* AppDelegate.swift */; };
+		9522BEAB26B5AACB0076B098 /* ListModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BEAA26B5AACB0076B098 /* ListModifier.swift */; };
 		9555933A269B0AB8000FD726 /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95559339269B0AB8000FD726 /* ParseJson.swift */; };
 		95561E3F26AF25EF00CCB543 /* SubscriptionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */; };
 		95562D4D26A8962A0047E778 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95562D4C26A8962A0047E778 /* StoreKit.framework */; };
@@ -95,6 +96,7 @@
 		950A377526A820F400CAB175 /* DefaultCurrency+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCurrency+CoreDataClass.swift"; sourceTree = "<group>"; };
 		950A377626A820F400CAB175 /* DefaultCurrency+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCurrency+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9522BEA826B5A4D20076B098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9522BEAA26B5AACB0076B098 /* ListModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModifier.swift; sourceTree = "<group>"; };
 		95559339269B0AB8000FD726 /* ParseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
 		95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFeature.swift; sourceTree = "<group>"; };
 		95562D4C26A8962A0047E778 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -401,6 +403,7 @@
 				95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */,
 				95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */,
 				95909CB226B07BFC00D051AB /* SearchBar.swift */,
+				9522BEAA26B5AACB0076B098 /* ListModifier.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				95C5B2312697752700941585 /* Persistence.swift in Sources */,
 				9585BB1226A6B71B00E3193E /* ReadConfig.swift in Sources */,
 				95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */,
+				9522BEAB26B5AACB0076B098 /* ListModifier.swift in Sources */,
 				95909CB326B07BFC00D051AB /* SearchBar.swift in Sources */,
 				95AEBC9B26A04A4200613729 /* CurrencyMetadataModel.swift in Sources */,
 				9522BEA926B5A4D20076B098 /* AppDelegate.swift in Sources */,
