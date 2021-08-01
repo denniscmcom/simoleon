@@ -91,11 +91,10 @@ struct SubscribeButton: View {
         formatter.locale = locale
         formatter.numberStyle = .currency
         
-        if let formattedAmount = formatter.string(from: amount as NSNumber) {
-            return formattedAmount
-        } else {
-            return "\(amount)\(locale.currencySymbol!)"
-        }
+        // It won't fail. Check unit test
+        let formattedAmount = formatter.string(from: amount as NSNumber)!
+        
+        return formattedAmount
     }
 }
 
