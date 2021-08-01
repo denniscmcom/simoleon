@@ -17,11 +17,14 @@ struct Favorites: View {
         VStack {
             if favorite.isEmpty {
                 Group {
-                    Text("Tap ") + Text(Image(systemName: "star"))
-                    Text("to add a currency pair to favorites")
+                    Image(systemName: "star")
+                        .font(.title)
+                    Text("Search a currency pair and add it to favourites.")
                         .padding(.top, 5)
                 }
+                .multilineTextAlignment(.center)
                 .foregroundColor(Color(.systemGray))
+                .padding(.horizontal, 50)
             } else {
                 List {
                     ForEach(favorite) { favorite in
@@ -62,6 +65,6 @@ struct Favorites: View {
 struct Favorites_Previews: PreviewProvider {
     static var previews: some View {
         Favorites()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
