@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct LockedCurrencyPicker: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) private var defaultCurrency: FetchedResults<DefaultCurrency>
+    
     var body: some View {
         HStack {
             Text("Default currency")
             Spacer()
-            Text("USD/GBP")
+            Text(defaultCurrency.first?.pair ?? "USD/GBP")
                 .foregroundColor(Color(.systemGray))
             
             Image(systemName: "lock")
