@@ -19,7 +19,7 @@ jobs:
           
 
 workflows:
-  build-test-adhoc:
+  build-test-dev:
     jobs:
       - build-and-test:
             filters:
