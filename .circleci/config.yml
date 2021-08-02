@@ -1,6 +1,8 @@
 version: 2.1
+
 jobs:
-  build-and-test:
+
+  test:
     macos:
       xcode: 12.5.1
     environment:
@@ -16,12 +18,43 @@ jobs:
           path: output
       - store_test_results:
           path: output/scan
-          
+
+  upload-to-testflight:
+    macos:
+      xcode: 12.5.1
+    environment:
+      FL_OUTPUT_DIR: output
+      FASTLANE_LANE: beta
+    steps:
+      - checkout
+      - run: bundle install
+      - run:
+          name: Fastlane
+          command: bundle exec fastlane $FASTLANE_LANE
+      - store_artifacts:
+          path: output
+      - store_test_results:
+          path: output/beta
+
 
 workflows:
-  build-test-dev:
+
+  test-dev-branch:
     jobs:
-      - build-and-test:
-            filters:
-                branches:
-                    only: development
+      - test:
+          filters:
+            branches:
+              only: development
+
+  upload-beta:
+    jobs:
+      - test:
+          filters:
+            branches:
+              only: beta
+      - upload-to-testflight:
+          requires:
+            - test
+          filters:
+            branches:
+              only: beta
