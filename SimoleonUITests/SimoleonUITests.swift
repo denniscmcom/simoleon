@@ -25,8 +25,10 @@ class SimoleonUITests: XCTestCase {
     // MARK: - Tab View
     func testExample() throws {
         let app = XCUIApplication()
+        setupSnapshot(app)
         app.launch()
-        // Put code here
+        snapshot("01LoginScreen")
+        
     }
 
     func testLaunchPerformance() throws {
