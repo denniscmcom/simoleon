@@ -20,6 +20,7 @@ struct Sidebar: View {
             NavigationLink(destination: Favorites()) {
                 Label("Favorites", systemImage: "star")
             }
+            .accessibility(identifier: "Favorites")
             
             NavigationLink(destination: Settings()) {
                 Label("Settings", systemImage: "gear")

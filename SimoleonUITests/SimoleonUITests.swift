@@ -11,7 +11,10 @@ class SimoleonUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        
+//        if UIDevice.current.userInterfaceIdiom == .pad {
+//            XCUIDevice.shared.orientation = .landscapeRight
+//            sleep(2)
+//        }
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
@@ -68,7 +71,13 @@ class SimoleonUITests: XCTestCase {
         app.launch()
         
         // Go to favorites
-        app.tabBars.buttons.element(boundBy: 1).tap()
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            app.navigationBars.buttons.element(boundBy: 0).tap()
+            app.buttons["Favorites"].tap()
+        } else {
+            app.tabBars.buttons.element(boundBy: 1).tap()
+        }
+
         snapshot("4-Favorites")
     }
 
