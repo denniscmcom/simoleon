@@ -1,0 +1,1 @@
+Divisa,moneda,conversor,dinero,euro,dolar,yen,viaje,intercambio,mercado,finanzas

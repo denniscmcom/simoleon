@@ -1,0 +1,6 @@
+¡Hola! Esta es la actualización más importante hasta el momento. Esperamos que te guste:
+- Simoleon está disponible es español, alemán, francés, italiano, holandés, portugués, y ruso. Si ves alguna tradución equivocada o rara, por favor contáctanos: https://dennistech.io/contact
+- Ya puedes comprar la suscripción directamente desde la App Store.
+- Ahora puede convertir entre las divisas más populares gratuitamente.
+- Mejoras en la interfaz.
+- Arreglo de bugs.
