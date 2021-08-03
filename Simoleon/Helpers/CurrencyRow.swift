@@ -20,14 +20,14 @@ struct CurrencyRow: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 30, height: 30)
                 .clipShape(Circle())
-                .overlay(Circle().stroke(Color(.systemGray), lineWidth: 1))
+                .overlay(Circle().stroke(Color(.secondaryLabel), lineWidth: 1))
             
             Image(currencyMetadata[String(currencies[1])]!.flag)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 30, height: 30)
                 .clipShape(Circle())
-                .overlay(Circle().stroke(Color(.systemGray), lineWidth: 1))
+                .overlay(Circle().stroke(Color(.secondaryLabel), lineWidth: 1))
                 .offset(x: -20)
                 .padding(.trailing, -20)
             
@@ -40,7 +40,7 @@ struct CurrencyRow: View {
             
             if isLocked ?? false {
                 Image(systemName: "lock")
-                    .foregroundColor(Color(.systemGray))
+                    .foregroundColor(.secondary)
             }
         }
     }
@@ -48,6 +48,6 @@ struct CurrencyRow: View {
 
 struct CurrencyRow_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyRow(currencyPairName: "USD/GBP")
+        CurrencyRow(currencyPairName: "USD/GBP", isLocked: true)
     }
 }

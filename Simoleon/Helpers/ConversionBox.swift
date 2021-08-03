@@ -41,6 +41,7 @@ struct ConversionBox: View {
                 .font(Font.title.weight(.semibold))
                 .lineLimit(1)
                 .padding(.bottom, 10)
+                .accessibilityIdentifier("ConversionTextfield")
             }
             
             Divider()

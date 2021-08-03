@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Simoleon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "95C5B2442697752700941585"
+               BuildableName = "SimoleonUITests.xctest"
+               BlueprintName = "SimoleonUITests"
+               ReferencedContainer = "container:Simoleon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
