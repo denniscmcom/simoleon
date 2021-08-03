@@ -33,6 +33,7 @@ struct Conversion: View {
                                     .padding(.horizontal)
                             )
                     }
+                    .accessibilityIdentifier("CurrencySelector")
                     
                     FavoriteButton(currencyPair: currencyPair)
                 }

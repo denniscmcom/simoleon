@@ -1,0 +1,6 @@
+Olá! Esta é uma grande actualização, esperamos que gostem:
+- Simoleon está disponível em espanhol, alemão, francês, italiano, holandês, português, e russo. Se notar uma tradução errada ou estranha, por favor contacte-nos: https://dennistech.io/contact
+- Compras promocionais implementadas In-App.
+- Agora, pode usar o Simoleon para converter entre os pares de moedas mais populares gratuitamente.
+- Actualizações UI.
+- Corrige bugs.

@@ -18,7 +18,7 @@ struct SearchBar: View {
             .padding(10)
             .background(
                 RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(Color(.systemGray6))
+                    .foregroundColor(Color(.tertiarySystemFill))
             )
     }
 }

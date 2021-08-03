@@ -16,10 +16,10 @@ struct LockedCurrencyPicker: View {
             Text("Default currency")
             Spacer()
             Text(defaultCurrency.first?.pair ?? "USD/GBP")
-                .foregroundColor(Color(.systemGray))
+                .foregroundColor(.secondary)
             
             Image(systemName: "lock")
-                .foregroundColor(Color(.systemGray))
+                .foregroundColor(.secondary)
         }
     }
 }
