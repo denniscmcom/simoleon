@@ -23,7 +23,7 @@ struct Favorites: View {
                         .padding(.top, 5)
                 }
                 .multilineTextAlignment(.center)
-                .foregroundColor(Color(.systemGray))
+                .foregroundColor(.secondary)
                 .padding(.horizontal, 50)
             } else {
                 List {
@@ -46,7 +46,11 @@ struct Favorites: View {
         .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
             NavigationView { content }
         }
-        .onAppear(perform: generateFavoritesToScreenshots)
+        .onAppear {
+            #if DEBUG
+            generateFavoritesToScreenshots()
+            #endif
+        }
     }
     
     private func removeFromFavorites(offsets: IndexSet) {
@@ -61,13 +65,13 @@ struct Favorites: View {
             }
         }
     }
-    
+
+    #if DEBUG
     private func generateFavoritesToScreenshots() {
-        #if DEBUG
         if favorite.isEmpty {
             let favoriteCurrencies = [
-                "EUR/USD", "BTC/USD", "USD/HKD", "USD/JPY", "AUD/USD", "XAU/GBP", "DASH/ETH", "EUR/USD",
-                "XAG/CAD", "XRP/RUB"
+                "EUR/USD", "BTC/USD", "USD/HKD", "USD/JPY", "AUD/USD",
+                "XAU/GBP", "DASH/ETH", "EUR/USD", "XAG/CAD"
             ]
             
             for favoriteCurrency in favoriteCurrencies {
@@ -82,8 +86,8 @@ struct Favorites: View {
                 }
             }
         }
-        #endif
     }
+    #endif
 }
 
 struct Favorites_Previews: PreviewProvider {
