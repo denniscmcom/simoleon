@@ -46,6 +46,7 @@ struct Favorites: View {
         .if(UIDevice.current.userInterfaceIdiom == .phone) { content in
             NavigationView { content }
         }
+        .onAppear(perform: generateFavoritesToScreenshots)
     }
     
     private func removeFromFavorites(offsets: IndexSet) {
@@ -60,11 +61,34 @@ struct Favorites: View {
             }
         }
     }
+    
+    private func generateFavoritesToScreenshots() {
+        #if DEBUG
+        if favorite.isEmpty {
+            let favoriteCurrencies = [
+                "EUR/USD", "BTC/USD", "USD/HKD", "USD/JPY", "AUD/USD", "XAU/GBP", "DASH/ETH", "EUR/USD",
+                "XAG/CAD", "XRP/RUB"
+            ]
+            
+            for favoriteCurrency in favoriteCurrencies {
+                let favorite = Favorite(context: viewContext)
+                favorite.currencyPair = favoriteCurrency
+                
+                do {
+                    try viewContext.save()
+                } catch {
+                    let nsError = error as NSError
+                    fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                }
+            }
+        }
+        #endif
+    }
 }
 
 struct Favorites_Previews: PreviewProvider {
     static var previews: some View {
         Favorites()
-//            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

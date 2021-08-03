@@ -40,6 +40,7 @@ struct CurrencySelector: View {
             VStack {
                 SearchBar(placeholder: "Search...", text: $searchCurrency)
                     .padding()
+                    .accessibilityIdentifier("SearchBar")
                 
                 if entitlementIsActive {
                     List(searchResults, id: \.self) { currencyPair in
@@ -49,6 +50,7 @@ struct CurrencySelector: View {
                         }) {
                             CurrencyRow(currencyPairName: currencyPair.name)
                         }
+                        .accessibilityIdentifier("CurrencyRow")
                     }
                     .listStyle()
                 } else {
@@ -96,6 +98,9 @@ struct CurrencySelector: View {
     
     // Check if user subscription is active
     private func checkEntitlement() {
+        #if DEBUG
+        entitlementIsActive = true
+        #else
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
             if purchaserInfo?.entitlements["all"]?.isActive == true {
                 entitlementIsActive = true
@@ -107,6 +112,7 @@ struct CurrencySelector: View {
                 showingAlert = true
             }
         }
+        #endif
     }
 }
 extension View {

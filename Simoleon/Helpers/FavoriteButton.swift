@@ -27,6 +27,7 @@ struct FavoriteButton: View {
                         .foregroundColor(Color(.systemYellow))
                 )
         }
+        .accessibilityIdentifier("FavoriteButton")
     }
     
     /*
