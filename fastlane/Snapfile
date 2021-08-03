@@ -34,5 +34,8 @@ override_status_bar(true)
 # Arguments to pass to the app on launch. See https://docs.fastlane.tools/actions/snapshot/#launch-arguments
 # launch_arguments(["-favColor red"])
 
+# Enabling this option will configure the Simulator's system language
+localize_simulator(true)
+
 # For more information about all available options run
 # fastlane action snapshot
