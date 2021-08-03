@@ -24,15 +24,13 @@ class SimoleonUITests: XCTestCase {
     }
     
     // MARK: - Automate screenshots
-    func testScreenshots() throws {
+    func testLaunchScreenshots() {
         let app = XCUIApplication()
         setupSnapshot(app)
-        
-        // MARK: - Launch
         app.launch()
         snapshot("0-Launch")
-        
-        // MARK: - Remove 100 from conversion textfield and type custom amount
+
+        // Remove 100 from conversion textfield and type custom amount
         let conversionTextfield = app.textFields["ConversionTextfield"]
         conversionTextfield.tap()
         for _ in (0..<4) {
@@ -46,8 +44,14 @@ class SimoleonUITests: XCTestCase {
             conversionTextfield.typeText(XCUIKeyboardKey.delete.rawValue)
         }
         conversionTextfield.typeText("1000\n")
+    }
+    
+    func testCurrencySelectorScreenshots() throws {
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
 
-        // MARK: - Open currency selector, search BTC, and select first row
+        // Open currency selector, search BTC, and select first row
         app.buttons["CurrencySelector"].tap()
         snapshot("2-CurrencySelector")
 
@@ -56,9 +60,14 @@ class SimoleonUITests: XCTestCase {
         searchBar.typeText("BTC")
         app.buttons["CurrencyRow"].firstMatch.tap()
         snapshot("3-Bitcoin")
-
-        // MARK: - Go to favorites
-        conversionTextfield.typeText("\n")  // Dismiss keyboard
+    }
+    
+    func testFavorites() throws {
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
+        
+        // Go to favorites
         app.tabBars.buttons.element(boundBy: 1).tap()
         snapshot("4-Favorites")
     }
