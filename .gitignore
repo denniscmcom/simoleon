@@ -30,4 +30,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Fastlane builds
+Simoleon.ipa
+Simoleon.app.dSYM.zip
+fastlane/Preview.html
+fastlane/screenshots
+report.xml
+
 # End of https://www.toptal.com/developers/gitignore/api/macos
