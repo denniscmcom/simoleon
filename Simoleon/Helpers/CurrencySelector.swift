@@ -40,27 +40,27 @@ struct CurrencySelector: View {
             VStack {
                 SearchBar(placeholder: "Search...", text: $searchCurrency)
                     .padding()
-                    .accessibilityIdentifier("SearchBar")
                 
-                if entitlementIsActive {
-                    List(searchResults, id: \.self) { currencyPair in
-                        Button(action: {
-                            self.currencyPair = currencyPair.name
-                            showingCurrencySelector = false
-                        }) {
-                            CurrencyRow(currencyPairName: currencyPair.name)
+                List {
+                    if entitlementIsActive {
+                        ForEach(searchResults, id: \.self) { currencyPair in
+                            Button(action: {
+                                self.currencyPair = currencyPair.name
+                                showingCurrencySelector = false
+                            }) {
+                                CurrencyRow(currencyPairName: currencyPair.name)
+                            }
+                            .accessibility(identifier: "CurrencyRow")
                         }
-                        .accessibilityIdentifier("CurrencyRow")
-                    }
-                    .listStyle()
-                } else {
-                    List(searchResults, id: \.self) { currencyPair in
-                        Button(action: { select(currencyPair) }) {
-                            CurrencyRow(currencyPairName: currencyPair.name, isLocked: currencyPair.isLocked)
+                    } else {
+                        ForEach(searchResults, id: \.self) { currencyPair in
+                            Button(action: { select(currencyPair) }) {
+                                CurrencyRow(currencyPairName: currencyPair.name, isLocked: currencyPair.isLocked)
+                            }
                         }
                     }
-                    .listStyle()
                 }
+                .id(UUID())
             }
             .navigationTitle("Currencies")
             .navigationBarTitleDisplayMode(.inline)
@@ -130,3 +130,24 @@ struct CurrencySelector_Previews: PreviewProvider {
         )
     }
 }
+
+
+
+//if entitlementIsActive {
+//                    List(searchResults, id: \.self) { currencyPair in
+//                        Button(action: {
+//                            self.currencyPair = currencyPair.name
+//                            showingCurrencySelector = false
+//                        }) {
+//                            CurrencyRow(currencyPairName: currencyPair.name)
+//                        }
+//                    }
+//                    .listStyle()
+//                } else {
+//                    List(searchResults, id: \.self) { currencyPair in
+//                        Button(action: { select(currencyPair) }) {
+//                            CurrencyRow(currencyPairName: currencyPair.name, isLocked: currencyPair.isLocked)
+//                        }
+//                    }
+//                    .listStyle()
+//                }
