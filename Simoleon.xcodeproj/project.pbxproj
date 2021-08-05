@@ -15,20 +15,15 @@
 		95561E3F26AF25EF00CCB543 /* SubscriptionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */; };
 		95562D4D26A8962A0047E778 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95562D4C26A8962A0047E778 /* StoreKit.framework */; };
 		95562D5226A8AEF60047E778 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 95562D5126A8AEF60047E778 /* Purchases */; };
-		956088B626B9307600A4FD6C /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956088B526B9307600A4FD6C /* SnapshotHelper.swift */; };
 		957065E226A5FE0400523E68 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957065E126A5FE0400523E68 /* Settings.swift */; };
 		958526C326B41D60001FC826 /* CurrencyPairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958526C226B41D60001FC826 /* CurrencyPairModel.swift */; };
 		9585BB1226A6B71B00E3193E /* ReadConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1126A6B71B00E3193E /* ReadConfig.swift */; };
 		9585BB1426A6B7F400E3193E /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1326A6B7F400E3193E /* NetworkRequest.swift */; };
 		9585BB1A26A6E8FD00E3193E /* SimpleSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1926A6E8FD00E3193E /* SimpleSuccess.swift */; };
 		9587598D26B2A68B004086F0 /* CurrencyMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 9587598F26B2A68B004086F0 /* CurrencyMetadata.json */; };
-		9587599E26B2ACA6004086F0 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 9587599D26B2ACA6004086F0 /* Configuration.storekit */; };
-		9587599F26B2ACA6004086F0 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 9587599D26B2ACA6004086F0 /* Configuration.storekit */; };
-		958759A026B2ACA6004086F0 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 9587599D26B2ACA6004086F0 /* Configuration.storekit */; };
-		958759A226B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 958759A126B2AE85004086F0 /* StoreKitTestCertificate.cer */; };
-		958759A326B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 958759A126B2AE85004086F0 /* StoreKitTestCertificate.cer */; };
-		958759A426B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 958759A126B2AE85004086F0 /* StoreKitTestCertificate.cer */; };
 		95909CB326B07BFC00D051AB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95909CB226B07BFC00D051AB /* SearchBar.swift */; };
+		959F6DEB26BBD53500101E53 /* SimoleonScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F6DEA26BBD53500101E53 /* SimoleonScreenshots.swift */; };
+		959F6DF326BBD54400101E53 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956088B526B9307600A4FD6C /* SnapshotHelper.swift */; };
 		95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9426A03ECB00613729 /* ContentView.swift */; };
 		95AEBC9B26A04A4200613729 /* CurrencyMetadataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9A26A04A4200613729 /* CurrencyMetadataModel.swift */; };
 		95AEBC9D26A04D4600613729 /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9C26A04D4600613729 /* CurrencyRow.swift */; };
@@ -64,6 +59,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		959F6DED26BBD53500101E53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C5B21C2697752600941585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95C5B2232697752600941585;
+			remoteInfo = Simoleon;
+		};
 		95C5B23B2697752700941585 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95C5B21C2697752600941585 /* Project object */;
@@ -132,9 +134,10 @@
 		9587599A26B2A6A8004086F0 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-PT"; path = "pt-PT.lproj/CurrencyMetadata.json"; sourceTree = "<group>"; };
 		9587599B26B2A6A8004086F0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ru; path = ru.lproj/CurrencyMetadata.json; sourceTree = "<group>"; };
 		9587599C26B2A6AA004086F0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = es; path = es.lproj/CurrencyMetadata.json; sourceTree = "<group>"; };
-		9587599D26B2ACA6004086F0 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = SOURCE_ROOT; };
-		958759A126B2AE85004086F0 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 		95909CB226B07BFC00D051AB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		959F6DE826BBD53500101E53 /* SimoleonScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoleonScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		959F6DEA26BBD53500101E53 /* SimoleonScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonScreenshots.swift; sourceTree = "<group>"; };
+		959F6DEC26BBD53500101E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A70BE926B0550000CC0273 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		95AEBC9426A03ECB00613729 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95AEBC9A26A04A4200613729 /* CurrencyMetadataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyMetadataModel.swift; sourceTree = "<group>"; };
@@ -180,6 +183,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		959F6DE526BBD53500101E53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C5B2212697752600941585 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,6 +251,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		959F6DE926BBD53500101E53 /* SimoleonScreenshots */ = {
+			isa = PBXGroup;
+			children = (
+				959F6DEA26BBD53500101E53 /* SimoleonScreenshots.swift */,
+				959F6DEC26BBD53500101E53 /* Info.plist */,
+			);
+			path = SimoleonScreenshots;
+			sourceTree = "<group>";
+		};
 		95B5F52526AADE4B00BDCE89 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				95B5F52726AADE4B00BDCE89 /* Localized Contents */,
-				95B5F52926AADE4B00BDCE89 /* Notes */,
 				95B5F52A26AADE4B00BDCE89 /* contents.json */,
 				95B5F52B26AADE4B00BDCE89 /* Source Contents */,
 			);
@@ -266,13 +284,6 @@
 				95B5F52826AADE4B00BDCE89 /* en.xliff */,
 			);
 			path = "Localized Contents";
-			sourceTree = "<group>";
-		};
-		95B5F52926AADE4B00BDCE89 /* Notes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Notes;
 			sourceTree = "<group>";
 		};
 		95B5F52B26AADE4B00BDCE89 /* Source Contents */ = {
@@ -295,12 +306,11 @@
 		95C5B21B2697752600941585 = {
 			isa = PBXGroup;
 			children = (
-				9587599D26B2ACA6004086F0 /* Configuration.storekit */,
-				958759A126B2AE85004086F0 /* StoreKitTestCertificate.cer */,
 				956088B526B9307600A4FD6C /* SnapshotHelper.swift */,
 				95C5B2262697752600941585 /* Simoleon */,
 				95C5B23D2697752700941585 /* SimoleonTests */,
 				95C5B2482697752700941585 /* SimoleonUITests */,
+				959F6DE926BBD53500101E53 /* SimoleonScreenshots */,
 				95C5B2252697752600941585 /* Products */,
 				95E76438269E0037008E9F31 /* Frameworks */,
 			);
@@ -312,6 +322,7 @@
 				95C5B2242697752600941585 /* Simoleon.app */,
 				95C5B23A2697752700941585 /* SimoleonTests.xctest */,
 				95C5B2452697752700941585 /* SimoleonUITests.xctest */,
+				959F6DE826BBD53500101E53 /* SimoleonScreenshots.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -402,6 +413,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		959F6DE726BBD53500101E53 /* SimoleonScreenshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 959F6DF126BBD53500101E53 /* Build configuration list for PBXNativeTarget "SimoleonScreenshots" */;
+			buildPhases = (
+				959F6DE426BBD53500101E53 /* Sources */,
+				959F6DE526BBD53500101E53 /* Frameworks */,
+				959F6DE626BBD53500101E53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				959F6DEE26BBD53500101E53 /* PBXTargetDependency */,
+			);
+			name = SimoleonScreenshots;
+			productName = SimoleonScreenshots;
+			productReference = 959F6DE826BBD53500101E53 /* SimoleonScreenshots.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		95C5B2232697752600941585 /* Simoleon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95C5B24E2697752700941585 /* Build configuration list for PBXNativeTarget "Simoleon" */;
@@ -468,6 +497,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					959F6DE726BBD53500101E53 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 95C5B2232697752600941585;
+					};
 					95C5B2232697752600941585 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -508,18 +541,24 @@
 				95C5B2232697752600941585 /* Simoleon */,
 				95C5B2392697752700941585 /* SimoleonTests */,
 				95C5B2442697752700941585 /* SimoleonUITests */,
+				959F6DE726BBD53500101E53 /* SimoleonScreenshots */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		959F6DE626BBD53500101E53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C5B2222697752600941585 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				95DD4ABB269B33810027CA1F /* CurrencyPairs.json in Resources */,
-				9587599E26B2ACA6004086F0 /* Configuration.storekit in Resources */,
-				958759A226B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */,
 				95C5B22F2697752700941585 /* Preview Assets.xcassets in Resources */,
 				95E76436269DFC1A008E9F31 /* LaunchScreen.storyboard in Resources */,
 				9587598D26B2A68B004086F0 /* CurrencyMetadata.json in Resources */,
@@ -535,8 +574,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9587599F26B2ACA6004086F0 /* Configuration.storekit in Resources */,
-				958759A326B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,14 +581,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				958759A026B2ACA6004086F0 /* Configuration.storekit in Resources */,
-				958759A426B2AE85004086F0 /* StoreKitTestCertificate.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		959F6DE426BBD53500101E53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				959F6DEB26BBD53500101E53 /* SimoleonScreenshots.swift in Sources */,
+				959F6DF326BBD54400101E53 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C5B2202697752600941585 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -605,13 +649,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				95C5B24A2697752700941585 /* SimoleonUITests.swift in Sources */,
-				956088B626B9307600A4FD6C /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		959F6DEE26BBD53500101E53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95C5B2232697752600941585 /* Simoleon */;
+			targetProxy = 959F6DED26BBD53500101E53 /* PBXContainerItemProxy */;
+		};
 		95C5B23C2697752700941585 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 95C5B2232697752600941585 /* Simoleon */;
@@ -677,6 +725,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		959F6DEF26BBD53500101E53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = SimoleonScreenshots/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.SimoleonScreenshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Simoleon;
+			};
+			name = Debug;
+		};
+		959F6DF026BBD53500101E53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = SimoleonScreenshots/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.SimoleonScreenshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Simoleon;
+			};
+			name = Release;
+		};
 		95C5B24C2697752700941585 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -804,7 +892,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -829,7 +917,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -934,6 +1022,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		959F6DF126BBD53500101E53 /* Build configuration list for PBXNativeTarget "SimoleonScreenshots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				959F6DEF26BBD53500101E53 /* Debug */,
+				959F6DF026BBD53500101E53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		95C5B21F2697752600941585 /* Build configuration list for PBXProject "Simoleon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

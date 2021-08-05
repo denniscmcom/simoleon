@@ -40,27 +40,26 @@ struct CurrencySelector: View {
             VStack {
                 SearchBar(placeholder: "Search...", text: $searchCurrency)
                     .padding()
-                    .accessibilityIdentifier("SearchBar")
                 
-                if entitlementIsActive {
-                    List(searchResults, id: \.self) { currencyPair in
-                        Button(action: {
-                            self.currencyPair = currencyPair.name
-                            showingCurrencySelector = false
-                        }) {
-                            CurrencyRow(currencyPairName: currencyPair.name)
+                List {
+                    if entitlementIsActive {
+                        ForEach(searchResults, id: \.self) { currencyPair in
+                            Button(action: {
+                                self.currencyPair = currencyPair.name
+                                showingCurrencySelector = false
+                            }) {
+                                CurrencyRow(currencyPairName: currencyPair.name)
+                            }
                         }
-                        .accessibilityIdentifier("CurrencyRow")
-                    }
-                    .listStyle()
-                } else {
-                    List(searchResults, id: \.self) { currencyPair in
-                        Button(action: { select(currencyPair) }) {
-                            CurrencyRow(currencyPairName: currencyPair.name, isLocked: currencyPair.isLocked)
+                    } else {
+                        ForEach(searchResults, id: \.self) { currencyPair in
+                            Button(action: { select(currencyPair) }) {
+                                CurrencyRow(currencyPairName: currencyPair.name, isLocked: currencyPair.isLocked)
+                            }
                         }
                     }
-                    .listStyle()
                 }
+                .id(UUID())
             }
             .navigationTitle("Currencies")
             .navigationBarTitleDisplayMode(.inline)
