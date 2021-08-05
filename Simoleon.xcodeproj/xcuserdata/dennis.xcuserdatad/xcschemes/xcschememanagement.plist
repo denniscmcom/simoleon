@@ -25,7 +25,7 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Simoleon - StoreKit Test.xcscheme_^#shared#^_</key>
+		<key>Screenshots.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -53,7 +53,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>959F6DE726BBD53500101E53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>95C5B2232697752600941585</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>95C5B2392697752700941585</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>95C5B2442697752700941585</key>
 		<dict>
 			<key>primary</key>
 			<true/>
