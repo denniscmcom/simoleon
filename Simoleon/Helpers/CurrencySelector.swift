@@ -50,7 +50,6 @@ struct CurrencySelector: View {
                             }) {
                                 CurrencyRow(currencyPairName: currencyPair.name)
                             }
-                            .accessibility(identifier: "CurrencyRow")
                         }
                     } else {
                         ForEach(searchResults, id: \.self) { currencyPair in
@@ -130,24 +129,3 @@ struct CurrencySelector_Previews: PreviewProvider {
         )
     }
 }
-
-
-
-//if entitlementIsActive {
-//                    List(searchResults, id: \.self) { currencyPair in
-//                        Button(action: {
-//                            self.currencyPair = currencyPair.name
-//                            showingCurrencySelector = false
-//                        }) {
-//                            CurrencyRow(currencyPairName: currencyPair.name)
-//                        }
-//                    }
-//                    .listStyle()
-//                } else {
-//                    List(searchResults, id: \.self) { currencyPair in
-//                        Button(action: { select(currencyPair) }) {
-//                            CurrencyRow(currencyPairName: currencyPair.name, isLocked: currencyPair.isLocked)
-//                        }
-//                    }
-//                    .listStyle()
-//                }
