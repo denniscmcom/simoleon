@@ -41,24 +41,25 @@ struct CurrencySelector: View {
                 SearchBar(placeholder: "Search...", text: $searchCurrency)
                     .padding()
                 
-                if entitlementIsActive {
-                    List(searchResults, id: \.self) { currencyPair in
-                        Button(action: {
-                            self.currencyPair = currencyPair.name
-                            showingCurrencySelector = false
-                        }) {
-                            CurrencyRow(currencyPairName: currencyPair.name)
+                List {
+                    if entitlementIsActive {
+                        ForEach(searchResults, id: \.self) { currencyPair in
+                            Button(action: {
+                                self.currencyPair = currencyPair.name
+                                showingCurrencySelector = false
+                            }) {
+                                CurrencyRow(currencyPairName: currencyPair.name)
+                            }
+                        }
+                    } else {
+                        ForEach(searchResults, id: \.self) { currencyPair in
+                            Button(action: { select(currencyPair) }) {
+                                CurrencyRow(currencyPairName: currencyPair.name, isLocked: currencyPair.isLocked)
+                            }
                         }
                     }
-                    .listStyle()
-                } else {
-                    List(searchResults, id: \.self) { currencyPair in
-                        Button(action: { select(currencyPair) }) {
-                            CurrencyRow(currencyPairName: currencyPair.name, isLocked: currencyPair.isLocked)
-                        }
-                    }
-                    .listStyle()
                 }
+                .id(UUID())
             }
             .navigationTitle("Currencies")
             .navigationBarTitleDisplayMode(.inline)
@@ -96,6 +97,9 @@ struct CurrencySelector: View {
     
     // Check if user subscription is active
     private func checkEntitlement() {
+        #if DEBUG
+        entitlementIsActive = true
+        #else
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
             if purchaserInfo?.entitlements["all"]?.isActive == true {
                 entitlementIsActive = true
@@ -107,6 +111,7 @@ struct CurrencySelector: View {
                 showingAlert = true
             }
         }
+        #endif
     }
 }
 extension View {

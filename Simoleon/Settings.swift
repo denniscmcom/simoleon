@@ -150,6 +150,9 @@ struct Settings: View {
     
     // Check if user subscription is active
     private func checkEntitlement() {
+        #if DEBUG
+        entitlementIsActive = true
+        #else
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
             if purchaserInfo?.entitlements["all"]?.isActive == true {
                 entitlementIsActive = true
@@ -161,6 +164,7 @@ struct Settings: View {
                 showingAlert = true
             }
         }
+        #endif
     }
 }
 

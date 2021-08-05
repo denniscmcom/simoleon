@@ -1,0 +1,10 @@
+Simoleon est un convertisseur de devises en temps réel qui prend en charge plus de 170 devises internationales et 2000 paires de devises. La facilité d'utilisation et le taux de change réel en font l'application parfaite pour les voyageurs qui veulent savoir combien vaut leur devise à chaque instant.
+
+- 170 devises internationales, des cryptomonnaies comme le bitcoin, l'ethereum et le dash, et des matières premières comme l'or, l'argent et le platine.
+- Des cotations en provenance directe des salles de marché européennes.
+- Sélectionnez votre paire de devises par défaut et enregistrez vos devises préférées.
+- Simoleon est synchronisé sur tous vos appareils.
+- Interface simple et rapide.
+
+Politique de confidentialité : https://dennistech.io/simoleon-privacy-policy
+Conditions d'utilisation : https://dennistech.io/simoleon-terms-of-use

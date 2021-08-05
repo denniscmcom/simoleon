@@ -21,13 +21,7 @@ class SimoleonUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
-    // MARK: - Tab View
-    func testExample() throws {
-        let app = XCUIApplication()
-        app.launch()
-        // Put code here
-    }
+
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {

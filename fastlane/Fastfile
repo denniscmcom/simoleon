@@ -16,10 +16,31 @@
 default_platform(:ios)
 
 platform :ios do
+
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    increment_build_number(xcodeproj: "Simoleon.xcodeproj")
+    increment_build_number(
+      build_number: latest_testflight_build_number + 1,
+      xcodeproj: "Simoleon.xcodeproj"
+    )
+    
     build_app(scheme: "Simoleon")
-    upload_to_testflight
+    upload_to_testflight(
+      beta_app_review_info: {
+        contact_email: "dmartin@dennistech.io",
+        contact_first_name: "Dennis",
+        contact_last_name: "Concepcion Martin",
+        contact_phone: "+34 639 465 931",
+        notes: "Go and crash it. Thank you for reviewing <3"
+      }
+    )
   end
+
+  desc "Release new version to App Store"
+  lane :release do
+    capture_screenshots
+    build_app(scheme: "Simoleon")
+    upload_to_app_store
+  end
+  
 end
