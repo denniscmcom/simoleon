@@ -59,7 +59,7 @@ struct Conversion: View {
                         UIApplication.shared.dismissKeyboard()
                         amountIsEditing = false
                     }) {
-                        Text("Cancel")
+                        Text("Done")
                     }
                 }
             }
