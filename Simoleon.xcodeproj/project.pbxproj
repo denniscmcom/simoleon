@@ -466,6 +466,8 @@
 				95C5B23C2697752700941585 /* PBXTargetDependency */,
 			);
 			name = SimoleonTests;
+			packageProductDependencies = (
+			);
 			productName = SimoleonTests;
 			productReference = 95C5B23A2697752700941585 /* SimoleonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
