@@ -40,6 +40,7 @@ struct ConversionBox: View {
                 .keyboardType(.decimalPad)
                 .font(Font.title.weight(.semibold))
                 .lineLimit(1)
+                .accessibilityIdentifier("ConversionTextField")
             }
             
             Divider()
