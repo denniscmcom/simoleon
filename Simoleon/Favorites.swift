@@ -11,14 +11,15 @@ struct Favorites: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Favorite.currencyPair, ascending: true)],
-        animation: .default) private var favorite: FetchedResults<Favorite>
+        animation: .default) private var favorites: FetchedResults<Favorite>
     
     var body: some View {
         VStack {
-            if favorite.isEmpty {
+            if favorites.isEmpty {
                 Group {
                     Image(systemName: "star")
                         .font(.title)
+                    
                     Text("Search a currency pair and add it to favourites.")
                         .padding(.top, 5)
                 }
@@ -27,7 +28,7 @@ struct Favorites: View {
                 .padding(.horizontal, 50)
             } else {
                 List {
-                    ForEach(favorite) { favorite in
+                    ForEach(favorites) { favorite in
                         NavigationLink(destination: Conversion(showNavigationView: false, currencyPair: favorite.currencyPair)) {
                             CurrencyRow(currencyPairName: favorite.currencyPair)
                         }
@@ -47,15 +48,15 @@ struct Favorites: View {
             NavigationView { content }
         }
         .onAppear {
-            #if DEBUG
-            generateFavoritesToScreenshots()
+            #if SCREENSHOTS
+            generateFavoritesForScreenshots()
             #endif
         }
     }
     
     private func removeFromFavorites(offsets: IndexSet) {
         withAnimation {
-            offsets.map { favorite[$0] }.forEach(viewContext.delete)
+            offsets.map { favorites[$0] }.forEach(viewContext.delete)
             
             do {
                 try viewContext.save()
@@ -66,17 +67,22 @@ struct Favorites: View {
         }
     }
 
-    #if DEBUG
-    private func generateFavoritesToScreenshots() {
-        if favorite.isEmpty {
-            let favoriteCurrencies = [
-                "EUR/USD", "BTC/USD", "USD/HKD", "USD/JPY", "AUD/USD",
-                "XAU/GBP", "DASH/ETH", "EUR/USD", "XAG/CAD"
-            ]
-            
-            for favoriteCurrency in favoriteCurrencies {
-                let favorite = Favorite(context: viewContext)
-                favorite.currencyPair = favoriteCurrency
+    #if SCREENSHOTS
+    /*
+     Save currencies to favourites to take screenshots for the App Store
+     */
+    private func generateFavoritesForScreenshots() {
+        let favoriteCurrencies = [
+            "EUR/USD", "BTC/USD", "USD/HKD", "USD/JPY", "AUD/USD",
+            "XAU/GBP", "DASH/ETH", "EUR/USD", "XAG/CAD"
+        ]
+        
+        let coreDataCurrencyPairs = favorites.map { $0.currencyPair }
+        
+        for favoriteCurrency in favoriteCurrencies {
+            if !coreDataCurrencyPairs.contains(favoriteCurrency) {
+                let favorites = Favorite(context: viewContext)
+                favorites.currencyPair = favoriteCurrency
                 
                 do {
                     try viewContext.save()
