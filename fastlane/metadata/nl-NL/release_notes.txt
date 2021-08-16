@@ -1,6 +1,1 @@
-Hallo daar! Dit is een grote update, we hopen dat jullie het leuk vinden:
-- Simoleon is beschikbaar in het Spaans, Duits, Frans, Italiaans, Nederlands, Portugees, en Russisch. Als u een verkeerde of vreemde vertaling opmerkt, neem dan contact met ons op: https://dennistech.io/contact
-- Geïmplementeerde In-App promotionele aankopen.
-- Nu kun je Simoleon gebruiken om gratis om te rekenen tussen de meest populaire valuta paren.
-- UI updates.
-- Bugs opgelost.
+Hoe gaat het met alles? In deze update hebben we wat kleine bugs verholpen en de UX verbeterd. Niets groots, maar zeer belangrijke verbeteringen. Tot ziens in de volgende versie!
