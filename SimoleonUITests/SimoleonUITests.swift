@@ -16,7 +16,6 @@ class SimoleonUITests: XCTestCase {
         }
         
         let app = XCUIApplication()
-        app.launchArguments += ["-AppleLocale", "en_US"]
         app.launch()
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
