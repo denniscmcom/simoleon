@@ -22,7 +22,7 @@ languages([
 scheme("Screenshots")
 
 # Enabling this option will automatically uninstall the application before running it.
-# reinstall_app(true)
+reinstall_app(true)
 
 # Should the project be cleaned before building it?
 clean(true)

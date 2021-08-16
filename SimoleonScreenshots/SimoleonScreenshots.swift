@@ -9,14 +9,14 @@ import XCTest
 import CoreData
 // Automate screenshots with Fastlane
 class SimoleonScreenshots: XCTestCase {
-    var screnshotEndingName = ""
+    var screenshotEndingName = ""
 
     override func setUpWithError() throws {
         // This method is called before the invocation of each test method in the class.
         
         if UIDevice.current.userInterfaceIdiom == .pad {
             XCUIDevice.shared.orientation = .landscapeLeft
-            screnshotEndingName = "-force_landscapeleft"
+            screenshotEndingName = "-force_landscapeleft"
         }
         
         let app = XCUIApplication()
@@ -37,7 +37,7 @@ class SimoleonScreenshots: XCTestCase {
         }
         
         sleep(2)
-        snapshot("1Launch\(screnshotEndingName)")
+        snapshot("1Launch\(screenshotEndingName)")
     }
     
     func testConvertAmountScreenshot() throws {
@@ -48,7 +48,7 @@ class SimoleonScreenshots: XCTestCase {
         let conversionTextField = XCUIApplication().textFields["ConversionTextField"]
         conversionTextField.tap()
         conversionTextField.typeText("1030.15\n")
-        snapshot("2Conversion\(screnshotEndingName)")
+        snapshot("2Conversion\(screenshotEndingName)")
     }
     
     func testCurrencySelectorScreenshot() throws {
@@ -57,7 +57,7 @@ class SimoleonScreenshots: XCTestCase {
         }
         
         XCUIApplication().scrollViews.buttons["OpenCurrencySelector"].tap()
-        snapshot("3CurrencySelector\(screnshotEndingName)")
+        snapshot("3CurrencySelector\(screenshotEndingName)")
     }
     
     func testFavoriteScreenshot() throws {
@@ -69,6 +69,6 @@ class SimoleonScreenshots: XCTestCase {
         
         sleep(1)
         
-        snapshot("4Favorites\(screnshotEndingName)")
+        snapshot("4Favorites\(screenshotEndingName)")
     }
 }
