@@ -64,7 +64,7 @@ class SimoleonUITests: XCTestCase {
     
     func testCoreData() throws {
         let app = XCUIApplication()
-        app.scrollViews.buttons["favorite"].tap()
+        app.scrollViews.buttons["AddToFavorites"].tap()
         
         if UIDevice.current.userInterfaceIdiom == .pad {
             app.tables["Sidebar"].buttons["NavigateToFavorites"].tap()
