@@ -32,9 +32,15 @@ platform :ios do
     )
   end
 
-  desc "Release new version to App Store"
+  desc "Capture screenshots and release version to App Store"
   lane :release do
     capture_screenshots
+    build_app(scheme: "Simoleon")
+    upload_to_app_store
+  end
+
+  desc "Upload to App Store Connect"
+  lane :upload do
     build_app(scheme: "Simoleon")
     upload_to_app_store
   end
