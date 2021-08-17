@@ -18,10 +18,6 @@ class SimoleonScreenshots: XCTestCase {
             XCUIDevice.shared.orientation = .landscapeLeft
             screenshotEndingName = "-force_landscapeleft"
         }
-        
-        let app = XCUIApplication()
-        setupSnapshot(app)
-        app.launch()
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
@@ -32,8 +28,12 @@ class SimoleonScreenshots: XCTestCase {
     }
 
     func testLaunchScreenshot() throws {
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
+        
         if UIDevice.current.userInterfaceIdiom == .pad {
-            XCUIApplication().tables["Sidebar"].buttons["NavigateToConversion"].tap()
+            app.tables["Sidebar"].buttons["NavigateToConversion"].tap()
         }
         
         sleep(2)
@@ -41,30 +41,42 @@ class SimoleonScreenshots: XCTestCase {
     }
     
     func testConvertAmountScreenshot() throws {
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
+        
         if UIDevice.current.userInterfaceIdiom == .pad {
-            XCUIApplication().tables["Sidebar"].buttons["NavigateToConversion"].tap()
+            app.tables["Sidebar"].buttons["NavigateToConversion"].tap()
         }
         
-        let conversionTextField = XCUIApplication().textFields["ConversionTextField"]
+        let conversionTextField = app.textFields["ConversionTextField"]
         conversionTextField.tap()
         conversionTextField.typeText("1030.15\n")
         snapshot("2Conversion\(screenshotEndingName)")
     }
     
     func testCurrencySelectorScreenshot() throws {
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
+        
         if UIDevice.current.userInterfaceIdiom == .pad {
-            XCUIApplication().tables["Sidebar"].buttons["NavigateToConversion"].tap()
+            app.tables["Sidebar"].buttons["NavigateToConversion"].tap()
         }
         
-        XCUIApplication().scrollViews.buttons["OpenCurrencySelector"].tap()
+        app.scrollViews.buttons["OpenCurrencySelector"].tap()
         snapshot("3CurrencySelector\(screenshotEndingName)")
     }
     
     func testFavoriteScreenshot() throws {
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
+        
         if UIDevice.current.userInterfaceIdiom == .pad {
-            XCUIApplication().tables["Sidebar"].buttons["NavigateToFavorites"].tap()
+            app.tables["Sidebar"].buttons["NavigateToFavorites"].tap()
         } else {
-            XCUIApplication().tabBars.buttons.element(boundBy: 1).tap()
+            app.tabBars.buttons.element(boundBy: 1).tap()
         }
         
         sleep(1)

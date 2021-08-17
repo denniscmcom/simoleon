@@ -20,7 +20,7 @@ struct Favorites: View {
                     Image(systemName: "star")
                         .font(.title)
                     
-                    Text("Search a currency pair and add it to favourites.")
+                    Text("Search a currency pair and add it to favorites.")
                         .padding(.top, 5)
                 }
                 .multilineTextAlignment(.center)
