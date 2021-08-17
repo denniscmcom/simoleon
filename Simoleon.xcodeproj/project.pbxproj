@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950093CA26CBC7A200FEBF67 /* SimoleonAppPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950093C926CBC7A200FEBF67 /* SimoleonAppPreview.swift */; };
 		950A377726A820F800CAB175 /* DefaultCurrency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A377626A820F400CAB175 /* DefaultCurrency+CoreDataProperties.swift */; };
 		950A377826A820F800CAB175 /* DefaultCurrency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A377526A820F400CAB175 /* DefaultCurrency+CoreDataClass.swift */; };
 		9522BEA926B5A4D20076B098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BEA826B5A4D20076B098 /* AppDelegate.swift */; };
@@ -59,6 +60,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		950093CC26CBC7A200FEBF67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C5B21C2697752600941585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95C5B2232697752600941585;
+			remoteInfo = Simoleon;
+		};
 		959F6DED26BBD53500101E53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95C5B21C2697752600941585 /* Project object */;
@@ -96,6 +104,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		950093C726CBC7A200FEBF67 /* SimoleonAppPreview.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoleonAppPreview.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		950093C926CBC7A200FEBF67 /* SimoleonAppPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonAppPreview.swift; sourceTree = "<group>"; };
+		950093CB26CBC7A200FEBF67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		950A377526A820F400CAB175 /* DefaultCurrency+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCurrency+CoreDataClass.swift"; sourceTree = "<group>"; };
 		950A377626A820F400CAB175 /* DefaultCurrency+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCurrency+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9522BEA826B5A4D20076B098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +194,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		950093C426CBC7A200FEBF67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		959F6DE526BBD53500101E53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +235,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		950093C826CBC7A200FEBF67 /* SimoleonAppPreview */ = {
+			isa = PBXGroup;
+			children = (
+				950093C926CBC7A200FEBF67 /* SimoleonAppPreview.swift */,
+				950093CB26CBC7A200FEBF67 /* Info.plist */,
+			);
+			path = SimoleonAppPreview;
+			sourceTree = "<group>";
+		};
 		95559331269B094A000FD726 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +338,7 @@
 				95C5B23D2697752700941585 /* SimoleonTests */,
 				95C5B2482697752700941585 /* SimoleonUITests */,
 				959F6DE926BBD53500101E53 /* SimoleonScreenshots */,
+				950093C826CBC7A200FEBF67 /* SimoleonAppPreview */,
 				95C5B2252697752600941585 /* Products */,
 				95E76438269E0037008E9F31 /* Frameworks */,
 			);
@@ -323,6 +351,7 @@
 				95C5B23A2697752700941585 /* SimoleonTests.xctest */,
 				95C5B2452697752700941585 /* SimoleonUITests.xctest */,
 				959F6DE826BBD53500101E53 /* SimoleonScreenshots.xctest */,
+				950093C726CBC7A200FEBF67 /* SimoleonAppPreview.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -413,6 +442,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		950093C626CBC7A200FEBF67 /* SimoleonAppPreview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950093D126CBC7A200FEBF67 /* Build configuration list for PBXNativeTarget "SimoleonAppPreview" */;
+			buildPhases = (
+				950093C326CBC7A200FEBF67 /* Sources */,
+				950093C426CBC7A200FEBF67 /* Frameworks */,
+				950093C526CBC7A200FEBF67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				950093CD26CBC7A200FEBF67 /* PBXTargetDependency */,
+			);
+			name = SimoleonAppPreview;
+			productName = SimoleonAppPreview;
+			productReference = 950093C726CBC7A200FEBF67 /* SimoleonAppPreview.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		959F6DE726BBD53500101E53 /* SimoleonScreenshots */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 959F6DF126BBD53500101E53 /* Build configuration list for PBXNativeTarget "SimoleonScreenshots" */;
@@ -499,6 +546,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					950093C626CBC7A200FEBF67 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 95C5B2232697752600941585;
+					};
 					959F6DE726BBD53500101E53 = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 95C5B2232697752600941585;
@@ -544,11 +595,19 @@
 				95C5B2392697752700941585 /* SimoleonTests */,
 				95C5B2442697752700941585 /* SimoleonUITests */,
 				959F6DE726BBD53500101E53 /* SimoleonScreenshots */,
+				950093C626CBC7A200FEBF67 /* SimoleonAppPreview */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		950093C526CBC7A200FEBF67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		959F6DE626BBD53500101E53 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,6 +648,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		950093C326CBC7A200FEBF67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950093CA26CBC7A200FEBF67 /* SimoleonAppPreview.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		959F6DE426BBD53500101E53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -657,6 +724,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		950093CD26CBC7A200FEBF67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95C5B2232697752600941585 /* Simoleon */;
+			targetProxy = 950093CC26CBC7A200FEBF67 /* PBXContainerItemProxy */;
+		};
 		959F6DEE26BBD53500101E53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 95C5B2232697752600941585 /* Simoleon */;
@@ -727,6 +799,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		950093CE26CBC7A200FEBF67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = SimoleonAppPreview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.SimoleonAppPreview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Simoleon;
+			};
+			name = Debug;
+		};
+		950093CF26CBC7A200FEBF67 /* Screenshots */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = SimoleonAppPreview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.SimoleonAppPreview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Simoleon;
+			};
+			name = Screenshots;
+		};
+		950093D026CBC7A200FEBF67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = SimoleonAppPreview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.SimoleonAppPreview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Simoleon;
+			};
+			name = Release;
+		};
 		959F6DEF26BBD53500101E53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1181,6 +1313,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		950093D126CBC7A200FEBF67 /* Build configuration list for PBXNativeTarget "SimoleonAppPreview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950093CE26CBC7A200FEBF67 /* Debug */,
+				950093CF26CBC7A200FEBF67 /* Screenshots */,
+				950093D026CBC7A200FEBF67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		959F6DF126BBD53500101E53 /* Build configuration list for PBXNativeTarget "SimoleonScreenshots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
