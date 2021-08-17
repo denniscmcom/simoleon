@@ -24,6 +24,12 @@ scheme("Screenshots")
 # Enabling this option will automatically uninstall the application before running it.
 reinstall_app(true)
 
+# Enabling this option will automatically erase the simulator before running the application
+# erase_simulator(true)
+
+# Take snapshots on multiple simulators concurrently.
+concurrent_simulators(false)
+
 # Should the project be cleaned before building it?
 clean(true)
 
