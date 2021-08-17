@@ -150,7 +150,7 @@ struct Settings: View {
     
     // Check if user subscription is active
     private func checkEntitlement() {
-        #if DEBUG
+        #if SCREENSHOTS
         entitlementIsActive = true
         #else
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in

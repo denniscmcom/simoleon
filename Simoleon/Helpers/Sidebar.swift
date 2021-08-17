@@ -16,17 +16,21 @@ struct Sidebar: View {
             NavigationLink(destination: Conversion(currencyPair: defaultCurrency.first?.pair ?? "USD/GBP")) {
                 Label("Convert", systemImage: "arrow.counterclockwise.circle")
             }
+            .accessibilityIdentifier("NavigateToConversion")
             
             NavigationLink(destination: Favorites()) {
                 Label("Favorites", systemImage: "star")
             }
+            .accessibilityIdentifier("NavigateToFavorites")
             
             NavigationLink(destination: Settings()) {
                 Label("Settings", systemImage: "gear")
             }
+            .accessibilityIdentifier("NavigateToSettings")
         }
         .listStyle(SidebarListStyle())
         .navigationTitle("Categories")
+        .accessibilityIdentifier("Sidebar")
     }
 }
 

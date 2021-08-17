@@ -40,7 +40,7 @@ struct ConversionBox: View {
                 .keyboardType(.decimalPad)
                 .font(Font.title.weight(.semibold))
                 .lineLimit(1)
-                .padding(.bottom, 10)
+                .accessibilityIdentifier("ConversionTextField")
             }
             
             Divider()
@@ -68,7 +68,7 @@ struct ConversionBox: View {
      else:
      * Return zero
      */
-    private func makeConversion() -> Double {
+    func makeConversion() -> Double {
         if let amountToConvert = Double(amountToConvert) {
             return amountToConvert * price  // Conversion
         } else {

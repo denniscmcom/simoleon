@@ -27,6 +27,8 @@ struct SubscriptionPaywall: View {
                             Text("Unlock All Access")
                                 .font(.title)
                                 .fontWeight(.semibold)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .multilineTextAlignment(.center)
                                 .padding(.top)
                         }
                         

@@ -12,7 +12,7 @@ struct Conversion: View {
     var showNavigationView: Bool?
     
     @State var currencyPair: String
-    @State private var amountToConvert = "1000"
+    @State private var amountToConvert = ""
     @State private var price: Double = 1.00
     @State private var showingConversion = false
     @State private var showingCurrencySelector = false
@@ -33,6 +33,7 @@ struct Conversion: View {
                                     .padding(.horizontal)
                             )
                     }
+                    .accessibilityIdentifier("OpenCurrencySelector")
                     
                     FavoriteButton(currencyPair: currencyPair)
                 }
@@ -59,7 +60,7 @@ struct Conversion: View {
                         UIApplication.shared.dismissKeyboard()
                         amountIsEditing = false
                     }) {
-                        Text("Cancel")
+                        Text("Done")
                     }
                 }
             }

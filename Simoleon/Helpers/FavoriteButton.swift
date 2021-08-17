@@ -11,12 +11,12 @@ struct FavoriteButton: View {
     var currencyPair: String
     
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) private var favorite: FetchedResults<Favorite>
+    @FetchRequest(sortDescriptors: []) private var favorites: FetchedResults<Favorite>
     
     @State private var starSymbol = "star"
     
     var body: some View {
-        let favoriteCurrencyPairs = favorite.map { $0.currencyPair }
+        let favoriteCurrencyPairs = favorites.map { $0.currencyPair }
         Button(action: { favoriteAction(favoriteCurrencyPairs) }) {
             RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(Color(.secondarySystemBackground))
@@ -27,6 +27,7 @@ struct FavoriteButton: View {
                         .foregroundColor(Color(.systemYellow))
                 )
         }
+        .accessibilityIdentifier("AddToFavorites")
     }
     
     /*
@@ -65,7 +66,7 @@ struct FavoriteButton: View {
      */
     private func removeFromFavorites() {
         withAnimation {
-            let favoriteObject = favorite.first(where: { $0.currencyPair == currencyPair })
+            let favoriteObject = favorites.first(where: { $0.currencyPair == currencyPair })
             viewContext.delete(favoriteObject ?? Favorite())
             
             do {
