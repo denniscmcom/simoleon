@@ -2,7 +2,8 @@
 devices([
 	"iPhone 8 Plus",
 	"iPhone 12 Pro Max",
-	"iPad Pro (12.9-inch) (5th generation)"
+	"iPad Pro (12.9-inch) (5th generation)",
+	"iPad Pro (12.9-inch) (3rd generation)"
 ])
 
 languages([
@@ -21,7 +22,13 @@ languages([
 scheme("Screenshots")
 
 # Enabling this option will automatically uninstall the application before running it.
-# reinstall_app(true)
+reinstall_app(true)
+
+# Enabling this option will automatically erase the simulator before running the application
+# erase_simulator(true)
+
+# Take snapshots on multiple simulators concurrently.
+concurrent_simulators(false)
 
 # Should the project be cleaned before building it?
 clean(true)

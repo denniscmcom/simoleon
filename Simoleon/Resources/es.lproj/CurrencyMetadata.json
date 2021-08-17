@@ -1,6 +1,6 @@
 {
     "AED": {
-        "name": "D\u00edrham De Los Emiratos \u00c1rabes Unidos",
+        "name": "D\u00edrham de los Emiratos \u00c1rabes Unidos",
         "flag": "AE"
     },
     "AFN": {
@@ -16,7 +16,7 @@
         "flag": "AM"
     },
     "ANG": {
-        "name": "Flor\u00edn De Las Antillas Neerlandesas",
+        "name": "Flor\u00edn de las Antillas Neerlandesas",
         "flag": "CW"
     },
     "AOA": {
@@ -40,15 +40,15 @@
         "flag": "AU"
     },
     "AWG": {
-        "name": "Flor\u00edn De Aruba",
+        "name": "Flor\u00edn de Aruba",
         "flag": "AW"
     },
     "BAM": {
-        "name": "Marco Convertible De Bosnia Y Herzegovina",
+        "name": "Marco Convertible de Bosnia y Herzegovina",
         "flag": "BA"
     },
     "BBD": {
-        "name": "D\u00f3lar De Barbados",
+        "name": "D\u00f3lar de Barbados",
         "flag": "BB"
     },
     "BDT": {
@@ -68,11 +68,11 @@
         "flag": "BI"
     },
     "BMD": {
-        "name": "D\u00f3lar De Las Bermudas",
+        "name": "D\u00f3lar de las Bermudas",
         "flag": "BM"
     },
     "BND": {
-        "name": "D\u00f3lares De Brunei",
+        "name": "D\u00f3lares de Brunei",
         "flag": "BN"
     },
     "BOB": {
@@ -88,7 +88,7 @@
         "flag": "BR"
     },
     "BSD": {
-        "name": "D\u00f3lar De Las Bahamas",
+        "name": "D\u00f3lar de las Bahamas",
         "flag": "BS"
     },
     "BTN": {
@@ -120,7 +120,7 @@
         "flag": "CH"
     },
     "CLF": {
-        "name": "Unidad De Cuenta Chilena",
+        "name": "Unidad de Cuenta Chilena",
         "flag": "CL"
     },
     "CLP": {
@@ -148,7 +148,7 @@
         "flag": "CU"
     },
     "CVE": {
-        "name": "Escudo De Cabo Verde",
+        "name": "Escudo de Cabo Verde",
         "flag": "CV"
     },
     "CYP": {
@@ -160,7 +160,7 @@
         "flag": "CZ"
     },
     "DJF": {
-        "name": "Franco De Yibuti",
+        "name": "Franco de Yibuti",
         "flag": "DJ"
     },
     "DKK": {
@@ -192,7 +192,7 @@
         "flag": "EU"
     },
     "FJD": {
-        "name": "D\u00f3lar De Fiji",
+        "name": "D\u00f3lar de Fiji",
         "flag": "FJ"
     },
     "FRN": {
@@ -208,11 +208,11 @@
         "flag": "GE"
     },
     "GHS": {
-        "name": "Cedi De Ghana",
+        "name": "Cedi de Ghana",
         "flag": "GH"
     },
     "GMD": {
-        "name": "Dalasi De Gambia",
+        "name": "Dalasi de Gambia",
         "flag": "GM"
     },
     "GNF": {
@@ -224,11 +224,11 @@
         "flag": "GT"
     },
     "GYD": {
-        "name": "D\u00f3lar De Guyana",
+        "name": "D\u00f3lar de Guyana",
         "flag": "GY"
     },
     "HKD": {
-        "name": "Dolar De Hong Kong",
+        "name": "Dolar de Hong Kong",
         "flag": "HK"
     },
     "HNL": {
@@ -292,7 +292,7 @@
         "flag": "KH"
     },
     "KMF": {
-        "name": "Franco De Las Comoras",
+        "name": "Franco de las Comoras",
         "flag": "KM"
     },
     "KRU": {
@@ -308,7 +308,7 @@
         "flag": "KW"
     },
     "KYD": {
-        "name": "D\u00f3lar De Las Islas Caim\u00e1n",
+        "name": "D\u00f3lar de las Islas Caim\u00e1n",
         "flag": "KY"
     },
     "KZT": {
@@ -324,11 +324,11 @@
         "flag": "LB"
     },
     "LFX": {
-        "name": "Tesoros De Sukuk",
+        "name": "Tesoros de Sukuk",
         "flag": "MY"
     },
     "LKR": {
-        "name": "Rupia De Sri Lanka",
+        "name": "Rupia de Sri Lanka",
         "flag": "LK"
     },
     "LRD": {
@@ -336,7 +336,7 @@
         "flag": "LR"
     },
     "LSL": {
-        "name": "Loti De Lesoto",
+        "name": "Loti de Lesoto",
         "flag": "LS"
     },
     "LTL": {
@@ -356,7 +356,7 @@
         "flag": "MA"
     },
     "MAL": {
-        "name": "Hoja De Arce",
+        "name": "Hoja de Arce",
         "flag": "MA"
     },
     "MDL": {
@@ -372,11 +372,11 @@
         "flag": "MK"
     },
     "MMK": {
-        "name": "Kyat De Myanmar",
+        "name": "Kyat de Myanmar",
         "flag": "MM"
     },
     "MOP": {
-        "name": "Pataca De Macao",
+        "name": "Pataca de Macao",
         "flag": "MO"
     },
     "MRU": {
@@ -388,11 +388,11 @@
         "flag": "MT"
     },
     "MUR": {
-        "name": "Rupia De Mauricio",
+        "name": "Rupia de Mauricio",
         "flag": "MU"
     },
     "MVR": {
-        "name": "Rufiyaa De Maldivas",
+        "name": "Rufiyaa de Maldivas",
         "flag": "MV"
     },
     "MWK": {
@@ -412,11 +412,11 @@
         "flag": "MZ"
     },
     "NAD": {
-        "name": "D\u00f3lar De Namibia",
+        "name": "D\u00f3lar de Namibia",
         "flag": "NA"
     },
     "NBL": {
-        "name": "Isla De Man Noble",
+        "name": "Isla de Man Noble",
         "flag": "IM"
     },
     "NGN": {
@@ -440,7 +440,7 @@
         "flag": "GB"
     },
     "NZD": {
-        "name": "Dolar De Nueva Zelanda",
+        "name": "Dolar de Nueva Zelanda",
         "flag": "NZ"
     },
     "OMR": {
@@ -480,7 +480,7 @@
         "flag": "PY"
     },
     "QAR": {
-        "name": "Riyal De Qatar",
+        "name": "Riyal de Qatar",
         "flag": "QA"
     },
     "RON": {
@@ -504,11 +504,11 @@
         "flag": "SA"
     },
     "SBD": {
-        "name": "D\u00f3lar De Las Islas Salom\u00f3n",
+        "name": "D\u00f3lar de las Islas Salom\u00f3n",
         "flag": "SB"
     },
     "SCR": {
-        "name": "Rupia De Seychelles",
+        "name": "Rupia de Seychelles",
         "flag": "SC"
     },
     "SDG": {
@@ -520,11 +520,11 @@
         "flag": "SE"
     },
     "SGD": {
-        "name": "Dolar De Singapur",
+        "name": "Dolar de Singapur",
         "flag": "SG"
     },
     "SHP": {
-        "name": "Libra De Santa Elena",
+        "name": "Libra de Santa Elena",
         "flag": "SH"
     },
     "SLL": {
@@ -540,7 +540,7 @@
         "flag": "SR"
     },
     "STN": {
-        "name": "Dobra De Santo Tom\u00e9",
+        "name": "Dobra de Santo Tom\u00e9",
         "flag": "ST"
     },
     "SVC": {
@@ -560,7 +560,7 @@
         "flag": "TJ"
     },
     "TMT": {
-        "name": "Manat De Turkmenist\u00e1n",
+        "name": "Manat de Turkmenist\u00e1n",
         "flag": "TM"
     },
     "TND": {
@@ -576,7 +576,7 @@
         "flag": "TR"
     },
     "TTD": {
-        "name": "D\u00f3lar De Trinidad Y Tobago",
+        "name": "D\u00f3lar de Trinidad y Tobago",
         "flag": "TT"
     },
     "TWD": {
@@ -584,7 +584,7 @@
         "flag": "TW"
     },
     "TZS": {
-        "name": "Chel\u00edn De Tanzania",
+        "name": "Chel\u00edn de Tanzania",
         "flag": "TZ"
     },
     "UAH": {
@@ -596,7 +596,7 @@
         "flag": "UG"
     },
     "USD": {
-        "name": "D\u00f3lar De Los Estados Unidos",
+        "name": "D\u00f3lar de los Estados Unidos",
         "flag": "US"
     },
     "UYU": {
@@ -676,11 +676,11 @@
         "flag": "ZA"
     },
     "ZMW": {
-        "name": "Kwacha De Zambia",
+        "name": "Kwacha de Zambia",
         "flag": "ZM"
     },
     "ZWD": {
-        "name": "D\u00f3lar De Zimbabwe",
+        "name": "D\u00f3lar de Zimbabwe",
         "flag": "ZW"
     },
     "DASH": {
