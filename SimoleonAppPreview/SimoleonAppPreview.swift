@@ -26,18 +26,24 @@ class SimoleonAppPreview: XCTestCase {
     func recordInteraction(of app: XCUIApplication) {
         app.launch()
         
-        // Write amount in textfield
+        /*
+         * Type amount to convert
+         * Click 'Done' to dismiss keyboard
+         */
         app.textFields["ConversionTextField"].tap()
         app.keys["4"].tap()
         app.keys["5"].tap()
         app.keys["0"].tap()
         app.keys["0"].tap()
         app.keys["0"].tap()
-        
+
         // Tap done to dismiss keyboard
         app.navigationBars.buttons.element(boundBy: 0).tap()
-        
-        // Open currency selector and select USD/BTC
+
+        /*
+         * Open currency selector
+         * Select USD/BTC
+         */
         app.scrollViews.buttons["OpenCurrencySelector"].tap()
         let currencySearchBar = app.textFields["CurrencySearchBar"]
         currencySearchBar.tap()
@@ -45,6 +51,38 @@ class SimoleonAppPreview: XCTestCase {
         sleep(1)
         app.tables.buttons.firstMatch.tap()
         sleep(2)
+        
+        /*
+         * Go to favorite view
+         * Open XAG/CAD
+         * Convert 100 ounce to CAD
+         * Go back to favorite
+         * Delete XAG to CAD
+         */
+        app.tabBars.buttons.element(boundBy: 1).tap()
+        let favoritesList = app.tables["FavoritesList"].cells
+        sleep(1)
+        let xagToCad = favoritesList.element(boundBy: 7)
+        xagToCad.tap()
+        sleep(2)
+        
+        // Convert 100 ounce to CAD
+        app.textFields["ConversionTextField"].tap()
+        app.keys["1"].tap()
+        app.keys["0"].tap()
+        app.keys["0"].tap()
+        sleep(2)
+        
+        // Tap done to dismiss keyboard
+        app.navigationBars.buttons.element(boundBy: 1).tap()
+        
+        // Go back
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        sleep(1)
+        
+        // Delete row from favorites
+        xagToCad.swipeLeft()
+        xagToCad.buttons.firstMatch.tap()
     }
     
     func testUSEnglish() throws {

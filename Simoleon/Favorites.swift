@@ -36,6 +36,7 @@ struct Favorites: View {
                     .onDelete(perform: removeFromFavorites)
                 }
                 .listStyle(PlainListStyle())
+                .accessibilityIdentifier("FavoritesList")
             }
         }
         .navigationTitle("Favorites")
