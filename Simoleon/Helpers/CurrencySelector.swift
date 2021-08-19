@@ -19,8 +19,6 @@ struct CurrencySelector: View {
     @State private var alertMessage = ""
     @State private var showingAlert = false
     
-    var currencyPairs: [CurrencyPairModel] = parseJson("CurrencyPairs.json")
-    
     /*
      If searched currency string is empty:
      * Show all currencies
@@ -28,6 +26,7 @@ struct CurrencySelector: View {
      * Show filtered list of currencies containing searched currency string
      */
     var searchResults: [CurrencyPairModel] {
+        let currencyPairs: [CurrencyPairModel] = try! read(json: "CurrencyPairs.json")
         if searchCurrency.isEmpty {
             return currencyPairs.sorted { !$0.isLocked && $1.isLocked }
         } else {

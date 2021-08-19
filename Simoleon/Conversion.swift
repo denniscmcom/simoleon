@@ -18,8 +18,6 @@ struct Conversion: View {
     @State private var showingCurrencySelector = false
     @State private var amountIsEditing = false
     
-    let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
-    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading) {

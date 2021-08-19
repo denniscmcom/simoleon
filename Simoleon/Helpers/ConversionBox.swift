@@ -14,10 +14,9 @@ struct ConversionBox: View {
     @Binding var showingConversion: Bool
     @Binding var amountIsEditing: Bool
     
-    let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
-    
     var body: some View {
         VStack(alignment: .leading) {
+            let currencyMetadata: [String: CurrencyMetadataModel] = try! read(json: "CurrencyMetadata.json")
             let currencies = currencyPair.split(separator: "/")
             Text("\(currencyMetadata[String(currencies[0])]!.name) (\(String(currencies[0])))")
                 .font(.callout)
