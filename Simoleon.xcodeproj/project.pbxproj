@@ -12,7 +12,8 @@
 		950A377826A820F800CAB175 /* DefaultCurrency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A377526A820F400CAB175 /* DefaultCurrency+CoreDataClass.swift */; };
 		9522BEA926B5A4D20076B098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BEA826B5A4D20076B098 /* AppDelegate.swift */; };
 		9522BEAB26B5AACB0076B098 /* ListModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BEAA26B5AACB0076B098 /* ListModifier.swift */; };
-		9555933A269B0AB8000FD726 /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95559339269B0AB8000FD726 /* ParseJson.swift */; };
+		9522CD9D26CED2E100DD9D03 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522CD9C26CED2E100DD9D03 /* ErrorHandling.swift */; };
+		9555933A269B0AB8000FD726 /* Read.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95559339269B0AB8000FD726 /* Read.swift */; };
 		95561E3F26AF25EF00CCB543 /* SubscriptionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */; };
 		95562D4D26A8962A0047E778 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95562D4C26A8962A0047E778 /* StoreKit.framework */; };
 		95562D5226A8AEF60047E778 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 95562D5126A8AEF60047E778 /* Purchases */; };
@@ -111,7 +112,8 @@
 		950A377626A820F400CAB175 /* DefaultCurrency+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCurrency+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9522BEA826B5A4D20076B098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9522BEAA26B5AACB0076B098 /* ListModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModifier.swift; sourceTree = "<group>"; };
-		95559339269B0AB8000FD726 /* ParseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
+		9522CD9C26CED2E100DD9D03 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		95559339269B0AB8000FD726 /* Read.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Read.swift; sourceTree = "<group>"; };
 		95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFeature.swift; sourceTree = "<group>"; };
 		95562D4C26A8962A0047E778 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		956088B526B9307600A4FD6C /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = "<group>"; };
@@ -261,7 +263,7 @@
 		95559338269B0AAA000FD726 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				95559339269B0AB8000FD726 /* ParseJson.swift */,
+				95559339269B0AB8000FD726 /* Read.swift */,
 				9585BB1126A6B71B00E3193E /* ReadConfig.swift */,
 				9585BB1326A6B7F400E3193E /* NetworkRequest.swift */,
 				9585BB1926A6E8FD00E3193E /* SimpleSuccess.swift */,
@@ -370,6 +372,7 @@
 				95D8C8C626A95D2900BCC188 /* SubscriptionPaywall.swift */,
 				95C5B22B2697752700941585 /* Assets.xcassets */,
 				95C5B2302697752700941585 /* Persistence.swift */,
+				9522CD9C26CED2E100DD9D03 /* ErrorHandling.swift */,
 				95C5B2352697752700941585 /* Info.plist */,
 				95C5B2322697752700941585 /* Simoleon.xcdatamodeld */,
 				95E76435269DFC1A008E9F31 /* LaunchScreen.storyboard */,
@@ -672,6 +675,7 @@
 				95C5179926A5EC9F00BC2B24 /* FavoriteButton.swift in Sources */,
 				95C5179C26A5EFBE00BC2B24 /* Favorite+CoreDataClass.swift in Sources */,
 				950A377826A820F800CAB175 /* DefaultCurrency+CoreDataClass.swift in Sources */,
+				9522CD9D26CED2E100DD9D03 /* ErrorHandling.swift in Sources */,
 				95C5B2312697752700941585 /* Persistence.swift in Sources */,
 				9585BB1226A6B71B00E3193E /* ReadConfig.swift in Sources */,
 				95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */,
@@ -682,7 +686,7 @@
 				95D8C8CD26A9784500BCC188 /* SubscribeButton.swift in Sources */,
 				950A377726A820F800CAB175 /* DefaultCurrency+CoreDataProperties.swift in Sources */,
 				9585BB1A26A6E8FD00E3193E /* SimpleSuccess.swift in Sources */,
-				9555933A269B0AB8000FD726 /* ParseJson.swift in Sources */,
+				9555933A269B0AB8000FD726 /* Read.swift in Sources */,
 				95D8C8CF26A98A7900BCC188 /* RestoreButton.swift in Sources */,
 				95C5179D26A5EFBE00BC2B24 /* Favorite+CoreDataProperties.swift in Sources */,
 				95C5179F26A5F34200BC2B24 /* Favorites.swift in Sources */,

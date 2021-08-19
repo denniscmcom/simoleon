@@ -10,10 +10,10 @@ import SwiftUI
 struct CurrencyRow: View {
     var currencyPairName: String
     var isLocked: Bool?
-    let currencyMetadata: [String: CurrencyMetadataModel] = parseJson("CurrencyMetadata.json")
     
     var body: some View {
         HStack {
+            let currencyMetadata: [String: CurrencyMetadataModel] = try! read(json: "CurrencyMetadata.json")
             let currencies = currencyPairName.split(separator: "/")
             Image(currencyMetadata[String(currencies[0])]!.flag)
                 .resizable()
