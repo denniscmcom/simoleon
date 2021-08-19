@@ -6,5 +6,5 @@ Simoleon é um conversor de moeda em tempo real com mais de 170 moedas globais e
 - O Simoleon está sincronizado em todos os seus dispositivos.
 - Interface rápida e simples.
 
-Política de privacidade: https://dennistech.io/simoleon-privacy-policy
-Termos de utilização: https://dennistech.io/simoleon-terms-of-use
+Política de privacidade: https://dennistech.io/apps/simoleon/privacy
+Termos de utilização: https://dennistech.io/apps/simoleon/terms

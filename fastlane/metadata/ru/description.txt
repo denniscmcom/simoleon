@@ -6,5 +6,5 @@ Simoleon - это конвертер валют в реальном времен
 - Simoleon синхронизируется на всех ваших устройствах.
 - Быстрый и простой интерфейс.
 
-Политика конфиденциальности: https://dennistech.io/simoleon-privacy-policy
-Условия использования: https://dennistech.io/simoleon-terms-of-use
+Политика конфиденциальности: https://dennistech.io/apps/simoleon/privacy
+Условия использования: https://dennistech.io/apps/simoleon/terms

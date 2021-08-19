@@ -6,5 +6,5 @@ Simoleon est un convertisseur de devises en temps réel qui prend en charge plus
 - Simoleon est synchronisé sur tous vos appareils.
 - Interface simple et rapide.
 
-Politique de confidentialité : https://dennistech.io/simoleon-privacy-policy
-Conditions d'utilisation : https://dennistech.io/simoleon-terms-of-use
+Politique de confidentialité: https://dennistech.io/apps/simoleon/privacy
+Conditions d'utilisation: https://dennistech.io/apps/simoleon/terms
