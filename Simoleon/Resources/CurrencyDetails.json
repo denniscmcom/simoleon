@@ -1,0 +1,982 @@
+{
+    "AED": {
+        "name": "United Arab Emirates Dirham",
+        "flag": "AE",
+        "isCrypto": false
+    },
+    "AFN": {
+        "name": "Afghan Afghani",
+        "flag": "AF",
+        "isCrypto": false
+    },
+    "ALL": {
+        "name": "Albanian Lek",
+        "flag": "AL",
+        "isCrypto": false
+    },
+    "AMD": {
+        "name": "Armenian Dram",
+        "flag": "AM",
+        "isCrypto": false
+    },
+    "ANG": {
+        "name": "Netherlands Antillean Guilder",
+        "flag": "CW",
+        "isCrypto": false
+    },
+    "AOA": {
+        "name": "Angolan Kwanza",
+        "flag": "AO",
+        "isCrypto": false
+    },
+    "ARE": {
+        "name": "Areg",
+        "flag": "AR",
+        "isCrypto": false
+    },
+    "ARS": {
+        "name": "Argentine Peso",
+        "flag": "AR",
+        "isCrypto": false
+    },
+    "AUD": {
+        "name": "Australian Dollar",
+        "flag": "AU",
+        "isCrypto": false
+    },
+    "AUN": {
+        "name": "Australian Nugget",
+        "flag": "AU",
+        "isCrypto": false
+    },
+    "AWG": {
+        "name": "Aruban Florin",
+        "flag": "AW",
+        "isCrypto": false
+    },
+    "BAM": {
+        "name": "Bosnia And Herzegovina Convertible Mark",
+        "flag": "BA",
+        "isCrypto": false
+    },
+    "BBD": {
+        "name": "Barbados Dollar",
+        "flag": "BB",
+        "isCrypto": false
+    },
+    "BDT": {
+        "name": "Bangladeshi Taka",
+        "flag": "BD",
+        "isCrypto": false
+    },
+    "BGN": {
+        "name": "Bulgarian Lev",
+        "flag": "BG",
+        "isCrypto": false
+    },
+    "BHD": {
+        "name": "Bahraini Dinar",
+        "flag": "BH",
+        "isCrypto": false
+    },
+    "BIF": {
+        "name": "Burundian Franc",
+        "flag": "BI",
+        "isCrypto": false
+    },
+    "BMD": {
+        "name": "Bermudian Dollar",
+        "flag": "BM",
+        "isCrypto": false
+    },
+    "BND": {
+        "name": "Brunei Dollar",
+        "flag": "BN",
+        "isCrypto": false
+    },
+    "BOB": {
+        "name": "Boliviano",
+        "flag": "BO",
+        "isCrypto": false
+    },
+    "BRI": {
+        "name": "Britannia",
+        "flag": "BR",
+        "isCrypto": false
+    },
+    "BRL": {
+        "name": "Brazilian Real",
+        "flag": "BR",
+        "isCrypto": false
+    },
+    "BSD": {
+        "name": "Bahamian Dollar",
+        "flag": "BS",
+        "isCrypto": false
+    },
+    "BTN": {
+        "name": "Bhutanese Ngultrum",
+        "flag": "BT",
+        "isCrypto": false
+    },
+    "BWP": {
+        "name": "Botswana Pula",
+        "flag": "BW",
+        "isCrypto": false
+    },
+    "BYN": {
+        "name": "Belarusian Ruble",
+        "flag": "BY",
+        "isCrypto": false
+    },
+    "BZD": {
+        "name": "Belize Dollar",
+        "flag": "BZ",
+        "isCrypto": false
+    },
+    "CAD": {
+        "name": "Canadian Dollar",
+        "flag": "CA",
+        "isCrypto": false
+    },
+    "CDF": {
+        "name": "Congolese Franc",
+        "flag": "CD",
+        "isCrypto": false
+    },
+    "CHF": {
+        "name": "Swiss Franc",
+        "flag": "CH",
+        "isCrypto": false
+    },
+    "CLF": {
+        "name": "Chilean Unit Of Account",
+        "flag": "CL",
+        "isCrypto": false
+    },
+    "CLP": {
+        "name": "Chilean Peso",
+        "flag": "CL",
+        "isCrypto": false
+    },
+    "CNH": {
+        "name": "Chinese Yuan",
+        "flag": "CN",
+        "isCrypto": false
+    },
+    "CNY": {
+        "name": "Chinese Yuan",
+        "flag": "CN",
+        "isCrypto": false
+    },
+    "COP": {
+        "name": "Colombian Peso",
+        "flag": "CO",
+        "isCrypto": false
+    },
+    "CRC": {
+        "name": "Costa Rican Colon",
+        "flag": "CR",
+        "isCrypto": false
+    },
+    "CUP": {
+        "name": "Cuban Peso",
+        "flag": "CU",
+        "isCrypto": false
+    },
+    "CVE": {
+        "name": "Cape Verde Escudo",
+        "flag": "CV",
+        "isCrypto": false
+    },
+    "CYP": {
+        "name": "Cypriot Pound",
+        "flag": "CY",
+        "isCrypto": false
+    },
+    "CZK": {
+        "name": "Czech Koruna",
+        "flag": "CZ",
+        "isCrypto": false
+    },
+    "DJF": {
+        "name": "Djiboutian Franc",
+        "flag": "DJ",
+        "isCrypto": false
+    },
+    "DKK": {
+        "name": "Danish Krone",
+        "flag": "DK",
+        "isCrypto": false
+    },
+    "DOE": {
+        "name": "Double Eagle",
+        "flag": "DO",
+        "isCrypto": false
+    },
+    "DOP": {
+        "name": "Dominican Peso",
+        "flag": "DO",
+        "isCrypto": false
+    },
+    "DZD": {
+        "name": "Algerian Dinar",
+        "flag": "DZ",
+        "isCrypto": false
+    },
+    "EGP": {
+        "name": "Egyptian Pound",
+        "flag": "EG",
+        "isCrypto": false
+    },
+    "ETB": {
+        "name": "Ethiopian Birr",
+        "flag": "ET",
+        "isCrypto": false
+    },
+    "EUR": {
+        "name": "Euro",
+        "flag": "EU",
+        "isCrypto": false
+    },
+    "FJD": {
+        "name": "Fiji Dollar",
+        "flag": "FJ",
+        "isCrypto": false
+    },
+    "FRN": {
+        "name": "French Napoleon",
+        "flag": "FR",
+        "isCrypto": false
+    },
+    "GBP": {
+        "name": "Pound Sterling",
+        "flag": "GB",
+        "isCrypto": false
+    },
+    "GEL": {
+        "name": "Georgian Lari",
+        "flag": "GE",
+        "isCrypto": false
+    },
+    "GHS": {
+        "name": "Ghanaian Cedi",
+        "flag": "GH",
+        "isCrypto": false
+    },
+    "GMD": {
+        "name": "Gambian Dalasi",
+        "flag": "GM",
+        "isCrypto": false
+    },
+    "GNF": {
+        "name": "Guinean Franc",
+        "flag": "GN",
+        "isCrypto": false
+    },
+    "GTQ": {
+        "name": "Guatemalan Quetzal",
+        "flag": "GT",
+        "isCrypto": false
+    },
+    "GYD": {
+        "name": "Guyanese Dollar",
+        "flag": "GY",
+        "isCrypto": false
+    },
+    "HKD": {
+        "name": "Hong Kong Dollar",
+        "flag": "HK",
+        "isCrypto": false
+    },
+    "HNL": {
+        "name": "Honduran Lempira",
+        "flag": "HN",
+        "isCrypto": false
+    },
+    "HRK": {
+        "name": "Croatian Kuna",
+        "flag": "HR",
+        "isCrypto": false
+    },
+    "HTG": {
+        "name": "Haitian Gourde",
+        "flag": "HT",
+        "isCrypto": false
+    },
+    "HUF": {
+        "name": "Hungarian Forint",
+        "flag": "HU",
+        "isCrypto": false
+    },
+    "IDR": {
+        "name": "Indonesian Rupiah",
+        "flag": "ID",
+        "isCrypto": false
+    },
+    "ILS": {
+        "name": "Israeli New Shekel",
+        "flag": "IL",
+        "isCrypto": false
+    },
+    "INR": {
+        "name": "Indian Rupee",
+        "flag": "IN",
+        "isCrypto": false
+    },
+    "IQD": {
+        "name": "Iraqi Dinar",
+        "flag": "IQ",
+        "isCrypto": false
+    },
+    "IRR": {
+        "name": "Iranian Rial",
+        "flag": "IR",
+        "isCrypto": false
+    },
+    "ISK": {
+        "name": "Icelandic Króna",
+        "flag": "IS",
+        "isCrypto": false
+    },
+    "JMD": {
+        "name": "Jamaican Dollar",
+        "flag": "JM",
+        "isCrypto": false
+    },
+    "JOD": {
+        "name": "Jordanian Dinar",
+        "flag": "JO",
+        "isCrypto": false
+    },
+    "JPY": {
+        "name": "Japanese Yen",
+        "flag": "JP",
+        "isCrypto": false
+    },
+    "KES": {
+        "name": "Kenyan Shilling",
+        "flag": "KE",
+        "isCrypto": false
+    },
+    "KHR": {
+        "name": "Cambodian Riel",
+        "flag": "KH",
+        "isCrypto": false
+    },
+    "KMF": {
+        "name": "Comoro Franc",
+        "flag": "KM",
+        "isCrypto": false
+    },
+    "KRU": {
+        "name": "South African Krugerrand",
+        "flag": "KR",
+        "isCrypto": false
+    },
+    "KRW": {
+        "name": "South Korean Won",
+        "flag": "KR",
+        "isCrypto": false
+    },
+    "KWD": {
+        "name": "Kuwaiti Dinar",
+        "flag": "KW",
+        "isCrypto": false
+    },
+    "KYD": {
+        "name": "Cayman Islands Dollar",
+        "flag": "KY",
+        "isCrypto": false
+    },
+    "KZT": {
+        "name": "Kazakhstani Tenge",
+        "flag": "KZ",
+        "isCrypto": false
+    },
+    "LAK": {
+        "name": "Lao Kip",
+        "flag": "LA",
+        "isCrypto": false
+    },
+    "LBP": {
+        "name": "Lebanese Pound",
+        "flag": "LB",
+        "isCrypto": false
+    },
+    "LFX": {
+        "name": "Khazanah Sukuk",
+        "flag": "MY",
+        "isCrypto": false
+    },
+    "LKR": {
+        "name": "Sri Lankan Rupee",
+        "flag": "LK",
+        "isCrypto": false
+    },
+    "LRD": {
+        "name": "Liberian Dollar",
+        "flag": "LR",
+        "isCrypto": false
+    },
+    "LSL": {
+        "name": "Lesotho Loti",
+        "flag": "LS",
+        "isCrypto": false
+    },
+    "LTL": {
+        "name": "Lithuanian Litas",
+        "flag": "LT",
+        "isCrypto": false
+    },
+    "LYD": {
+        "name": "Libyan Dinar",
+        "flag": "LY",
+        "isCrypto": false
+    },
+    "M5P": {
+        "name": "Mexican 50 Peso",
+        "flag": "MX",
+        "isCrypto": false
+    },
+    "MAD": {
+        "name": "Moroccan Dirham",
+        "flag": "MA",
+        "isCrypto": false
+    },
+    "MAL": {
+        "name": "Maple Leaf",
+        "flag": "MA",
+        "isCrypto": false
+    },
+    "MDL": {
+        "name": "Moldovan Leu",
+        "flag": "MD",
+        "isCrypto": false
+    },
+    "MGA": {
+        "name": "Malagasy Ariary",
+        "flag": "MG",
+        "isCrypto": false
+    },
+    "MKD": {
+        "name": "Macedonian Denar",
+        "flag": "MK",
+        "isCrypto": false
+    },
+    "MMK": {
+        "name": "Myanma Kyat",
+        "flag": "MM",
+        "isCrypto": false
+    },
+    "MOP": {
+        "name": "Macanese Pataca",
+        "flag": "MO",
+        "isCrypto": false
+    },
+    "MRU": {
+        "name": "Mauritanian Ouguiya",
+        "flag": "MR",
+        "isCrypto": false
+    },
+    "MTL": {
+        "name": "Maltese Lira",
+        "flag": "MT",
+        "isCrypto": false
+    },
+    "MUR": {
+        "name": "Mauritian Rupee",
+        "flag": "MU",
+        "isCrypto": false
+    },
+    "MVR": {
+        "name": "Maldivian Rufiyaa",
+        "flag": "MV",
+        "isCrypto": false
+    },
+    "MWK": {
+        "name": "Malawian Kwacha",
+        "flag": "MW",
+        "isCrypto": false
+    },
+    "MXN": {
+        "name": "Mexican Peso",
+        "flag": "MX",
+        "isCrypto": false
+    },
+    "MYR": {
+        "name": "Malaysian Ringgit",
+        "flag": "MY",
+        "isCrypto": false
+    },
+    "MZN": {
+        "name": "Mozambican Metical",
+        "flag": "MZ",
+        "isCrypto": false
+    },
+    "NAD": {
+        "name": "Namibian Dollar",
+        "flag": "NA",
+        "isCrypto": false
+    },
+    "NBL": {
+        "name": "Isle Of Man Noble",
+        "flag": "IM",
+        "isCrypto": false
+    },
+    "NGN": {
+        "name": "Nigerian Naira",
+        "flag": "NG",
+        "isCrypto": false
+    },
+    "NIO": {
+        "name": "Nicaraguan Córdoba",
+        "flag": "NI",
+        "isCrypto": false
+    },
+    "NOK": {
+        "name": "Norwegian Krone",
+        "flag": "NO",
+        "isCrypto": false
+    },
+    "NPR": {
+        "name": "Nepalese Rupee",
+        "flag": "NP",
+        "isCrypto": false
+    },
+    "NSO": {
+        "name": "New Sovereign",
+        "flag": "GB",
+        "isCrypto": false
+    },
+    "NZD": {
+        "name": "New Zealand Dollar",
+        "flag": "NZ",
+        "isCrypto": false
+    },
+    "OMR": {
+        "name": "Omani Rial",
+        "flag": "OM",
+        "isCrypto": false
+    },
+    "OSO": {
+        "name": "Old Sovereign",
+        "flag": "GB",
+        "isCrypto": false
+    },
+    "PAB": {
+        "name": "Panamanian Balboa",
+        "flag": "PA",
+        "isCrypto": false
+    },
+    "PEN": {
+        "name": "Peruvian Nuevo Sol",
+        "flag": "PE",
+        "isCrypto": false
+    },
+    "PGK": {
+        "name": "Papua New Guinean Kina",
+        "flag": "PG",
+        "isCrypto": false
+    },
+    "PHP": {
+        "name": "Philippine Peso",
+        "flag": "PH",
+        "isCrypto": false
+    },
+    "PKR": {
+        "name": "Pakistani Rupee",
+        "flag": "PK",
+        "isCrypto": false
+    },
+    "PLN": {
+        "name": "Polish Zloty",
+        "flag": "PL",
+        "isCrypto": false
+    },
+    "PYG": {
+        "name": "Paraguayan Guaraní",
+        "flag": "PY",
+        "isCrypto": false
+    },
+    "QAR": {
+        "name": "Qatari Riyal",
+        "flag": "QA",
+        "isCrypto": false
+    },
+    "RON": {
+        "name": "Romanian New Leu",
+        "flag": "RO",
+        "isCrypto": false
+    },
+    "RSD": {
+        "name": "Serbian Dinar",
+        "flag": "RS",
+        "isCrypto": false
+    },
+    "RUB": {
+        "name": "Russian Rouble",
+        "flag": "RU",
+        "isCrypto": false
+    },
+    "RWF": {
+        "name": "Rwandan Franc",
+        "flag": "RW",
+        "isCrypto": false
+    },
+    "SAR": {
+        "name": "Saudi Riyal",
+        "flag": "SA",
+        "isCrypto": false
+    },
+    "SBD": {
+        "name": "Solomon Islands Dollar",
+        "flag": "SB",
+        "isCrypto": false
+    },
+    "SCR": {
+        "name": "Seychelles Rupee",
+        "flag": "SC",
+        "isCrypto": false
+    },
+    "SDG": {
+        "name": "Sudanese Pound",
+        "flag": "SD",
+        "isCrypto": false
+    },
+    "SEK": {
+        "name": "Swedish Krona",
+        "flag": "SE",
+        "isCrypto": false
+    },
+    "SGD": {
+        "name": "Singapore Dollar",
+        "flag": "SG",
+        "isCrypto": false
+    },
+    "SHP": {
+        "name": "Saint Helena Pound",
+        "flag": "SH",
+        "isCrypto": false
+    },
+    "SLL": {
+        "name": "Sierra Leonean Leone",
+        "flag": "SL",
+        "isCrypto": false
+    },
+    "SOS": {
+        "name": "Somali Shilling",
+        "flag": "SO",
+        "isCrypto": false
+    },
+    "SRD": {
+        "name": "Surinamese Dollar",
+        "flag": "SR",
+        "isCrypto": false
+    },
+    "STN": {
+        "name": "Sao Tomean Dobra",
+        "flag": "ST",
+        "isCrypto": false
+    },
+    "SVC": {
+        "name": "Salvadoran Colón",
+        "flag": "SV",
+        "isCrypto": false
+    },
+    "SZL": {
+        "name": "Swazi Lilangeni",
+        "flag": "SZ",
+        "isCrypto": false
+    },
+    "THB": {
+        "name": "Thai Baht",
+        "flag": "TH",
+        "isCrypto": false
+    },
+    "TJS": {
+        "name": "Tajikistani Somoni",
+        "flag": "TJ",
+        "isCrypto": false
+    },
+    "TMT": {
+        "name": "Turkmenistani Manat",
+        "flag": "TM",
+        "isCrypto": false
+    },
+    "TND": {
+        "name": "Tunisian Dinar",
+        "flag": "TN",
+        "isCrypto": false
+    },
+    "TOP": {
+        "name": "Tongan PaʻAnga",
+        "flag": "TO",
+        "isCrypto": false
+    },
+    "TRY": {
+        "name": "Turkish Lira",
+        "flag": "TR",
+        "isCrypto": false
+    },
+    "TTD": {
+        "name": "Trinidad And Tobago Dollar",
+        "flag": "TT",
+        "isCrypto": false
+    },
+    "TWD": {
+        "name": "New Taiwan Dollar",
+        "flag": "TW",
+        "isCrypto": false
+    },
+    "TZS": {
+        "name": "Tanzanian Shilling",
+        "flag": "TZ",
+        "isCrypto": false
+    },
+    "UAH": {
+        "name": "Ukrainian Hryvnia",
+        "flag": "UA",
+        "isCrypto": false
+    },
+    "UGX": {
+        "name": "Ugandan Shilling",
+        "flag": "UG",
+        "isCrypto": false
+    },
+    "USD": {
+        "name": "United States Dollar",
+        "flag": "US",
+        "isCrypto": false
+    },
+    "UYU": {
+        "name": "Uruguayan Peso",
+        "flag": "UY",
+        "isCrypto": false
+    },
+    "UZS": {
+        "name": "Uzbekistan Som",
+        "flag": "UZ",
+        "isCrypto": false
+    },
+    "VES": {
+        "name": "Venezuelan Bolivar Soberano",
+        "flag": "VE",
+        "isCrypto": false
+    },
+    "VND": {
+        "name": "Vietnamese Dong",
+        "flag": "VN",
+        "isCrypto": false
+    },
+    "VRL": {
+        "name": "Vreneli 10F.",
+        "flag": "CH",
+        "isCrypto": false
+    },
+    "VRN": {
+        "name": "Vreneli 20F",
+        "flag": "CH",
+        "isCrypto": false
+    },
+    "XAG": {
+        "name": "Silver (One Troy Ounce)",
+        "flag": "XAG",
+        "isCrypto": false
+    },
+    "XAGK": {
+        "name": "Silver (Kg)",
+        "flag": "XAG",
+        "isCrypto": false
+    },
+    "XAU": {
+        "name": "Gold (One Troy Ounce)",
+        "flag": "XAU",
+        "isCrypto": false
+    },
+    "XAUK": {
+        "name": "Gold (Kg)",
+        "flag": "XAU",
+        "isCrypto": false
+    },
+    "XCD": {
+        "name": "East Caribbean Dollar",
+        "flag": "AI",
+        "isCrypto": false
+    },
+    "XOF": {
+        "name": "Cfa Franc Bceao",
+        "flag": "SN",
+        "isCrypto": false
+    },
+    "XPD": {
+        "name": "Palladium (One Troy Ounce)",
+        "flag": "XPD",
+        "isCrypto": false
+    },
+    "XPDK": {
+        "name": "Palladium (Kg)",
+        "flag": "XPD",
+        "isCrypto": false
+    },
+    "XPF": {
+        "name": "Cfp Franc",
+        "flag": "PF",
+        "isCrypto": false
+    },
+    "XPT": {
+        "name": "Platinum (One Troy Ounce)",
+        "flag": "XPT",
+        "isCrypto": false
+    },
+    "XPTK": {
+        "name": "Platinum (Kg)",
+        "flag": "XPT",
+        "isCrypto": false
+    },
+    "YER": {
+        "name": "Yemeni Rial",
+        "flag": "YE",
+        "isCrypto": false
+    },
+    "ZAR": {
+        "name": "South African Rand",
+        "flag": "ZA",
+        "isCrypto": false
+    },
+    "ZMW": {
+        "name": "Zambian Kwacha",
+        "flag": "ZM",
+        "isCrypto": false
+    },
+    "ZWD": {
+        "name": "Zimbabwe Dollar",
+        "flag": "ZW",
+        "isCrypto": false
+    },
+    "DASH": {
+        "name": "Dash",
+        "flag": "DASH",
+        "isCrypto": true
+    },
+    "BTC": {
+        "name": "Bitcoin",
+        "flag": "BTC",
+        "isCrypto": true
+    },
+    "DSH": {
+        "name": "Dash Coin",
+        "flag": "DASH",
+        "isCrypto": true
+    },
+    "LTC": {
+        "name": "Litecoin",
+        "flag": "LTC",
+        "isCrypto": true
+    },
+    "ETH": {
+        "name": "Ethereum",
+        "flag": "ETH",
+        "isCrypto": true
+    },
+    "BCH": {
+        "name": "Bitcoin Cash",
+        "flag": "BTC",
+        "isCrypto": true
+    },
+    "XRP": {
+        "name": "Xrp Cryptocurrency",
+        "flag": "XRP",
+        "isCrypto": true
+    },
+    "XLM": {
+        "name": "Stellar",
+        "flag": "XLM",
+        "isCrypto": true
+    },
+    "ADA": {
+        "name": "Cardano",
+        "flag": "ADA",
+        "isCrypto": true
+    },
+    "UKO": {
+        "name": "Brent Crude Oil",
+        "flag": "UKO",
+        "isCrypto": false
+    },
+    "AAVE": {
+        "name": "Aave Token",
+        "flag": "AAVE",
+        "isCrypto": true
+    },
+    "UNI": {
+        "name": "Uniswap",
+        "flag": "UNI",
+        "isCrypto": true
+    },
+    "LUNA": {
+        "name": "Terra",
+        "flag": "LUNA",
+        "isCrypto": true
+    },
+    "XMR": {
+        "name": "Monero",
+        "flag": "XMR",
+        "isCrypto": true
+    },
+    "XDR": {
+        "name": "Special Drawing Rights",
+        "flag": "XDR",
+        "isCrypto": false
+    },
+    "SOL": {
+        "name": "Solana",
+        "flag": "SOL",
+        "isCrypto": true
+    },
+    "DOGE": {
+        "name": "Dogecoin",
+        "flag": "DOGE",
+        "isCrypto": true
+    },
+    "VET": {
+        "name": "VeChain",
+        "flag": "VET",
+        "isCrypto": true
+    },
+    "DOT": {
+        "name": "Polkadot",
+        "flag": "DOT",
+        "isCrypto": true
+    },
+    "USDC": {
+        "name": "USD Coin",
+        "flag": "USDC",
+        "isCrypto": true
+    },
+    "FIL": {
+        "name": "File Coin",
+        "flag": "FIL",
+        "isCrypto": true
+    },
+    "LINK": {
+        "name": "Chainlink",
+        "flag": "LINK",
+        "isCrypto": true
+    },
+    "MATIC": {
+        "name": "Polygon",
+        "flag": "MATIC",
+        "isCrypto": true
+    },
+    "THETA": {
+        "name": "Theta",
+        "flag": "THETA",
+        "isCrypto": true
+    },
+    "BNB": {
+        "name": "Binance Coin",
+        "flag": "BNB",
+        "isCrypto": true
+    }
+}

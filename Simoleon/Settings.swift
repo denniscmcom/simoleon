@@ -26,12 +26,12 @@ struct Settings: View {
      else:
      * Show filtered list of currencies containing searched currency string
      */
-    var searchResults: [CurrencyPairModel] {
-        let currencyPairs: [CurrencyPairModel] = try! read(json: "CurrencyPairs.json")
+    var searchResults: [String] {
+        let currencyPairsSupported: [String] = try! read(json: "CurrencyPairsSupported.json")
         if searchCurrency.isEmpty {
-            return currencyPairs.sorted { $0.name < $1.name }
+            return currencyPairsSupported.sorted()
         } else {
-            return currencyPairs.filter { $0.name.contains(searchCurrency.uppercased()) }
+            return currencyPairsSupported.filter { $0.contains(searchCurrency.uppercased()) }
         }
     }
     
@@ -43,9 +43,9 @@ struct Settings: View {
                         SearchBar(placeholder: "Search...", text: $searchCurrency)
                             .padding(5)
                         
-                        ForEach(searchResults, id: \.self) { currencyPair in
-                            Text(currencyPair.name)
-                                .tag(currencyPair.name)
+                        ForEach(searchResults, id: \.self) { currencyPairsSupported in
+                            Text(currencyPairsSupported)
+                                .tag(currencyPairsSupported)
                         }
                     }
                 } else {

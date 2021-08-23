@@ -25,12 +25,12 @@ struct CurrencySelector: View {
      else:
      * Show filtered list of currencies containing searched currency string
      */
-    var searchResults: [CurrencyPairModel] {
-        let currencyPairs: [CurrencyPairModel] = try! read(json: "CurrencyPairs.json")
+    var searchResults: [String] {
+        let currencyPairsSupported: [String] = try! read(json: "CurrencyPairs.json")
         if searchCurrency.isEmpty {
-            return currencyPairs.sorted { !$0.isLocked && $1.isLocked }
+            return currencyPairsSupported.sorted()
         } else {
-            return currencyPairs.filter { $0.name.contains(searchCurrency.uppercased()) }
+            return currencyPairsSupported.filter { $0.contains(searchCurrency.uppercased()) }
         }
     }
     
@@ -43,18 +43,18 @@ struct CurrencySelector: View {
                 
                 List {
                     if entitlementIsActive {
-                        ForEach(searchResults, id: \.self) { currencyPair in
+                        ForEach(searchResults, id: \.self) { currencyPairsSupported in
                             Button(action: {
-                                self.currencyPair = currencyPair.name
+                                self.currencyPair = currencyPairsSupported
                                 showingCurrencySelector = false
                             }) {
-                                CurrencyRow(currencyPairName: currencyPair.name)
+                                CurrencyRow(currencyPairName: currencyPairsSupported)
                             }
                         }
                     } else {
-                        ForEach(searchResults, id: \.self) { currencyPair in
-                            Button(action: { select(currencyPair) }) {
-                                CurrencyRow(currencyPairName: currencyPair.name, isLocked: currencyPair.isLocked)
+                        ForEach(searchResults, id: \.self) { currencyPairsSupported in
+                            Button(action: { select(currencyPairsSupported) }) {
+                                CurrencyRow(currencyPairName: currencyPairsSupported, isLocked: false)
                             }
                         }
                     }
@@ -86,13 +86,13 @@ struct CurrencySelector: View {
      else:
      * Show subscription paywall
      */
-    private func select(_ currencyPair: CurrencyPairModel) {
-        if currencyPair.isLocked {
-            showingSubscriptionPaywall = true
-        } else {
-            self.currencyPair = currencyPair.name
-            showingCurrencySelector = false
-        }
+    private func select(_ currencyPair: String) {
+//        if currencyPair.isLocked {
+//            showingSubscriptionPaywall = true
+//        } else {
+//            self.currencyPair = currencyPair.name
+//            showingCurrencySelector = false
+//        }
     }
     
     // Check if user subscription is active

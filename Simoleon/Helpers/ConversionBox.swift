@@ -16,9 +16,9 @@ struct ConversionBox: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            let currencyMetadata: [String: CurrencyMetadataModel] = try! read(json: "CurrencyMetadata.json")
+            let currencyDetails: [String: CurrencyDetailsModel] = try! read(json: "CurrencyDetails.json")
             let currencies = currencyPair.split(separator: "/")
-            Text("\(currencyMetadata[String(currencies[0])]!.name) (\(String(currencies[0])))")
+            Text("\(currencyDetails[String(currencies[0])]!.name) (\(String(currencies[0])))")
                 .font(.callout)
                 .fontWeight(.semibold)
                 .padding(.top, 40)
@@ -44,7 +44,7 @@ struct ConversionBox: View {
             
             Divider()
             
-            Text("\(currencyMetadata[String(currencies[1])]!.name) (\(String(currencies[1])))")
+            Text("\(currencyDetails[String(currencies[1])]!.name) (\(String(currencies[1])))")
                 .font(.callout)
                 .fontWeight(.semibold)
                 .padding(.top, 10)
