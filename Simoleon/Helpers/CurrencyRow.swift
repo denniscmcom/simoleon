@@ -13,16 +13,16 @@ struct CurrencyRow: View {
     
     var body: some View {
         HStack {
-            let currencyMetadata: [String: CurrencyMetadataModel] = try! read(json: "CurrencyMetadata.json")
+            let currencyDetails: [String: CurrencyDetailsModel] = try! read(json: "CurrencyDetails.json")
             let currencies = currencyPairName.split(separator: "/")
-            Image(currencyMetadata[String(currencies[0])]!.flag)
+            Image(currencyDetails[String(currencies[0])]!.flag)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 30, height: 30)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color(.secondaryLabel), lineWidth: 1))
             
-            Image(currencyMetadata[String(currencies[1])]!.flag)
+            Image(currencyDetails[String(currencies[1])]!.flag)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 30, height: 30)
