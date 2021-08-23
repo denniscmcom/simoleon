@@ -12,6 +12,7 @@ class SimoleonTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        continueAfterFailure = false
     }
 
     override func tearDownWithError() throws {
@@ -19,20 +20,31 @@ class SimoleonTests: XCTestCase {
     }
     
     func testReadJson() throws {
-        let currencyPairs: [CurrencyPairModel]? = try? read(json: "CurrencyPairs.json")
-        XCTAssertNotNil(currencyPairs)
+        let currencyPairsSupported: [String]? = try? read(json: "CurrencyPairsSupported.json")
+        XCTAssertNotNil(currencyPairsSupported, "An error occurred while reading CurrencyPairsSupported.json")
         
-        let currencyMetadata: [String: CurrencyMetadataModel]? = try? read(json: "CurrencyMetadata.json")
-        XCTAssertNotNil(currencyMetadata)
+        let currencyDetails: [String: CurrencyDetailsModel]? = try? read(json: "CurrencyDetails.json")
+        XCTAssertNotNil(currencyDetails, "An error occurred while reading CurrencyDetails.json")
     }
     
-    func testFlagsExistence() throws {
-        let currencyMetadata: [String: CurrencyMetadataModel]! = try! read(json: "CurrencyMetadata.json")
+    func testCurrencyExistence() throws {
+        let currencyDetails: [String: CurrencyDetailsModel] = try! read(json: "CurrencyDetails.json")
         
-        for currencySymbol in currencyMetadata.keys {
-            let flag = currencyMetadata[currencySymbol]!.flag
-            XCTAssertTrue((UIImage(named: flag) != nil))
+        // Remove duplicates from currency pairs supported
+        let currencyPairsSupported: [String] = try! read(json: "CurrencyPairsSupported.json")
+        var currenciesSupported = Set<String>()
+        
+        for currencyPairSupported in currencyPairsSupported {
+            let symbols = currencyPairSupported.components(separatedBy: "/")
+            for symbol in symbols {
+                currenciesSupported.insert(symbol)
+                XCTAssertNotNil(currencyDetails[symbol], "Currency details of symbol: \(symbol) can't be found")
+                XCTAssertTrue((UIImage(named: currencyDetails[symbol]!.flag) != nil), "Flag of symbol: \(symbol) can't be found")
+            }
         }
+        
+        // Check if there are same number of currencies
+        XCTAssertEqual(currencyDetails.keys.count, currenciesSupported.count)
     }
 
     func testPerformanceExample() throws {
