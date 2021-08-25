@@ -5,7 +5,7 @@
 //  Created by Dennis Concepción Martín on 15/07/2021.
 //
 
-import SwiftUI
+import Foundation
 
 struct CurrencyQuoteModel: Codable, Hashable {
     var symbol: String?

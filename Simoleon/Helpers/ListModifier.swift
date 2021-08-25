@@ -12,10 +12,11 @@ struct ListModifier: ViewModifier {
             content
                 .id(UUID())
                 .listStyle(PlainListStyle())
-                .gesture(DragGesture()
+                .gesture(
+                    DragGesture()
                             .onChanged({ _ in
                                 UIApplication.shared.dismissKeyboard()
-                            })
+                        })
                 )
         }
 }

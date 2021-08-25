@@ -9,6 +9,7 @@ import XCTest
 @testable import Simoleon
 
 class SimoleonTests: XCTestCase {
+    let fileController = FileController()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,18 +21,18 @@ class SimoleonTests: XCTestCase {
     }
     
     func testReadJson() throws {
-        let currencyPairsSupported: [String]? = try? read(json: "CurrencyPairsSupported.json")
+        let currencyPairsSupported: [String]? = try? fileController.read(json: "CurrencyPairsSupported.json")
         XCTAssertNotNil(currencyPairsSupported, "An error occurred while reading CurrencyPairsSupported.json")
         
-        let currencyDetails: [String: CurrencyDetailsModel]? = try? read(json: "CurrencyDetails.json")
+        let currencyDetails: [String: CurrencyDetailsModel]? = try? fileController.read(json: "CurrencyDetails.json")
         XCTAssertNotNil(currencyDetails, "An error occurred while reading CurrencyDetails.json")
     }
     
     func testCurrencyExistence() throws {
-        let currencyDetails: [String: CurrencyDetailsModel] = try! read(json: "CurrencyDetails.json")
+        let currencyDetails: [String: CurrencyDetailsModel] = try! fileController.read(json: "CurrencyDetails.json")
         
         // Remove duplicates from currency pairs supported
-        let currencyPairsSupported: [String] = try! read(json: "CurrencyPairsSupported.json")
+        let currencyPairsSupported: [String] = try! fileController.read(json: "CurrencyPairsSupported.json")
         var currenciesSupported = Set<String>()
         
         for currencyPairSupported in currencyPairsSupported {
