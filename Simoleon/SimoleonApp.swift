@@ -12,9 +12,11 @@ import Purchases
 struct SimoleonApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     let persistenceController = PersistenceController.shared
+    let fileController = FileController()
     
     init() {
-        Purchases.configure(withAPIKey: "\(readConfig("PURCHASES_KEY")!)")
+        let apiKey = fileController.readConfigVariable(withKey: "PURCHASES_KEY")!
+        Purchases.configure(withAPIKey: apiKey)
     }
     
     var body: some Scene {

@@ -20,6 +20,8 @@ struct Settings: View {
     @State private var showingAlert = false
     @State private var searchCurrency = ""
     
+    let fileController = FileController()
+    
     /*
      If searched currency string is empty:
      * Show all currencies
@@ -27,7 +29,7 @@ struct Settings: View {
      * Show filtered list of currencies containing searched currency string
      */
     var searchResults: [String] {
-        let currencyPairsSupported: [String] = try! read(json: "CurrencyPairsSupported.json")
+        let currencyPairsSupported: [String] = try! fileController.read(json: "CurrencyPairsSupported.json")
         if searchCurrency.isEmpty {
             return currencyPairsSupported.sorted()
         } else {
@@ -114,11 +116,11 @@ struct Settings: View {
              * View is appearing after user selected another default currency
              * Save it to core data
              */
-            if selectedDefaultCurrency == "" {
-                selectedDefaultCurrency = defaultCurrency.first?.pair ?? "USD/GBP"
-            } else {
-                setCoreData()
-            }
+//            if selectedDefaultCurrency == "" {
+//                selectedDefaultCurrency = defaultCurrency.first?.pair ?? "USD/GBP"
+//            } else {
+//                setCoreData()
+//            }
         }
         .listStyle(InsetGroupedListStyle())
         .navigationTitle("Settings")
@@ -131,21 +133,21 @@ struct Settings: View {
     }
      
     // Save default currency to core data
-    private func setCoreData() {
-        if defaultCurrency.isEmpty {  // If it's empty -> add record
-            let defaultCurrency = DefaultCurrency(context: viewContext)
-            defaultCurrency.pair = selectedDefaultCurrency
-            
-            do {
-                try viewContext.save()
-            } catch {
-                print(error.localizedDescription)
-            }
-        } else {  // If not, update record
-            defaultCurrency.first?.pair = selectedDefaultCurrency
-            try? viewContext.save()
-        }
-    }
+//    private func setCoreData() {
+//        if defaultCurrency.isEmpty {  // If it's empty -> add record
+//            let defaultCurrency = DefaultCurrency(context: viewContext)
+//            defaultCurrency.pair = selectedDefaultCurrency
+//            
+//            do {
+//                try viewContext.save()
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        } else {  // If not, update record
+//            defaultCurrency.first?.pair = selectedDefaultCurrency
+//            try? viewContext.save()
+//        }
+//    }
     
     // Check if user subscription is active
     private func checkEntitlement() {

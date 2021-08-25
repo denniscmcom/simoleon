@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct CurrencyDetailsModel: Codable {
     var name: String
     var flag: String
