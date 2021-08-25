@@ -7,8 +7,10 @@
 
 import Foundation
 
-enum JsonErrors: Error {
-    case fileMissing
-    case loadFailed(cause: String)
-    case parseFailed(cause: String)
+class ErrorHandling {
+    enum Json: Error {
+        case fileMissing
+        case loadFailed(cause: String)
+        case parseFailed(cause: String)
+    }
 }
