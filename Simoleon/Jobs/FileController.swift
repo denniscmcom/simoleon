@@ -25,20 +25,20 @@ class FileController {
         
         guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
         else {
-            throw JsonErrors.fileMissing
+            throw ErrorHandling.Json.fileMissing
         }
         
         do {
             data = try Data(contentsOf: file)
         } catch {
-            throw JsonErrors.loadFailed(cause: error.localizedDescription)
+            throw ErrorHandling.Json.loadFailed(cause: error.localizedDescription)
         }
         
         do {
             let decoder = JSONDecoder()
             return try decoder.decode(T.self, from: data)
         } catch {
-            throw JsonErrors.parseFailed(cause: error.localizedDescription)
+            throw ErrorHandling.Json.parseFailed(cause: error.localizedDescription)
         }
     }
 }
