@@ -9,94 +9,82 @@ import SwiftUI
 
 struct FavoriteButton: View {
     @State var currencyPair: CurrencyPairModel
+    @State private var scale: CGFloat = 1
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) private var favorites: FetchedResults<Favorite>
-    @State private var starSymbol = "star"
+    @FetchRequest(sortDescriptors: []) private var favoritePairs: FetchedResults<FavoritePair>
     
     var body: some View {
-        Button(action: favoriteAction) {
+        Button(action: {
+            animate()
+            if isFavorite() {
+                remove()
+            } else {
+                add()
+            }
+        }) {
             RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(Color(.secondarySystemBackground))
                 .frame(width: 60, height: 60)
                 .overlay(
-                    Image(systemName: generateStar())
-                        .font(.system(size: 28))
-                        .foregroundColor(Color(.systemYellow))
+                    VStack {
+                        if isFavorite() {
+                            Image(systemName: "star.fill")
+                        } else {
+                            Image(systemName: "star")
+                        }
+                    }
+                    .font(.system(size: 28))
+                    .foregroundColor(Color(.systemYellow))
                 )
         }
-        .accessibilityIdentifier("AddToFavorites")
+        .scaleEffect(scale)
+        .animation(.linear(duration: 0.2), value: scale)
     }
     
-    /*
-     If currency pair is favorite:
-     * Button action is to remove from favorites
-     else:
-     * Button action is to add to favorites
-     */
-    private func favoriteAction() {
-        let favoriteCurrencyPairs = favorites.map { $0.currencyPair }
-        let currencyPair = "(\(currencyPair.baseSymbol)/\(currencyPair.quoteSymbol)"
-        if favoriteCurrencyPairs.contains(currencyPair) {
-            removeFromFavorites()
-        } else {
-            addToFavorites()
-        }
+    func add() {
+        let favoritePair = FavoritePair(context: viewContext)
+        favoritePair.baseSymbol = currencyPair.baseSymbol
+        favoritePair.quoteSymbol = currencyPair.quoteSymbol
         
-        let haptics = Haptics()
-        haptics.simpleSuccess()
-    }
-    
-    /*
-     if currency pair is favorite:
-     * Return "star.fill" symbol
-     else:
-     * Return "star"
-     */
-    private func generateStar() -> String {
-        let favoriteCurrencyPairs = favorites.map { $0.currencyPair }
-        let currencyPair = "(\(currencyPair.baseSymbol)/\(currencyPair.quoteSymbol)"
-        if favoriteCurrencyPairs.contains(currencyPair) {
-            return "star.fill"
-        } else {
-            return "star"
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
     
-    /*
-     * Get first favorite core data object that matches the specified currency pair
-     * Delete it
-     */
-    private func removeFromFavorites() {
-        let currencyPair = "(\(currencyPair.baseSymbol)/\(currencyPair.quoteSymbol)"
-        withAnimation {
-            let favoriteObject = favorites.first(where: { $0.currencyPair == currencyPair })
-            viewContext.delete(favoriteObject ?? Favorite())
-
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+    func remove() {
+        let favoritePair = favoritePairs.first(
+            where: {
+                $0.baseSymbol == currencyPair.baseSymbol && $0.quoteSymbol == currencyPair.quoteSymbol
+        })
+        
+        viewContext.delete(favoritePair!)
+        
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
     
-    /*
-     * Create a favorite core data object
-     * Save it
-     */
-    private func addToFavorites() {
-        let currencyPair = "(\(currencyPair.baseSymbol)/\(currencyPair.quoteSymbol)"
-        withAnimation {
-            let favorite = Favorite(context: viewContext)
-            favorite.currencyPair = currencyPair
-
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+    func isFavorite() -> Bool {
+        let favoritePair = favoritePairs.first(
+            where: {
+                $0.baseSymbol == currencyPair.baseSymbol && $0.quoteSymbol == currencyPair.quoteSymbol
+        })
+        
+        guard let _ = favoritePair else { return false }
+        
+        return true
+    }
+    
+    private func animate() {
+        scale += 0.2
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            scale -= 0.2
         }
     }
 }
