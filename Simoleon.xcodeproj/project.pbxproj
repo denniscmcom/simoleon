@@ -22,15 +22,14 @@
 		957DCF3326D7ADEA00BCAB1E /* CurrencyPairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DCF3226D7ADEA00BCAB1E /* CurrencyPairModel.swift */; };
 		95851CE326D4DAAE004ADA79 /* CurrencyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CE226D4DAAE004ADA79 /* CurrencyButton.swift */; };
 		95851CE526D4DB4C004ADA79 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CE426D4DB4C004ADA79 /* Flag.swift */; };
-		95851CE826D4E552004ADA79 /* DefaultCurrency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CE626D4E552004ADA79 /* DefaultCurrency+CoreDataClass.swift */; };
-		95851CE926D4E552004ADA79 /* DefaultCurrency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CE726D4E552004ADA79 /* DefaultCurrency+CoreDataProperties.swift */; };
-		95851CF026D4E89C004ADA79 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CEE26D4E89C004ADA79 /* Favorite+CoreDataClass.swift */; };
-		95851CF126D4E89C004ADA79 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CEF26D4E89C004ADA79 /* Favorite+CoreDataProperties.swift */; };
 		9585BB1426A6B7F400E3193E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1326A6B7F400E3193E /* NetworkHelper.swift */; };
 		9585BB1A26A6E8FD00E3193E /* HapticsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1926A6E8FD00E3193E /* HapticsHelper.swift */; };
 		95909CB326B07BFC00D051AB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95909CB226B07BFC00D051AB /* SearchBar.swift */; };
 		959F6DEB26BBD53500101E53 /* SimoleonScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F6DEA26BBD53500101E53 /* SimoleonScreenshots.swift */; };
 		95AA42ED26D78A4A0085570D /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA42EC26D78A4A0085570D /* FileHelper.swift */; };
+		95AC820726DAA3ED00CD5C3F /* FavoritePair+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC820526DAA3ED00CD5C3F /* FavoritePair+CoreDataClass.swift */; };
+		95AC820826DAA3ED00CD5C3F /* FavoritePair+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC820626DAA3ED00CD5C3F /* FavoritePair+CoreDataProperties.swift */; };
+		95AC820A26DAAC6B00CD5C3F /* ButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC820926DAAC6B00CD5C3F /* ButtonAnimation.swift */; };
 		95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9426A03ECB00613729 /* ContentView.swift */; };
 		95AEBC9D26A04D4600613729 /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBC9C26A04D4600613729 /* CurrencyRow.swift */; };
 		95AEBCA326A0900E00613729 /* CurrencyQuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEBCA226A0900E00613729 /* CurrencyQuoteModel.swift */; };
@@ -127,10 +126,6 @@
 		957DCF3226D7ADEA00BCAB1E /* CurrencyPairModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairModel.swift; sourceTree = "<group>"; };
 		95851CE226D4DAAE004ADA79 /* CurrencyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyButton.swift; sourceTree = "<group>"; };
 		95851CE426D4DB4C004ADA79 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
-		95851CE626D4E552004ADA79 /* DefaultCurrency+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCurrency+CoreDataClass.swift"; sourceTree = "<group>"; };
-		95851CE726D4E552004ADA79 /* DefaultCurrency+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCurrency+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		95851CEE26D4E89C004ADA79 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
-		95851CEF26D4E89C004ADA79 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9585BB0F26A6B58500E3193E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		9585BB1326A6B7F400E3193E /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		9585BB1926A6E8FD00E3193E /* HapticsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsHelper.swift; sourceTree = "<group>"; };
@@ -154,6 +149,9 @@
 		959F6DEC26BBD53500101E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A70BE926B0550000CC0273 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		95AA42EC26D78A4A0085570D /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		95AC820526DAA3ED00CD5C3F /* FavoritePair+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritePair+CoreDataClass.swift"; sourceTree = "<group>"; };
+		95AC820626DAA3ED00CD5C3F /* FavoritePair+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritePair+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		95AC820926DAAC6B00CD5C3F /* ButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimation.swift; sourceTree = "<group>"; };
 		95AEBC9426A03ECB00613729 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95AEBC9C26A04D4600613729 /* CurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRow.swift; sourceTree = "<group>"; };
 		95AEBCA226A0900E00613729 /* CurrencyQuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyQuoteModel.swift; sourceTree = "<group>"; };
@@ -255,10 +253,8 @@
 		95559331269B094A000FD726 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				95851CEE26D4E89C004ADA79 /* Favorite+CoreDataClass.swift */,
-				95851CEF26D4E89C004ADA79 /* Favorite+CoreDataProperties.swift */,
-				95851CE626D4E552004ADA79 /* DefaultCurrency+CoreDataClass.swift */,
-				95851CE726D4E552004ADA79 /* DefaultCurrency+CoreDataProperties.swift */,
+				95AC820526DAA3ED00CD5C3F /* FavoritePair+CoreDataClass.swift */,
+				95AC820626DAA3ED00CD5C3F /* FavoritePair+CoreDataProperties.swift */,
 				95AEBCA226A0900E00613729 /* CurrencyQuoteModel.swift */,
 				953B8B1626D3A970003CF530 /* CurrencyDetailsModel.swift */,
 				957DCF3226D7ADEA00BCAB1E /* CurrencyPairModel.swift */,
@@ -420,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				95DA4B5826D7E2DE00566C5E /* ChildListResets.swift */,
+				95AC820926DAAC6B00CD5C3F /* ButtonAnimation.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -687,13 +684,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				95C5179926A5EC9F00BC2B24 /* FavoriteButton.swift in Sources */,
-				95851CF126D4E89C004ADA79 /* Favorite+CoreDataProperties.swift in Sources */,
+				95AC820726DAA3ED00CD5C3F /* FavoritePair+CoreDataClass.swift in Sources */,
 				9522CD9D26CED2E100DD9D03 /* ErrorHandling.swift in Sources */,
 				95AA42ED26D78A4A0085570D /* FileHelper.swift in Sources */,
 				95851CE326D4DAAE004ADA79 /* CurrencyButton.swift in Sources */,
 				95C5B2312697752700941585 /* Persistence.swift in Sources */,
 				95DA4B5926D7E2DE00566C5E /* ChildListResets.swift in Sources */,
-				95851CF026D4E89C004ADA79 /* Favorite+CoreDataClass.swift in Sources */,
 				95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */,
 				9522BEAB26B5AACB0076B098 /* ListModifier.swift in Sources */,
 				95909CB326B07BFC00D051AB /* SearchBar.swift in Sources */,
@@ -701,13 +697,14 @@
 				9522BEA926B5A4D20076B098 /* AppDelegate.swift in Sources */,
 				95851CE526D4DB4C004ADA79 /* Flag.swift in Sources */,
 				95D8C8CD26A9784500BCC188 /* SubscribeButton.swift in Sources */,
-				95851CE926D4E552004ADA79 /* DefaultCurrency+CoreDataProperties.swift in Sources */,
 				9585BB1A26A6E8FD00E3193E /* HapticsHelper.swift in Sources */,
 				95D8C8CF26A98A7900BCC188 /* RestoreButton.swift in Sources */,
 				95C5179F26A5F34200BC2B24 /* FavoritesView.swift in Sources */,
 				95C5B2282697752600941585 /* SimoleonApp.swift in Sources */,
 				95B54F4A26A4A450001DC0D8 /* ConversionBox.swift in Sources */,
 				95D8C8C726A95D2900BCC188 /* SubscriptionPaywall.swift in Sources */,
+				95AC820A26DAAC6B00CD5C3F /* ButtonAnimation.swift in Sources */,
+				95AC820826DAA3ED00CD5C3F /* FavoritePair+CoreDataProperties.swift in Sources */,
 				95D8C8D126A9BC6200BCC188 /* LockedCurrencyPicker.swift in Sources */,
 				95C517A126A5F6C000BC2B24 /* ResignKeyboard.swift in Sources */,
 				95CE6A3626D50B7700D9DCBD /* CurrencyList.swift in Sources */,
@@ -722,7 +719,6 @@
 				95C5179126A5DC8E00BC2B24 /* ConditionalWrapper.swift in Sources */,
 				95B54F5126A4ACAC001DC0D8 /* Sidebar.swift in Sources */,
 				95561E3F26AF25EF00CCB543 /* SubscriptionFeature.swift in Sources */,
-				95851CE826D4E552004ADA79 /* DefaultCurrency+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
