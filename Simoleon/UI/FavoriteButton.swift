@@ -8,21 +8,18 @@
 import SwiftUI
 
 struct FavoriteButton: View {
-    var currencyPair: String
-    
+    @State var currencyPair: CurrencyPairModel
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var favorites: FetchedResults<Favorite>
-    
     @State private var starSymbol = "star"
     
     var body: some View {
-        let favoriteCurrencyPairs = favorites.map { $0.currencyPair }
-        Button(action: { favoriteAction(favoriteCurrencyPairs) }) {
+        Button(action: favoriteAction) {
             RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(Color(.secondarySystemBackground))
                 .frame(width: 60, height: 60)
                 .overlay(
-                    Image(systemName: generateStar(favoriteCurrencyPairs))
+                    Image(systemName: generateStar())
                         .font(.system(size: 28))
                         .foregroundColor(Color(.systemYellow))
                 )
@@ -36,14 +33,17 @@ struct FavoriteButton: View {
      else:
      * Button action is to add to favorites
      */
-    private func favoriteAction(_ favoriteCurrencyPairs: [String]) {
+    private func favoriteAction() {
+        let favoriteCurrencyPairs = favorites.map { $0.currencyPair }
+        let currencyPair = "(\(currencyPair.baseSymbol)/\(currencyPair.quoteSymbol)"
         if favoriteCurrencyPairs.contains(currencyPair) {
             removeFromFavorites()
         } else {
             addToFavorites()
         }
         
-        simpleSuccess()
+        let haptics = Haptics()
+        haptics.simpleSuccess()
     }
     
     /*
@@ -52,7 +52,9 @@ struct FavoriteButton: View {
      else:
      * Return "star"
      */
-    private func generateStar(_ favoriteCurrencyPairs: [String]) -> String {
+    private func generateStar() -> String {
+        let favoriteCurrencyPairs = favorites.map { $0.currencyPair }
+        let currencyPair = "(\(currencyPair.baseSymbol)/\(currencyPair.quoteSymbol)"
         if favoriteCurrencyPairs.contains(currencyPair) {
             return "star.fill"
         } else {
@@ -65,10 +67,11 @@ struct FavoriteButton: View {
      * Delete it
      */
     private func removeFromFavorites() {
+        let currencyPair = "(\(currencyPair.baseSymbol)/\(currencyPair.quoteSymbol)"
         withAnimation {
             let favoriteObject = favorites.first(where: { $0.currencyPair == currencyPair })
             viewContext.delete(favoriteObject ?? Favorite())
-            
+
             do {
                 try viewContext.save()
             } catch {
@@ -83,10 +86,11 @@ struct FavoriteButton: View {
      * Save it
      */
     private func addToFavorites() {
+        let currencyPair = "(\(currencyPair.baseSymbol)/\(currencyPair.quoteSymbol)"
         withAnimation {
             let favorite = Favorite(context: viewContext)
             favorite.currencyPair = currencyPair
-            
+
             do {
                 try viewContext.save()
             } catch {
@@ -99,6 +103,6 @@ struct FavoriteButton: View {
 
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteButton(currencyPair: "USD/GBP")
+        FavoriteButton(currencyPair: CurrencyPairModel(baseSymbol: "USD", quoteSymbol: "EUR"))
     }
 }

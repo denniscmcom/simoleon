@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct CurrencyDetailsModel: Codable {
+struct CurrencyModel: Codable {
+    var symbol: String
     var name: String
     var flag: String
     var isCrypto: Bool

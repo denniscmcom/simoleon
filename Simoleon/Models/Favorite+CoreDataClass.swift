@@ -2,7 +2,7 @@
 //  Favorite+CoreDataClass.swift
 //  Simoleon
 //
-//  Created by Dennis Concepción Martín on 19/07/2021.
+//  Created by Dennis Concepción Martín on 24/8/21.
 //
 //
 
@@ -11,5 +11,5 @@ import CoreData
 
 @objc(Favorite)
 public class Favorite: NSManagedObject {
-    
+
 }
