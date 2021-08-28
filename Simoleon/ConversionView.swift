@@ -21,7 +21,10 @@ struct ConversionView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading) {
-                CurrencySelector(currencyPair: currencyPair)
+                HStack {
+                    CurrencySelector(currencyPair: currencyPair)
+                    FavoriteButton(currencyPair: currencyPair)
+                }
             }
             .padding()
         }
@@ -61,8 +64,8 @@ struct ConversionView: View {
 }
 
 
-//struct ConversionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ConversionView()
-//    }
-//}
+struct ConversionView_Previews: PreviewProvider {
+    static var previews: some View {
+        ConversionView(showNavigationView: true, currencyPair: CurrencyPairModel(baseSymbol: "USD", quoteSymbol: "EUR"))
+    }
+}
