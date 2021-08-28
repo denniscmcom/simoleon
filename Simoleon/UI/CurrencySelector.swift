@@ -10,7 +10,7 @@ import SwiftUI
 struct CurrencySelector: View {
     @State var currencyPair: CurrencyPairModel
     @State private var showingList = false
-    @State private var modalSelection: ModalType? = nil
+    @State private var modalSelection: ModalType = .allCurrencies
     let currencyPairsSupported: [String] = try! read(json: "CurrencyPairsSupported.json")
     
     private enum ModalType {
@@ -20,15 +20,15 @@ struct CurrencySelector: View {
     var body: some View {
         HStack {
             Button(action: {
-                showingList = true
                 modalSelection = .allCurrencies
+                showingList = true
             }) {
                 CurrencyButton(selectedCurrency: currencyPair.baseSymbol)
             }
             
             Button(action: {
-                showingList = true
                 modalSelection = .compatibleCurrencies
+                showingList = true
             }) {
                 CurrencyButton(selectedCurrency: currencyPair.quoteSymbol)
             }
