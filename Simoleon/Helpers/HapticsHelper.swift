@@ -7,11 +7,9 @@
 
 import SwiftUI
 
-class HapticsController {
+class Haptics {
     
-    /*
-     Default haptic for success action
-     */
+    // MARK: - Simple success
     func simpleSuccess() {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)

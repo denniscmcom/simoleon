@@ -10,7 +10,6 @@ import Purchases
 
 struct SubscribeButton: View {
     @Binding var showingSubscriptionPaywall: Bool
-    
     @State private var price = ""
     @State private var alertTitle = ""
     @State private var alertMessage = ""

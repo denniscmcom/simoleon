@@ -1,980 +1,1372 @@
 {
-    "AED": {
+    "AED":
+    {
+        "symbol": "AED",
         "name": "United Arab Emirates Dirham",
         "flag": "AE",
         "isCrypto": false
     },
-    "AFN": {
+    "AFN":
+    {
+        "symbol": "AFN",
         "name": "Afghan Afghani",
         "flag": "AF",
         "isCrypto": false
     },
-    "ALL": {
+    "ALL":
+    {
+        "symbol": "ALL",
         "name": "Albanian Lek",
         "flag": "AL",
         "isCrypto": false
     },
-    "AMD": {
+    "AMD":
+    {
+        "symbol": "AMD",
         "name": "Armenian Dram",
         "flag": "AM",
         "isCrypto": false
     },
-    "ANG": {
+    "ANG":
+    {
+        "symbol": "ANG",
         "name": "Netherlands Antillean Guilder",
         "flag": "CW",
         "isCrypto": false
     },
-    "AOA": {
+    "AOA":
+    {
+        "symbol": "AOA",
         "name": "Angolan Kwanza",
         "flag": "AO",
         "isCrypto": false
     },
-    "ARE": {
+    "ARE":
+    {
+        "symbol": "ARE",
         "name": "Areg",
         "flag": "AR",
         "isCrypto": false
     },
-    "ARS": {
+    "ARS":
+    {
+        "symbol": "ARS",
         "name": "Argentine Peso",
         "flag": "AR",
         "isCrypto": false
     },
-    "AUD": {
+    "AUD":
+    {
+        "symbol": "AUD",
         "name": "Australian Dollar",
         "flag": "AU",
         "isCrypto": false
     },
-    "AUN": {
+    "AUN":
+    {
+        "symbol": "AUN",
         "name": "Australian Nugget",
         "flag": "AU",
         "isCrypto": false
     },
-    "AWG": {
+    "AWG":
+    {
+        "symbol": "AWG",
         "name": "Aruban Florin",
         "flag": "AW",
         "isCrypto": false
     },
-    "BAM": {
+    "BAM":
+    {
+        "symbol": "BAM",
         "name": "Bosnia And Herzegovina Convertible Mark",
         "flag": "BA",
         "isCrypto": false
     },
-    "BBD": {
+    "BBD":
+    {
+        "symbol": "BBD",
         "name": "Barbados Dollar",
         "flag": "BB",
         "isCrypto": false
     },
-    "BDT": {
+    "BDT":
+    {
+        "symbol": "BDT",
         "name": "Bangladeshi Taka",
         "flag": "BD",
         "isCrypto": false
     },
-    "BGN": {
+    "BGN":
+    {
+        "symbol": "BGN",
         "name": "Bulgarian Lev",
         "flag": "BG",
         "isCrypto": false
     },
-    "BHD": {
+    "BHD":
+    {
+        "symbol": "BHD",
         "name": "Bahraini Dinar",
         "flag": "BH",
         "isCrypto": false
     },
-    "BIF": {
+    "BIF":
+    {
+        "symbol": "BIF",
         "name": "Burundian Franc",
         "flag": "BI",
         "isCrypto": false
     },
-    "BMD": {
+    "BMD":
+    {
+        "symbol": "BMD",
         "name": "Bermudian Dollar",
         "flag": "BM",
         "isCrypto": false
     },
-    "BND": {
+    "BND":
+    {
+        "symbol": "BND",
         "name": "Brunei Dollar",
         "flag": "BN",
         "isCrypto": false
     },
-    "BOB": {
+    "BOB":
+    {
+        "symbol": "BOB",
         "name": "Boliviano",
         "flag": "BO",
         "isCrypto": false
     },
-    "BRI": {
+    "BRI":
+    {
+        "symbol": "BRI",
         "name": "Britannia",
         "flag": "BR",
         "isCrypto": false
     },
-    "BRL": {
+    "BRL":
+    {
+        "symbol": "BRL",
         "name": "Brazilian Real",
         "flag": "BR",
         "isCrypto": false
     },
-    "BSD": {
+    "BSD":
+    {
+        "symbol": "BSD",
         "name": "Bahamian Dollar",
         "flag": "BS",
         "isCrypto": false
     },
-    "BTN": {
+    "BTN":
+    {
+        "symbol": "BTN",
         "name": "Bhutanese Ngultrum",
         "flag": "BT",
         "isCrypto": false
     },
-    "BWP": {
+    "BWP":
+    {
+        "symbol": "BWP",
         "name": "Botswana Pula",
         "flag": "BW",
         "isCrypto": false
     },
-    "BYN": {
+    "BYN":
+    {
+        "symbol": "BYN",
         "name": "Belarusian Ruble",
         "flag": "BY",
         "isCrypto": false
     },
-    "BZD": {
+    "BZD":
+    {
+        "symbol": "BZD",
         "name": "Belize Dollar",
         "flag": "BZ",
         "isCrypto": false
     },
-    "CAD": {
+    "CAD":
+    {
+        "symbol": "CAD",
         "name": "Canadian Dollar",
         "flag": "CA",
         "isCrypto": false
     },
-    "CDF": {
+    "CDF":
+    {
+        "symbol": "CDF",
         "name": "Congolese Franc",
         "flag": "CD",
         "isCrypto": false
     },
-    "CHF": {
+    "CHF":
+    {
+        "symbol": "CHF",
         "name": "Swiss Franc",
         "flag": "CH",
         "isCrypto": false
     },
-    "CLF": {
+    "CLF":
+    {
+        "symbol": "CLF",
         "name": "Chilean Unit Of Account",
         "flag": "CL",
         "isCrypto": false
     },
-    "CLP": {
+    "CLP":
+    {
+        "symbol": "CLP",
         "name": "Chilean Peso",
         "flag": "CL",
         "isCrypto": false
     },
-    "CNH": {
+    "CNH":
+    {
+        "symbol": "CNH",
         "name": "Chinese Yuan",
         "flag": "CN",
         "isCrypto": false
     },
-    "CNY": {
+    "CNY":
+    {
+        "symbol": "CNY",
         "name": "Chinese Yuan",
         "flag": "CN",
         "isCrypto": false
     },
-    "COP": {
+    "COP":
+    {
+        "symbol": "COP",
         "name": "Colombian Peso",
         "flag": "CO",
         "isCrypto": false
     },
-    "CRC": {
+    "CRC":
+    {
+        "symbol": "CRC",
         "name": "Costa Rican Colon",
         "flag": "CR",
         "isCrypto": false
     },
-    "CUP": {
+    "CUP":
+    {
+        "symbol": "CUP",
         "name": "Cuban Peso",
         "flag": "CU",
         "isCrypto": false
     },
-    "CVE": {
+    "CVE":
+    {
+        "symbol": "CVE",
         "name": "Cape Verde Escudo",
         "flag": "CV",
         "isCrypto": false
     },
-    "CYP": {
+    "CYP":
+    {
+        "symbol": "CYP",
         "name": "Cypriot Pound",
         "flag": "CY",
         "isCrypto": false
     },
-    "CZK": {
+    "CZK":
+    {
+        "symbol": "CZK",
         "name": "Czech Koruna",
         "flag": "CZ",
         "isCrypto": false
     },
-    "DJF": {
+    "DJF":
+    {
+        "symbol": "DJF",
         "name": "Djiboutian Franc",
         "flag": "DJ",
         "isCrypto": false
     },
-    "DKK": {
+    "DKK":
+    {
+        "symbol": "DKK",
         "name": "Danish Krone",
         "flag": "DK",
         "isCrypto": false
     },
-    "DOE": {
+    "DOE":
+    {
+        "symbol": "DOE",
         "name": "Double Eagle",
         "flag": "DO",
         "isCrypto": false
     },
-    "DOP": {
+    "DOP":
+    {
+        "symbol": "DOP",
         "name": "Dominican Peso",
         "flag": "DO",
         "isCrypto": false
     },
-    "DZD": {
+    "DZD":
+    {
+        "symbol": "DZD",
         "name": "Algerian Dinar",
         "flag": "DZ",
         "isCrypto": false
     },
-    "EGP": {
+    "EGP":
+    {
+        "symbol": "EGP",
         "name": "Egyptian Pound",
         "flag": "EG",
         "isCrypto": false
     },
-    "ETB": {
+    "ETB":
+    {
+        "symbol": "ETB",
         "name": "Ethiopian Birr",
         "flag": "ET",
         "isCrypto": false
     },
-    "EUR": {
+    "EUR":
+    {
+        "symbol": "EUR",
         "name": "Euro",
         "flag": "EU",
         "isCrypto": false
     },
-    "FJD": {
+    "FJD":
+    {
+        "symbol": "FJD",
         "name": "Fiji Dollar",
         "flag": "FJ",
         "isCrypto": false
     },
-    "FRN": {
+    "FRN":
+    {
+        "symbol": "FRN",
         "name": "French Napoleon",
         "flag": "FR",
         "isCrypto": false
     },
-    "GBP": {
+    "GBP":
+    {
+        "symbol": "GBP",
         "name": "Pound Sterling",
         "flag": "GB",
         "isCrypto": false
     },
-    "GEL": {
+    "GEL":
+    {
+        "symbol": "GEL",
         "name": "Georgian Lari",
         "flag": "GE",
         "isCrypto": false
     },
-    "GHS": {
+    "GHS":
+    {
+        "symbol": "GHS",
         "name": "Ghanaian Cedi",
         "flag": "GH",
         "isCrypto": false
     },
-    "GMD": {
+    "GMD":
+    {
+        "symbol": "GMD",
         "name": "Gambian Dalasi",
         "flag": "GM",
         "isCrypto": false
     },
-    "GNF": {
+    "GNF":
+    {
+        "symbol": "GNF",
         "name": "Guinean Franc",
         "flag": "GN",
         "isCrypto": false
     },
-    "GTQ": {
+    "GTQ":
+    {
+        "symbol": "GTQ",
         "name": "Guatemalan Quetzal",
         "flag": "GT",
         "isCrypto": false
     },
-    "GYD": {
+    "GYD":
+    {
+        "symbol": "GYD",
         "name": "Guyanese Dollar",
         "flag": "GY",
         "isCrypto": false
     },
-    "HKD": {
+    "HKD":
+    {
+        "symbol": "HKD",
         "name": "Hong Kong Dollar",
         "flag": "HK",
         "isCrypto": false
     },
-    "HNL": {
+    "HNL":
+    {
+        "symbol": "HNL",
         "name": "Honduran Lempira",
         "flag": "HN",
         "isCrypto": false
     },
-    "HRK": {
+    "HRK":
+    {
+        "symbol": "HRK",
         "name": "Croatian Kuna",
         "flag": "HR",
         "isCrypto": false
     },
-    "HTG": {
+    "HTG":
+    {
+        "symbol": "HTG",
         "name": "Haitian Gourde",
         "flag": "HT",
         "isCrypto": false
     },
-    "HUF": {
+    "HUF":
+    {
+        "symbol": "HUF",
         "name": "Hungarian Forint",
         "flag": "HU",
         "isCrypto": false
     },
-    "IDR": {
+    "IDR":
+    {
+        "symbol": "IDR",
         "name": "Indonesian Rupiah",
         "flag": "ID",
         "isCrypto": false
     },
-    "ILS": {
+    "ILS":
+    {
+        "symbol": "ILS",
         "name": "Israeli New Shekel",
         "flag": "IL",
         "isCrypto": false
     },
-    "INR": {
+    "INR":
+    {
+        "symbol": "INR",
         "name": "Indian Rupee",
         "flag": "IN",
         "isCrypto": false
     },
-    "IQD": {
+    "IQD":
+    {
+        "symbol": "IQD",
         "name": "Iraqi Dinar",
         "flag": "IQ",
         "isCrypto": false
     },
-    "IRR": {
+    "IRR":
+    {
+        "symbol": "IRR",
         "name": "Iranian Rial",
         "flag": "IR",
         "isCrypto": false
     },
-    "ISK": {
+    "ISK":
+    {
+        "symbol": "ISK",
         "name": "Icelandic Króna",
         "flag": "IS",
         "isCrypto": false
     },
-    "JMD": {
+    "JMD":
+    {
+        "symbol": "JMD",
         "name": "Jamaican Dollar",
         "flag": "JM",
         "isCrypto": false
     },
-    "JOD": {
+    "JOD":
+    {
+        "symbol": "JOD",
         "name": "Jordanian Dinar",
         "flag": "JO",
         "isCrypto": false
     },
-    "JPY": {
+    "JPY":
+    {
+        "symbol": "JPY",
         "name": "Japanese Yen",
         "flag": "JP",
         "isCrypto": false
     },
-    "KES": {
+    "KES":
+    {
+        "symbol": "KES",
         "name": "Kenyan Shilling",
         "flag": "KE",
         "isCrypto": false
     },
-    "KHR": {
+    "KHR":
+    {
+        "symbol": "KHR",
         "name": "Cambodian Riel",
         "flag": "KH",
         "isCrypto": false
     },
-    "KMF": {
+    "KMF":
+    {
+        "symbol": "KMF",
         "name": "Comoro Franc",
         "flag": "KM",
         "isCrypto": false
     },
-    "KRU": {
+    "KRU":
+    {
+        "symbol": "KRU",
         "name": "South African Krugerrand",
         "flag": "KR",
         "isCrypto": false
     },
-    "KRW": {
+    "KRW":
+    {
+        "symbol": "KRW",
         "name": "South Korean Won",
         "flag": "KR",
         "isCrypto": false
     },
-    "KWD": {
+    "KWD":
+    {
+        "symbol": "KWD",
         "name": "Kuwaiti Dinar",
         "flag": "KW",
         "isCrypto": false
     },
-    "KYD": {
+    "KYD":
+    {
+        "symbol": "KYD",
         "name": "Cayman Islands Dollar",
         "flag": "KY",
         "isCrypto": false
     },
-    "KZT": {
+    "KZT":
+    {
+        "symbol": "KZT",
         "name": "Kazakhstani Tenge",
         "flag": "KZ",
         "isCrypto": false
     },
-    "LAK": {
+    "LAK":
+    {
+        "symbol": "LAK",
         "name": "Lao Kip",
         "flag": "LA",
         "isCrypto": false
     },
-    "LBP": {
+    "LBP":
+    {
+        "symbol": "LBP",
         "name": "Lebanese Pound",
         "flag": "LB",
         "isCrypto": false
     },
-    "LFX": {
+    "LFX":
+    {
+        "symbol": "LFX",
         "name": "Khazanah Sukuk",
         "flag": "MY",
         "isCrypto": false
     },
-    "LKR": {
+    "LKR":
+    {
+        "symbol": "LKR",
         "name": "Sri Lankan Rupee",
         "flag": "LK",
         "isCrypto": false
     },
-    "LRD": {
+    "LRD":
+    {
+        "symbol": "LRD",
         "name": "Liberian Dollar",
         "flag": "LR",
         "isCrypto": false
     },
-    "LSL": {
+    "LSL":
+    {
+        "symbol": "LSL",
         "name": "Lesotho Loti",
         "flag": "LS",
         "isCrypto": false
     },
-    "LTL": {
+    "LTL":
+    {
+        "symbol": "LTL",
         "name": "Lithuanian Litas",
         "flag": "LT",
         "isCrypto": false
     },
-    "LYD": {
+    "LYD":
+    {
+        "symbol": "LYD",
         "name": "Libyan Dinar",
         "flag": "LY",
         "isCrypto": false
     },
-    "M5P": {
+    "M5P":
+    {
+        "symbol": "M5P",
         "name": "Mexican 50 Peso",
         "flag": "MX",
         "isCrypto": false
     },
-    "MAD": {
+    "MAD":
+    {
+        "symbol": "MAD",
         "name": "Moroccan Dirham",
         "flag": "MA",
         "isCrypto": false
     },
-    "MAL": {
+    "MAL":
+    {
+        "symbol": "MAL",
         "name": "Maple Leaf",
         "flag": "MA",
         "isCrypto": false
     },
-    "MDL": {
+    "MDL":
+    {
+        "symbol": "MDL",
         "name": "Moldovan Leu",
         "flag": "MD",
         "isCrypto": false
     },
-    "MGA": {
+    "MGA":
+    {
+        "symbol": "MGA",
         "name": "Malagasy Ariary",
         "flag": "MG",
         "isCrypto": false
     },
-    "MKD": {
+    "MKD":
+    {
+        "symbol": "MKD",
         "name": "Macedonian Denar",
         "flag": "MK",
         "isCrypto": false
     },
-    "MMK": {
+    "MMK":
+    {
+        "symbol": "MMK",
         "name": "Myanma Kyat",
         "flag": "MM",
         "isCrypto": false
     },
-    "MOP": {
+    "MOP":
+    {
+        "symbol": "MOP",
         "name": "Macanese Pataca",
         "flag": "MO",
         "isCrypto": false
     },
-    "MRU": {
+    "MRU":
+    {
+        "symbol": "MRU",
         "name": "Mauritanian Ouguiya",
         "flag": "MR",
         "isCrypto": false
     },
-    "MTL": {
+    "MTL":
+    {
+        "symbol": "MTL",
         "name": "Maltese Lira",
         "flag": "MT",
         "isCrypto": false
     },
-    "MUR": {
+    "MUR":
+    {
+        "symbol": "MUR",
         "name": "Mauritian Rupee",
         "flag": "MU",
         "isCrypto": false
     },
-    "MVR": {
+    "MVR":
+    {
+        "symbol": "MVR",
         "name": "Maldivian Rufiyaa",
         "flag": "MV",
         "isCrypto": false
     },
-    "MWK": {
+    "MWK":
+    {
+        "symbol": "MWK",
         "name": "Malawian Kwacha",
         "flag": "MW",
         "isCrypto": false
     },
-    "MXN": {
+    "MXN":
+    {
+        "symbol": "MXN",
         "name": "Mexican Peso",
         "flag": "MX",
         "isCrypto": false
     },
-    "MYR": {
+    "MYR":
+    {
+        "symbol": "MYR",
         "name": "Malaysian Ringgit",
         "flag": "MY",
         "isCrypto": false
     },
-    "MZN": {
+    "MZN":
+    {
+        "symbol": "MZN",
         "name": "Mozambican Metical",
         "flag": "MZ",
         "isCrypto": false
     },
-    "NAD": {
+    "NAD":
+    {
+        "symbol": "NAD",
         "name": "Namibian Dollar",
         "flag": "NA",
         "isCrypto": false
     },
-    "NBL": {
+    "NBL":
+    {
+        "symbol": "NBL",
         "name": "Isle Of Man Noble",
         "flag": "IM",
         "isCrypto": false
     },
-    "NGN": {
+    "NGN":
+    {
+        "symbol": "NGN",
         "name": "Nigerian Naira",
         "flag": "NG",
         "isCrypto": false
     },
-    "NIO": {
+    "NIO":
+    {
+        "symbol": "NIO",
         "name": "Nicaraguan Córdoba",
         "flag": "NI",
         "isCrypto": false
     },
-    "NOK": {
+    "NOK":
+    {
+        "symbol": "NOK",
         "name": "Norwegian Krone",
         "flag": "NO",
         "isCrypto": false
     },
-    "NPR": {
+    "NPR":
+    {
+        "symbol": "NPR",
         "name": "Nepalese Rupee",
         "flag": "NP",
         "isCrypto": false
     },
-    "NSO": {
+    "NSO":
+    {
+        "symbol": "NSO",
         "name": "New Sovereign",
         "flag": "GB",
         "isCrypto": false
     },
-    "NZD": {
+    "NZD":
+    {
+        "symbol": "NZD",
         "name": "New Zealand Dollar",
         "flag": "NZ",
         "isCrypto": false
     },
-    "OMR": {
+    "OMR":
+    {
+        "symbol": "OMR",
         "name": "Omani Rial",
         "flag": "OM",
         "isCrypto": false
     },
-    "OSO": {
+    "OSO":
+    {
+        "symbol": "OSO",
         "name": "Old Sovereign",
         "flag": "GB",
         "isCrypto": false
     },
-    "PAB": {
+    "PAB":
+    {
+        "symbol": "PAB",
         "name": "Panamanian Balboa",
         "flag": "PA",
         "isCrypto": false
     },
-    "PEN": {
+    "PEN":
+    {
+        "symbol": "PEN",
         "name": "Peruvian Nuevo Sol",
         "flag": "PE",
         "isCrypto": false
     },
-    "PGK": {
+    "PGK":
+    {
+        "symbol": "PGK",
         "name": "Papua New Guinean Kina",
         "flag": "PG",
         "isCrypto": false
     },
-    "PHP": {
+    "PHP":
+    {
+        "symbol": "PHP",
         "name": "Philippine Peso",
         "flag": "PH",
         "isCrypto": false
     },
-    "PKR": {
+    "PKR":
+    {
+        "symbol": "PKR",
         "name": "Pakistani Rupee",
         "flag": "PK",
         "isCrypto": false
     },
-    "PLN": {
+    "PLN":
+    {
+        "symbol": "PLN",
         "name": "Polish Zloty",
         "flag": "PL",
         "isCrypto": false
     },
-    "PYG": {
+    "PYG":
+    {
+        "symbol": "PYG",
         "name": "Paraguayan Guaraní",
         "flag": "PY",
         "isCrypto": false
     },
-    "QAR": {
+    "QAR":
+    {
+        "symbol": "QAR",
         "name": "Qatari Riyal",
         "flag": "QA",
         "isCrypto": false
     },
-    "RON": {
+    "RON":
+    {
+        "symbol": "RON",
         "name": "Romanian New Leu",
         "flag": "RO",
         "isCrypto": false
     },
-    "RSD": {
+    "RSD":
+    {
+        "symbol": "RSD",
         "name": "Serbian Dinar",
         "flag": "RS",
         "isCrypto": false
     },
-    "RUB": {
+    "RUB":
+    {
+        "symbol": "RUB",
         "name": "Russian Rouble",
         "flag": "RU",
         "isCrypto": false
     },
-    "RWF": {
+    "RWF":
+    {
+        "symbol": "RWF",
         "name": "Rwandan Franc",
         "flag": "RW",
         "isCrypto": false
     },
-    "SAR": {
+    "SAR":
+    {
+        "symbol": "SAR",
         "name": "Saudi Riyal",
         "flag": "SA",
         "isCrypto": false
     },
-    "SBD": {
+    "SBD":
+    {
+        "symbol": "SBD",
         "name": "Solomon Islands Dollar",
         "flag": "SB",
         "isCrypto": false
     },
-    "SCR": {
+    "SCR":
+    {
+        "symbol": "SCR",
         "name": "Seychelles Rupee",
         "flag": "SC",
         "isCrypto": false
     },
-    "SDG": {
+    "SDG":
+    {
+        "symbol": "SDG",
         "name": "Sudanese Pound",
         "flag": "SD",
         "isCrypto": false
     },
-    "SEK": {
+    "SEK":
+    {
+        "symbol": "SEK",
         "name": "Swedish Krona",
         "flag": "SE",
         "isCrypto": false
     },
-    "SGD": {
+    "SGD":
+    {
+        "symbol": "SGD",
         "name": "Singapore Dollar",
         "flag": "SG",
         "isCrypto": false
     },
-    "SHP": {
+    "SHP":
+    {
+        "symbol": "SHP",
         "name": "Saint Helena Pound",
         "flag": "SH",
         "isCrypto": false
     },
-    "SLL": {
+    "SLL":
+    {
+        "symbol": "SLL",
         "name": "Sierra Leonean Leone",
         "flag": "SL",
         "isCrypto": false
     },
-    "SOS": {
+    "SOS":
+    {
+        "symbol": "SOS",
         "name": "Somali Shilling",
         "flag": "SO",
         "isCrypto": false
     },
-    "SRD": {
+    "SRD":
+    {
+        "symbol": "SRD",
         "name": "Surinamese Dollar",
         "flag": "SR",
         "isCrypto": false
     },
-    "STN": {
+    "STN":
+    {
+        "symbol": "STN",
         "name": "Sao Tomean Dobra",
         "flag": "ST",
         "isCrypto": false
     },
-    "SVC": {
+    "SVC":
+    {
+        "symbol": "SVC",
         "name": "Salvadoran Colón",
         "flag": "SV",
         "isCrypto": false
     },
-    "SZL": {
+    "SZL":
+    {
+        "symbol": "SZL",
         "name": "Swazi Lilangeni",
         "flag": "SZ",
         "isCrypto": false
     },
-    "THB": {
+    "THB":
+    {
+        "symbol": "THB",
         "name": "Thai Baht",
         "flag": "TH",
         "isCrypto": false
     },
-    "TJS": {
+    "TJS":
+    {
+        "symbol": "TJS",
         "name": "Tajikistani Somoni",
         "flag": "TJ",
         "isCrypto": false
     },
-    "TMT": {
+    "TMT":
+    {
+        "symbol": "TMT",
         "name": "Turkmenistani Manat",
         "flag": "TM",
         "isCrypto": false
     },
-    "TND": {
+    "TND":
+    {
+        "symbol": "TND",
         "name": "Tunisian Dinar",
         "flag": "TN",
         "isCrypto": false
     },
-    "TOP": {
+    "TOP":
+    {
+        "symbol": "TOP",
         "name": "Tongan PaʻAnga",
         "flag": "TO",
         "isCrypto": false
     },
-    "TRY": {
+    "TRY":
+    {
+        "symbol": "TRY",
         "name": "Turkish Lira",
         "flag": "TR",
         "isCrypto": false
     },
-    "TTD": {
+    "TTD":
+    {
+        "symbol": "TTD",
         "name": "Trinidad And Tobago Dollar",
         "flag": "TT",
         "isCrypto": false
     },
-    "TWD": {
+    "TWD":
+    {
+        "symbol": "TWD",
         "name": "New Taiwan Dollar",
         "flag": "TW",
         "isCrypto": false
     },
-    "TZS": {
+    "TZS":
+    {
+        "symbol": "TZS",
         "name": "Tanzanian Shilling",
         "flag": "TZ",
         "isCrypto": false
     },
-    "UAH": {
+    "UAH":
+    {
+        "symbol": "UAH",
         "name": "Ukrainian Hryvnia",
         "flag": "UA",
         "isCrypto": false
     },
-    "UGX": {
+    "UGX":
+    {
+        "symbol": "UGX",
         "name": "Ugandan Shilling",
         "flag": "UG",
         "isCrypto": false
     },
-    "USD": {
+    "USD":
+    {
+        "symbol": "USD",
         "name": "United States Dollar",
         "flag": "US",
         "isCrypto": false
     },
-    "UYU": {
+    "UYU":
+    {
+        "symbol": "UYU",
         "name": "Uruguayan Peso",
         "flag": "UY",
         "isCrypto": false
     },
-    "UZS": {
+    "UZS":
+    {
+        "symbol": "UZS",
         "name": "Uzbekistan Som",
         "flag": "UZ",
         "isCrypto": false
     },
-    "VES": {
+    "VES":
+    {
+        "symbol": "VES",
         "name": "Venezuelan Bolivar Soberano",
         "flag": "VE",
         "isCrypto": false
     },
-    "VND": {
+    "VND":
+    {
+        "symbol": "VND",
         "name": "Vietnamese Dong",
         "flag": "VN",
         "isCrypto": false
     },
-    "VRL": {
+    "VRL":
+    {
+        "symbol": "VRL",
         "name": "Vreneli 10F.",
         "flag": "CH",
         "isCrypto": false
     },
-    "VRN": {
+    "VRN":
+    {
+        "symbol": "VRN",
         "name": "Vreneli 20F",
         "flag": "CH",
         "isCrypto": false
     },
-    "XAG": {
+    "XAG":
+    {
+        "symbol": "XAG",
         "name": "Silver (One Troy Ounce)",
         "flag": "XAG",
         "isCrypto": false
     },
-    "XAGK": {
+    "XAGK":
+    {
+        "symbol": "XAGK",
         "name": "Silver (Kg)",
         "flag": "XAG",
         "isCrypto": false
     },
-    "XAU": {
+    "XAU":
+    {
+        "symbol": "XAU",
         "name": "Gold (One Troy Ounce)",
         "flag": "XAU",
         "isCrypto": false
     },
-    "XAUK": {
+    "XAUK":
+    {
+        "symbol": "XAUK",
         "name": "Gold (Kg)",
         "flag": "XAU",
         "isCrypto": false
     },
-    "XCD": {
+    "XCD":
+    {
+        "symbol": "XCD",
         "name": "East Caribbean Dollar",
         "flag": "AI",
         "isCrypto": false
     },
-    "XOF": {
+    "XOF":
+    {
+        "symbol": "XOF",
         "name": "Cfa Franc Bceao",
         "flag": "SN",
         "isCrypto": false
     },
-    "XPD": {
+    "XPD":
+    {
+        "symbol": "XPD",
         "name": "Palladium (One Troy Ounce)",
         "flag": "XPD",
         "isCrypto": false
     },
-    "XPDK": {
+    "XPDK":
+    {
+        "symbol": "XPDK",
         "name": "Palladium (Kg)",
         "flag": "XPD",
         "isCrypto": false
     },
-    "XPF": {
+    "XPF":
+    {
+        "symbol": "XPF",
         "name": "Cfp Franc",
         "flag": "PF",
         "isCrypto": false
     },
-    "XPT": {
+    "XPT":
+    {
+        "symbol": "XPT",
         "name": "Platinum (One Troy Ounce)",
         "flag": "XPT",
         "isCrypto": false
     },
-    "XPTK": {
+    "XPTK":
+    {
+        "symbol": "XPTK",
         "name": "Platinum (Kg)",
         "flag": "XPT",
         "isCrypto": false
     },
-    "YER": {
+    "YER":
+    {
+        "symbol": "YER",
         "name": "Yemeni Rial",
         "flag": "YE",
         "isCrypto": false
     },
-    "ZAR": {
+    "ZAR":
+    {
+        "symbol": "ZAR",
         "name": "South African Rand",
         "flag": "ZA",
         "isCrypto": false
     },
-    "ZMW": {
+    "ZMW":
+    {
+        "symbol": "ZMW",
         "name": "Zambian Kwacha",
         "flag": "ZM",
         "isCrypto": false
     },
-    "ZWD": {
+    "ZWD":
+    {
+        "symbol": "ZWD",
         "name": "Zimbabwe Dollar",
         "flag": "ZW",
         "isCrypto": false
     },
-    "DASH": {
+    "DASH":
+    {
+        "symbol": "DASH",
         "name": "Dash",
         "flag": "DASH",
         "isCrypto": true
     },
-    "BTC": {
+    "BTC":
+    {
+        "symbol": "BTC",
         "name": "Bitcoin",
         "flag": "BTC",
         "isCrypto": true
     },
-    "DSH": {
+    "DSH":
+    {
+        "symbol": "DSH",
         "name": "Dash Coin",
         "flag": "DASH",
         "isCrypto": true
     },
-    "LTC": {
+    "LTC":
+    {
+        "symbol": "LTC",
         "name": "Litecoin",
         "flag": "LTC",
         "isCrypto": true
     },
-    "ETH": {
+    "ETH":
+    {
+        "symbol": "ETH",
         "name": "Ethereum",
         "flag": "ETH",
         "isCrypto": true
     },
-    "BCH": {
+    "BCH":
+    {
+        "symbol": "BCH",
         "name": "Bitcoin Cash",
         "flag": "BTC",
         "isCrypto": true
     },
-    "XRP": {
+    "XRP":
+    {
+        "symbol": "XRP",
         "name": "Xrp Cryptocurrency",
         "flag": "XRP",
         "isCrypto": true
     },
-    "XLM": {
+    "XLM":
+    {
+        "symbol": "XLM",
         "name": "Stellar",
         "flag": "XLM",
         "isCrypto": true
     },
-    "ADA": {
+    "ADA":
+    {
+        "symbol": "ADA",
         "name": "Cardano",
         "flag": "ADA",
         "isCrypto": true
     },
-    "UKO": {
+    "UKO":
+    {
+        "symbol": "UKO",
         "name": "Brent Crude Oil",
         "flag": "UKO",
         "isCrypto": false
     },
-    "AAVE": {
+    "AAVE":
+    {
+        "symbol": "AAVE",
         "name": "Aave Token",
         "flag": "AAVE",
         "isCrypto": true
     },
-    "UNI": {
+    "UNI":
+    {
+        "symbol": "UNI",
         "name": "Uniswap",
         "flag": "UNI",
         "isCrypto": true
     },
-    "LUNA": {
+    "LUNA":
+    {
+        "symbol": "LUNA",
         "name": "Terra",
         "flag": "LUNA",
         "isCrypto": true
     },
-    "XMR": {
+    "XMR":
+    {
+        "symbol": "XMR",
         "name": "Monero",
         "flag": "XMR",
         "isCrypto": true
     },
-    "XDR": {
+    "XDR":
+    {
+        "symbol": "XDR",
         "name": "Special Drawing Rights",
         "flag": "XDR",
         "isCrypto": false
     },
-    "SOL": {
+    "SOL":
+    {
+        "symbol": "SOL",
         "name": "Solana",
         "flag": "SOL",
         "isCrypto": true
     },
-    "DOGE": {
+    "DOGE":
+    {
+        "symbol": "DOGE",
         "name": "Dogecoin",
         "flag": "DOGE",
         "isCrypto": true
     },
-    "VET": {
+    "VET":
+    {
+        "symbol": "VET",
         "name": "VeChain",
         "flag": "VET",
         "isCrypto": true
     },
-    "DOT": {
+    "DOT":
+    {
+        "symbol": "DOT",
         "name": "Polkadot",
         "flag": "DOT",
         "isCrypto": true
     },
-    "USDC": {
+    "USDC":
+    {
+        "symbol": "USDC",
         "name": "USD Coin",
         "flag": "USDC",
         "isCrypto": true
     },
-    "FIL": {
+    "FIL":
+    {
+        "symbol": "FIL",
         "name": "File Coin",
         "flag": "FIL",
         "isCrypto": true
     },
-    "LINK": {
+    "LINK":
+    {
+        "symbol": "LINK",
         "name": "Chainlink",
         "flag": "LINK",
         "isCrypto": true
     },
-    "MATIC": {
+    "MATIC":
+    {
+        "symbol": "MATIC",
         "name": "Polygon",
         "flag": "MATIC",
         "isCrypto": true
     },
-    "THETA": {
+    "THETA":
+    {
+        "symbol": "THETA",
         "name": "Theta",
         "flag": "THETA",
         "isCrypto": true
     },
-    "BNB": {
+    "BNB":
+    {
+        "symbol": "BNB",
         "name": "Binance Coin",
         "flag": "BNB",
         "isCrypto": true

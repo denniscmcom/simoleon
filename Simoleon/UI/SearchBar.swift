@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SearchBar: View {
     var placeholder: LocalizedStringKey
-    
     @Binding var text: String
     
     var body: some View {

@@ -16,7 +16,7 @@ struct PersistenceController {
         
         for _ in 0..<10 {
             let favorite = Favorite(context: viewContext)
-            favorite.currencyPair = "USD/GBP"
+            favorite.currencyPair = "GBP/USD"
         }
         do {
             try viewContext.save()

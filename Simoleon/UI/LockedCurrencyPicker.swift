@@ -15,8 +15,8 @@ struct LockedCurrencyPicker: View {
         HStack {
             Text("Default currency")
             Spacer()
-            Text(defaultCurrency.first?.pair ?? "USD/GBP")
-                .foregroundColor(.secondary)
+//            Text(defaultCurrency.first?.pair ?? "USD/GBP")
+//                .foregroundColor(.secondary)
             
             Image(systemName: "lock")
                 .foregroundColor(.secondary)

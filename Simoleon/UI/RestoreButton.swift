@@ -10,7 +10,6 @@ import Purchases
 
 struct RestoreButton: View {
     @Binding var showingSubscriptionPaywall: Bool
-    
     @State private var alertTitle: LocalizedStringKey = ""
     @State private var alertMessage: LocalizedStringKey = ""
     @State private var restoringPurchases = false
