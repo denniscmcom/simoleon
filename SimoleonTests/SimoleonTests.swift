@@ -24,7 +24,7 @@ class SimoleonTests: XCTestCase {
         let expectedResults = [1: ["USD", "EUR"], 2: ["USD"]]
         
         // Test
-        let currencySelector = CurrencySelector(currencyPair: CurrencyPairModel(baseSymbol: "USD", quoteSymbol: "EUR"))
+        let currencySelector = CurrencySelector(currencyPair: CurrencyPair())
         for testCaseNumber in testCases.keys {
             print("Testing case: \(testCaseNumber)")
             let mockData = testCases[testCaseNumber]!
@@ -41,7 +41,7 @@ class SimoleonTests: XCTestCase {
         let expectedResults = [1: ["GBP"], 2: ["GBP", "EUR"], 3: []]
         
         // Test
-        let currencySelector = CurrencySelector(currencyPair: CurrencyPairModel(baseSymbol: "USD", quoteSymbol: "EUR"))
+        let currencySelector = CurrencySelector(currencyPair: CurrencyPair())
         for testCaseNumber in testCases.keys {
             print("Testing case: \(testCaseNumber)")
             let mockData = testCases[testCaseNumber]!

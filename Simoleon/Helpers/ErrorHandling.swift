@@ -13,4 +13,8 @@ class ErrorHandling {
         case loadFailed(cause: String)
         case parseFailed(cause: String)
     }
+    
+    enum Networking: Error {
+        case invalidURL
+    }
 }

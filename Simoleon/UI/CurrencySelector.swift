@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct CurrencySelector: View {
-    @State var currencyPair: CurrencyPairModel
+    @ObservedObject var currencyPair: CurrencyPair
     @State private var showingList = false
     @State private var modalSelection: ModalType = .allCurrencies
-    let currencyPairsSupported: [String] = try! read(json: "CurrencyPairsSupported.json")
+    let currencyPairsSupported: [String] = try! readJson(from: "CurrencyPairsSupported.json")
     
     private enum ModalType {
         case allCurrencies, compatibleCurrencies
@@ -84,6 +84,6 @@ struct CurrencySelector: View {
 
 struct CurrencySelector_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencySelector(currencyPair: CurrencyPairModel(baseSymbol: "USD", quoteSymbol: "EUR"))
+        CurrencySelector(currencyPair: CurrencyPair())
     }
 }

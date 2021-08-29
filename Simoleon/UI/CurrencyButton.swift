@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CurrencyButton: View {
     var selectedCurrency: String
-    let currencyDetails: [String: CurrencyModel] = try! read(json: "Currencies.json")
+    let currencyDetails: [String: CurrencyModel] = try! readJson(from: "Currencies.json")
     
     var body: some View {
         let currency = currencyDetails[selectedCurrency]!

@@ -14,7 +14,7 @@ struct SimoleonApp: App {
     let persistenceController = PersistenceController.shared
     
     init() {
-        let apiKey = readConfigVariable(withKey: "PURCHASES_KEY")!
+        let apiKey = readConfig(withKey: "PURCHASES_KEY")!
         Purchases.configure(withAPIKey: apiKey)
     }
     

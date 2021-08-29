@@ -15,18 +15,17 @@ struct ContentView: View {
     }
     
     @ViewBuilder var adjustedView: some View {
-        let currencyPair = CurrencyPairModel(baseSymbol: "USD", quoteSymbol: "EUR")
         
         // MARK: - iPad
         if UIDevice.current.userInterfaceIdiom == .pad {
             NavigationView {
 //                Sidebar()
-                ConversionView(currencyPair: currencyPair)
+                ConversionView()
             }
         } else {
             // MARK: - iPhone
             TabView(selection: $tab) {
-                ConversionView(currencyPair: currencyPair)
+                ConversionView()
                     .tabItem {
                         Label("Convert", systemImage: "arrow.counterclockwise.circle")
                     }
