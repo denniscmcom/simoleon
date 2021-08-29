@@ -14,9 +14,8 @@ struct Flag: View {
         Image(flag)
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: 30, height: 30)
+            .frame(width: 35, height: 35)
             .clipShape(Circle())
-            .overlay(Circle().stroke(Color(.secondaryLabel), lineWidth: 1))
     }
 }
 

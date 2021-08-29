@@ -12,7 +12,7 @@ struct CurrencyList: View {
     @Binding var selectedCurrency: String
     @State private var searchCurrency = ""
     @Environment(\.presentationMode) private var presentation
-    let currencyDetails: [String: CurrencyModel] = try! read(json: "Currencies.json")
+    let currencyDetails: [String: CurrencyModel] = try! readJson(from: "Currencies.json")
     
     var searchResults: [String] {
         if searchCurrency.isEmpty {

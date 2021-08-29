@@ -15,11 +15,12 @@
 		9522CD9D26CED2E100DD9D03 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522CD9C26CED2E100DD9D03 /* ErrorHandling.swift */; };
 		9531D44226D8E4CF00665D2A /* SimoleonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9531D44126D8E4CF00665D2A /* SimoleonTests.swift */; };
 		953B8B1726D3A970003CF530 /* CurrencyDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B8B1626D3A970003CF530 /* CurrencyDetailsModel.swift */; };
+		9547423526DBE56600415B3F /* ConversionTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9547423426DBE56600415B3F /* ConversionTextfield.swift */; };
 		95561E3F26AF25EF00CCB543 /* SubscriptionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */; };
 		95562D4D26A8962A0047E778 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95562D4C26A8962A0047E778 /* StoreKit.framework */; };
 		95562D5226A8AEF60047E778 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 95562D5126A8AEF60047E778 /* Purchases */; };
 		957065E226A5FE0400523E68 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957065E126A5FE0400523E68 /* SettingsView.swift */; };
-		957DCF3326D7ADEA00BCAB1E /* CurrencyPairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DCF3226D7ADEA00BCAB1E /* CurrencyPairModel.swift */; };
+		957DCF3326D7ADEA00BCAB1E /* CurrencyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DCF3226D7ADEA00BCAB1E /* CurrencyPair.swift */; };
 		95851CE326D4DAAE004ADA79 /* CurrencyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CE226D4DAAE004ADA79 /* CurrencyButton.swift */; };
 		95851CE526D4DB4C004ADA79 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CE426D4DB4C004ADA79 /* Flag.swift */; };
 		9585BB1426A6B7F400E3193E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1326A6B7F400E3193E /* NetworkHelper.swift */; };
@@ -119,11 +120,12 @@
 		9531D44126D8E4CF00665D2A /* SimoleonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonTests.swift; sourceTree = "<group>"; };
 		9531D44326D8E4CF00665D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		953B8B1626D3A970003CF530 /* CurrencyDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsModel.swift; sourceTree = "<group>"; };
+		9547423426DBE56600415B3F /* ConversionTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionTextfield.swift; sourceTree = "<group>"; };
 		95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFeature.swift; sourceTree = "<group>"; };
 		95562D4C26A8962A0047E778 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		956088B526B9307600A4FD6C /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		957065E126A5FE0400523E68 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		957DCF3226D7ADEA00BCAB1E /* CurrencyPairModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairModel.swift; sourceTree = "<group>"; };
+		957DCF3226D7ADEA00BCAB1E /* CurrencyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPair.swift; sourceTree = "<group>"; };
 		95851CE226D4DAAE004ADA79 /* CurrencyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyButton.swift; sourceTree = "<group>"; };
 		95851CE426D4DB4C004ADA79 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 		9585BB0F26A6B58500E3193E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -257,7 +259,7 @@
 				95AC820626DAA3ED00CD5C3F /* FavoritePair+CoreDataProperties.swift */,
 				95AEBCA226A0900E00613729 /* CurrencyQuoteModel.swift */,
 				953B8B1626D3A970003CF530 /* CurrencyDetailsModel.swift */,
-				957DCF3226D7ADEA00BCAB1E /* CurrencyPairModel.swift */,
+				957DCF3226D7ADEA00BCAB1E /* CurrencyPair.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -399,6 +401,7 @@
 				95CE6A3526D50B7700D9DCBD /* CurrencyList.swift */,
 				95C5179826A5EC9F00BC2B24 /* FavoriteButton.swift */,
 				95B54F4926A4A450001DC0D8 /* ConversionBox.swift */,
+				9547423426DBE56600415B3F /* ConversionTextfield.swift */,
 				95AEBC9C26A04D4600613729 /* CurrencyRow.swift */,
 				95851CE426D4DB4C004ADA79 /* Flag.swift */,
 				95B54F5026A4ACAC001DC0D8 /* Sidebar.swift */,
@@ -708,7 +711,7 @@
 				95D8C8D126A9BC6200BCC188 /* LockedCurrencyPicker.swift in Sources */,
 				95C517A126A5F6C000BC2B24 /* ResignKeyboard.swift in Sources */,
 				95CE6A3626D50B7700D9DCBD /* CurrencyList.swift in Sources */,
-				957DCF3326D7ADEA00BCAB1E /* CurrencyPairModel.swift in Sources */,
+				957DCF3326D7ADEA00BCAB1E /* CurrencyPair.swift in Sources */,
 				95AEBC9D26A04D4600613729 /* CurrencyRow.swift in Sources */,
 				95AEBCA326A0900E00613729 /* CurrencyQuoteModel.swift in Sources */,
 				9585BB1426A6B7F400E3193E /* NetworkHelper.swift in Sources */,
@@ -718,6 +721,7 @@
 				953B8B1726D3A970003CF530 /* CurrencyDetailsModel.swift in Sources */,
 				95C5179126A5DC8E00BC2B24 /* ConditionalWrapper.swift in Sources */,
 				95B54F5126A4ACAC001DC0D8 /* Sidebar.swift in Sources */,
+				9547423526DBE56600415B3F /* ConversionTextfield.swift in Sources */,
 				95561E3F26AF25EF00CCB543 /* SubscriptionFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

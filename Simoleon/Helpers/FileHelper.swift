@@ -7,10 +7,8 @@
 
 import Foundation
 
-/*
- Decode and read json file
- */
-func read<T: Decodable>(json filename: String) throws -> T {
+
+func readJson<T: Decodable>(from filename: String) throws -> T {
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
@@ -32,10 +30,7 @@ func read<T: Decodable>(json filename: String) throws -> T {
     }
 }
 
-/*
- Read configuration variables from Config.xconfig
- */
-func readConfigVariable(withKey: String) -> String? {
+func readConfig(withKey: String) -> String? {
     return (Bundle.main.infoDictionary?[withKey] as? String)?
         .replacingOccurrences(of: "\\", with: "")
 }

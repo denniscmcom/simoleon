@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoriteButton: View {
-    @State var currencyPair: CurrencyPairModel
+    @ObservedObject var currencyPair: CurrencyPair
     @State private var scale: CGFloat = 1
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var favoritePairs: FetchedResults<FavoritePair>
@@ -91,6 +91,6 @@ struct FavoriteButton: View {
 
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteButton(currencyPair: CurrencyPairModel(baseSymbol: "USD", quoteSymbol: "EUR"))
+        FavoriteButton(currencyPair: CurrencyPair())
     }
 }
