@@ -9,8 +9,10 @@ import SwiftUI
 
 struct CurrencyList: View {
     var currencies: [String]
-    @Binding var selectedCurrency: String
+    var selection: Selection
+    @ObservedObject var currencyConversion: CurrencyConversion
     @State private var searchCurrency = ""
+    
     @Environment(\.presentationMode) private var presentation
     let currencyDetails: [String: CurrencyModel] = try! readJson(from: "Currencies.json")
     
@@ -30,7 +32,15 @@ struct CurrencyList: View {
                     .accessibilityIdentifier("CurrencySearchBar")
                 
                 ForEach(searchResults, id: \.self) { symbol in
-                    Button(action: {selectedCurrency = symbol; presentation.wrappedValue.dismiss()}) {
+                    Button(action: {
+                        if selection == .baseSymbol {
+                            currencyConversion.baseSymbol = symbol
+                        } else {
+                            currencyConversion.quoteSymbol = symbol
+                        }
+                        
+                        presentation.wrappedValue.dismiss()
+                    }) {
                         let currency = currencyDetails[symbol]!
                         CurrencyRow(currency: currency)
                     }
@@ -48,6 +58,10 @@ struct CurrencyList: View {
             }
         }
     }
+    
+    enum Selection {
+        case baseSymbol, quoteSymbol
+    }
 }
 extension View {
     func listStyle() -> some View {
@@ -57,6 +71,6 @@ extension View {
 
 struct CurrencyList_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyList(currencies: ["USD"], selectedCurrency: .constant("USD"))
+        CurrencyList(currencies: ["USD"], selection: .baseSymbol, currencyConversion: CurrencyConversion())
     }
 }

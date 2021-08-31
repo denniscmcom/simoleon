@@ -20,7 +20,7 @@
 		95562D4D26A8962A0047E778 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95562D4C26A8962A0047E778 /* StoreKit.framework */; };
 		95562D5226A8AEF60047E778 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 95562D5126A8AEF60047E778 /* Purchases */; };
 		957065E226A5FE0400523E68 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957065E126A5FE0400523E68 /* SettingsView.swift */; };
-		957DCF3326D7ADEA00BCAB1E /* CurrencyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DCF3226D7ADEA00BCAB1E /* CurrencyPair.swift */; };
+		957DCF3326D7ADEA00BCAB1E /* CurrencyConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DCF3226D7ADEA00BCAB1E /* CurrencyConversion.swift */; };
 		95851CE326D4DAAE004ADA79 /* CurrencyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CE226D4DAAE004ADA79 /* CurrencyButton.swift */; };
 		95851CE526D4DB4C004ADA79 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CE426D4DB4C004ADA79 /* Flag.swift */; };
 		9585BB1426A6B7F400E3193E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585BB1326A6B7F400E3193E /* NetworkHelper.swift */; };
@@ -125,7 +125,7 @@
 		95562D4C26A8962A0047E778 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		956088B526B9307600A4FD6C /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		957065E126A5FE0400523E68 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		957DCF3226D7ADEA00BCAB1E /* CurrencyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPair.swift; sourceTree = "<group>"; };
+		957DCF3226D7ADEA00BCAB1E /* CurrencyConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversion.swift; sourceTree = "<group>"; };
 		95851CE226D4DAAE004ADA79 /* CurrencyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyButton.swift; sourceTree = "<group>"; };
 		95851CE426D4DB4C004ADA79 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 		9585BB0F26A6B58500E3193E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 				95AC820626DAA3ED00CD5C3F /* FavoritePair+CoreDataProperties.swift */,
 				95AEBCA226A0900E00613729 /* CurrencyQuoteModel.swift */,
 				953B8B1626D3A970003CF530 /* CurrencyDetailsModel.swift */,
-				957DCF3226D7ADEA00BCAB1E /* CurrencyPair.swift */,
+				957DCF3226D7ADEA00BCAB1E /* CurrencyConversion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -711,7 +711,7 @@
 				95D8C8D126A9BC6200BCC188 /* LockedCurrencyPicker.swift in Sources */,
 				95C517A126A5F6C000BC2B24 /* ResignKeyboard.swift in Sources */,
 				95CE6A3626D50B7700D9DCBD /* CurrencyList.swift in Sources */,
-				957DCF3326D7ADEA00BCAB1E /* CurrencyPair.swift in Sources */,
+				957DCF3326D7ADEA00BCAB1E /* CurrencyConversion.swift in Sources */,
 				95AEBC9D26A04D4600613729 /* CurrencyRow.swift in Sources */,
 				95AEBCA326A0900E00613729 /* CurrencyQuoteModel.swift in Sources */,
 				9585BB1426A6B7F400E3193E /* NetworkHelper.swift in Sources */,

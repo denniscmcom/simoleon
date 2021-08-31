@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoriteButton: View {
-    @ObservedObject var currencyPair: CurrencyPair
+    @ObservedObject var currencyConversion: CurrencyConversion
     @State private var scale: CGFloat = 1
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var favoritePairs: FetchedResults<FavoritePair>
@@ -43,8 +43,8 @@ struct FavoriteButton: View {
     
     func add() {
         let favoritePair = FavoritePair(context: viewContext)
-        favoritePair.baseSymbol = currencyPair.baseSymbol
-        favoritePair.quoteSymbol = currencyPair.quoteSymbol
+        favoritePair.baseSymbol = currencyConversion.baseSymbol
+        favoritePair.quoteSymbol = currencyConversion.quoteSymbol
         
         do {
             try viewContext.save()
@@ -57,7 +57,7 @@ struct FavoriteButton: View {
     func remove() {
         let favoritePair = favoritePairs.first(
             where: {
-                $0.baseSymbol == currencyPair.baseSymbol && $0.quoteSymbol == currencyPair.quoteSymbol
+                $0.baseSymbol == currencyConversion.baseSymbol && $0.quoteSymbol == currencyConversion.quoteSymbol
         })
         
         viewContext.delete(favoritePair!)
@@ -73,7 +73,7 @@ struct FavoriteButton: View {
     func isFavorite() -> Bool {
         let favoritePair = favoritePairs.first(
             where: {
-                $0.baseSymbol == currencyPair.baseSymbol && $0.quoteSymbol == currencyPair.quoteSymbol
+                $0.baseSymbol == currencyConversion.baseSymbol && $0.quoteSymbol == currencyConversion.quoteSymbol
         })
         
         guard let _ = favoritePair else { return false }
@@ -91,6 +91,6 @@ struct FavoriteButton: View {
 
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteButton(currencyPair: CurrencyPair())
+        FavoriteButton(currencyConversion: CurrencyConversion())
     }
 }
