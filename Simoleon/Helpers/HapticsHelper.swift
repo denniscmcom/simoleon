@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class Haptics {
+class HapticsHelper {
     
     // MARK: - Simple success
     func simpleSuccess() {
