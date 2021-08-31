@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct CurrencySelector: View {
-    @ObservedObject var currencyPair: CurrencyPair
-    @State private var showingList = false
+    @ObservedObject var currencyConversion: CurrencyConversion
     @State private var modalSelection: ModalType = .allCurrencies
+    @State private var showingList = false
+    
     let currencyPairsSupported: [String] = try! readJson(from: "CurrencyPairsSupported.json")
     
     private enum ModalType {
@@ -23,31 +24,31 @@ struct CurrencySelector: View {
                 modalSelection = .allCurrencies
                 showingList = true
             }) {
-                CurrencyButton(selectedCurrency: currencyPair.baseSymbol)
+                CurrencyButton(selectedCurrency: currencyConversion.baseSymbol)
             }
             
             Button(action: {
                 modalSelection = .compatibleCurrencies
                 showingList = true
             }) {
-                CurrencyButton(selectedCurrency: currencyPair.quoteSymbol)
+                CurrencyButton(selectedCurrency: currencyConversion.quoteSymbol)
             }
         }
-        .onChange(of: currencyPair.baseSymbol) { _ in
+        .onChange(of: currencyConversion.baseSymbol) { _ in
             // If the previous quote symbol is not compatible anymore with base symbol
             // return the first symbol of the new compatible symbols list
-            let compatibleCurrencies = get(currencyType: .compatible(with: currencyPair.baseSymbol), from: currencyPairsSupported)
-            if !compatibleCurrencies.contains(currencyPair.quoteSymbol) {
-                currencyPair.quoteSymbol = compatibleCurrencies.sorted().first!
+            let compatibleCurrencies = get(currencyType: .compatible(with: currencyConversion.baseSymbol), from: currencyPairsSupported)
+            if !compatibleCurrencies.contains(currencyConversion.quoteSymbol) {
+                currencyConversion.quoteSymbol = compatibleCurrencies.sorted().first!
             }
         }
         .sheet(isPresented: $showingList) {
             if modalSelection == .allCurrencies {
                 let currencies = get(currencyType: .all, from: currencyPairsSupported)
-                CurrencyList(currencies: currencies, selectedCurrency: $currencyPair.baseSymbol)
+                CurrencyList(currencies: currencies, selection: .baseSymbol, currencyConversion: currencyConversion)
             } else {
-                let currencies = get(currencyType: .compatible(with: currencyPair.baseSymbol), from: currencyPairsSupported)
-                CurrencyList(currencies: currencies, selectedCurrency: $currencyPair.quoteSymbol)
+                let currencies = get(currencyType: .compatible(with: currencyConversion.baseSymbol), from: currencyPairsSupported)
+                CurrencyList(currencies: currencies, selection: .quoteSymbol, currencyConversion: currencyConversion)
             }
         }
     }
@@ -84,6 +85,6 @@ struct CurrencySelector: View {
 
 struct CurrencySelector_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencySelector(currencyPair: CurrencyPair())
+        CurrencySelector(currencyConversion: CurrencyConversion())
     }
 }
