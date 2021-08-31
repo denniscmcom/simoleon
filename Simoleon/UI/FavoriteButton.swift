@@ -13,6 +13,8 @@ struct FavoriteButton: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var favoritePairs: FetchedResults<FavoritePair>
     
+    let hapticsHelper = HapticsHelper()
+    
     var body: some View {
         Button(action: {
             animate()
@@ -21,6 +23,8 @@ struct FavoriteButton: View {
             } else {
                 add()
             }
+            
+            hapticsHelper.simpleSuccess()
         }) {
             RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(Color(.secondarySystemBackground))

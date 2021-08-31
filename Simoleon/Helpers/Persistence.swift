@@ -15,9 +15,18 @@ struct PersistenceController {
         let viewContext = result.container.viewContext
         
         for _ in 0..<10 {
-//            let favorite = Favorite(context: viewContext)
-//            favorite.currencyPair = "GBP/USD"
+            let favoritePair = FavoritePair(context: viewContext)
+            favoritePair.baseSymbol = "USD"
+            favoritePair.quoteSymbol = "EUR"
         }
+        
+        for _ in 0..<10 {
+            let conversionHistory = ConversionHistory(context: viewContext)
+            conversionHistory.baseSymbol = "USD"
+            conversionHistory.quoteSymbol = "EUR"
+            conversionHistory.timestamp = Date()
+        }
+        
         do {
             try viewContext.save()
         } catch {
