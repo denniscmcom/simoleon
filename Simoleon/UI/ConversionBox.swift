@@ -35,6 +35,7 @@ struct ConversionBox: View {
                 Text("\(conversion, specifier: "%.2f")")
                     .font(Font.title.weight(.semibold))
                     .lineLimit(1)
+                    .padding(.top, 1)
             } else {
                 ProgressView()
             }

@@ -16,8 +16,8 @@ extension FavoritePair {
         return NSFetchRequest<FavoritePair>(entityName: "FavoritePair")
     }
 
-    @NSManaged public var baseSymbol: String?
-    @NSManaged public var quoteSymbol: String?
+    @NSManaged public var baseSymbol: String
+    @NSManaged public var quoteSymbol: String
 
 }
 

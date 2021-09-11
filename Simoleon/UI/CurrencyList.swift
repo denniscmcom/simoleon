@@ -28,7 +28,7 @@ struct CurrencyList: View {
         NavigationView {
             List {
                 SearchBar(placeholder: "Search...", text: $searchCurrency)
-                    .padding(.vertical)
+                    .padding(.vertical, 4)
                     .accessibilityIdentifier("CurrencySearchBar")
                 
                 ForEach(searchResults, id: \.self) { symbol in
@@ -43,6 +43,7 @@ struct CurrencyList: View {
                     }) {
                         let currency = currencyDetails[symbol]!
                         CurrencyRow(currency: currency)
+                            .padding(.vertical, 4)
                     }
                 }
             }

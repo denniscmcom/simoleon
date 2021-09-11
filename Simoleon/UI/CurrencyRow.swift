@@ -21,6 +21,7 @@ struct CurrencyRow: View {
                     .font(.subheadline)
                     .lineLimit(1)
             }
+            .foregroundColor(.primary)
             .padding(.horizontal)
         }
     }

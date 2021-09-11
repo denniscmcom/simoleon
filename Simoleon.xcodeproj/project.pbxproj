@@ -10,17 +10,14 @@
 		950093CA26CBC7A200FEBF67 /* SimoleonAppPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950093C926CBC7A200FEBF67 /* SimoleonAppPreview.swift */; };
 		9501E13826D3A52000D14DE5 /* Currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 9501E13726D3A52000D14DE5 /* Currencies.json */; };
 		9501E13A26D3A55200D14DE5 /* CurrencyPairsSupported.json in Resources */ = {isa = PBXBuildFile; fileRef = 9501E13926D3A55200D14DE5 /* CurrencyPairsSupported.json */; };
-		9522BEA926B5A4D20076B098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BEA826B5A4D20076B098 /* AppDelegate.swift */; };
 		9522BEAB26B5AACB0076B098 /* ListModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BEAA26B5AACB0076B098 /* ListModifier.swift */; };
 		9522CD9D26CED2E100DD9D03 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522CD9C26CED2E100DD9D03 /* ErrorHandling.swift */; };
 		9531D44226D8E4CF00665D2A /* SimoleonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9531D44126D8E4CF00665D2A /* SimoleonTests.swift */; };
-		953B8B1726D3A970003CF530 /* CurrencyDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B8B1626D3A970003CF530 /* CurrencyDetailsModel.swift */; };
+		953B8B1726D3A970003CF530 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B8B1626D3A970003CF530 /* CurrencyModel.swift */; };
 		9547423526DBE56600415B3F /* ConversionTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9547423426DBE56600415B3F /* ConversionTextfield.swift */; };
-		95561E3F26AF25EF00CCB543 /* SubscriptionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */; };
-		95562D4D26A8962A0047E778 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95562D4C26A8962A0047E778 /* StoreKit.framework */; };
-		95562D5226A8AEF60047E778 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 95562D5126A8AEF60047E778 /* Purchases */; };
-		957065E226A5FE0400523E68 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957065E126A5FE0400523E68 /* SettingsView.swift */; };
-		95726BC626DE38C000964F3C /* ConversionHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95726BC526DE38C000964F3C /* ConversionHistoryList.swift */; };
+		954D95CE26E4F16D005BE568 /* FavoritePairRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D95CD26E4F16D005BE568 /* FavoritePairRow.swift */; };
+		954D95D026E4FE28005BE568 /* FavoritesPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D95CF26E4FE28005BE568 /* FavoritesPlaceholder.swift */; };
+		957065E226A5FE0400523E68 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957065E126A5FE0400523E68 /* AboutView.swift */; };
 		957DCF3326D7ADEA00BCAB1E /* CurrencyConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DCF3226D7ADEA00BCAB1E /* CurrencyConversion.swift */; };
 		95851CE326D4DAAE004ADA79 /* CurrencyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CE226D4DAAE004ADA79 /* CurrencyButton.swift */; };
 		95851CE526D4DB4C004ADA79 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851CE426D4DB4C004ADA79 /* Flag.swift */; };
@@ -54,10 +51,6 @@
 		95C5B2342697752700941585 /* Simoleon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2322697752700941585 /* Simoleon.xcdatamodeld */; };
 		95C5B24A2697752700941585 /* SimoleonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C5B2492697752700941585 /* SimoleonUITests.swift */; };
 		95CE6A3626D50B7700D9DCBD /* CurrencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CE6A3526D50B7700D9DCBD /* CurrencyList.swift */; };
-		95D8C8C726A95D2900BCC188 /* SubscriptionPaywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8C626A95D2900BCC188 /* SubscriptionPaywall.swift */; };
-		95D8C8CD26A9784500BCC188 /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */; };
-		95D8C8CF26A98A7900BCC188 /* RestoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */; };
-		95D8C8D126A9BC6200BCC188 /* LockedCurrencyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */; };
 		95DA4B5626D7D10100566C5E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956088B526B9307600A4FD6C /* SnapshotHelper.swift */; };
 		95DA4B5926D7E2DE00566C5E /* ChildListResets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA4B5826D7E2DE00566C5E /* ChildListResets.swift */; };
 		95E76436269DFC1A008E9F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E76435269DFC1A008E9F31 /* LaunchScreen.storyboard */; };
@@ -114,19 +107,18 @@
 		950093CB26CBC7A200FEBF67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9501E13726D3A52000D14DE5 /* Currencies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Currencies.json; sourceTree = "<group>"; };
 		9501E13926D3A55200D14DE5 /* CurrencyPairsSupported.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrencyPairsSupported.json; sourceTree = "<group>"; };
-		9522BEA826B5A4D20076B098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9522BEAA26B5AACB0076B098 /* ListModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModifier.swift; sourceTree = "<group>"; };
 		9522CD9C26CED2E100DD9D03 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 		9531D43F26D8E4CF00665D2A /* SimoleonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoleonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9531D44126D8E4CF00665D2A /* SimoleonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonTests.swift; sourceTree = "<group>"; };
 		9531D44326D8E4CF00665D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		953B8B1626D3A970003CF530 /* CurrencyDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsModel.swift; sourceTree = "<group>"; };
+		953B8B1626D3A970003CF530 /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		9547423426DBE56600415B3F /* ConversionTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionTextfield.swift; sourceTree = "<group>"; };
-		95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFeature.swift; sourceTree = "<group>"; };
+		954D95CD26E4F16D005BE568 /* FavoritePairRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePairRow.swift; sourceTree = "<group>"; };
+		954D95CF26E4FE28005BE568 /* FavoritesPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPlaceholder.swift; sourceTree = "<group>"; };
 		95562D4C26A8962A0047E778 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		956088B526B9307600A4FD6C /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
-		957065E126A5FE0400523E68 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		95726BC526DE38C000964F3C /* ConversionHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionHistoryList.swift; sourceTree = "<group>"; };
+		957065E126A5FE0400523E68 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		957DCF3226D7ADEA00BCAB1E /* CurrencyConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversion.swift; sourceTree = "<group>"; };
 		95851CE226D4DAAE004ADA79 /* CurrencyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyButton.swift; sourceTree = "<group>"; };
 		95851CE426D4DB4C004ADA79 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
@@ -184,10 +176,6 @@
 		95C5B2492697752700941585 /* SimoleonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonUITests.swift; sourceTree = "<group>"; };
 		95C5B24B2697752700941585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95CE6A3526D50B7700D9DCBD /* CurrencyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyList.swift; sourceTree = "<group>"; };
-		95D8C8C626A95D2900BCC188 /* SubscriptionPaywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPaywall.swift; sourceTree = "<group>"; };
-		95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
-		95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreButton.swift; sourceTree = "<group>"; };
-		95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedCurrencyPicker.swift; sourceTree = "<group>"; };
 		95DA4B5826D7E2DE00566C5E /* ChildListResets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildListResets.swift; sourceTree = "<group>"; };
 		95E76435269DFC1A008E9F31 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E76437269E0033008E9F31 /* Simoleon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simoleon.entitlements; sourceTree = "<group>"; };
@@ -221,8 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				95E7643A269E0037008E9F31 /* CloudKit.framework in Frameworks */,
-				95562D4D26A8962A0047E778 /* StoreKit.framework in Frameworks */,
-				95562D5226A8AEF60047E778 /* Purchases in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +246,7 @@
 				95AC820526DAA3ED00CD5C3F /* FavoritePair+CoreDataClass.swift */,
 				95AC820626DAA3ED00CD5C3F /* FavoritePair+CoreDataProperties.swift */,
 				95AEBCA226A0900E00613729 /* CurrencyQuoteModel.swift */,
-				953B8B1626D3A970003CF530 /* CurrencyDetailsModel.swift */,
+				953B8B1626D3A970003CF530 /* CurrencyModel.swift */,
 				957DCF3226D7ADEA00BCAB1E /* CurrencyConversion.swift */,
 			);
 			path = Models;
@@ -361,12 +347,11 @@
 				95C5B2352697752700941585 /* Info.plist */,
 				95C5B2322697752700941585 /* Simoleon.xcdatamodeld */,
 				95E76435269DFC1A008E9F31 /* LaunchScreen.storyboard */,
-				9522BEA826B5A4D20076B098 /* AppDelegate.swift */,
 				95C5B2272697752600941585 /* SimoleonApp.swift */,
 				95AEBC9426A03ECB00613729 /* ContentView.swift */,
 				95B54F4326A4842C001DC0D8 /* ConversionView.swift */,
 				95C5179E26A5F34200BC2B24 /* FavoritesView.swift */,
-				957065E126A5FE0400523E68 /* SettingsView.swift */,
+				957065E126A5FE0400523E68 /* AboutView.swift */,
 				95DA4B5226D7D09A00566C5E /* UI */,
 				95FE659A269AFB44008745DE /* Helpers */,
 				95559331269B094A000FD726 /* Models */,
@@ -408,12 +393,8 @@
 				95851CE426D4DB4C004ADA79 /* Flag.swift */,
 				95B54F5026A4ACAC001DC0D8 /* Sidebar.swift */,
 				95909CB226B07BFC00D051AB /* SearchBar.swift */,
-				95D8C8D026A9BC6200BCC188 /* LockedCurrencyPicker.swift */,
-				95D8C8C626A95D2900BCC188 /* SubscriptionPaywall.swift */,
-				95D8C8CC26A9784500BCC188 /* SubscribeButton.swift */,
-				95D8C8CE26A98A7900BCC188 /* RestoreButton.swift */,
-				95561E3E26AF25EF00CCB543 /* SubscriptionFeature.swift */,
-				95726BC526DE38C000964F3C /* ConversionHistoryList.swift */,
+				954D95CD26E4F16D005BE568 /* FavoritePairRow.swift */,
+				954D95CF26E4FE28005BE568 /* FavoritesPlaceholder.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -525,7 +506,6 @@
 			);
 			name = Simoleon;
 			packageProductDependencies = (
-				95562D5126A8AEF60047E778 /* Purchases */,
 			);
 			productName = Simoleon;
 			productReference = 95C5B2242697752600941585 /* Simoleon.app */;
@@ -695,38 +675,33 @@
 				95AA42ED26D78A4A0085570D /* FileHelper.swift in Sources */,
 				95851CE326D4DAAE004ADA79 /* CurrencyButton.swift in Sources */,
 				95C5B2312697752700941585 /* Persistence.swift in Sources */,
-				95726BC626DE38C000964F3C /* ConversionHistoryList.swift in Sources */,
 				95DA4B5926D7E2DE00566C5E /* ChildListResets.swift in Sources */,
 				95AEBC9526A03ECB00613729 /* ContentView.swift in Sources */,
 				9522BEAB26B5AACB0076B098 /* ListModifier.swift in Sources */,
 				95909CB326B07BFC00D051AB /* SearchBar.swift in Sources */,
 				95C1DD6A26D8DF9400315C3F /* CurrencySelector.swift in Sources */,
-				9522BEA926B5A4D20076B098 /* AppDelegate.swift in Sources */,
 				95851CE526D4DB4C004ADA79 /* Flag.swift in Sources */,
-				95D8C8CD26A9784500BCC188 /* SubscribeButton.swift in Sources */,
 				9585BB1A26A6E8FD00E3193E /* HapticsHelper.swift in Sources */,
-				95D8C8CF26A98A7900BCC188 /* RestoreButton.swift in Sources */,
 				95C5179F26A5F34200BC2B24 /* FavoritesView.swift in Sources */,
 				95C5B2282697752600941585 /* SimoleonApp.swift in Sources */,
+				954D95D026E4FE28005BE568 /* FavoritesPlaceholder.swift in Sources */,
 				95B54F4A26A4A450001DC0D8 /* ConversionBox.swift in Sources */,
-				95D8C8C726A95D2900BCC188 /* SubscriptionPaywall.swift in Sources */,
+				954D95CE26E4F16D005BE568 /* FavoritePairRow.swift in Sources */,
 				95AC820A26DAAC6B00CD5C3F /* ButtonAnimation.swift in Sources */,
 				95AC820826DAA3ED00CD5C3F /* FavoritePair+CoreDataProperties.swift in Sources */,
-				95D8C8D126A9BC6200BCC188 /* LockedCurrencyPicker.swift in Sources */,
 				95C517A126A5F6C000BC2B24 /* ResignKeyboard.swift in Sources */,
 				95CE6A3626D50B7700D9DCBD /* CurrencyList.swift in Sources */,
 				957DCF3326D7ADEA00BCAB1E /* CurrencyConversion.swift in Sources */,
 				95AEBC9D26A04D4600613729 /* CurrencyRow.swift in Sources */,
 				95AEBCA326A0900E00613729 /* CurrencyQuoteModel.swift in Sources */,
 				9585BB1426A6B7F400E3193E /* NetworkHelper.swift in Sources */,
-				957065E226A5FE0400523E68 /* SettingsView.swift in Sources */,
+				957065E226A5FE0400523E68 /* AboutView.swift in Sources */,
 				95B54F4426A4842C001DC0D8 /* ConversionView.swift in Sources */,
 				95C5B2342697752700941585 /* Simoleon.xcdatamodeld in Sources */,
-				953B8B1726D3A970003CF530 /* CurrencyDetailsModel.swift in Sources */,
+				953B8B1726D3A970003CF530 /* CurrencyModel.swift in Sources */,
 				95C5179126A5DC8E00BC2B24 /* ConditionalWrapper.swift in Sources */,
 				95B54F5126A4ACAC001DC0D8 /* Sidebar.swift in Sources */,
 				9547423526DBE56600415B3F /* ConversionTextfield.swift in Sources */,
-				95561E3F26AF25EF00CCB543 /* SubscriptionFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1382,14 +1357,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		95562D5126A8AEF60047E778 /* Purchases */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95562D5026A8AEF60047E778 /* XCRemoteSwiftPackageReference "purchases-ios" */;
-			productName = Purchases;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		95C5B2322697752700941585 /* Simoleon.xcdatamodeld */ = {
