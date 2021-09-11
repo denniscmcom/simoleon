@@ -11,7 +11,7 @@ struct ListModifier: ViewModifier {
     func body(content: Content) -> some View {
             content
                 .id(UUID())
-                .listStyle(PlainListStyle())
+                .listStyle(InsetGroupedListStyle())
                 .gesture(
                     DragGesture()
                             .onChanged({ _ in
