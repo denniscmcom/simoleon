@@ -19,7 +19,7 @@ struct ContentView: View {
         // MARK: - iPad
         if UIDevice.current.userInterfaceIdiom == .pad {
             NavigationView {
-//                Sidebar()
+                Sidebar()
                 ConversionView()
             }
         } else {
@@ -31,17 +31,17 @@ struct ContentView: View {
                     }
                     .tag(Tab.convert)
                 
-//                FavoritesView()
-//                    .tabItem {
-//                        Label("Favorites", systemImage: "star")
-//                    }
-//                    .tag(Tab.favorites)
-//
-//                SettingsView()
-//                    .tabItem {
-//                        Label("Settings", systemImage: "gear")
-//                    }
-//                    .tag(Tab.settings)
+                FavoritesView()
+                    .tabItem {
+                        Label("Favorites", systemImage: "star")
+                    }
+                    .tag(Tab.favorites)
+
+                AboutView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+                    .tag(Tab.settings)
             }
         }
     }
