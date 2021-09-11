@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Purchases
 
 struct ConversionView: View {
     var showNavigationView: Bool?
