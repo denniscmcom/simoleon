@@ -20,13 +20,6 @@ struct PersistenceController {
             favoritePair.quoteSymbol = "EUR"
         }
         
-        for _ in 0..<10 {
-            let conversionHistory = ConversionHistory(context: viewContext)
-            conversionHistory.baseSymbol = "USD"
-            conversionHistory.quoteSymbol = "EUR"
-            conversionHistory.timestamp = Date()
-        }
-        
         do {
             try viewContext.save()
         } catch {

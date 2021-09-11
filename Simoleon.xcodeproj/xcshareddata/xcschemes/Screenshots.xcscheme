@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "95C5B2392697752700941585"
+               BlueprintIdentifier = "9531D43E26D8E4CF00665D2A"
                BuildableName = "SimoleonTests.xctest"
                BlueprintName = "SimoleonTests"
                ReferencedContainer = "container:Simoleon.xcodeproj">
