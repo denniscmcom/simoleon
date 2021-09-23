@@ -21,7 +21,7 @@ struct Sidebar: View {
             .accessibilityIdentifier("NavigateToFavorites")
             
             NavigationLink(destination: AboutView()) {
-                Label("About", systemImage: "gear")
+                Label("About", systemImage: "info.circle")
             }
             .accessibilityIdentifier("NavigateToSettings")
         }

@@ -10,7 +10,7 @@ import SwiftUI
 struct AboutView: View {
     var body: some View {
         Form {
-            Section(header: Text("Stay in touch")) {
+            Section(header: Text("Feedback")) {
                 Link(destination: URL(string: "https://itunes.apple.com/app/id1576390953?action=write-review")!) {
                     HStack {
                         Image(systemName: "heart.fill")
@@ -20,7 +20,9 @@ struct AboutView: View {
                         Text("Rate Simoleon")
                     }
                 }
-                
+            }
+            
+            Section(header: Text("Stay in touch")) {
                 Link(destination: URL(string: "https://twitter.com/dennisconcep")!) {
                     HStack {
                         Image("TwitterLogo")
@@ -42,7 +44,7 @@ struct AboutView: View {
                 }
             }
             
-            Section(header: Text("About")) {
+            Section(header: Text("Information")) {
                 Link(destination: URL(string: "https://dennistech.io")!) {
                     Text("Website")
                 }
