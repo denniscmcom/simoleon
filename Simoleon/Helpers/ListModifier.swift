@@ -11,11 +11,12 @@ struct ListModifier: ViewModifier {
     func body(content: Content) -> some View {
             content
                 .id(UUID())
-                .listStyle(PlainListStyle())
-                .gesture(DragGesture()
+                .listStyle(InsetGroupedListStyle())
+                .gesture(
+                    DragGesture()
                             .onChanged({ _ in
                                 UIApplication.shared.dismissKeyboard()
-                            })
+                        })
                 )
         }
 }

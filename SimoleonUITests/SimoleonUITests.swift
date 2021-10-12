@@ -14,9 +14,6 @@ class SimoleonUITests: XCTestCase {
         if UIDevice.current.userInterfaceIdiom == .pad {
             XCUIDevice.shared.orientation = .landscapeLeft
         }
-        
-        let app = XCUIApplication()
-        app.launch()
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
@@ -30,6 +27,8 @@ class SimoleonUITests: XCTestCase {
     
     func testTabBar() throws {
         let app = XCUIApplication()
+        app.launch()
+        
         if UIDevice.current.userInterfaceIdiom == .pad {
             app.tables["Sidebar"].buttons["NavigateToConversion"].tap()
             XCTAssertTrue(app.staticTexts["Convert"].exists)
@@ -54,6 +53,7 @@ class SimoleonUITests: XCTestCase {
     
     func testCurrencySelector() throws {
         let app = XCUIApplication()
+        app.launch()
         app.scrollViews.buttons["OpenCurrencySelector"].tap()
         
         let currencySearchBar = app.textFields["CurrencySearchBar"]
@@ -64,7 +64,7 @@ class SimoleonUITests: XCTestCase {
     
     func testCoreData() throws {
         let app = XCUIApplication()
-        app.scrollViews.buttons["AddToFavorites"].tap()
+        app.launch()
         
         if UIDevice.current.userInterfaceIdiom == .pad {
             app.tables["Sidebar"].buttons["NavigateToFavorites"].tap()

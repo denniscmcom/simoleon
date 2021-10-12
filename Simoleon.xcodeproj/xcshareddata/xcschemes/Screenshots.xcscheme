@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "95C5B2392697752700941585"
+               BlueprintIdentifier = "9531D43E26D8E4CF00665D2A"
                BuildableName = "SimoleonTests.xctest"
                BlueprintName = "SimoleonTests"
                ReferencedContainer = "container:Simoleon.xcodeproj">
@@ -78,6 +78,16 @@
                BlueprintIdentifier = "959F6DE726BBD53500101E53"
                BuildableName = "SimoleonScreenshots.xctest"
                BlueprintName = "SimoleonScreenshots"
+               ReferencedContainer = "container:Simoleon.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "950093C626CBC7A200FEBF67"
+               BuildableName = "SimoleonAppPreview.xctest"
+               BlueprintName = "SimoleonAppPreview"
                ReferencedContainer = "container:Simoleon.xcodeproj">
             </BuildableReference>
          </TestableReference>

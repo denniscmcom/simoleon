@@ -6,5 +6,5 @@ Simoleon is a real-time currency converter with over 170 global currencies and 2
 - Simoleon is synchronised across all your devices.
 - Fast and simple interface.
 
-Privacy policy: https://dennistech.io/simoleon-privacy-policy
-Terms of use: https://dennistech.io/simoleon-terms-of-use
+Privacy policy: https://dennistech.io/apps/simoleon/privacy
+Terms of use: https://dennistech.io/apps/simoleon/terms

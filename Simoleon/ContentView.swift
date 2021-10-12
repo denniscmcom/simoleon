@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) private var defaultCurrency: FetchedResults<DefaultCurrency>
-    
     @State private var tab: Tab = .convert
     
     private enum Tab {
@@ -18,30 +15,31 @@ struct ContentView: View {
     }
     
     @ViewBuilder var adjustedView: some View {
+        
         // MARK: - iPad
         if UIDevice.current.userInterfaceIdiom == .pad {
             NavigationView {
                 Sidebar()
-                Conversion(currencyPair: defaultCurrency.first?.pair ?? "USD/GBP")
+                ConversionView()
             }
         } else {
             // MARK: - iPhone
             TabView(selection: $tab) {
-                Conversion(currencyPair: defaultCurrency.first?.pair ?? "USD/GBP")
+                ConversionView()
                     .tabItem {
                         Label("Convert", systemImage: "arrow.counterclockwise.circle")
                     }
                     .tag(Tab.convert)
                 
-                Favorites()
+                FavoritesView()
                     .tabItem {
                         Label("Favorites", systemImage: "star")
                     }
                     .tag(Tab.favorites)
-                
-                Settings()
+
+                AboutView()
                     .tabItem {
-                        Label("Settings", systemImage: "gear")
+                        Label("About", systemImage: "info.circle")
                     }
                     .tag(Tab.settings)
             }
