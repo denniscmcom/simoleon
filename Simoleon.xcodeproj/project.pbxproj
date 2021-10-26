@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953B98B9272859CD00477D86 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98B8272859CD00477D86 /* Sidebar.swift */; };
+		953B98BB272859DE00477D86 /* ConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98BA272859DE00477D86 /* ConversionView.swift */; };
+		953B98BD272859F000477D86 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98BC272859F000477D86 /* FavoritesView.swift */; };
+		953B98BF272859FB00477D86 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98BE272859FB00477D86 /* AboutView.swift */; };
+		953B98C227285D2600477D86 /* currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 953B98C127285D2600477D86 /* currencies.json */; };
+		953B98C427285E1600477D86 /* CurrencySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98C327285E1600477D86 /* CurrencySelector.swift */; };
+		953B98C827285FA900477D86 /* CurrencySelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98C727285FA900477D86 /* CurrencySelectorButton.swift */; };
+		953B98CB27285FF400477D86 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98CA27285FF400477D86 /* CurrencyModel.swift */; };
 		95DC5D502728176700B1EFA0 /* SimoleonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D4F2728176700B1EFA0 /* SimoleonApp.swift */; };
 		95DC5D522728176700B1EFA0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D512728176700B1EFA0 /* ContentView.swift */; };
 		95DC5D542728176800B1EFA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95DC5D532728176800B1EFA0 /* Assets.xcassets */; };
@@ -37,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		953B98B8272859CD00477D86 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		953B98BA272859DE00477D86 /* ConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionView.swift; sourceTree = "<group>"; };
+		953B98BC272859F000477D86 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		953B98BE272859FB00477D86 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		953B98C127285D2600477D86 /* currencies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currencies.json; sourceTree = "<group>"; };
+		953B98C327285E1600477D86 /* CurrencySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelector.swift; sourceTree = "<group>"; };
+		953B98C727285FA900477D86 /* CurrencySelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectorButton.swift; sourceTree = "<group>"; };
+		953B98CA27285FF400477D86 /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		95DC5D4C2728176700B1EFA0 /* Simoleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simoleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95DC5D4F2728176700B1EFA0 /* SimoleonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonApp.swift; sourceTree = "<group>"; };
 		95DC5D512728176700B1EFA0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +97,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		953B98B7272859B000477D86 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				953B98B8272859CD00477D86 /* Sidebar.swift */,
+				953B98C327285E1600477D86 /* CurrencySelector.swift */,
+				953B98C727285FA900477D86 /* CurrencySelectorButton.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		953B98C027285D0B00477D86 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				953B98C127285D2600477D86 /* currencies.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		953B98C927285FE900477D86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				953B98CA27285FF400477D86 /* CurrencyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		95DC5D432728176700B1EFA0 = {
 			isa = PBXGroup;
 			children = (
@@ -110,9 +152,15 @@
 				95DC5D532728176800B1EFA0 /* Assets.xcassets */,
 				95DC5D7E272817DE00B1EFA0 /* Config.xcconfig */,
 				95DC5D5A2728176800B1EFA0 /* Simoleon.xcdatamodeld */,
+				95DC5D582728176800B1EFA0 /* Persistence.swift */,
 				95DC5D4F2728176700B1EFA0 /* SimoleonApp.swift */,
 				95DC5D512728176700B1EFA0 /* ContentView.swift */,
-				95DC5D582728176800B1EFA0 /* Persistence.swift */,
+				953B98BC272859F000477D86 /* FavoritesView.swift */,
+				953B98BA272859DE00477D86 /* ConversionView.swift */,
+				953B98BE272859FB00477D86 /* AboutView.swift */,
+				953B98B7272859B000477D86 /* Helpers */,
+				953B98C027285D0B00477D86 /* Resources */,
+				953B98C927285FE900477D86 /* Models */,
 				95DC5D552728176800B1EFA0 /* Preview Content */,
 			);
 			path = Simoleon;
@@ -257,6 +305,7 @@
 			files = (
 				95DC5D572728176800B1EFA0 /* Preview Assets.xcassets in Resources */,
 				95DC5D542728176800B1EFA0 /* Assets.xcassets in Resources */,
+				953B98C227285D2600477D86 /* currencies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +330,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953B98BF272859FB00477D86 /* AboutView.swift in Sources */,
+				953B98C427285E1600477D86 /* CurrencySelector.swift in Sources */,
+				953B98BB272859DE00477D86 /* ConversionView.swift in Sources */,
+				953B98B9272859CD00477D86 /* Sidebar.swift in Sources */,
 				95DC5D592728176800B1EFA0 /* Persistence.swift in Sources */,
 				95DC5D522728176700B1EFA0 /* ContentView.swift in Sources */,
+				953B98CB27285FF400477D86 /* CurrencyModel.swift in Sources */,
+				953B98BD272859F000477D86 /* FavoritesView.swift in Sources */,
+				953B98C827285FA900477D86 /* CurrencySelectorButton.swift in Sources */,
 				95DC5D502728176700B1EFA0 /* SimoleonApp.swift in Sources */,
 				95DC5D5C2728176800B1EFA0 /* Simoleon.xcdatamodeld in Sources */,
 			);
