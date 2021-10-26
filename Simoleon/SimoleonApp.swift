@@ -2,7 +2,7 @@
 //  SimoleonApp.swift
 //  Simoleon
 //
-//  Created by Dennis Concepción Martín on 08/07/2021.
+//  Created by Dennis Concepción Martín on 26/10/21.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct SimoleonApp: App {
     let persistenceController = PersistenceController.shared
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()
