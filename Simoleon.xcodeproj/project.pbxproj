@@ -16,6 +16,7 @@
 		95DC5D662728176900B1EFA0 /* SimoleonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D652728176900B1EFA0 /* SimoleonTests.swift */; };
 		95DC5D702728176900B1EFA0 /* SimoleonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D6F2728176900B1EFA0 /* SimoleonUITests.swift */; };
 		95DC5D722728176900B1EFA0 /* SimoleonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D712728176900B1EFA0 /* SimoleonUITestsLaunchTests.swift */; };
+		95DC5D8327281A9F00B1EFA0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95DC5D8227281A9F00B1EFA0 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		95DC5D6F2728176900B1EFA0 /* SimoleonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonUITests.swift; sourceTree = "<group>"; };
 		95DC5D712728176900B1EFA0 /* SimoleonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		95DC5D7E272817DE00B1EFA0 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		95DC5D7F27281A8C00B1EFA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		95DC5D8027281A9700B1EFA0 /* Simoleon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simoleon.entitlements; sourceTree = "<group>"; };
+		95DC5D8227281A9F00B1EFA0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95DC5D8327281A9F00B1EFA0 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,7 @@
 				95DC5D642728176900B1EFA0 /* SimoleonTests */,
 				95DC5D6E2728176900B1EFA0 /* SimoleonUITests */,
 				95DC5D4D2728176700B1EFA0 /* Products */,
+				95DC5D8127281A9F00B1EFA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +105,8 @@
 		95DC5D4E2728176700B1EFA0 /* Simoleon */ = {
 			isa = PBXGroup;
 			children = (
+				95DC5D8027281A9700B1EFA0 /* Simoleon.entitlements */,
+				95DC5D7F27281A8C00B1EFA0 /* Info.plist */,
 				95DC5D532728176800B1EFA0 /* Assets.xcassets */,
 				95DC5D7E272817DE00B1EFA0 /* Config.xcconfig */,
 				95DC5D5A2728176800B1EFA0 /* Simoleon.xcdatamodeld */,
@@ -133,6 +141,14 @@
 				95DC5D712728176900B1EFA0 /* SimoleonUITestsLaunchTests.swift */,
 			);
 			path = SimoleonUITests;
+			sourceTree = "<group>";
+		};
+		95DC5D8127281A9F00B1EFA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95DC5D8227281A9F00B1EFA0 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,12 +444,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Simoleon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,12 +475,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Simoleon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
