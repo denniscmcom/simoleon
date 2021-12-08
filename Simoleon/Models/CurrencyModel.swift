@@ -9,5 +9,5 @@ import Foundation
 
 struct CurrencyModel: Codable {
     var name: String
-    var code: String
+    var flag: String
 }
