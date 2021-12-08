@@ -1,6 +1,6 @@
 //
-//  simoleonApp.swift
-//  simoleon
+//  SimoleonApp.swift
+//  Simoleon
 //
 //  Created by Dennis Concepción Martín on 8/12/21.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct simoleonApp: App {
+struct SimoleonApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {

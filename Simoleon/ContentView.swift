@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  simoleon
+//  Simoleon
 //
 //  Created by Dennis Concepción Martín on 8/12/21.
 //
