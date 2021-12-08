@@ -1,8 +1,8 @@
 //
 //  Persistence.swift
-//  Simoleon
+//  simoleon
 //
-//  Created by Dennis Concepción Martín on 26/10/21.
+//  Created by Dennis Concepción Martín on 8/12/21.
 //
 
 import CoreData
@@ -31,7 +31,7 @@ struct PersistenceController {
     let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Simoleon")
+        container = NSPersistentCloudKitContainer(name: "simoleon")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

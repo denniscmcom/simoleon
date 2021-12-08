@@ -1,14 +1,14 @@
 //
-//  SimoleonTests.swift
-//  SimoleonTests
+//  simoleonTests.swift
+//  simoleonTests
 //
-//  Created by Dennis Concepción Martín on 26/10/21.
+//  Created by Dennis Concepción Martín on 8/12/21.
 //
 
 import XCTest
-@testable import Simoleon
+@testable import simoleon
 
-class SimoleonTests: XCTestCase {
+class simoleonTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

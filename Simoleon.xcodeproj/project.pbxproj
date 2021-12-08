@@ -7,87 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		953B98B9272859CD00477D86 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98B8272859CD00477D86 /* Sidebar.swift */; };
-		953B98BB272859DE00477D86 /* ConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98BA272859DE00477D86 /* ConversionView.swift */; };
-		953B98BD272859F000477D86 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98BC272859F000477D86 /* FavoritesView.swift */; };
-		953B98BF272859FB00477D86 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98BE272859FB00477D86 /* AboutView.swift */; };
-		953B98C227285D2600477D86 /* currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 953B98C127285D2600477D86 /* currencies.json */; };
-		953B98C427285E1600477D86 /* CurrencySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98C327285E1600477D86 /* CurrencySelector.swift */; };
-		953B98C827285FA900477D86 /* CurrencySelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98C727285FA900477D86 /* CurrencySelectorButton.swift */; };
-		953B98CB27285FF400477D86 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B98CA27285FF400477D86 /* CurrencyModel.swift */; };
-		95DC5D502728176700B1EFA0 /* SimoleonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D4F2728176700B1EFA0 /* SimoleonApp.swift */; };
-		95DC5D522728176700B1EFA0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D512728176700B1EFA0 /* ContentView.swift */; };
-		95DC5D542728176800B1EFA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95DC5D532728176800B1EFA0 /* Assets.xcassets */; };
-		95DC5D572728176800B1EFA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95DC5D562728176800B1EFA0 /* Preview Assets.xcassets */; };
-		95DC5D592728176800B1EFA0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D582728176800B1EFA0 /* Persistence.swift */; };
-		95DC5D5C2728176800B1EFA0 /* Simoleon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D5A2728176800B1EFA0 /* Simoleon.xcdatamodeld */; };
-		95DC5D662728176900B1EFA0 /* SimoleonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D652728176900B1EFA0 /* SimoleonTests.swift */; };
-		95DC5D702728176900B1EFA0 /* SimoleonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D6F2728176900B1EFA0 /* SimoleonUITests.swift */; };
-		95DC5D722728176900B1EFA0 /* SimoleonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC5D712728176900B1EFA0 /* SimoleonUITestsLaunchTests.swift */; };
-		95DC5D8327281A9F00B1EFA0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95DC5D8227281A9F00B1EFA0 /* CloudKit.framework */; };
+		9511E2CA2760B72B005EEE8D /* simoleonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511E2C92760B72B005EEE8D /* simoleonApp.swift */; };
+		9511E2CC2760B72B005EEE8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511E2CB2760B72B005EEE8D /* ContentView.swift */; };
+		9511E2CE2760B72C005EEE8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9511E2CD2760B72C005EEE8D /* Assets.xcassets */; };
+		9511E2D12760B72C005EEE8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9511E2D02760B72C005EEE8D /* Preview Assets.xcassets */; };
+		9511E2D32760B72C005EEE8D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511E2D22760B72C005EEE8D /* Persistence.swift */; };
+		9511E2D62760B72C005EEE8D /* simoleon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9511E2D42760B72C005EEE8D /* simoleon.xcdatamodeld */; };
+		9511E2E02760B72C005EEE8D /* simoleonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511E2DF2760B72C005EEE8D /* simoleonTests.swift */; };
+		9511E2EA2760B72C005EEE8D /* simoleonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511E2E92760B72C005EEE8D /* simoleonUITests.swift */; };
+		9511E2EC2760B72C005EEE8D /* simoleonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511E2EB2760B72C005EEE8D /* simoleonUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		95DC5D622728176900B1EFA0 /* PBXContainerItemProxy */ = {
+		9511E2DC2760B72C005EEE8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 95DC5D442728176700B1EFA0 /* Project object */;
+			containerPortal = 9511E2BE2760B72B005EEE8D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 95DC5D4B2728176700B1EFA0;
-			remoteInfo = Simoleon;
+			remoteGlobalIDString = 9511E2C52760B72B005EEE8D;
+			remoteInfo = simoleon;
 		};
-		95DC5D6C2728176900B1EFA0 /* PBXContainerItemProxy */ = {
+		9511E2E62760B72C005EEE8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 95DC5D442728176700B1EFA0 /* Project object */;
+			containerPortal = 9511E2BE2760B72B005EEE8D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 95DC5D4B2728176700B1EFA0;
-			remoteInfo = Simoleon;
+			remoteGlobalIDString = 9511E2C52760B72B005EEE8D;
+			remoteInfo = simoleon;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		953B98B8272859CD00477D86 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
-		953B98BA272859DE00477D86 /* ConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionView.swift; sourceTree = "<group>"; };
-		953B98BC272859F000477D86 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
-		953B98BE272859FB00477D86 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		953B98C127285D2600477D86 /* currencies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currencies.json; sourceTree = "<group>"; };
-		953B98C327285E1600477D86 /* CurrencySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelector.swift; sourceTree = "<group>"; };
-		953B98C727285FA900477D86 /* CurrencySelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectorButton.swift; sourceTree = "<group>"; };
-		953B98CA27285FF400477D86 /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
-		95DC5D4C2728176700B1EFA0 /* Simoleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simoleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		95DC5D4F2728176700B1EFA0 /* SimoleonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonApp.swift; sourceTree = "<group>"; };
-		95DC5D512728176700B1EFA0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		95DC5D532728176800B1EFA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		95DC5D562728176800B1EFA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		95DC5D582728176800B1EFA0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		95DC5D5B2728176800B1EFA0 /* Simoleon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Simoleon.xcdatamodel; sourceTree = "<group>"; };
-		95DC5D612728176900B1EFA0 /* SimoleonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoleonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95DC5D652728176900B1EFA0 /* SimoleonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonTests.swift; sourceTree = "<group>"; };
-		95DC5D6B2728176900B1EFA0 /* SimoleonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoleonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95DC5D6F2728176900B1EFA0 /* SimoleonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonUITests.swift; sourceTree = "<group>"; };
-		95DC5D712728176900B1EFA0 /* SimoleonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		95DC5D7E272817DE00B1EFA0 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		95DC5D7F27281A8C00B1EFA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		95DC5D8027281A9700B1EFA0 /* Simoleon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simoleon.entitlements; sourceTree = "<group>"; };
-		95DC5D8227281A9F00B1EFA0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		9511E2C62760B72B005EEE8D /* simoleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simoleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9511E2C92760B72B005EEE8D /* simoleonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simoleonApp.swift; sourceTree = "<group>"; };
+		9511E2CB2760B72B005EEE8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9511E2CD2760B72C005EEE8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9511E2D02760B72C005EEE8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9511E2D22760B72C005EEE8D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		9511E2D52760B72C005EEE8D /* simoleon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = simoleon.xcdatamodel; sourceTree = "<group>"; };
+		9511E2DB2760B72C005EEE8D /* simoleonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simoleonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9511E2DF2760B72C005EEE8D /* simoleonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simoleonTests.swift; sourceTree = "<group>"; };
+		9511E2E52760B72C005EEE8D /* simoleonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simoleonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9511E2E92760B72C005EEE8D /* simoleonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simoleonUITests.swift; sourceTree = "<group>"; };
+		9511E2EB2760B72C005EEE8D /* simoleonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simoleonUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		95DC5D492728176700B1EFA0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				95DC5D8327281A9F00B1EFA0 /* CloudKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95DC5D5E2728176900B1EFA0 /* Frameworks */ = {
+		9511E2C32760B72B005EEE8D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95DC5D682728176900B1EFA0 /* Frameworks */ = {
+		9511E2D82760B72C005EEE8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9511E2E22760B72C005EEE8D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -97,188 +75,144 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		953B98B7272859B000477D86 /* Helpers */ = {
+		9511E2BD2760B72B005EEE8D = {
 			isa = PBXGroup;
 			children = (
-				953B98B8272859CD00477D86 /* Sidebar.swift */,
-				953B98C327285E1600477D86 /* CurrencySelector.swift */,
-				953B98C727285FA900477D86 /* CurrencySelectorButton.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		953B98C027285D0B00477D86 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				953B98C127285D2600477D86 /* currencies.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		953B98C927285FE900477D86 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				953B98CA27285FF400477D86 /* CurrencyModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		95DC5D432728176700B1EFA0 = {
-			isa = PBXGroup;
-			children = (
-				95DC5D4E2728176700B1EFA0 /* Simoleon */,
-				95DC5D642728176900B1EFA0 /* SimoleonTests */,
-				95DC5D6E2728176900B1EFA0 /* SimoleonUITests */,
-				95DC5D4D2728176700B1EFA0 /* Products */,
-				95DC5D8127281A9F00B1EFA0 /* Frameworks */,
+				9511E2C82760B72B005EEE8D /* simoleon */,
+				9511E2DE2760B72C005EEE8D /* simoleonTests */,
+				9511E2E82760B72C005EEE8D /* simoleonUITests */,
+				9511E2C72760B72B005EEE8D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		95DC5D4D2728176700B1EFA0 /* Products */ = {
+		9511E2C72760B72B005EEE8D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95DC5D4C2728176700B1EFA0 /* Simoleon.app */,
-				95DC5D612728176900B1EFA0 /* SimoleonTests.xctest */,
-				95DC5D6B2728176900B1EFA0 /* SimoleonUITests.xctest */,
+				9511E2C62760B72B005EEE8D /* simoleon.app */,
+				9511E2DB2760B72C005EEE8D /* simoleonTests.xctest */,
+				9511E2E52760B72C005EEE8D /* simoleonUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		95DC5D4E2728176700B1EFA0 /* Simoleon */ = {
+		9511E2C82760B72B005EEE8D /* simoleon */ = {
 			isa = PBXGroup;
 			children = (
-				95DC5D8027281A9700B1EFA0 /* Simoleon.entitlements */,
-				95DC5D7F27281A8C00B1EFA0 /* Info.plist */,
-				95DC5D532728176800B1EFA0 /* Assets.xcassets */,
-				95DC5D7E272817DE00B1EFA0 /* Config.xcconfig */,
-				95DC5D5A2728176800B1EFA0 /* Simoleon.xcdatamodeld */,
-				95DC5D582728176800B1EFA0 /* Persistence.swift */,
-				95DC5D4F2728176700B1EFA0 /* SimoleonApp.swift */,
-				95DC5D512728176700B1EFA0 /* ContentView.swift */,
-				953B98BC272859F000477D86 /* FavoritesView.swift */,
-				953B98BA272859DE00477D86 /* ConversionView.swift */,
-				953B98BE272859FB00477D86 /* AboutView.swift */,
-				953B98B7272859B000477D86 /* Helpers */,
-				953B98C027285D0B00477D86 /* Resources */,
-				953B98C927285FE900477D86 /* Models */,
-				95DC5D552728176800B1EFA0 /* Preview Content */,
+				9511E2C92760B72B005EEE8D /* simoleonApp.swift */,
+				9511E2CB2760B72B005EEE8D /* ContentView.swift */,
+				9511E2CD2760B72C005EEE8D /* Assets.xcassets */,
+				9511E2D22760B72C005EEE8D /* Persistence.swift */,
+				9511E2D42760B72C005EEE8D /* simoleon.xcdatamodeld */,
+				9511E2CF2760B72C005EEE8D /* Preview Content */,
 			);
-			path = Simoleon;
+			path = simoleon;
 			sourceTree = "<group>";
 		};
-		95DC5D552728176800B1EFA0 /* Preview Content */ = {
+		9511E2CF2760B72C005EEE8D /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				95DC5D562728176800B1EFA0 /* Preview Assets.xcassets */,
+				9511E2D02760B72C005EEE8D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		95DC5D642728176900B1EFA0 /* SimoleonTests */ = {
+		9511E2DE2760B72C005EEE8D /* simoleonTests */ = {
 			isa = PBXGroup;
 			children = (
-				95DC5D652728176900B1EFA0 /* SimoleonTests.swift */,
+				9511E2DF2760B72C005EEE8D /* simoleonTests.swift */,
 			);
-			path = SimoleonTests;
+			path = simoleonTests;
 			sourceTree = "<group>";
 		};
-		95DC5D6E2728176900B1EFA0 /* SimoleonUITests */ = {
+		9511E2E82760B72C005EEE8D /* simoleonUITests */ = {
 			isa = PBXGroup;
 			children = (
-				95DC5D6F2728176900B1EFA0 /* SimoleonUITests.swift */,
-				95DC5D712728176900B1EFA0 /* SimoleonUITestsLaunchTests.swift */,
+				9511E2E92760B72C005EEE8D /* simoleonUITests.swift */,
+				9511E2EB2760B72C005EEE8D /* simoleonUITestsLaunchTests.swift */,
 			);
-			path = SimoleonUITests;
-			sourceTree = "<group>";
-		};
-		95DC5D8127281A9F00B1EFA0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				95DC5D8227281A9F00B1EFA0 /* CloudKit.framework */,
-			);
-			name = Frameworks;
+			path = simoleonUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		95DC5D4B2728176700B1EFA0 /* Simoleon */ = {
+		9511E2C52760B72B005EEE8D /* simoleon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95DC5D752728176900B1EFA0 /* Build configuration list for PBXNativeTarget "Simoleon" */;
+			buildConfigurationList = 9511E2EF2760B72C005EEE8D /* Build configuration list for PBXNativeTarget "simoleon" */;
 			buildPhases = (
-				95DC5D482728176700B1EFA0 /* Sources */,
-				95DC5D492728176700B1EFA0 /* Frameworks */,
-				95DC5D4A2728176700B1EFA0 /* Resources */,
+				9511E2C22760B72B005EEE8D /* Sources */,
+				9511E2C32760B72B005EEE8D /* Frameworks */,
+				9511E2C42760B72B005EEE8D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Simoleon;
-			productName = Simoleon;
-			productReference = 95DC5D4C2728176700B1EFA0 /* Simoleon.app */;
+			name = simoleon;
+			productName = simoleon;
+			productReference = 9511E2C62760B72B005EEE8D /* simoleon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		95DC5D602728176900B1EFA0 /* SimoleonTests */ = {
+		9511E2DA2760B72C005EEE8D /* simoleonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95DC5D782728176900B1EFA0 /* Build configuration list for PBXNativeTarget "SimoleonTests" */;
+			buildConfigurationList = 9511E2F22760B72C005EEE8D /* Build configuration list for PBXNativeTarget "simoleonTests" */;
 			buildPhases = (
-				95DC5D5D2728176900B1EFA0 /* Sources */,
-				95DC5D5E2728176900B1EFA0 /* Frameworks */,
-				95DC5D5F2728176900B1EFA0 /* Resources */,
+				9511E2D72760B72C005EEE8D /* Sources */,
+				9511E2D82760B72C005EEE8D /* Frameworks */,
+				9511E2D92760B72C005EEE8D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				95DC5D632728176900B1EFA0 /* PBXTargetDependency */,
+				9511E2DD2760B72C005EEE8D /* PBXTargetDependency */,
 			);
-			name = SimoleonTests;
-			productName = SimoleonTests;
-			productReference = 95DC5D612728176900B1EFA0 /* SimoleonTests.xctest */;
+			name = simoleonTests;
+			productName = simoleonTests;
+			productReference = 9511E2DB2760B72C005EEE8D /* simoleonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		95DC5D6A2728176900B1EFA0 /* SimoleonUITests */ = {
+		9511E2E42760B72C005EEE8D /* simoleonUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95DC5D7B2728176900B1EFA0 /* Build configuration list for PBXNativeTarget "SimoleonUITests" */;
+			buildConfigurationList = 9511E2F52760B72C005EEE8D /* Build configuration list for PBXNativeTarget "simoleonUITests" */;
 			buildPhases = (
-				95DC5D672728176900B1EFA0 /* Sources */,
-				95DC5D682728176900B1EFA0 /* Frameworks */,
-				95DC5D692728176900B1EFA0 /* Resources */,
+				9511E2E12760B72C005EEE8D /* Sources */,
+				9511E2E22760B72C005EEE8D /* Frameworks */,
+				9511E2E32760B72C005EEE8D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				95DC5D6D2728176900B1EFA0 /* PBXTargetDependency */,
+				9511E2E72760B72C005EEE8D /* PBXTargetDependency */,
 			);
-			name = SimoleonUITests;
-			productName = SimoleonUITests;
-			productReference = 95DC5D6B2728176900B1EFA0 /* SimoleonUITests.xctest */;
+			name = simoleonUITests;
+			productName = simoleonUITests;
+			productReference = 9511E2E52760B72C005EEE8D /* simoleonUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		95DC5D442728176700B1EFA0 /* Project object */ = {
+		9511E2BE2760B72B005EEE8D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					95DC5D4B2728176700B1EFA0 = {
+					9511E2C52760B72B005EEE8D = {
 						CreatedOnToolsVersion = 13.1;
 					};
-					95DC5D602728176900B1EFA0 = {
+					9511E2DA2760B72C005EEE8D = {
 						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 95DC5D4B2728176700B1EFA0;
+						TestTargetID = 9511E2C52760B72B005EEE8D;
 					};
-					95DC5D6A2728176900B1EFA0 = {
+					9511E2E42760B72C005EEE8D = {
 						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 95DC5D4B2728176700B1EFA0;
+						TestTargetID = 9511E2C52760B72B005EEE8D;
 					};
 				};
 			};
-			buildConfigurationList = 95DC5D472728176700B1EFA0 /* Build configuration list for PBXProject "Simoleon" */;
+			buildConfigurationList = 9511E2C12760B72B005EEE8D /* Build configuration list for PBXProject "simoleon" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -286,37 +220,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 95DC5D432728176700B1EFA0;
-			productRefGroup = 95DC5D4D2728176700B1EFA0 /* Products */;
+			mainGroup = 9511E2BD2760B72B005EEE8D;
+			productRefGroup = 9511E2C72760B72B005EEE8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95DC5D4B2728176700B1EFA0 /* Simoleon */,
-				95DC5D602728176900B1EFA0 /* SimoleonTests */,
-				95DC5D6A2728176900B1EFA0 /* SimoleonUITests */,
+				9511E2C52760B72B005EEE8D /* simoleon */,
+				9511E2DA2760B72C005EEE8D /* simoleonTests */,
+				9511E2E42760B72C005EEE8D /* simoleonUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		95DC5D4A2728176700B1EFA0 /* Resources */ = {
+		9511E2C42760B72B005EEE8D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95DC5D572728176800B1EFA0 /* Preview Assets.xcassets in Resources */,
-				95DC5D542728176800B1EFA0 /* Assets.xcassets in Resources */,
-				953B98C227285D2600477D86 /* currencies.json in Resources */,
+				9511E2D12760B72C005EEE8D /* Preview Assets.xcassets in Resources */,
+				9511E2CE2760B72C005EEE8D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95DC5D5F2728176900B1EFA0 /* Resources */ = {
+		9511E2D92760B72C005EEE8D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95DC5D692728176900B1EFA0 /* Resources */ = {
+		9511E2E32760B72C005EEE8D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,58 +259,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		95DC5D482728176700B1EFA0 /* Sources */ = {
+		9511E2C22760B72B005EEE8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				953B98BF272859FB00477D86 /* AboutView.swift in Sources */,
-				953B98C427285E1600477D86 /* CurrencySelector.swift in Sources */,
-				953B98BB272859DE00477D86 /* ConversionView.swift in Sources */,
-				953B98B9272859CD00477D86 /* Sidebar.swift in Sources */,
-				95DC5D592728176800B1EFA0 /* Persistence.swift in Sources */,
-				95DC5D522728176700B1EFA0 /* ContentView.swift in Sources */,
-				953B98CB27285FF400477D86 /* CurrencyModel.swift in Sources */,
-				953B98BD272859F000477D86 /* FavoritesView.swift in Sources */,
-				953B98C827285FA900477D86 /* CurrencySelectorButton.swift in Sources */,
-				95DC5D502728176700B1EFA0 /* SimoleonApp.swift in Sources */,
-				95DC5D5C2728176800B1EFA0 /* Simoleon.xcdatamodeld in Sources */,
+				9511E2D32760B72C005EEE8D /* Persistence.swift in Sources */,
+				9511E2CC2760B72B005EEE8D /* ContentView.swift in Sources */,
+				9511E2CA2760B72B005EEE8D /* simoleonApp.swift in Sources */,
+				9511E2D62760B72C005EEE8D /* simoleon.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95DC5D5D2728176900B1EFA0 /* Sources */ = {
+		9511E2D72760B72C005EEE8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95DC5D662728176900B1EFA0 /* SimoleonTests.swift in Sources */,
+				9511E2E02760B72C005EEE8D /* simoleonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95DC5D672728176900B1EFA0 /* Sources */ = {
+		9511E2E12760B72C005EEE8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95DC5D722728176900B1EFA0 /* SimoleonUITestsLaunchTests.swift in Sources */,
-				95DC5D702728176900B1EFA0 /* SimoleonUITests.swift in Sources */,
+				9511E2EC2760B72C005EEE8D /* simoleonUITestsLaunchTests.swift in Sources */,
+				9511E2EA2760B72C005EEE8D /* simoleonUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		95DC5D632728176900B1EFA0 /* PBXTargetDependency */ = {
+		9511E2DD2760B72C005EEE8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 95DC5D4B2728176700B1EFA0 /* Simoleon */;
-			targetProxy = 95DC5D622728176900B1EFA0 /* PBXContainerItemProxy */;
+			target = 9511E2C52760B72B005EEE8D /* simoleon */;
+			targetProxy = 9511E2DC2760B72C005EEE8D /* PBXContainerItemProxy */;
 		};
-		95DC5D6D2728176900B1EFA0 /* PBXTargetDependency */ = {
+		9511E2E72760B72C005EEE8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 95DC5D4B2728176700B1EFA0 /* Simoleon */;
-			targetProxy = 95DC5D6C2728176900B1EFA0 /* PBXContainerItemProxy */;
+			target = 9511E2C52760B72B005EEE8D /* simoleon */;
+			targetProxy = 9511E2E62760B72C005EEE8D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		95DC5D732728176900B1EFA0 /* Debug */ = {
+		9511E2ED2760B72C005EEE8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -438,9 +364,8 @@
 			};
 			name = Debug;
 		};
-		95DC5D742728176900B1EFA0 /* Release */ = {
+		9511E2EE2760B72C005EEE8D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95DC5D7E272817DE00B1EFA0 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -494,20 +419,17 @@
 			};
 			name = Release;
 		};
-		95DC5D762728176900B1EFA0 /* Debug */ = {
+		9511E2F02760B72C005EEE8D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95DC5D7E272817DE00B1EFA0 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Simoleon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -517,8 +439,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
-				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.simoleon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -526,19 +448,17 @@
 			};
 			name = Debug;
 		};
-		95DC5D772728176900B1EFA0 /* Release */ = {
+		9511E2F12760B72C005EEE8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Simoleon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -548,8 +468,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
-				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.simoleon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -557,7 +477,7 @@
 			};
 			name = Release;
 		};
-		95DC5D792728176900B1EFA0 /* Debug */ = {
+		9511E2F32760B72C005EEE8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -573,16 +493,16 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.SimoleonTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.simoleonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simoleon.app/Simoleon";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/simoleon.app/simoleon";
 			};
 			name = Debug;
 		};
-		95DC5D7A2728176900B1EFA0 /* Release */ = {
+		9511E2F42760B72C005EEE8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -598,16 +518,16 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.SimoleonTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.simoleonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simoleon.app/Simoleon";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/simoleon.app/simoleon";
 			};
 			name = Release;
 		};
-		95DC5D7C2728176900B1EFA0 /* Debug */ = {
+		9511E2F62760B72C005EEE8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -621,16 +541,16 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.SimoleonUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.simoleonUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Simoleon;
+				TEST_TARGET_NAME = simoleon;
 			};
 			name = Debug;
 		};
-		95DC5D7D2728176900B1EFA0 /* Release */ = {
+		9511E2F72760B72C005EEE8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -644,50 +564,50 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.SimoleonUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.simoleonUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Simoleon;
+				TEST_TARGET_NAME = simoleon;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95DC5D472728176700B1EFA0 /* Build configuration list for PBXProject "Simoleon" */ = {
+		9511E2C12760B72B005EEE8D /* Build configuration list for PBXProject "simoleon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95DC5D732728176900B1EFA0 /* Debug */,
-				95DC5D742728176900B1EFA0 /* Release */,
+				9511E2ED2760B72C005EEE8D /* Debug */,
+				9511E2EE2760B72C005EEE8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95DC5D752728176900B1EFA0 /* Build configuration list for PBXNativeTarget "Simoleon" */ = {
+		9511E2EF2760B72C005EEE8D /* Build configuration list for PBXNativeTarget "simoleon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95DC5D762728176900B1EFA0 /* Debug */,
-				95DC5D772728176900B1EFA0 /* Release */,
+				9511E2F02760B72C005EEE8D /* Debug */,
+				9511E2F12760B72C005EEE8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95DC5D782728176900B1EFA0 /* Build configuration list for PBXNativeTarget "SimoleonTests" */ = {
+		9511E2F22760B72C005EEE8D /* Build configuration list for PBXNativeTarget "simoleonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95DC5D792728176900B1EFA0 /* Debug */,
-				95DC5D7A2728176900B1EFA0 /* Release */,
+				9511E2F32760B72C005EEE8D /* Debug */,
+				9511E2F42760B72C005EEE8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95DC5D7B2728176900B1EFA0 /* Build configuration list for PBXNativeTarget "SimoleonUITests" */ = {
+		9511E2F52760B72C005EEE8D /* Build configuration list for PBXNativeTarget "simoleonUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95DC5D7C2728176900B1EFA0 /* Debug */,
-				95DC5D7D2728176900B1EFA0 /* Release */,
+				9511E2F62760B72C005EEE8D /* Debug */,
+				9511E2F72760B72C005EEE8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -695,17 +615,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		95DC5D5A2728176800B1EFA0 /* Simoleon.xcdatamodeld */ = {
+		9511E2D42760B72C005EEE8D /* simoleon.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				95DC5D5B2728176800B1EFA0 /* Simoleon.xcdatamodel */,
+				9511E2D52760B72C005EEE8D /* simoleon.xcdatamodel */,
 			);
-			currentVersion = 95DC5D5B2728176800B1EFA0 /* Simoleon.xcdatamodel */;
-			path = Simoleon.xcdatamodeld;
+			currentVersion = 9511E2D52760B72C005EEE8D /* simoleon.xcdatamodel */;
+			path = simoleon.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 95DC5D442728176700B1EFA0 /* Project object */;
+	rootObject = 9511E2BE2760B72B005EEE8D /* Project object */;
 }

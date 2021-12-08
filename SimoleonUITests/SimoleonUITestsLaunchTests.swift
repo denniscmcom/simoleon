@@ -1,13 +1,13 @@
 //
-//  SimoleonUITestsLaunchTests.swift
-//  SimoleonUITests
+//  simoleonUITestsLaunchTests.swift
+//  simoleonUITests
 //
-//  Created by Dennis Concepción Martín on 26/10/21.
+//  Created by Dennis Concepción Martín on 8/12/21.
 //
 
 import XCTest
 
-class SimoleonUITestsLaunchTests: XCTestCase {
+class simoleonUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
