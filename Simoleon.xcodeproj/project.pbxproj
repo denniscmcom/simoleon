@@ -16,6 +16,15 @@
 		9511E31B2760B8D7005EEE8D /* SimoleonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511E31A2760B8D7005EEE8D /* SimoleonTests.swift */; };
 		9511E3252760B8D7005EEE8D /* SimoleonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511E3242760B8D7005EEE8D /* SimoleonUITests.swift */; };
 		9511E3272760B8D7005EEE8D /* SimoleonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511E3262760B8D7005EEE8D /* SimoleonUITestsLaunchTests.swift */; };
+		954573012760C2030084FFC7 /* ConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954573002760C2030084FFC7 /* ConversionView.swift */; };
+		954573042760C2DF0084FFC7 /* ConditionalWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954573032760C2DF0084FFC7 /* ConditionalWrapper.swift */; };
+		954573062760C4810084FFC7 /* CurrencySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954573052760C4810084FFC7 /* CurrencySelector.swift */; };
+		954573082760C4B00084FFC7 /* CurrencyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954573072760C4B00084FFC7 /* CurrencyBox.swift */; };
+		9545730B2760C5FC0084FFC7 /* SupportedCurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 9545730A2760C5FC0084FFC7 /* SupportedCurrencies.json */; };
+		9545730D2760C77C0084FFC7 /* ReadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9545730C2760C77C0084FFC7 /* ReadJson.swift */; };
+		954573102760C8980084FFC7 /* SupportedCurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9545730F2760C8980084FFC7 /* SupportedCurrencyModel.swift */; };
+		954573122760C8D60084FFC7 /* SupportedPairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954573112760C8D60084FFC7 /* SupportedPairModel.swift */; };
+		954573162760CE3B0084FFC7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954573152760CE3B0084FFC7 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,17 @@
 		9511E3202760B8D7005EEE8D /* SimoleonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoleonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9511E3242760B8D7005EEE8D /* SimoleonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonUITests.swift; sourceTree = "<group>"; };
 		9511E3262760B8D7005EEE8D /* SimoleonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoleonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		954573002760C2030084FFC7 /* ConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionView.swift; sourceTree = "<group>"; };
+		954573032760C2DF0084FFC7 /* ConditionalWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalWrapper.swift; sourceTree = "<group>"; };
+		954573052760C4810084FFC7 /* CurrencySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelector.swift; sourceTree = "<group>"; };
+		954573072760C4B00084FFC7 /* CurrencyBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyBox.swift; sourceTree = "<group>"; };
+		9545730A2760C5FC0084FFC7 /* SupportedCurrencies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SupportedCurrencies.json; sourceTree = "<group>"; };
+		9545730C2760C77C0084FFC7 /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadJson.swift; sourceTree = "<group>"; };
+		9545730F2760C8980084FFC7 /* SupportedCurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedCurrencyModel.swift; sourceTree = "<group>"; };
+		954573112760C8D60084FFC7 /* SupportedPairModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedPairModel.swift; sourceTree = "<group>"; };
+		954573132760CE380084FFC7 /* Simoleon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simoleon.entitlements; sourceTree = "<group>"; };
+		954573152760CE3B0084FFC7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		954573172760CE490084FFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				954573162760CE3B0084FFC7 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +103,7 @@
 				9511E3192760B8D7005EEE8D /* SimoleonTests */,
 				9511E3232760B8D7005EEE8D /* SimoleonUITests */,
 				9511E3022760B8D6005EEE8D /* Products */,
+				954573142760CE3B0084FFC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +120,17 @@
 		9511E3032760B8D6005EEE8D /* Simoleon */ = {
 			isa = PBXGroup;
 			children = (
-				9511E3042760B8D6005EEE8D /* SimoleonApp.swift */,
-				9511E3062760B8D6005EEE8D /* ContentView.swift */,
+				954573172760CE490084FFC7 /* Info.plist */,
+				954573132760CE380084FFC7 /* Simoleon.entitlements */,
 				9511E3082760B8D7005EEE8D /* Assets.xcassets */,
-				9511E30D2760B8D7005EEE8D /* Persistence.swift */,
 				9511E30F2760B8D7005EEE8D /* Simoleon.xcdatamodeld */,
+				9511E3042760B8D6005EEE8D /* SimoleonApp.swift */,
+				9511E30D2760B8D7005EEE8D /* Persistence.swift */,
+				9511E3062760B8D6005EEE8D /* ContentView.swift */,
+				954573002760C2030084FFC7 /* ConversionView.swift */,
+				954573022760C2CE0084FFC7 /* Helpers */,
+				9545730E2760C8840084FFC7 /* Models */,
+				954573092760C5DC0084FFC7 /* Resources */,
 				9511E30A2760B8D7005EEE8D /* Preview Content */,
 			);
 			path = Simoleon;
@@ -131,6 +159,42 @@
 				9511E3262760B8D7005EEE8D /* SimoleonUITestsLaunchTests.swift */,
 			);
 			path = SimoleonUITests;
+			sourceTree = "<group>";
+		};
+		954573022760C2CE0084FFC7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				954573032760C2DF0084FFC7 /* ConditionalWrapper.swift */,
+				954573052760C4810084FFC7 /* CurrencySelector.swift */,
+				954573072760C4B00084FFC7 /* CurrencyBox.swift */,
+				9545730C2760C77C0084FFC7 /* ReadJson.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		954573092760C5DC0084FFC7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9545730A2760C5FC0084FFC7 /* SupportedCurrencies.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9545730E2760C8840084FFC7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9545730F2760C8980084FFC7 /* SupportedCurrencyModel.swift */,
+				954573112760C8D60084FFC7 /* SupportedPairModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		954573142760CE3B0084FFC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				954573152760CE3B0084FFC7 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9511E30C2760B8D7005EEE8D /* Preview Assets.xcassets in Resources */,
+				9545730B2760C5FC0084FFC7 /* SupportedCurrencies.json in Resources */,
 				9511E3092760B8D7005EEE8D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9545730D2760C77C0084FFC7 /* ReadJson.swift in Sources */,
+				954573102760C8980084FFC7 /* SupportedCurrencyModel.swift in Sources */,
+				954573082760C4B00084FFC7 /* CurrencyBox.swift in Sources */,
+				954573042760C2DF0084FFC7 /* ConditionalWrapper.swift in Sources */,
 				9511E30E2760B8D7005EEE8D /* Persistence.swift in Sources */,
+				954573122760C8D60084FFC7 /* SupportedPairModel.swift in Sources */,
+				954573012760C2030084FFC7 /* ConversionView.swift in Sources */,
+				954573062760C4810084FFC7 /* CurrencySelector.swift in Sources */,
 				9511E3072760B8D6005EEE8D /* ContentView.swift in Sources */,
 				9511E3052760B8D6005EEE8D /* SimoleonApp.swift in Sources */,
 				9511E3112760B8D7005EEE8D /* Simoleon.xcdatamodeld in Sources */,
@@ -424,12 +496,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Simoleon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -453,12 +527,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Simoleon/Simoleon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simoleon/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Simoleon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,7 +544,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.Simoleon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

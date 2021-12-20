@@ -17,10 +17,31 @@ class SimoleonTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testGetBaseCurrencies() throws {
+        let baseCurrency = SupportedCurrencyResult(code: "EUR", name: "Euro", isCrypto: 0)
+        let quoteCurrency = SupportedCurrencyResult(code: "CHF", name: "Swiss Franc", isCrypto: 0)
+        let currencyList = CurrencyList(
+            baseCurrency: .constant(baseCurrency),
+            quoteCurrency: .constant(quoteCurrency),
+            selecting: .baseCurrency
+        )
+        
+        let baseCurrencies = currencyList.getCurrencies()
+        XCTAssertEqual(baseCurrencies.count, 5, "Base currencies does not match")
+    }
+    
+    func testGetQuoteCurrencies() throws {
+        let baseCurrency = SupportedCurrencyResult(code: "EUR", name: "Euro", isCrypto: 0)
+        let quoteCurrency = SupportedCurrencyResult(code: "CHF", name: "Swiss Franc", isCrypto: 0)
+        let currencyList = CurrencyList(
+            baseCurrency: .constant(baseCurrency),
+            quoteCurrency: .constant(quoteCurrency),
+            selecting: .quoteCurrency
+        )
+        
+        let quoteCurrencies = currencyList.getCurrencies()
+        XCTAssertEqual(quoteCurrencies.count, 18, "Quote currencies does not match")
     }
 
     func testPerformanceExample() throws {
