@@ -12,20 +12,28 @@ struct CurrencyList: View {
     @Binding var baseCurrency: SupportedCurrencyResult
     @Binding var quoteCurrency: SupportedCurrencyResult
     var selecting: Selection
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationView {
             List {
                 let currencies = getCurrencies()
                 ForEach(currencies, id: \.self) { currency in
-                    Text(currency.code)
+                    CurrencyRow(currency: currency)
                 }
             }
             .navigationTitle("Currencies")
+            .toolbar {
+                ToolbarItem(placement: .destructiveAction) {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "multiply.circle.fill")
+                    }
+                }
+            }
         }
     }
     
-    // MARK: - Get compatible currencies given currency code
+    // Get compatible currencies given currency code
     func getCurrencies() -> [SupportedCurrencyResult] {
         let pairs: SupportedPairResponse = readJson(from: "SupportedCurrencies.json")
         let currencies: SupportedCurrencyResponse = readJson(from: "SupportedCurrencies.json")

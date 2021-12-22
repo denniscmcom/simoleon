@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Read JSON file
 func readJson<T: Decodable>(from filename: String) -> T {
     let data: Data
     
