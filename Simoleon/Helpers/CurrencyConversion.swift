@@ -86,7 +86,7 @@ struct CurrencyConversion_Previews: PreviewProvider {
                         )
                     ]
                 ),
-            currencyCode: "CHF",
+            currencyCode: "USD",
             amount: .constant("1")
         )
     }

@@ -18,23 +18,29 @@ struct ContentView: View {
         if UIDevice.current.userInterfaceIdiom == .pad {
             NavigationView {
                 Sidebar()
-                ConversionView()
+                ConversionView(
+                    baseCurrency: SupportedCurrencyResult(code: "EUR", name: "Euro", isCrypto: 0),
+                    quoteCurrency: SupportedCurrencyResult(code: "USD", name: "U.S. Dollar", isCrypto: 0)
+                )
             }
         } else {
             TabView(selection: $tab) {
-                ConversionView()
+                ConversionView(
+                    baseCurrency: SupportedCurrencyResult(code: "EUR", name: "Euro", isCrypto: 0),
+                    quoteCurrency: SupportedCurrencyResult(code: "USD", name: "U.S. Dollar", isCrypto: 0)
+                )
                     .tabItem {
                         Label("Convert", systemImage: "arrow.counterclockwise.circle")
                     }
                     .tag(Tab.convert)
                 
-                Text("Favorites View")
+                FavoritesView()
                     .tabItem {
                         Label("Favorites", systemImage: "star")
                     }
                     .tag(Tab.favorites)
 
-                Text("About View")
+                AboutView()
                     .tabItem {
                         Label("About", systemImage: "info.circle")
                     }

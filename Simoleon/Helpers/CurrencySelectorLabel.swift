@@ -16,8 +16,7 @@ struct CurrencySelectorLabel: View {
             .frame(height: 60)
             .overlay(
                 HStack {
-                    let flagName = getFlagName(currency: currency)
-                    Flag(flagName: flagName)
+                    Flag(currencyCode: currency.code)
                     Text(currency.code)
                         .font(.headline)
                         .foregroundColor(.primary)

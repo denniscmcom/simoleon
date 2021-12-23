@@ -12,8 +12,7 @@ struct CurrencyRow: View {
     
     var body: some View {
         HStack {
-            let flagName = getFlagName(currency: currency)
-            Flag(flagName: flagName)
+            Flag(currencyCode: currency.code)
             
             VStack(alignment: .leading) {
                 Text(currency.code)

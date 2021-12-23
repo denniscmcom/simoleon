@@ -10,15 +10,20 @@ import SwiftUI
 struct Sidebar: View {
     var body: some View {
         List {
-            NavigationLink(destination: ConversionView()) {
+            NavigationLink(destination:
+                ConversionView(
+                    baseCurrency: SupportedCurrencyResult(code: "EUR", name: "Euro", isCrypto: 0),
+                    quoteCurrency: SupportedCurrencyResult(code: "USD", name: "U.S. Dollar", isCrypto: 0)
+                )
+            ) {
                 Label("Convert", systemImage: "arrow.counterclockwise.circle")
             }
             
-            NavigationLink(destination: Text("Favorites View")) {
+            NavigationLink(destination: FavoritesView()) {
                 Label("Favorites", systemImage: "star")
             }
             
-            NavigationLink(destination: Text("About")) {
+            NavigationLink(destination: AboutView()) {
                 Label("About", systemImage: "info.circle")
             }
         }

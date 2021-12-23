@@ -77,7 +77,7 @@ struct CurrencyList_Previews: PreviewProvider {
     static var previews: some View {
         CurrencyList(
             baseCurrency: .constant(SupportedCurrencyResult(code: "EUR", name: "Euro", isCrypto: 0)),
-            quoteCurrency: .constant(SupportedCurrencyResult(code: "CHF", name: "Swiss Franc", isCrypto: 0)),
+            quoteCurrency: .constant(SupportedCurrencyResult(code: "USD", name: "U.S. Dollar", isCrypto: 0)),
             selecting: .baseCurrency
         )
     }

@@ -11,8 +11,8 @@ struct ConversionView: View {
     var showNavigationView: Bool?
     
     // CurrencySelector variables
-    @State private var baseCurrency = SupportedCurrencyResult(code: "EUR", name: "Euro", isCrypto: 0)
-    @State private var quoteCurrency = SupportedCurrencyResult(code: "CHF", name: "Swiss Franc", isCrypto: 0)
+    @State var baseCurrency: SupportedCurrencyResult
+    @State var quoteCurrency: SupportedCurrencyResult
     @State private var showingCurrencyList = false
     @State private var selecting: Selection = .baseCurrency
     
@@ -40,7 +40,7 @@ struct ConversionView: View {
                     }
                     
                     // MARK: - Favorite button
-                    FavoriteButton()
+                    FavoriteButton(baseCurrency: $baseCurrency, quoteCurrency: $quoteCurrency)
                     
                 }
                 .padding(.bottom)
@@ -63,7 +63,7 @@ struct ConversionView: View {
                     amount: $amount
                 )
             }
-            .padding()
+            .padding(.horizontal)
             .sheet(isPresented: $showingCurrencyList) {
                 CurrencyList(baseCurrency: $baseCurrency, quoteCurrency: $quoteCurrency, selecting: selecting)
             }
@@ -96,7 +96,6 @@ struct ConversionView: View {
         let url = "https://api.simoleon.app/fx/latest?symbols=\(currencyPair)"
         httpRequest(url: url, model: CurrencyLatestRateResponse.self) { response in
             latestRate = response
-            print(latestRate.message.first!.timestamp)
             if latestRate.message.isEmpty {
                 // Handle exception
             } else {
@@ -112,6 +111,9 @@ enum Selection {
 
 struct ConversionView_Previews: PreviewProvider {
     static var previews: some View {
-        ConversionView(showNavigationView: true)
+        ConversionView(
+            baseCurrency: SupportedCurrencyResult(code: "EUR", name: "Euro", isCrypto: 0),
+            quoteCurrency: SupportedCurrencyResult(code: "USD", name: "U.S. Dollar", isCrypto: 0)
+        )
     }
 }

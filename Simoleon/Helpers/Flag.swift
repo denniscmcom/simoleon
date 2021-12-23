@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct Flag: View {
-    var flagName: String
+    var currencyCode: String
     
     var body: some View {
-        Image(flagName)
+        Image(String(currencyCode.dropLast()))
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: 35, height: 35)
@@ -21,6 +21,6 @@ struct Flag: View {
 
 struct Flag_Previews: PreviewProvider {
     static var previews: some View {
-        Flag(flagName: "EU")
+        Flag(currencyCode: "EUR")
     }
 }
