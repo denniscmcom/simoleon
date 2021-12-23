@@ -26,6 +26,9 @@ struct ConversionView: View {
     // Update currency rates
     @State private var timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     
+    // CurrencyTextfield variables
+    @FocusState private var textfieldIsFocused: Bool
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: 20) {
@@ -51,6 +54,7 @@ struct ConversionView: View {
                     .fontWeight(.semibold)
                 
                 CurrencyTextfield(currencyCode: baseCurrency.code, amount: $amount)
+                    .focused($textfieldIsFocused)
                 
                 Divider()
                 Text("\(quoteCurrency.code) - \(quoteCurrency.name)")
@@ -66,6 +70,15 @@ struct ConversionView: View {
             .padding(.horizontal)
             .sheet(isPresented: $showingCurrencyList) {
                 CurrencyList(baseCurrency: $baseCurrency, quoteCurrency: $quoteCurrency, selecting: selecting)
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                if textfieldIsFocused {
+                    Button("Done") {
+                        textfieldIsFocused = false
+                    }
+                }
             }
         }
         .onAppear {

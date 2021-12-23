@@ -12,7 +12,6 @@ struct CurrencyTextfield: View {
     @Binding var amount: String
     
     var body: some View {
-        VStack {
         TextField("Enter the amount", text: $amount)
             .keyboardType(.decimalPad)
             .font(.title2)
@@ -22,7 +21,6 @@ struct CurrencyTextfield: View {
                     .cornerRadius(15)
                     .frame(height: 55)
             )
-        }
     }
 }
 
