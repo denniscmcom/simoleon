@@ -21,7 +21,10 @@ struct ConversionView: View {
     
     // CurrencyConversion variables
     @State private var showConversion = false
-    @State private var conversion = CurrencyConversionResponse(message: [CurrencyConversionResult]())
+    @State private var latestRate = CurrencyLatestRateResponse(message: [CurrencyLatestRateResult]())
+    
+    // Update currency rates
+    @State private var timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -48,10 +51,6 @@ struct ConversionView: View {
                     .fontWeight(.semibold)
                 
                 CurrencyTextfield(currencyCode: baseCurrency.code, amount: $amount)
-                    .onChange(of: amount) { _ in
-                        showConversion = false
-                        getConversion()
-                    }
                 
                 Divider()
                 Text("\(quoteCurrency.code) - \(quoteCurrency.name)")
@@ -59,9 +58,9 @@ struct ConversionView: View {
                     .fontWeight(.semibold)
                 
                 CurrencyConversion(
-                    conversion: conversion,
+                    latestRate: latestRate,
                     currencyCode: quoteCurrency.code,
-                    showConversion: $showConversion
+                    amount: $amount
                 )
             }
             .padding()
@@ -69,7 +68,16 @@ struct ConversionView: View {
                 CurrencyList(baseCurrency: $baseCurrency, quoteCurrency: $quoteCurrency, selecting: selecting)
             }
         }
-        .onAppear(perform: getConversion)
+        .onAppear {
+            getConversion()
+            timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+        }
+        .onReceive(timer) { _ in
+            getConversion()
+        }
+        .onDisappear {
+            timer.upstream.connect().cancel()
+        }
         .navigationTitle("Convert")
         .if(UIDevice.current.userInterfaceIdiom == .phone && showNavigationView ?? true) { content in
             NavigationView { content }
@@ -84,17 +92,12 @@ struct ConversionView: View {
     
     // Request conversion
     private func getConversion() {
-        guard let amount = Float(amount) else {
-            amount = ""
-            showConversion = true
-            return
-        }
-        
         let currencyPair = "\(baseCurrency.code)\(quoteCurrency.code)"
-        let url = "https://api.simoleon.app/fx/convert?symbols=\(currencyPair)&amount=\(amount)"
-        httpRequest(url: url, model: CurrencyConversionResponse.self) { response in
-            conversion = response
-            if conversion.message.isEmpty {
+        let url = "https://api.simoleon.app/fx/latest?symbols=\(currencyPair)"
+        httpRequest(url: url, model: CurrencyLatestRateResponse.self) { response in
+            latestRate = response
+            print(latestRate.message.first!.timestamp)
+            if latestRate.message.isEmpty {
                 // Handle exception
             } else {
                 showConversion = true

@@ -19,7 +19,9 @@ struct CurrencyList: View {
             List {
                 let currencies = getCurrencies()
                 ForEach(currencies, id: \.self) { currency in
-                    CurrencyRow(currency: currency)
+                    Button(action: { select(currency: currency) }) {
+                        CurrencyRow(currency: currency)
+                    }
                 }
             }
             .navigationTitle("Currencies")
@@ -57,6 +59,17 @@ struct CurrencyList: View {
         
         
         return supportedCurrencies
+    }
+    
+    // Select currency
+    private func select(currency: SupportedCurrencyResult) {
+        if selecting == .baseCurrency {
+            baseCurrency = currency
+        } else {
+            quoteCurrency = currency
+        }
+        
+        dismiss()
     }
 }
 

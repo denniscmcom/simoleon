@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct CurrencyConversion: View {
-    var conversion: CurrencyConversionResponse
+    var latestRate: CurrencyLatestRateResponse
     var currencyCode: String
-    @Binding var showConversion: Bool
+    @Binding var amount: String
     
     var body: some View {
         VStack {
@@ -19,13 +19,13 @@ struct CurrencyConversion: View {
                 .foregroundColor(Color(.secondarySystemBackground))
                 .overlay(
                     VStack {
-                        if showConversion {
-                            let amount = conversion.message.first!.amount
-                            let formattedAmount = format(currency: amount)
+                        if latestRate.message.isEmpty {
+                            ProgressView()
+                        } else {
+                            let conversion = convert(amount: amount)
+                            let formattedAmount = format(currency: conversion)
                             Text(formattedAmount)
                                 .font(.title2)
-                        } else {
-                            ProgressView()
                         }
                     }
                     .padding(.leading, 15)
@@ -33,8 +33,8 @@ struct CurrencyConversion: View {
                     , alignment: .leading
                 )
             
-            if showConversion {
-                let timestamp = conversion.message.first!.timestamp
+            if !latestRate.message.isEmpty {
+                let timestamp = latestRate.message.first!.timestamp
                 Text("Last updated: \(converToDate(epoch: timestamp))")
                     .font(.caption)
                     .opacity(0.6)
@@ -51,7 +51,7 @@ struct CurrencyConversion: View {
         return formatter.string(from: NSNumber(value: currency))!
     }
     
-    // COnvert epoch to date
+    // Convert epoch to date
     private func converToDate(epoch: Int) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = DateFormatter.Style.medium
@@ -60,23 +60,34 @@ struct CurrencyConversion: View {
         
         return dateFormatter.string(from: date)
     }
+    
+    // Compute conversion
+    private func convert(amount: String) -> Double {
+        guard let amount = Double(amount) else {
+            return Double()
+        }
+        
+        let rate = latestRate.message.first!.rate
+        let conversion = amount * rate
+        
+        return conversion
+    }
 }
 
 struct CurrencyConversion_Previews: PreviewProvider {
     static var previews: some View {
         CurrencyConversion(
-            conversion:
-                CurrencyConversionResponse(
+            latestRate:
+                CurrencyLatestRateResponse(
                     message: [
-                        CurrencyConversionResult(
+                        CurrencyLatestRateResult(
                             rate: 1.31,
-                            timestamp: 1288282222000,
-                            amount: 95.63
+                            timestamp: 1288282222000
                         )
                     ]
                 ),
             currencyCode: "CHF",
-            showConversion: .constant(true)
+            amount: .constant("1")
         )
     }
 }

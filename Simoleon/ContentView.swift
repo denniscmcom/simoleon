@@ -17,7 +17,8 @@ struct ContentView: View {
     @ViewBuilder var adjustedView: some View {
         if UIDevice.current.userInterfaceIdiom == .pad {
             NavigationView {
-                
+                Sidebar()
+                ConversionView()
             }
         } else {
             TabView(selection: $tab) {

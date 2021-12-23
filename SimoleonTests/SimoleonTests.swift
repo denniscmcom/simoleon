@@ -55,7 +55,7 @@ class SimoleonTests: XCTestCase {
         let currency = SupportedCurrencyResult(code: "BTC", name: "Bitcoin", isCrypto: 1)
         let flagName = getFlagName(currency: currency)
         
-        XCTAssertEqual(flagName, "BTC", "Flag name does not match")
+        XCTAssertEqual(flagName, "", "Flag name does not match")
     }
 
     func testPerformanceExample() throws {

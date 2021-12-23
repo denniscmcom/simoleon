@@ -23,6 +23,7 @@ struct CurrencyRow: View {
                     .font(.callout)
                     .opacity(0.6)
             }
+            .foregroundColor(.primary)
             .padding(.leading)
         }
     }

@@ -7,12 +7,11 @@
 
 import Foundation
 
-struct CurrencyConversionResponse: Codable {
-    var message: [CurrencyConversionResult]
+struct CurrencyLatestRateResponse: Codable {
+    var message: [CurrencyLatestRateResult]
 }
 
-struct CurrencyConversionResult: Codable {
+struct CurrencyLatestRateResult: Codable {
     var rate: Double
     var timestamp: Int
-    var amount: Double
 }
